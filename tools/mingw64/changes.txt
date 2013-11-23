@@ -1,0 +1,44 @@
+copied C:\OMDev\tools\mingw\include\CL\*.h to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\include\CL\*.h
+
+copied C:\OMDev\lib\expat_mingw64\include\expat.h to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\include\expat.h
+copied C:\OMDev\lib\expat_mingw64\include\expat_external.h to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\include\expat_external.h
+copied C:\OMDev\lib\expat_mingw64\lib\libexpat.a to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\lib\libexpat.a
+
+copied C:\OMDev\tools\mingw\include\lpsolve\*.h to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\include\lpsolve\*.h
+copied C:\OMDev\lib\lpsolve_mingw64\liblpsolve55.a to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\lib\liblpsolve55.a
+
+copied C:\OMDev\tools\mingw\include\sqlite3.h to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\include\sqlite3.h
+copied C:\OMDev\compile-here\libsqlite3\libsqlite3_64.a to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\lib\libsqlite3.a
+
+copied C:\OMDev\tools\mingw\include\regex.h to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\include\regex.h
+copied C:\OMDev\compile-here\mingw-libgnurx-2.5.1\libregex.a to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\lib\libregex.a
+copied C:\OMDev\compile-here\mingw-libgnurx-2.5.1\libregex.a to C:\OMDev\tools\mingw64\lib\libregex.a
+
+copied C:\OMDev\compile-here\libintl\libintl.h to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\include\libintl.h
+copied C:\OMDev\compile-here\libintl\libintl.a to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\lib\libintl.a
+
+copied C:\OMDev\compile-here\lapack\lapack-mingw64.a to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\lib\liblapack-mingw.a
+copied C:\OMDev\compile-here\lapack\blas-mingw64.a to C:\OMDev\tools\mingw64\x86_64-w64-mingw32\lib\libblas-mingw.a
+
+
+
+C:\OMDev\tools\mingw64\x86_64-w64-mingw32\include\winnt.h
+
+    #ifndef VOID
+    #define VOID void
+        typedef char CHAR;
+        typedef short SHORT;
+        typedef __LONG32 LONG;
+    #endif
+
+changed to  
+
+    #ifndef VOID
+    #define VOID void
+    #endif
+        typedef char CHAR;
+        typedef short SHORT;
+        typedef __LONG32 LONG;
+
+otherwise CHAR, LPCSTR, ... were not found
+
