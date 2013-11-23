@@ -1,0 +1,197 @@
+The Eclipse + MinGW + OMC + WINDOWS + MICO story
+************************************************
+Adrian Pop, adrpo@ida.liu.se, 2006-02-01
+----------------------------------------
+
+
+Eclipse
+=======
+- when console is open, there are no Project Properties available
+
+- there is no OTHER way to "make clean" than making a 
+  Run->External Tools->External Tool and defining one.
+  + make sure you set the Environment of the make command right!!
+  NOTE: we sould define make clean for all the subdirectories
+        so we can just go quickly Run->External Tools->tool
+
+- even when you run the external tool "make clean" you cannot build
+  the project afterwords because you haven't edited any file and
+  will refuse to build anything.
+  + solution: open a file, delete a charater, put it back, save (Ctrl+S)
+    and press Ctrl+B
+
+LESSON LEARNED
+1. pseudo modify something + save if you want to be able to build again
+2. define your external tools but pay attention to the environment 
+   you pass to them. "make clean" for example
+3. when console is open you cannot touch Project Properties
+
+Eclipse CDT 
+===========
+- Just some pointers, OMC build now is based on MDT, 
+  but I did try it myself to see how is working.
+- I would say MDT should be based on CDT as you can define Make targets
+  on specific directory like "clean" or "all" and just run them with
+  a click of a mouse. MDT lacks this.
+- However, it has its problems. Managed stuff doen't work at all for 
+  OMC, so choose standard make.
+- Disable the damn C/C++ indexer as it will wander through your files
+  forever.
+- Error reporting is desastrous. It reported errors in directories 
+  which weren't even included in the build.... 
+- However, it feels good and we should try to implement some things
+  with it for MDT: Build Make Target, Create Make Target and 
+  Refresh Project are a MUST!
+
+Eclipse + Windows stuff
+=======================
+- learned a bunch of stuff about environment variables, actually the lack of:
+  + In order to compile OMC you need to make a builder, tell it to run "make",
+    then give an Environment for "make". Well, you can just put some variables,
+    and say "Append to the native environment". But that isn't good as a lot
+    of crap can be in the native environment. And you don't want "make" to know
+    about it. (Like running the wrong gcc from some cygwin path, etc.)
+
+  + So you say "Replace native environment with specified environment". 
+    So far so good, BUT! When you run the builder and surprise! 
+    Some stuff go well, some doesn't:
+
+    - Like passing an environment variable $OMDev to "make" causes "sh" to take it
+      as $OMDEV (see the all caps) and $OMDev is empty of course :(2 hours went
+      by until I figure it out. one hour/small letter :)
+
+    - You run the builder a tool say: "/tmp does not exist, please create"
+      So you add the $TMP and $TEMP to the Environment.
+
+    - running the IDL compiler on omc_communication.idl exposes another strange 
+      thing: transport\tcp.cc:218 -> assert failed. To test I switched to: 
+      "Append environment to native environment" and it worked. Now which of the
+      native environment variables were needed? Take the tcp.cc source apart and
+      see what's happening: a socket(...) call failed. Why in the damn world would
+      the IDL compiler need to use sockets when compiling an IDL file beats me.
+      So I compiled mico.dll/idl.exe in debug mode, added some error printing and
+      voila: WSAEPROVIDERFAILEDINIT error! Why in the damn hell did the socket
+      initialization failed??? WSAStartup(...) went well, so what's the deal?
+      Well, a search on Google for WSAEPROVIDERFAILEDINIT give you this:
+      http://www.cygwin.com/ml/cygwin-apps/2001-05/msg00000.html
+      To spare you the clicking i tell you that some of the winsock components need
+      $SystemRoot environment variable. Why???!!! Looks like the Windows Registry
+      is for nothing and everything seems to be passed into environment variables.
+      So you add $SYSTEMROOT to the environment (You learned your lesson with the
+      small letters, so you apply it.) and ... well doesn't work! So you add with
+      small letters $SystemRoot to the environment and the assert doesn't happen,
+      however, idl.exe crashes. Having the debug version of MICO available you look 
+      and see that _popen(...) call is failing. You get smart and say, ok, 
+      _popen(cmd, mode) executes a command, well what about $COMSPEC enviroment 
+      variable (which points to the cmd.exe)?? You add $COMSPEC environment variable 
+      to the environment and that's it! Even if in Windows is defined as $ComSpec,
+      isn't that extremly non-homogenous??!! So when is with small and when is with
+      all CAPS? Only experience can tell you. 
+      So now everything works as expected! :(5 hours went by but you learned valuable 
+      stuff ;) Again... why is the Windows Registry for, if everything is passed in 
+      environment variables??
+      Found also a very cool site:
+      http://www.koders.com/c++/fidE9EBE68A47FB84D4FBEFF529BF3EF1D5B9040F56.aspx
+      This is viewing the tcp.cc file I talked about. Click on some code see what's
+      happening. We surely need that for MDT :)
+
+LESSON LEARNED:
+1. Build your Environment passed to "make", otherwise on another 
+   computer you may run some other gcc from the path, or some other 
+   tools. Also it could run on your computer because of the Native 
+   Enviroment you have but it doesn't run on other computers because
+   they don't have the tool you have in your PATH for example.
+2. Windows sockets need SystemRoot (and maybe SystemDrive) passed
+   as Environment variables
+3. ComSpec variable has to be passed also if you do an exec (_popen)
+   of some command from your program.
+4. Pass the $TMP and $TEMP to your specified Environment, otherwise
+   tools that need saving temporary data (say gcc) will crash.
+5. Small letters or all CAPS for environment variables is 
+   not-conclusive! Try it and see. Which one works that's it :)
+6. I think all these Environment Variable problems are somehow
+   ironically connected with "Programming Environments" Laboratory :)
+   
+
+OMC + MICO Corba
+================
+So now you have an omc.exe, You say: "Let's put it to test!" 
+./omc.exe +d=interactiveCorba 
+
+You pop your favourite windows/python Corba client based 
+on omniORBpy which you happen to hack recently and say go. 
+(You can take it from: http://www.ida.liu.se/~adrpo/omc/corba)
+Mumu, results returned are none and omc.exe crashes. 
+You run the MSVC debugger on it, you see that it fails in mico2311.dll. 
+Not having (at that particular moment) a debug version of mico2311.dll
+you compile a static version of omc.exe (13MB) and run gdb on it. 
+You see that omc.exe did some sucessful Corba requests and then failed. 
+Well, what's the deal? You say is because you compiled MICO with MinGW and 
+you look for ways to link omc.exe with MSVC compiled MICO mico2311.dll 
+which you have available. Of course you are hit by massive undefined 
+references at linking. The MSVC compiler has a very different naming
+conventions for exports from a .dll compared with GCC. 
+(... "And they still belive in ubiquitous computing" :) Nah, this
+is a mute war between open source and companies)
+
+You go to MinGW FAQ: 
+http://www.mingw.org/mingwfaq.shtml#faq-msvcdll
+Also you see:
+http://wyw.dcweb.cn/stdcall.htm
+http://www.emmestech.com/software/cygwin/pexports-0.43/moron1.html
+
+Ok, is possible to interoperate the .dlls but you need a tool called 
+pexports + some sed command. Very good, you take pexports, compile it, run:
+pexports mico2311.dll | sed "s/^_\([[:alnum:]_]\+\)\(@[[:digit:]]\+\)/\1\2/" > mico2311-mingw-gcc.def
+All you get back as a result is a pexports.exe.stackdump :)
+So you gdb pexports and realize it crashes so badly that the stack is corrupt,
+so you leave it be for some other time because you note that you had a crashed 
+omc.exe in the Task Manager, you kill it and everything starts working perfectly.
+
+LESSON LEARNED: 
+- Look in the Task Manager for crashed omc.exe before you 
+  assume something is wrong with the code or the way you
+  compiled it.
+
+NOTE: WE HAVE TO ADDRESS THIS.
+We have a bunch of programs compiled with MSVC (WinMosh, OMNotebook, etc)
+wich depend on the MSVC compiled mico2311.dll, and now we have omc.exe dependent
+on MinGW compiled mico2311.dll. The libraries have to reside in the same directory
+C:\OpenModelicaXXX\, have the same name and are incompatible. We have to compile 
+another .dll with different name for one of them.
+
+
+GENERAL LESSON: 
+- MAKE CLEAN before you compile for some other target. 
+  Don't mix binary (.exe, .a, .dll) from different targets
+  or undefined references during link will become your second
+  nature.
+
+Conclusion
+==========
+So now we have a builder called OMDev-MINGW-OpenModelicaBuilder 
+with the Environment setup as it should be wich used OMDev and
+compiled OMC from .rml OR .mo files.
+
+OMDev.zip + Pictures + Eclipse .project file + External builders 
++ MinGW Makefiles + .mo files + ExternalRMLDefines.h + Instructions
+are available here:
+http://www.ida.liu.se/~adrpo/omc/omdev/mingw
+
+In some time from now I will make:
+http://www.ida.liu.se/~adrpo/omc/omdev/msvc
+http://www.ida.liu.se/~adrpo/omc/omdev/cygwin
+versions available also.
+
+
+
+Well, that's it. I'm just glad I have 1GB of memory now,
+otherwise I would have already make seppuku waiting for
+Windows context switching (performed on a  fragmented 
+pagefile.sys file which sits on a 5400 RPM hard drive)
+to happen.
+
+Adrian Pop/
+P.S. I'll never abandon Cygwin! Is way to cute :)
+To get the OMDev package or updates go to:
+http://www.ida.liu.se/~adrpo/omc/omdev/

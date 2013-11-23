@@ -1,0 +1,47 @@
+OMDev=OpenModelica Development Environment-MSYS+MINGW
+------------------------------------------------------
+Adrian Pop, adrpo@ida.liu.se, 2010-10-24
+------------------------------------------------------
+To check for an updated version of this package go to:
+http://www.ida.liu.se/~adrpo/omc/omdev/mingw
+
+VERY IMPORTANT INSTALLATION ISSUES!
+***********************************
+
+MINGW+MSYS setting
+==================
+IN ORDER TO MAKE msys know where mingw is
+you have to edit 
+/tools/msys/etc/fstab
+and write
+path_to_your_omdev/tools/mingw /mingw
+
+ENVIRONMENT VARIABLE SETTING
+============================
+- define a Windows environment variable called OMDEV 
+  that points to c:\path\to\your\omdev
+
+Subversion and Eclipse:
+=======================
+Checkout OpenModelica sources from:
+svn co https://openmodelica.org/svn/OpenModelica/trunk/ OpenModelica
+user: anonymous
+pass: none      <- write "none" here
+Follow the instructions found in OpenModelica/README-OMDev-MINGW.txt
+
+MSYS setting (optional)
+=======================
+If you want to use msys shell make a  
+shortcut on your desktop to: 
+path_to_your_omdev\tools\msys\msys.bat
+and say it to run in:
+path_to_your_omdev\tools\msys\bin
+
+If I find another way to do the environment/msys+mingw 
+stuff automatically I'll fix it, but for now is manual 
+time :)
+
+
+Address questions/problems to:
+Adrian Pop,
+adrpo@ida.liu.se

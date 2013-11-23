@@ -1,0 +1,26 @@
+These were the files I use for OMDev install
+============================================
+Adrian Pop, adrpo@ida.liu.se, 2006-02-01
+
+General System
+==============
+MSYS-1.0.10.exe 
+MinGW-5.0.0.exe -> this one I used to get the candidate releases:
+ Candidate releases downloaded and installed by MINGW-5.0.0.exe
+ + binutils-2.16.91-20050827-1.tar.gz
+ + bison-2.0-MSYS.tar.gz
+ + flex-2.5.4a.tar.gz
+ + gcc-core-3.4.4-20050522-1.tar.gz
+ + gcc-g++-3.4.4-20050522-1.tar.gz
+ + gcc-g77-3.4.4-20050522-1.tar.gz
+ + mingw-runtime-3.8.tar.gz
+ + w32api-3.3.tar.gz
+
+The rest I downloaded myself because I think they are useful
+------------------------------------------------------------
+gdb-5.2.1-1.exe
+mingw-utils-0.3.tar.gz
+mingw32-make-3.80.0-3.tar.gz
+msysDTK-1.0.1.exe -> sh, ar, perl, autoconf and othe unix like stuff
+pexports-0.43.zip
+readline-4.0.zip

@@ -1,0 +1,12 @@
+prefix=/f/dev/ipopt/
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/coin
+
+Name: IPOPT
+Description: Interior Point Optimizer
+URL: https://projects.coin-or.org/Ipopt
+Version: 3.11.3
+Libs: -L${libdir} -lipopt -llapack-mingw -ltmglib-mingw -lblas-mingw -lf2c -L""C:\OpenModelica1.9.0-r16609\/lib/omc"" -llapack-mingw -ltmglib-mingw -lblas-mingw -lf2c -L""C:\OpenModelica1.9.0-r16609\/lib/omc"" -lm 
+Cflags: -I${includedir}
+Requires: coinmumps 

@@ -1,0 +1,2 @@
+C:/Qt/2010.05/mingw/bin/ar.exe cr ../lib/libmoeo.a  CMakeFiles/moeo.dir/core/moeoObjectiveVectorTraits.cpp.obj
+C:/Qt/2010.05/mingw/bin/ranlib.exe ../lib/libmoeo.a

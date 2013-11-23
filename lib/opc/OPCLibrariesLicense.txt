@@ -1,0 +1,22 @@
+Copyright (c) 2011, Technical Research Centre of Finland - VTT
+All rights reserved.
+See the file OPCLibrariesLicense.txt for terms and conditions of the license.
+
+OPC Libraries refer to the following dll's:
+
+libeay32.dll
+libxml2.dll
+OPCKit.dll
+OPCregistry.dll
+ua_server.dll
+uastack.dll
+
+Use and redistribution of OPC Libraries in binary forms, without modification, are permitted provided that the following conditions are met:
+
+-OPC Libraries are used and redistributed only together with the Open Source Modelica (www.openmodelica.org). They are not allowed to be used for building OPC functionality to any other software products or components.
+
+-Redistributions together with Open Source Modelica in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. 
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT OF COPYRIGHTS, TRADE SECRETS OR ANY PATENTS AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+This license shall be governed by Finnish law, excluding its conflict-of-law provisions.

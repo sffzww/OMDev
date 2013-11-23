@@ -1,0 +1,132 @@
+diff -r -u mico--devel--2.3--patch-6/include/mico/process_impl.h mico--devel--2.3--patch-6--with-reflection/include/mico/process_impl.h
+--- mico--devel--2.3--patch-6/include/mico/process_impl.h	2004-11-04 10:22:04.000000000 -0500
++++ mico--devel--2.3--patch-6--with-reflection/include/mico/process_impl.h	2004-11-04 14:22:09.528832000 -0500
+@@ -47,8 +47,8 @@
+     static unsigned int __stdcall wait_thread_func (VOID *arg);
+     static unsigned int __stdcall ThreadExitFunc(VOID *arg);
+ #else
+-    static void __stdcall wait_thread_func (VOID *arg);
+-    static void __stdcall ThreadExitFunc(VOID *arg);
++    static void wait_thread_func (VOID *arg);
++    static void ThreadExitFunc(VOID *arg);
+ #endif
+     static HANDLE s_waitthread;
+     static int s_stop_waiting;
+diff -r -u mico--devel--2.3--patch-6/orb/fixed.cc mico--devel--2.3--patch-6--with-reflection/orb/fixed.cc
+--- mico--devel--2.3--patch-6/orb/fixed.cc	2004-11-04 10:22:05.000000000 -0500
++++ mico--devel--2.3--patch-6--with-reflection/orb/fixed.cc	2004-11-04 14:22:09.669033600 -0500
+@@ -104,7 +104,7 @@
+ 	int exp;
+ 	frexpl (d, &exp);
+ 
+-	d = ldexpl (1, exp);
++	d = ldexpl (1.0, exp);
+ 	/*
+ 	 * now d is the smallest power of 2 that is greater than
+ 	 * the error in representing 0.6 as a LongDouble
+@@ -138,7 +138,7 @@
+ 	int exp;
+ 	frexpl (d, &exp);
+ 
+-	d = ldexpl (1, exp);
++	d = ldexpl (1.0, exp);
+ 	/*
+ 	 * now d is the smallest power of 2 that is greater than
+ 	 * the error in representing 0.6 as a Double
+diff -r -u mico--devel--2.3--patch-6/orb/os-windows.cc mico--devel--2.3--patch-6--with-reflection/orb/os-windows.cc
+--- mico--devel--2.3--patch-6/orb/os-windows.cc	2004-11-04 10:22:05.000000000 -0500
++++ mico--devel--2.3--patch-6--with-reflection/orb/os-windows.cc	2004-11-04 14:22:09.709091200 -0500
+@@ -221,7 +221,7 @@
+       if (hRequestExitEvent == NULL) { 
+         char szExitEventName[] = "Process00000000";
+ 
+-        sprintf(szExitEventName, "Process%08X", _pid);
++        sprintf(szExitEventName, "Process%08X", (unsigned int) _pid);
+                 hRequestExitEvent = CreateEvent(NULL, TRUE, FALSE, szExitEventName);
+       }
+       ReleaseMutex(OSMisc::SignalMutex);        
+@@ -238,8 +238,6 @@
+ void
+ MICO::UnixProcess::process_died(DWORD pid)
+ {
+-    int status;
+-
+ 	ListProcess::iterator i;
+ 	for (i = _procs.begin(); i != _procs.end(); ++i) {
+ 	    if (pid == (*i)->_pid)
+@@ -275,14 +273,14 @@
+   HANDLE hProcessExitEvent = NULL;
+   char  szExitEventName[] = "Process00000000";
+   HANDLE hExitThread = NULL;
+-  unsigned int ExitThreadID = 0;
+ 
+-  sprintf(szExitEventName, "Process%08X", GetCurrentProcessId());
++  sprintf(szExitEventName, "Process%08X", (unsigned int) GetCurrentProcessId());
+   hProcessExitEvent = OpenEvent(SYNCHRONIZE, TRUE, szExitEventName);
+   if (hProcessExitEvent != NULL) { // we have been started by MICO::UnixProcess::run()
+     CloseHandle(hProcessExitEvent);
+     // Start the thread waiting for process termination
+ #if !defined(__MINGW32__)
++    unsigned int ExitThreadID = 0;
+     hExitThread = (HANDLE)_beginthreadex(NULL, 0, ThreadExitFunc, NULL, 0, &ExitThreadID);
+ #else
+     hExitThread = (HANDLE)_beginthread(ThreadExitFunc, 0, NULL);
+@@ -301,12 +299,11 @@
+ #ifdef _POCKET_PC
+ 	MICO_NOT_IMPLEMENTED;
+ #else
+-  unsigned int	threadid = 0;
+-
+   s_stop_waiting = FALSE;
+   s_childprocs[0] = CreateEvent(NULL, FALSE, FALSE, NULL);
+   //XXX TODO kill the thread when shutting down
+ #ifndef __MINGW32__
++  unsigned int	threadid = 0;
+   s_waitthread = (HANDLE)_beginthreadex(NULL, 0, wait_thread_func, NULL, 0, &threadid);
+ #else
+   s_waitthread = (HANDLE)_beginthread(wait_thread_func, 0, NULL);
+@@ -320,18 +317,18 @@
+ 
+ 
+ #if !defined(__MINGW32__)
+-unsigned int
++unsigned int __stdcall
+ #else
+ void
+ #endif
+-__stdcall MICO::UnixProcess::ThreadExitFunc(VOID *arg) {
++MICO::UnixProcess::ThreadExitFunc(VOID *arg) {
+ #ifdef _POCKET_PC
+ 	MICO_NOT_IMPLEMENTED;
+ #else
+   HANDLE hProcessExitEvent = NULL;
+   char szExitEventName[] = "Process00000000";
+ 
+-  sprintf(szExitEventName, "Process%08X", GetCurrentProcessId());
++  sprintf(szExitEventName, "Process%08X", (unsigned int) GetCurrentProcessId());
+   hProcessExitEvent = OpenEvent(SYNCHRONIZE, TRUE, szExitEventName);
+   if (hProcessExitEvent != NULL) {
+     WaitForSingleObject(hProcessExitEvent, INFINITE);
+@@ -348,11 +345,11 @@
+ 
+ 
+ #if !defined(__MINGW32__)
+-unsigned int
++unsigned int __stdcall
+ #else
+ void
+ #endif
+-__stdcall MICO::UnixProcess::wait_thread_func (VOID *arg)
++MICO::UnixProcess::wait_thread_func (VOID *arg)
+ {
+     while(9*6)
+     {
+@@ -453,7 +450,7 @@
+ void *
+ MICO::UnixSharedLib::symbol (const char *sym)
+ {
+-    return ::GetProcAddress((HINSTANCE)_handle,sym);
++    return (void *) ::GetProcAddress((HINSTANCE)_handle,sym);
+ }
+ 
+ const char *

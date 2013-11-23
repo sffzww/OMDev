@@ -1,0 +1,23 @@
+readline - GNU Readline Library
+
+dsm-version: 4.2
+dsm-name: readline
+dsm-file-version: 1.3
+dsm-author: Stefan Jahn
+type: standard
+
+name: readline
+version: 4.2 snapshot 20010727
+short-description: Get a line from a user with editing.
+info-description: \
+  Readline offers editing capabilities while the user is entering the \
+  line. By default, the line editing commands are similar to those of \
+  emacs.
+
+porter: \
+  Paul Sokolovsky (2.0), Earnie Boyd (2.2), Michael Rickmann (4.0), \
+  Stefan Jahn (4.1)
+porter-email: stefan@lkcc.org
+porting-web-site: http://mingwrep.sourceforge.net
+
+zip: readline-4.2-20010727.zip

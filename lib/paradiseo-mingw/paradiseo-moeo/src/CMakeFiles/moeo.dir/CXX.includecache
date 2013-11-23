@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/ParadisEO-1.2/paradiseo-moeo/src/core/moeoObjectiveVectorTraits.cpp
+core/moeoObjectiveVectorTraits.h
+-
+
+src/core/moeoObjectiveVectorTraits.h
+iostream
+-
+stdexcept
+-
+vector
+-
+

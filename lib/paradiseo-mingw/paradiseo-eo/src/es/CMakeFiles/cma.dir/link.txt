@@ -1,0 +1,2 @@
+C:/Qt/2010.05/mingw/bin/ar.exe cr ../../lib/libcma.a  CMakeFiles/cma.dir/eig.cpp.obj CMakeFiles/cma.dir/CMAState.cpp.obj CMakeFiles/cma.dir/CMAParams.cpp.obj
+C:/Qt/2010.05/mingw/bin/ranlib.exe ../../lib/libcma.a

@@ -1,0 +1,90 @@
+
+ann
+  "nonexhaustiveMatch warn" "redundantMatch warn"
+  "sequenceNonUnit ignore"
+  "warnUnused false" "forceUsed"
+in
+
+local
+  basis l30 = 
+    bas
+      (* $/basis.cm ====> *) $(SML_LIB)/basis/basis.mlb $(SML_LIB)/basis/unsafe.mlb
+    end
+  basis l26 = 
+    bas
+      (* $/smlnj-lib.cm ====> *) $(SML_LIB)/smlnj-lib/Util/smlnj-lib.mlb
+    end
+  basis l4 = 
+    bas
+      (* $MLRISC.cm(=$SMLNJ-MLRISC)/MLRISC.cm ====> *) $(SML_LIB)/mlrisc-lib/mlb/MLRISC.mlb
+    end
+in
+local
+   $(SML_LIB)/basis/pervasive.mlb
+   local
+      open l4
+   in
+      signature gs_0 = MLTREE
+   end
+   local
+      signature MLTREE = gs_0
+      ../staged-allocation/staged-allocation-sig.sml
+   in
+      signature gs_1 = STAGED_ALLOCATION
+      signature gs_2 = TARGET_LANG
+   end
+   local
+      open l4
+   in
+      structure gs_3 = CTypes
+   end
+   local
+      structure CTypes = gs_3
+      signature MLTREE = gs_0
+      ../staged-allocation/c-call-sig.sml
+   in
+      signature gs_4 = C_CALL
+   end
+   local
+      open l4
+   in
+      structure gs_5 = CellsBasis
+   end
+   local
+      structure CellsBasis = gs_5
+      signature STAGED_ALLOCATION = gs_1
+      signature TARGET_LANG = gs_2
+      ../staged-allocation/call-conv-sig.sml
+   in
+      signature gs_6 = CALL_CONV
+   end
+   local
+      open l26
+   in
+      structure gs_7 = IntBinaryMap
+   end
+   local
+      open l30
+   in
+      structure gs_8 = Int
+   end
+   local
+      structure Int = gs_8
+      structure IntBinaryMap = gs_7
+      signature MLTREE = gs_0
+      signature STAGED_ALLOCATION = gs_1
+      signature TARGET_LANG = gs_2
+      ../staged-allocation/staged-allocation-fn.sml
+   in
+      functor gs_9 = StagedAllocationFn
+   end
+in
+   signature CALL_CONV = gs_6
+   signature C_CALL = gs_4
+   signature STAGED_ALLOCATION = gs_1
+   functor StagedAllocationFn = gs_9
+   signature TARGET_LANG = gs_2
+end
+end
+
+end

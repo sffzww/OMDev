@@ -1,0 +1,2 @@
+C:/Qt/2010.05/mingw/bin/ar.exe cr ../lib/libeo.a  CMakeFiles/eo.dir/eoFunctorStore.cpp.obj CMakeFiles/eo.dir/eoPersistent.cpp.obj CMakeFiles/eo.dir/eoPrintable.cpp.obj CMakeFiles/eo.dir/eoCtrlCContinue.cpp.obj CMakeFiles/eo.dir/eoParetoFitness.cpp.obj CMakeFiles/eo.dir/eoScalarFitnessAssembled.cpp.obj
+C:/Qt/2010.05/mingw/bin/ranlib.exe ../lib/libeo.a

@@ -1,0 +1,267 @@
+diff -c -r pexports-0.41/README pexports-0.43/README
+*** pexports-0.41/README	Sat Nov 07 10:39:42 1998
+--- pexports-0.43/README	Thu Mar 30 21:49:20 2000
+***************
+*** 1,8 ****
+! PEXPORTS README
+  ============================================
+  
+  Anders Norlander <anorland@hem2.passagen.se>
+  URL: hem2.passagen.se/anorland/
+  
+  ============================================
+  
+--- 1,10 ----
+! PEXPORTS 0.43 README
+  ============================================
+  
+  Anders Norlander <anorland@hem2.passagen.se>
+  URL: hem2.passagen.se/anorland/
++ Hacked by Paul.Sokolovsky@technologist.com
++ URL: http://www.is.lg.ua/~paul/devel/binutils.html
+  
+  ============================================
+  
+***************
+*** 14,21 ****
+  convention. GCC is used to do the preprocessing so it must be in your
+  path.
+  
+! A binary for Cygwin b19 is in the cygbin directory.
+! A binary for mingw32 is in the mingwbin directory.
+  
+  Note that the mingw32 version uses ';' as path separator,
+  while the cygwin version uses ':'.
+--- 16,23 ----
+  convention. GCC is used to do the preprocessing so it must be in your
+  path.
+  
+! /*A binary for Cygwin b19 is in the cygbin directory.*/
+! A binary for mingw32 is in the /*mingw*/bin directory.
+  
+  Note that the mingw32 version uses ';' as path separator,
+  while the cygwin version uses ':'.
+***************
+*** 39,44 ****
+--- 41,57 ----
+  conditions when it will fail (especially complex parameter types),
+  although I it works fine for me.  Please report bugs or send me a
+  patch.
++ 
++ CHANGES FROM 0.42:
++ =================
++ * There were bug which led to wrong subcategorizing of symbols as
++ code/data. I thought it was fixed in version on the site, but it turns
++ out that almost year there was wrong version. I greatly apologize to
++ everyone whom it cause problems and confusion.
++ 
++ CHANGES FROM 0.41:
++ =================
++ * Data/non-data symbols are now distinguished.
+  
+  CHANGES FROM 0.4:
+  =================
+Only in pexports-0.43: bin
+diff -c -r pexports-0.41/src/ChangeLog pexports-0.43/src/ChangeLog
+*** pexports-0.41/src/ChangeLog	Sat Nov 07 10:35:46 1998
+--- pexports-0.43/src/ChangeLog	Sun Apr 04 18:31:18 1999
+***************
+*** 1,3 ****
+--- 1,10 ----
++ 1999-04-02  Paul Sokolovsky  <Paul.Sokolovsky@technologist.com>
++ 
++ 	* pexports.c: now distinguishes data/non-data symbols,
++ 	depending on type of section symbol in
++ 	* pexports.c: in verbose mode prints section name for symbol
++ 	* pexports.c: file offsets are now in hex
++ 
+  1998-11-07  Anders Norlander  <kv98anr@cs.umu.se>
+  
+  	* hparse.y: types and parameters are now recognized as
+diff -c -r pexports-0.41/src/Makefile pexports-0.43/src/Makefile
+*** pexports-0.41/src/Makefile	Sat Nov 07 10:33:18 1998
+--- pexports-0.43/src/Makefile	Sun Apr 04 18:29:48 1999
+***************
+*** 1,5 ****
+  LEX=flex
+! YACC=bison
+  
+  CC=gcc
+  
+--- 1,5 ----
+  LEX=flex
+! YACC+=-L/usr/cygwin-b20/share/
+  
+  CC=gcc
+  
+***************
+*** 24,30 ****
+  hparse.o: hparse.c
+  hparse.h: hparse.c
+  hparse.c: hparse.y
+! 	bison -d $< -o $@
+  
+  clean:
+  	$(RM) *.o *.exe hlex.c hparse.c hparse.h
+--- 24,30 ----
+  hparse.o: hparse.c
+  hparse.h: hparse.c
+  hparse.c: hparse.y
+! #	bison -d $< -o $@
+  
+  clean:
+  	$(RM) *.o *.exe hlex.c hparse.c hparse.h
+Only in pexports-0.43/src: pe.h
+diff -c -r pexports-0.41/src/pexports.c pexports-0.43/src/pexports.c
+*** pexports-0.41/src/pexports.c	Thu Nov 05 19:06:38 1998
+--- pexports-0.43/src/pexports.c	Thu Mar 30 21:51:55 2000
+***************
+*** 119,124 ****
+--- 119,125 ----
+    if (filename == NULL)
+      {
+        printf("PExports %d.%d Copyright 1998, Anders Norlander\n"
++       	     "Changed 1999, Paul Sokolovsky\n"
+               "This program is free software; you may redistribute it under the terms of\n"
+               "the GNU General Public License.  This program has absolutely no warranty.\n"
+  
+***************
+*** 127,133 ****
+               "  -o\tprint ordinals\n"
+               "  -p\tset preprocessor program\n"
+               "  -v\tverbose mode\n"
+!              "\nReport bugs to anorland@hem2.passagen.se\n",
+               VER_MAJOR, VER_MINOR,
+               program_name);
+        return 1;
+--- 128,134 ----
+               "  -o\tprint ordinals\n"
+               "  -p\tset preprocessor program\n"
+               "  -v\tverbose mode\n"
+!              "\nReport bugs to anorland@hem2.passagen.se or Paul.Sokolovsky@technologist.com\n",
+               VER_MAJOR, VER_MINOR,
+               program_name);
+        return 1;
+***************
+*** 156,162 ****
+      {
+        if (verbose)
+          {
+!           printf("; %8s: RVA: %08x, File offset: %d\n",
+                   section->Name,
+                   section->VirtualAddress,
+                   section->PointerToRawData);
+--- 157,163 ----
+      {
+        if (verbose)
+          {
+!           printf("; %8s: RVA: %08x, File offset: %08x\n",
+                   section->Name,
+                   section->VirtualAddress,
+                   section->PointerToRawData);
+***************
+*** 223,229 ****
+      {
+        dump_symbol(RVA_TO_PTR(name_table[i],char*),
+                    ordinal_table[i] + exports->Base,
+!                   function_table[i]);
+        printf("\n");
+      }
+  
+--- 224,230 ----
+      {
+        dump_symbol(RVA_TO_PTR(name_table[i],char*),
+                    ordinal_table[i] + exports->Base,
+!                   function_table[ordinal_table[i]]);
+        printf("\n");
+      }
+  
+***************
+*** 258,263 ****
+--- 259,278 ----
+      printf("%-24s\t@%d", s, ord);
+    else
+      printf("%s", s);
++ 
++   {
++     PIMAGE_SECTION_HEADER s=find_section(rva);
++ 
++ /* Stupid msvc doesn't have .bss section, it spews uninitilized data
++    to no section */
++     if (!s) { printf(" DATA"); if (verbose) printf (" ; no section"); }
++     else
++     {
++       if (!(s->Characteristics&IMAGE_SCN_CNT_CODE)) printf(" DATA");
++       if (verbose) printf (" ; %.8s",s->Name);
++     }
++   }
++ 
+    if (verbose)
+      printf(" ; RVA %08x", rva);
+  }
+diff -c -r pexports-0.41/src/pexports.h pexports-0.43/src/pexports.h
+*** pexports-0.41/src/pexports.h	Sat Nov 07 10:36:28 1998
+--- pexports-0.43/src/pexports.h	Thu Mar 30 21:49:54 2000
+***************
+*** 18,24 ****
+  #include "str_tree.h"
+  
+  #define VER_MAJOR 0
+! #define VER_MINOR 41
+  
+  /* These are needed */
+  typedef unsigned short WORD;
+--- 18,24 ----
+  #include "str_tree.h"
+  
+  #define VER_MAJOR 0
+! #define VER_MINOR 43
+  
+  /* These are needed */
+  typedef unsigned short WORD;
+***************
+*** 152,156 ****
+--- 152,163 ----
+  
+  #define ADD_FUNCTION(nm,n) str_tree_add(&symbols, nm, (void*)n)
+  extern str_tree *symbols;
++ 
++ /* pe.h from bfd */
++ 
++ /* dirty! */
++ #define AOUTHDR int
++ 
++ #include "pe.h"
+  
+  #endif /* _pexports_h */
+diff -c -r pexports-0.41/src/str_tree.c pexports-0.43/src/str_tree.c
+*** pexports-0.41/src/str_tree.c	Thu Oct 22 18:13:46 1998
+--- pexports-0.43/src/str_tree.c	Sat Apr 03 01:04:40 1999
+***************
+*** 52,54 ****
+--- 52,64 ----
+        *root = NULL;
+      }
+  }
++ 
++ int str_tree_traverse(str_tree *root,int(*f)(str_tree *node))
++ {
++   if (root == NULL)   return 1;
++ 
++   if (!str_tree_traverse(root->left,f) ||
++       !f(root) ||
++       !str_tree_traverse(root->right,f)) return 0;
++   return 1;
++ }
+diff -c -r pexports-0.41/src/str_tree.h pexports-0.43/src/str_tree.h
+*** pexports-0.41/src/str_tree.h	Thu Nov 05 18:34:20 1998
+--- pexports-0.43/src/str_tree.h	Sat Apr 03 00:55:54 1999
+***************
+*** 10,14 ****
+--- 10,15 ----
+  str_tree *str_tree_add(str_tree **root, const char *s, void *extra);
+  str_tree *str_tree_find(str_tree *node, const char *s);
+  void str_tree_free(str_tree **root);
++ int str_tree_traverse(str_tree *root,int(*f)(str_tree *node));
+  
+  #endif /* _str_tree */

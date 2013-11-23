@@ -1,0 +1,1106 @@
+
+ann
+  "nonexhaustiveMatch warn" "redundantMatch warn"
+  "sequenceNonUnit ignore"
+  "warnUnused false" "forceUsed"
+in
+
+local
+  basis l4 = 
+    bas
+      (* $/basis.cm ====> *) $(SML_LIB)/basis/basis.mlb $(SML_LIB)/basis/unsafe.mlb $(SML_LIB)/basis/sml-nj.mlb
+    end
+in
+local
+   $(SML_LIB)/basis/pervasive.mlb
+   local
+      open l4
+   in
+      structure gs_0 = List
+   end
+   local
+      ord-key-sig.sml
+   in
+      signature gs_1 = ORD_KEY
+   end
+   local
+      signature ORD_KEY = gs_1
+      ord-set-sig.sml
+   in
+      signature gs_2 = ORD_SET
+   end
+   local
+      open l4
+   in
+      structure gs_3 = Int
+   end
+   local
+      lib-base-sig.sml
+   in
+      signature gs_4 = LIB_BASE
+   end
+   local
+      structure Int = gs_3
+      signature LIB_BASE = gs_4
+      lib-base.sml
+   in
+      structure gs_5 = LibBase
+   end
+   local
+      structure LibBase = gs_5
+      structure List = gs_0
+      signature ORD_KEY = gs_1
+      signature ORD_SET = gs_2
+      list-set-fn.sml
+   in
+      functor gs_6 = ListSetFn
+   end
+   local
+      signature ORD_KEY = gs_1
+      ord-map-sig.sml
+   in
+      signature gs_7 = ORD_MAP
+   end
+   local
+      structure LibBase = gs_5
+      structure List = gs_0
+      signature ORD_KEY = gs_1
+      signature ORD_MAP = gs_7
+      list-map-fn.sml
+   in
+      functor gs_8 = ListMapFn
+   end
+   local
+      structure Int = gs_3
+      structure LibBase = gs_5
+      structure List = gs_0
+      signature ORD_SET = gs_2
+      int-binary-set.sml
+   in
+      structure gs_9 = IntBinarySet
+   end
+   local
+      structure Int = gs_3
+      structure LibBase = gs_5
+      signature ORD_MAP = gs_7
+      int-binary-map.sml
+   in
+      structure gs_10 = IntBinaryMap
+   end
+   local
+      prime-sizes.sml
+   in
+      structure gs_11 = PrimeSizes
+   end
+   local
+      open l4
+   in
+      structure gs_12 = Array
+   end
+   local
+      open l4
+   in
+      structure gs_13 = General
+   end
+   local
+      dynamic-array-sig.sml
+   in
+      signature gs_14 = DYNAMIC_ARRAY
+   end
+   local
+      structure Array = gs_12
+      signature DYNAMIC_ARRAY = gs_14
+      structure General = gs_13
+      structure Int = gs_3
+      dynamic-array.sml
+   in
+      structure gs_15 = DynamicArray
+   end
+   local
+      io-util-sig.sml
+   in
+      signature gs_16 = IO_UTIL
+   end
+   local
+      splaytree-sig.sml
+   in
+      signature gs_17 = SPLAY_TREE
+   end
+   local
+      signature SPLAY_TREE = gs_17
+      splaytree.sml
+   in
+      structure gs_18 = SplayTree
+   end
+   local
+      structure LibBase = gs_5
+      structure List = gs_0
+      signature ORD_KEY = gs_1
+      signature ORD_SET = gs_2
+      structure SplayTree = gs_18
+      splay-set-fn.sml
+   in
+      functor gs_19 = SplaySetFn
+   end
+   local
+      structure LibBase = gs_5
+      signature ORD_KEY = gs_1
+      signature ORD_MAP = gs_7
+      structure SplayTree = gs_18
+      splay-map-fn.sml
+   in
+      functor gs_20 = SplayMapFn
+   end
+   local
+      open l4
+   in
+      structure gs_21 = TextIO
+   end
+   local
+      structure Int = gs_3
+      structure List = gs_0
+      structure TextIO = gs_21
+      ansi-term.sml
+   in
+      structure gs_22 = ANSITerm
+   end
+   local
+      signature IO_UTIL = gs_16
+      structure TextIO = gs_21
+      io-util.sml
+   in
+      structure gs_23 = IOUtil
+   end
+   local
+      plist-sig.sml
+   in
+      signature gs_24 = PROP_LIST
+   end
+   local
+      open l4
+   in
+      structure gs_25 = String
+   end
+   local
+      open l4
+   in
+      structure gs_26 = Substring
+   end
+   local
+      open l4
+   in
+      structure gs_27 = StringCvt
+   end
+   local
+      open l4
+   in
+      structure gs_28 = Char
+   end
+   local
+      getopt-sig.sml
+   in
+      signature gs_29 = GET_OPT
+   end
+   local
+      structure Char = gs_28
+      signature GET_OPT = gs_29
+      structure Int = gs_3
+      structure List = gs_0
+      structure String = gs_25
+      structure StringCvt = gs_27
+      structure Substring = gs_26
+      getopt.sml
+   in
+      structure gs_30 = GetOpt
+   end
+   local
+      interval-domain-sig.sml
+   in
+      signature gs_31 = INTERVAL_DOMAIN
+   end
+   local
+      signature INTERVAL_DOMAIN = gs_31
+      interval-set-sig.sml
+   in
+      signature gs_32 = INTERVAL_SET
+   end
+   local
+      structure StringCvt = gs_27
+      parser-comb-sig.sml
+   in
+      signature gs_33 = PARSER_COMB
+   end
+   local
+      open l4
+   in
+      structure gs_34 = Word8
+   end
+   local
+      open l4
+   in
+      structure gs_35 = CharVector
+   end
+   local
+      open l4
+   in
+      structure gs_36 = LargeWord
+   end
+   local
+      open l4
+   in
+      structure gs_37 = LargeInt
+   end
+   local
+      open l4
+   in
+      structure gs_38 = Word
+   end
+   local
+      open l4
+   in
+      structure gs_39 = Real
+   end
+   local
+      open l4
+   in
+      structure gs_40 = LargeReal
+   end
+   local
+      atom-sig.sml
+   in
+      signature gs_41 = ATOM
+   end
+   local
+      open l4
+   in
+      structure gs_42 = Unsafe
+   end
+   local
+      structure Char = gs_28
+      structure Substring = gs_26
+      structure Unsafe = gs_42
+      structure Word = gs_38
+      hash-string.sml
+   in
+      structure gs_43 = HashString
+   end
+   local
+      signature ATOM = gs_41
+      structure Array = gs_12
+      structure HashString = gs_43
+      structure String = gs_25
+      structure Substring = gs_26
+      structure Word = gs_38
+      atom.sml
+   in
+      structure gs_44 = Atom
+   end
+   local
+      structure Atom = gs_44
+      structure Int = gs_3
+      structure LargeInt = gs_37
+      structure LargeReal = gs_40
+      structure LargeWord = gs_36
+      structure Real = gs_39
+      structure Word = gs_38
+      structure Word8 = gs_34
+      format-sig.sml
+   in
+      signature gs_45 = FORMAT
+   end
+   local
+      structure Int = gs_3
+      structure String = gs_25
+      structure StringCvt = gs_27
+      real-format.sml
+   in
+      structure gs_46 = RealFormat
+   end
+   local
+      structure Atom = gs_44
+      structure Char = gs_28
+      structure Int = gs_3
+      structure LargeInt = gs_37
+      structure LargeReal = gs_40
+      structure LargeWord = gs_36
+      structure Real = gs_39
+      structure StringCvt = gs_27
+      structure Substring = gs_26
+      structure Word = gs_38
+      structure Word8 = gs_34
+      fmt-fields.sml
+   in
+      structure gs_47 = FmtFields
+   end
+   local
+      structure Atom = gs_44
+      structure Char = gs_28
+      structure CharVector = gs_35
+      signature FORMAT = gs_45
+      structure FmtFields = gs_47
+      structure Int = gs_3
+      structure LargeInt = gs_37
+      structure LargeWord = gs_36
+      structure Real = gs_39
+      structure RealFormat = gs_46
+      structure String = gs_25
+      structure StringCvt = gs_27
+      structure Substring = gs_26
+      structure Word = gs_38
+      structure Word8 = gs_34
+      format.sml
+   in
+      structure gs_48 = Format
+   end
+   local
+      priority-sig.sml
+   in
+      signature gs_49 = PRIORITY
+   end
+   local
+      hash-key-sig.sml
+   in
+      signature gs_50 = HASH_KEY
+   end
+   local
+      signature HASH_KEY = gs_50
+      mono-hash-table-sig.sml
+   in
+      signature gs_51 = MONO_HASH_TABLE
+   end
+   local
+      structure Array = gs_12
+      structure Word = gs_38
+      hash-table-rep.sml
+   in
+      structure gs_52 = HashTableRep
+   end
+   local
+      structure Array = gs_12
+      structure HashTableRep = gs_52
+      signature MONO_HASH_TABLE = gs_51
+      structure Word = gs_38
+      int-hash-table.sml
+   in
+      structure gs_53 = IntHashTable
+   end
+   local
+      open l4
+   in
+      signature gs_54 = MONO_ARRAY
+   end
+   local
+      signature MONO_ARRAY = gs_54
+      bit-array-sig.sml
+   in
+      signature gs_55 = BIT_ARRAY
+   end
+   local
+      structure LibBase = gs_5
+      signature ORD_KEY = gs_1
+      signature ORD_SET = gs_2
+      redblack-set-fn.sml
+   in
+      functor gs_56 = RedBlackSetFn
+   end
+   local
+      structure Atom = gs_44
+      functor RedBlackSetFn = gs_56
+      atom-redblack-set.sml
+   in
+      structure gs_57 = AtomRedBlackSet
+   end
+   local
+      structure AtomRedBlackSet = gs_57
+      atom-set.sml
+   in
+      structure gs_58 = AtomSet
+   end
+   local
+      structure LibBase = gs_5
+      signature ORD_KEY = gs_1
+      signature ORD_MAP = gs_7
+      redblack-map-fn.sml
+   in
+      functor gs_59 = RedBlackMapFn
+   end
+   local
+      structure Atom = gs_44
+      functor RedBlackMapFn = gs_59
+      atom-redblack-map.sml
+   in
+      structure gs_60 = AtomRedBlackMap
+   end
+   local
+      structure AtomRedBlackMap = gs_60
+      atom-map.sml
+   in
+      structure gs_61 = AtomMap
+   end
+   local
+      structure List = gs_0
+      signature PROP_LIST = gs_24
+      plist.sml
+   in
+      structure gs_62 = PropList
+   end
+   local
+      open l4
+   in
+      structure gs_63 = Vector
+   end
+   local
+      char-map-sig.sml
+   in
+      signature gs_64 = CHAR_MAP
+   end
+   local
+      structure Array = gs_12
+      signature CHAR_MAP = gs_64
+      structure Char = gs_28
+      structure String = gs_25
+      structure Vector = gs_63
+      char-map.sml
+   in
+      structure gs_65 = CharMap
+   end
+   local
+      list-xprod-sig.sml
+   in
+      signature gs_66 = LIST_XPROD
+   end
+   local
+      signature ORD_KEY = gs_1
+      graph-scc-sig.sml
+   in
+      signature gs_67 = GRAPH_SCC
+   end
+   local
+      signature GRAPH_SCC = gs_67
+      structure List = gs_0
+      signature ORD_KEY = gs_1
+      functor RedBlackMapFn = gs_59
+      graph-scc-fn.sml
+   in
+      functor gs_68 = GraphSCCFn
+   end
+   local
+      structure Array = gs_12
+      signature HASH_KEY = gs_50
+      structure HashTableRep = gs_52
+      signature MONO_HASH_TABLE = gs_51
+      structure Word = gs_38
+      hash-table-fn.sml
+   in
+      functor gs_69 = HashTableFn
+   end
+   local
+      structure Atom = gs_44
+      functor HashTableFn = gs_69
+      atom-table.sml
+   in
+      structure gs_70 = AtomTable
+   end
+   local
+      structure StringCvt = gs_27
+      list-format-sig.sml
+   in
+      signature gs_71 = LIST_FORMAT
+   end
+   local
+      signature LIST_FORMAT = gs_71
+      structure String = gs_25
+      structure StringCvt = gs_27
+      list-format.sml
+   in
+      structure gs_72 = ListFormat
+   end
+   local
+      open l4
+   in
+      signature gs_73 = MONO_VECTOR
+   end
+   local
+      signature MONO_VECTOR = gs_73
+      bit-vector-sig.sml
+   in
+      signature gs_74 = BIT_VECTOR
+   end
+   local
+      signature PARSER_COMB = gs_33
+      structure StringCvt = gs_27
+      structure Substring = gs_26
+      parser-comb.sml
+   in
+      structure gs_75 = ParserComb
+   end
+   local
+      signature HASH_KEY = gs_50
+      mono-hash2-table-sig.sml
+   in
+      signature gs_76 = MONO_HASH2_TABLE
+   end
+   local
+      signature INTERVAL_DOMAIN = gs_31
+      signature INTERVAL_SET = gs_32
+      structure List = gs_0
+      interval-set-fn.sml
+   in
+      functor gs_77 = IntervalSetFn
+   end
+   local
+      structure LibBase = gs_5
+      signature ORD_SET = gs_2
+      structure Word = gs_38
+      word-redblack-set.sml
+   in
+      structure gs_78 = WordRedBlackSet
+   end
+   local
+      structure LibBase = gs_5
+      signature ORD_MAP = gs_7
+      structure Word = gs_38
+      word-redblack-map.sml
+   in
+      structure gs_79 = WordRedBlackMap
+   end
+   local
+      structure Int = gs_3
+      structure LibBase = gs_5
+      structure List = gs_0
+      signature ORD_SET = gs_2
+      int-list-set.sml
+   in
+      structure gs_80 = IntListSet
+   end
+   local
+      structure Int = gs_3
+      structure LibBase = gs_5
+      structure List = gs_0
+      signature ORD_MAP = gs_7
+      int-list-map.sml
+   in
+      structure gs_81 = IntListMap
+   end
+   local
+      open l4
+   in
+      structure gs_82 = OS
+   end
+   local
+      path-util-sig.sml
+   in
+      signature gs_83 = PATH_UTIL
+   end
+   local
+      structure OS = gs_82
+      signature PATH_UTIL = gs_83
+      path-util.sml
+   in
+      structure gs_84 = PathUtil
+   end
+   local
+      structure LibBase = gs_5
+      structure List = gs_0
+      signature ORD_KEY = gs_1
+      signature ORD_SET = gs_2
+      binary-set-fn.sml
+   in
+      functor gs_85 = BinarySetFn
+   end
+   local
+      structure LibBase = gs_5
+      signature ORD_KEY = gs_1
+      signature ORD_MAP = gs_7
+      binary-map-fn.sml
+   in
+      functor gs_86 = BinaryMapFn
+   end
+   local
+      open l4
+   in
+      structure gs_87 = ArraySlice
+   end
+   local
+      open l4
+   in
+      structure gs_88 = Math
+   end
+   local
+      open l4
+   in
+      structure gs_89 = PackWord32Big
+   end
+   local
+      open l4
+   in
+      structure gs_90 = Word8Vector
+   end
+   local
+      open l4
+   in
+      structure gs_91 = Word8Array
+   end
+   local
+      open l4
+   in
+      structure gs_92 = Word31
+   end
+   local
+      open l4
+   in
+      structure gs_93 = Byte
+   end
+   local
+      random-sig.sml
+   in
+      signature gs_94 = RANDOM
+   end
+   local
+      structure Array = gs_12
+      structure Byte = gs_93
+      structure LargeWord = gs_36
+      structure LibBase = gs_5
+      structure PackWord32Big = gs_89
+      signature RANDOM = gs_94
+      structure Word31 = gs_92
+      structure Word8Array = gs_91
+      structure Word8Vector = gs_90
+      random.sml
+   in
+      structure gs_95 = Random
+   end
+   local
+      structure Array = gs_12
+      structure ArraySlice = gs_87
+      structure Random = gs_95
+      structure Real = gs_39
+      structure Unsafe = gs_42
+      structure Word = gs_38
+      real-order-stats.sml
+   in
+      structure gs_96 = RealOrderStats
+   end
+   local
+      structure Array = gs_12
+      structure ArraySlice = gs_87
+      structure Math = gs_88
+      structure RealOrderStats = gs_96
+      structure Unsafe = gs_42
+      univariate-stats.sml
+   in
+      structure gs_97 = UnivariateStats
+   end
+   local
+      signature BIT_ARRAY = gs_55
+      structure Byte = gs_93
+      structure Int = gs_3
+      structure LibBase = gs_5
+      structure List = gs_0
+      structure Word = gs_38
+      structure Word8 = gs_34
+      structure Word8Array = gs_91
+      structure Word8Vector = gs_90
+      bit-array.sml
+   in
+      structure gs_98 = BitArray
+   end
+   local
+      structure Array = gs_12
+      signature MONO_ARRAY = gs_54
+      structure Vector = gs_63
+      mono-array-fn.sml
+   in
+      functor gs_99 = MonoArrayFn
+   end
+   local
+      signature MONO_ARRAY = gs_54
+      bsearch-fn.sml
+   in
+      functor gs_100 = BSearchFn
+   end
+   local
+      mono-dynamic-array-sig.sml
+   in
+      signature gs_101 = MONO_DYNAMIC_ARRAY
+   end
+   local
+      open l4
+   in
+      structure gs_102 = Bool
+   end
+   local
+      structure StringCvt = gs_27
+      format-comb-sig.sml
+   in
+      signature gs_103 = FORMAT_COMB
+   end
+   local
+      structure Bool = gs_102
+      structure Char = gs_28
+      signature FORMAT_COMB = gs_103
+      structure Int = gs_3
+      structure Real = gs_39
+      structure String = gs_25
+      structure StringCvt = gs_27
+      format-comb.sml
+   in
+      structure gs_104 = FormatComb
+   end
+   local
+      queue-sig.sml
+   in
+      signature gs_105 = QUEUE
+   end
+   local
+      fifo-sig.sml
+   in
+      signature gs_106 = FIFO
+   end
+   local
+      signature FIFO = gs_106
+      structure List = gs_0
+      fifo.sml
+   in
+      structure gs_107 = Fifo
+   end
+   local
+      structure Fifo = gs_107
+      signature QUEUE = gs_105
+      queue.sml
+   in
+      structure gs_108 = Queue
+   end
+   local
+      structure Array = gs_12
+      signature HASH_KEY = gs_50
+      structure HashTableRep = gs_52
+      signature MONO_HASH2_TABLE = gs_76
+      structure Word = gs_38
+      hash2-table-fn.sml
+   in
+      functor gs_109 = Hash2TableFn
+   end
+   local
+      structure Array = gs_12
+      structure HashTableRep = gs_52
+      signature MONO_HASH_TABLE = gs_51
+      structure Word = gs_38
+      word-hash-table.sml
+   in
+      structure gs_110 = WordHashTable
+   end
+   local
+      structure Atom = gs_44
+      structure AtomTable = gs_70
+      structure List = gs_0
+      keyword-fn.sml
+   in
+      functor gs_111 = KeywordFn
+   end
+   local
+      mono-priorityq-sig.sml
+   in
+      signature gs_112 = MONO_PRIORITYQ
+   end
+   local
+      structure List = gs_0
+      signature MONO_PRIORITYQ = gs_112
+      signature PRIORITY = gs_49
+      left-priorityq-fn.sml
+   in
+      functor gs_113 = LeftPriorityQFn
+   end
+   local
+      hash-table-sig.sml
+   in
+      signature gs_114 = HASH_TABLE
+   end
+   local
+      structure Array = gs_12
+      signature HASH_TABLE = gs_114
+      structure HashTableRep = gs_52
+      structure Word = gs_38
+      hash-table.sml
+   in
+      structure gs_115 = HashTable
+   end
+   local
+      structure General = gs_13
+      structure Int = gs_3
+      signature MONO_ARRAY = gs_54
+      signature MONO_DYNAMIC_ARRAY = gs_101
+      dynamic-array-fn.sml
+   in
+      functor gs_116 = DynamicArrayFn
+   end
+   local
+      signature MONO_ARRAY = gs_54
+      mono-array-sort-sig.sml
+   in
+      signature gs_117 = MONO_ARRAY_SORT
+   end
+   local
+      structure Int = gs_3
+      structure LibBase = gs_5
+      signature ORD_SET = gs_2
+      int-redblack-set.sml
+   in
+      structure gs_118 = IntRedBlackSet
+   end
+   local
+      structure Int = gs_3
+      structure LibBase = gs_5
+      signature ORD_MAP = gs_7
+      int-redblack-map.sml
+   in
+      structure gs_119 = IntRedBlackMap
+   end
+   local
+      array-sort-sig.sml
+   in
+      signature gs_120 = ARRAY_SORT
+   end
+   local
+      signature ARRAY_SORT = gs_120
+      structure Array = gs_12
+      structure Int = gs_3
+      structure Unsafe = gs_42
+      array-qsort.sml
+   in
+      structure gs_121 = ArrayQSort
+   end
+   local
+      uref-sig.sml
+   in
+      signature gs_122 = UREF
+   end
+   local
+      signature UREF = gs_122
+      simple-uref.sml
+   in
+      structure gs_123 = SimpleURef
+   end
+   local
+      listsort-sig.sml
+   in
+      signature gs_124 = LIST_SORT
+   end
+   local
+      signature LIST_SORT = gs_124
+      structure LibBase = gs_5
+      list-mergesort.sml
+   in
+      structure gs_125 = ListMergeSort
+   end
+   local
+      structure Int = gs_3
+      signature MONO_ARRAY = gs_54
+      signature MONO_ARRAY_SORT = gs_117
+      array-qsort-fn.sml
+   in
+      functor gs_126 = ArrayQSortFn
+   end
+   local
+      structure Atom = gs_44
+      functor BinarySetFn = gs_85
+      atom-binary-set.sml
+   in
+      structure gs_127 = AtomBinarySet
+   end
+   local
+      structure Atom = gs_44
+      functor BinaryMapFn = gs_86
+      atom-binary-map.sml
+   in
+      structure gs_128 = AtomBinaryMap
+   end
+   local
+      structure StringCvt = gs_27
+      utf8-sig.sml
+   in
+      signature gs_129 = UTF8
+   end
+   local
+      structure Char = gs_28
+      structure String = gs_25
+      structure StringCvt = gs_27
+      structure Substring = gs_26
+      signature UTF8 = gs_129
+      structure Word = gs_38
+      utf8.sml
+   in
+      structure gs_130 = UTF8
+   end
+   local
+      signature UREF = gs_122
+      uref.sml
+   in
+      structure gs_131 = URef
+   end
+   local
+      structure Atom = gs_44
+      structure Int = gs_3
+      structure LargeInt = gs_37
+      structure LargeReal = gs_40
+      structure LargeWord = gs_36
+      structure Real = gs_39
+      structure StringCvt = gs_27
+      structure Word = gs_38
+      structure Word8 = gs_34
+      scan-sig.sml
+   in
+      signature gs_132 = SCAN
+   end
+   local
+      structure Bool = gs_102
+      structure Char = gs_28
+      structure FmtFields = gs_47
+      structure Int = gs_3
+      structure LargeInt = gs_37
+      structure LargeReal = gs_40
+      signature SCAN = gs_132
+      structure StringCvt = gs_27
+      structure Substring = gs_26
+      structure Word8Array = gs_91
+      scan.sml
+   in
+      structure gs_133 = Scan
+   end
+   local
+      open l4
+   in
+      structure gs_134 = Int32
+   end
+   local
+      structure Word31 = gs_92
+      rand-sig.sml
+   in
+      signature gs_135 = RAND
+   end
+   local
+      structure Int32 = gs_134
+      structure LibBase = gs_5
+      signature RAND = gs_135
+      structure Real = gs_39
+      structure Word31 = gs_92
+      rand.sml
+   in
+      structure gs_136 = Rand
+   end
+   local
+      signature LIST_XPROD = gs_66
+      list-xprod.sml
+   in
+      structure gs_137 = ListXProd
+   end
+in
+   structure ANSITerm = gs_22
+   signature ARRAY_SORT = gs_120
+   signature ATOM = gs_41
+   structure ArrayQSort = gs_121
+   functor ArrayQSortFn = gs_126
+   structure Atom = gs_44
+   structure AtomBinaryMap = gs_128
+   structure AtomBinarySet = gs_127
+   structure AtomMap = gs_61
+   structure AtomRedBlackMap = gs_60
+   structure AtomRedBlackSet = gs_57
+   structure AtomSet = gs_58
+   structure AtomTable = gs_70
+   signature BIT_ARRAY = gs_55
+   signature BIT_VECTOR = gs_74
+   functor BSearchFn = gs_100
+   functor BinaryMapFn = gs_86
+   functor BinarySetFn = gs_85
+   structure BitArray = gs_98
+   signature CHAR_MAP = gs_64
+   structure CharMap = gs_65
+   signature DYNAMIC_ARRAY = gs_14
+   structure DynamicArray = gs_15
+   functor DynamicArrayFn = gs_116
+   signature FIFO = gs_106
+   signature FORMAT = gs_45
+   signature FORMAT_COMB = gs_103
+   structure Fifo = gs_107
+   structure Format = gs_48
+   structure FormatComb = gs_104
+   signature GET_OPT = gs_29
+   signature GRAPH_SCC = gs_67
+   structure GetOpt = gs_30
+   functor GraphSCCFn = gs_68
+   signature HASH_KEY = gs_50
+   signature HASH_TABLE = gs_114
+   functor Hash2TableFn = gs_109
+   structure HashString = gs_43
+   structure HashTable = gs_115
+   functor HashTableFn = gs_69
+   signature INTERVAL_DOMAIN = gs_31
+   signature INTERVAL_SET = gs_32
+   structure IOUtil = gs_23
+   signature IO_UTIL = gs_16
+   structure IntBinaryMap = gs_10
+   structure IntBinarySet = gs_9
+   structure IntHashTable = gs_53
+   structure IntListMap = gs_81
+   structure IntListSet = gs_80
+   structure IntRedBlackMap = gs_119
+   structure IntRedBlackSet = gs_118
+   functor IntervalSetFn = gs_77
+   functor KeywordFn = gs_111
+   signature LIB_BASE = gs_4
+   signature LIST_FORMAT = gs_71
+   signature LIST_SORT = gs_124
+   signature LIST_XPROD = gs_66
+   functor LeftPriorityQFn = gs_113
+   structure LibBase = gs_5
+   structure ListFormat = gs_72
+   functor ListMapFn = gs_8
+   structure ListMergeSort = gs_125
+   functor ListSetFn = gs_6
+   structure ListXProd = gs_137
+   signature MONO_ARRAY_SORT = gs_117
+   signature MONO_DYNAMIC_ARRAY = gs_101
+   signature MONO_HASH2_TABLE = gs_76
+   signature MONO_HASH_TABLE = gs_51
+   signature MONO_PRIORITYQ = gs_112
+   functor MonoArrayFn = gs_99
+   signature ORD_KEY = gs_1
+   signature ORD_MAP = gs_7
+   signature ORD_SET = gs_2
+   signature PARSER_COMB = gs_33
+   signature PATH_UTIL = gs_83
+   signature PRIORITY = gs_49
+   signature PROP_LIST = gs_24
+   structure ParserComb = gs_75
+   structure PathUtil = gs_84
+   structure PrimeSizes = gs_11
+   structure PropList = gs_62
+   signature QUEUE = gs_105
+   structure Queue = gs_108
+   signature RAND = gs_135
+   signature RANDOM = gs_94
+   structure Rand = gs_136
+   structure Random = gs_95
+   structure RealOrderStats = gs_96
+   functor RedBlackMapFn = gs_59
+   functor RedBlackSetFn = gs_56
+   signature SCAN = gs_132
+   signature SPLAY_TREE = gs_17
+   structure Scan = gs_133
+   structure SimpleURef = gs_123
+   functor SplayMapFn = gs_20
+   functor SplaySetFn = gs_19
+   structure SplayTree = gs_18
+   signature UREF = gs_122
+   structure URef = gs_131
+   signature UTF8 = gs_129
+   structure UTF8 = gs_130
+   structure UnivariateStats = gs_97
+   structure WordHashTable = gs_110
+   structure WordRedBlackMap = gs_79
+   structure WordRedBlackSet = gs_78
+end
+end
+
+end

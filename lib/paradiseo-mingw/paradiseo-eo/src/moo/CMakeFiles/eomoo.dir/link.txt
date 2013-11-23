@@ -1,0 +1,2 @@
+C:/Qt/2010.05/mingw/bin/ar.exe cr ../../lib/libeomoo.a  CMakeFiles/eomoo.dir/eoFrontSorter.cpp.obj CMakeFiles/eomoo.dir/eoNSGA_IIa_Eval.cpp.obj CMakeFiles/eomoo.dir/eoNSGA_II_Eval.cpp.obj
+C:/Qt/2010.05/mingw/bin/ranlib.exe ../../lib/libeomoo.a
