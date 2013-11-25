@@ -10,9 +10,8 @@ typedef unsigned long long rml_uint_t;
 #define RML_LOG2_SIZE_INT 3
 #define RML_SIZE_INT 8
 #define RML_SIZE_DBL 8
-/*
-#define RML_DBL_PAD
-#define RML_DBL_STRICT *//* conservative assumption */
+/* #define RML_DBL_PAD */
+#define RML_DBL_STRICT /* conservative assumption */
 /* end of repchk-generated section */
 
 #define	RML_CLOCK_ANSIC
@@ -83,7 +82,8 @@ typedef unsigned long long rml_uint_t;
  * An even value i<<1 represents the integer i.
  * An odd value p+3 represents (a pointer to) the node at even address p-3.
  * A value is typed as `void*'. When manipulated as an integer (possibly unsigned),
- * the typedef rml_sint_t (or rml_uint_t) is used. This type is either int or long.
+ * the typedef rml_sint_t (or rml_uint_t) is used. This type is either int or (long)
+ * or (long long).
  * False and true are represented as the fixnums 0 and 1, respectively.
  *
  * On a 64-bit machine, a value is a 64-bit quantity.
@@ -239,7 +239,7 @@ extern double rml_prim_get_real(void*);
 extern void rml_prim_set_real(struct rml_real*, double);
 #else	/* !RML_DBL_STRICT */
 #define rml_prim_get_real(x)	(*(double*)RML_REALDATA(x))
-#define rml_prim_set_real(p,d)	(*(double*)((p)->data) = (d))
+#define rml_prim_set_real(p,d)	(*(double*)(((struct rml_real*)p)->data) = (d))
 #endif	/* RML_DBL_STRICT */
 
 /* STRUCTS */
@@ -404,27 +404,27 @@ extern void  rml_prim_unwind_(void**);
  *   stringHashSdbm -> rml_sdbm_hash
  */
 /*** djb2 hash ***/
-STATIC_INLINE unsigned long rml_djb2_hash(unsigned char *str)
+STATIC_INLINE rml_uint_t rml_djb2_hash(unsigned char *str)
 {
-  unsigned long hash = 5381;
-  int c;
+  rml_uint_t hash = 5381;
+  unsigned int c;
   while (0 != (c = *str++))  hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
   return hash;
 }
 
 /*** sdbm hash ***/
-STATIC_INLINE unsigned long rml_sdbm_hash(unsigned char* str)
+STATIC_INLINE rml_uint_t rml_sdbm_hash(unsigned char* str)
 {
-  unsigned long hash = 0;
-  int c;
+  rml_uint_t hash = 0;
+  unsigned int c;
   while (0 != (c = *str++)) hash = c + (hash << 6) + (hash << 16) - hash;
   return hash;
 }
 
-STATIC_INLINE unsigned long rml_default_hash(unsigned char* str)
+STATIC_INLINE rml_uint_t rml_default_hash(unsigned char* str)
 {
-  unsigned long hash = 0;
-  int c;
+  rml_uint_t hash = 0;
+  unsigned int c;
   while (0 != (c = *str++)) hash += c;
   return hash;
 }
@@ -794,6 +794,11 @@ RML_BEGIN_MODULE(RML_GLUE(module__,LABEL))
 /* memory allocation */
 extern void rml_prim_gc(rml_uint_t, rml_uint_t);
 #define RML_ALLOC(VAR,NWORDS,NARGS,TAGLABEL) do{(VAR)=(void*)rml_young_next;if((rml_young_next=(void**)(VAR)+(NWORDS))>=rml_young_limit){gc_nwords=(NWORDS);gc_nargs=(NARGS);switch_tag=TAGLABEL;goto collect;}}while(0)
+
+#define RML_CHECK_POINTER(VAR, UNUSEDLABEL, LABEL_STRING) 
+
+
+
 
 /*
  * rml-predef.h
