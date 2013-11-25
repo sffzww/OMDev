@@ -31,7 +31,7 @@ installed_prefix ()
     echo $RESULT
 }
 
-prefix_build="/tmp/x64-481-win32-seh-r5/mingw64/opt"
+prefix_build="/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt"
 prefix_real=$(installed_prefix "$0")
 
 # Use sed to fix paths from their built to locations to their installed to locations.
@@ -40,7 +40,7 @@ exec_prefix_build="${prefix}"
 exec_prefix=$(echo "$exec_prefix_build" | sed "s#$exec_prefix_build#$prefix_real#")
 includedir=$(echo "${prefix}/include" | sed "s#$prefix_build#$prefix_real#")
 libdir=$(echo "${exec_prefix}/lib" | sed "s#$prefix_build#$prefix_real#")
-CFLAGS=$(echo "-O2 -pipe -I/tmp/x64-481-win32-seh-r5/libs/include -I/tmp/mingw-prereq/x64-zlib/include -I/tmp/mingw-prereq/x86_64-w64-mingw32-static/include -fwrapv -DNDEBUG -D__USE_MINGW_ANSI_STDIO=1" | sed "s#$prefix_build#$prefix_real#")
+CFLAGS=$(echo "-O2 -pipe -I/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/include -I/tmp/prerequisites/x86_64-zlib-static/include -I/tmp/prerequisites/x86_64-w64-mingw32-static/include -fwrapv -DNDEBUG -D__USE_MINGW_ANSI_STDIO=1" | sed "s#$prefix_build#$prefix_real#")
 VERSION="2.7"
 LIBM=""
 LIBC=""

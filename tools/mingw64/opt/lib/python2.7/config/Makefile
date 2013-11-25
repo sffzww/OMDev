@@ -29,8 +29,8 @@ VERSION=	2.7
 srcdir=		../../../src/Python-2.7.5
 VPATH=		../../../src/Python-2.7.5
 MSYSVPATH=	../../../src/Python-2.7.5
-abs_srcdir=	/tmp/x64-481-win32-seh-r5/build/Python-2.7.5/../../../src/Python-2.7.5
-abs_builddir=	/tmp/x64-481-win32-seh-r5/build/Python-2.7.5
+abs_srcdir=	/tmp/x86_64-482-win32-seh-rt_v3-r0/build/Python-2.7.5/../../../src/Python-2.7.5
+abs_builddir=	/tmp/x86_64-482-win32-seh-rt_v3-r0/build/Python-2.7.5
 build=		x86_64-w64-mingw32
 host=		x86_64-w64-mingw32
 
@@ -70,12 +70,12 @@ MAKESETUP=      $(srcdir)/Modules/makesetup
 # Compiler options
 OPT=		-DNDEBUG 
 BASECFLAGS=	 -fno-strict-aliasing
-CFLAGS=		$(BASECFLAGS) -O2 -pipe -I/tmp/x64-481-win32-seh-r5/libs/include -I/tmp/mingw-prereq/x64-zlib/include -I/tmp/mingw-prereq/x86_64-w64-mingw32-static/include -fwrapv -DNDEBUG -D__USE_MINGW_ANSI_STDIO=1 $(OPT) $(EXTRA_CFLAGS)
+CFLAGS=		$(BASECFLAGS) -O2 -pipe -I/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/include -I/tmp/prerequisites/x86_64-zlib-static/include -I/tmp/prerequisites/x86_64-w64-mingw32-static/include -fwrapv -DNDEBUG -D__USE_MINGW_ANSI_STDIO=1 $(OPT) $(EXTRA_CFLAGS)
 # Both CPPFLAGS and LDFLAGS need to contain the shell's value for setup.py to
 # be able to build extension modules using the directories specified in the
 # environment variables
-CPPFLAGS=	-I. -IInclude -I$(srcdir)/Include -I$(srcdir)/Python -I$(srcdir)/PC  -IC:/Temp/msys64/tmp/x64-481-win32-seh-r5/libs/include -IC:/Temp/msys64/tmp/x64-481-win32-seh-r5/libs/include/ncurses -IC:/Temp/msys64/tmp/mingw-prereq/x64-zlib/include -IC:/Temp/msys64/tmp/x64-481-win32-seh-r5/mingw64/opt/include
-LDFLAGS=	-pipe -L/tmp/x64-481-win32-seh-r5/libs/lib -L/tmp/mingw-prereq/x64-zlib/lib -L/tmp/mingw-prereq/x86_64-w64-mingw32-static/lib -L/tmp/x64-481-win32-seh-r5/mingw64/opt/lib -LC:/Temp/msys64/tmp/mingw-prereq/x64-zlib/lib -LC:/Temp/msys64/tmp/x64-481-win32-seh-r5/mingw64/opt/lib -LC:/Temp/msys64/tmp/x64-481-win32-seh-r5/libs/lib
+CPPFLAGS=	-I. -IInclude -I$(srcdir)/Include -I$(srcdir)/Python -I$(srcdir)/PC  -IC:/Temp/msys64/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/include -IC:/Temp/msys64/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/include/ncurses -IC:/Temp/msys64/tmp/prerequisites/x86_64-zlib-static/include
+LDFLAGS=	-pipe -L/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/lib -L/tmp/prerequisites/x86_64-zlib-static/lib -L/tmp/prerequisites/x86_64-w64-mingw32-static/lib -LC:/Temp/msys64/tmp/prerequisites/x86_64-zlib-static/lib -LC:/Temp/msys64/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/lib
 LDLAST=		
 SGI_ABI=	
 CCSHARED=	
@@ -95,7 +95,7 @@ MACHDEP=	win32
 MULTIARCH=	
 
 # Install prefix for architecture-independent files
-prefix=		/tmp/x64-481-win32-seh-r5/mingw64/opt
+prefix=		/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -154,7 +154,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--host=x86_64-w64-mingw32' '--build=x86_64-w64-mingw32' '--prefix=/tmp/x64-481-win32-seh-r5/mingw64/opt' '--enable-shared' '--disable-ipv6' '--without-pydebug' '--with-system-expat' '--with-system-ffi' 'CXX=x86_64-w64-mingw32-g++' 'LIBFFI_INCLUDEDIR=C:/Temp/msys64/tmp/x64-481-win32-seh-r5/libs/lib/libffi-3.0.13/include' 'OPT=' 'CFLAGS=-O2 -pipe -I/tmp/x64-481-win32-seh-r5/libs/include -I/tmp/mingw-prereq/x64-zlib/include -I/tmp/mingw-prereq/x86_64-w64-mingw32-static/include -fwrapv -DNDEBUG -D__USE_MINGW_ANSI_STDIO=1' 'CXXFLAGS=-O2 -pipe -I/tmp/x64-481-win32-seh-r5/libs/include -I/tmp/mingw-prereq/x64-zlib/include -I/tmp/mingw-prereq/x86_64-w64-mingw32-static/include -fwrapv -DNDEBUG -D__USE_MINGW_ANSI_STDIO=1 -IC:/Temp/msys64/tmp/x64-481-win32-seh-r5/libs/include -IC:/Temp/msys64/tmp/x64-481-win32-seh-r5/libs/include/ncurses -IC:/Temp/msys64/tmp/mingw-prereq/x64-zlib/include -IC:/Temp/msys64/tmp/x64-481-win32-seh-r5/mingw64/opt/include' 'CPPFLAGS= -IC:/Temp/msys64/tmp/x64-481-win32-seh-r5/libs/include -IC:/Temp/msys64/tmp/x64-481-win32-seh-r5/libs/include/ncurses -IC:/Temp/msys64/tmp/mingw-prereq/x64-zlib/include -IC:/Temp/msys64/tmp/x64-481-win32-seh-r5/mingw64/opt/include' 'LDFLAGS=-pipe -L/tmp/x64-481-win32-seh-r5/libs/lib -L/tmp/mingw-prereq/x64-zlib/lib -L/tmp/mingw-prereq/x86_64-w64-mingw32-static/lib -L/tmp/x64-481-win32-seh-r5/mingw64/opt/lib -LC:/Temp/msys64/tmp/mingw-prereq/x64-zlib/lib -LC:/Temp/msys64/tmp/x64-481-win32-seh-r5/mingw64/opt/lib -LC:/Temp/msys64/tmp/x64-481-win32-seh-r5/libs/lib' 'build_alias=x86_64-w64-mingw32' 'host_alias=x86_64-w64-mingw32'
+CONFIG_ARGS=	 '--host=x86_64-w64-mingw32' '--build=x86_64-w64-mingw32' '--prefix=/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt' '--enable-shared' '--disable-ipv6' '--without-pydebug' '--with-system-expat' '--with-system-ffi' 'CXX=x86_64-w64-mingw32-g++' 'LIBFFI_INCLUDEDIR=C:/Temp/msys64/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/lib/libffi-3.0.13/include' 'OPT=' 'CFLAGS=-O2 -pipe -I/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/include -I/tmp/prerequisites/x86_64-zlib-static/include -I/tmp/prerequisites/x86_64-w64-mingw32-static/include -fwrapv -DNDEBUG -D__USE_MINGW_ANSI_STDIO=1' 'CXXFLAGS=-O2 -pipe -I/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/include -I/tmp/prerequisites/x86_64-zlib-static/include -I/tmp/prerequisites/x86_64-w64-mingw32-static/include -fwrapv -DNDEBUG -D__USE_MINGW_ANSI_STDIO=1 -IC:/Temp/msys64/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/include -IC:/Temp/msys64/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/include/ncurses -IC:/Temp/msys64/tmp/prerequisites/x86_64-zlib-static/include' 'CPPFLAGS= -IC:/Temp/msys64/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/include -IC:/Temp/msys64/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/include/ncurses -IC:/Temp/msys64/tmp/prerequisites/x86_64-zlib-static/include' 'LDFLAGS=-pipe -L/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/lib -L/tmp/prerequisites/x86_64-zlib-static/lib -L/tmp/prerequisites/x86_64-w64-mingw32-static/lib -LC:/Temp/msys64/tmp/prerequisites/x86_64-zlib-static/lib -LC:/Temp/msys64/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/lib' 'build_alias=x86_64-w64-mingw32' 'host_alias=x86_64-w64-mingw32'
 
 
 # Subdirectories with code
@@ -241,7 +241,7 @@ GRAMMAR_C=	Python/graminit.c
 GRAMMAR_INPUT=	$(srcdir)/Grammar/Grammar
 
 
-LIBFFI_INCLUDEDIR=	C:/Temp/msys64/tmp/x64-481-win32-seh-r5/libs/lib/libffi-3.0.13/include
+LIBFFI_INCLUDEDIR=	C:/Temp/msys64/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/lib/libffi-3.0.13/include
 
 ##########################################################################
 # Parser
@@ -1158,6 +1158,12 @@ libainstall:	all python-config
 		;; \
 	esac
 
+ifeq ($(shell uname -o),Msys)
+DESTDIRFINAL=$(DESTDIR)
+else
+DESTDIRFINAL=$(DESTDIR)/
+endif
+
 # Install the dynamically loadable modules
 # This goes into $(exec_prefix)
 sharedinstall: sharedmods
@@ -1165,7 +1171,7 @@ sharedinstall: sharedmods
 	   	--prefix=$(prefix) \
 		--install-scripts=$(BINDIR) \
 		--install-platlib=$(DESTSHARED) \
-		--root=$(DESTDIR)
+		--root=$(DESTDIRFINAL)
 	-rm $(DESTDIR)$(DESTSHARED)/_sysconfigdata.py*
 
 # Here are a couple of targets for MacOSX again, to install a full
@@ -1238,7 +1244,7 @@ scriptsinstall:
 	$(PYTHON_FOR_BUILD) $(srcdir)/Tools/scripts/setup.py install \
 	--prefix=$(prefix) \
 	--install-scripts=$(BINDIR) \
-	--root=$(DESTDIR)/
+	--root=$(DESTDIRFINAL)
 
 # Build the toplevel Makefile
 Makefile.pre: Makefile.pre.in config.status

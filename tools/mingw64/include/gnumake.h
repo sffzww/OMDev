@@ -26,6 +26,7 @@ typedef struct
     unsigned long lineno;
   } gmk_floc;
 
+typedef char *(*gmk_func_ptr)(const char *nm, unsigned int argc, char **argv);
 
 #ifdef _WIN32
 # ifdef GMK_BUILDING_MAKE
@@ -38,17 +39,17 @@ typedef struct
 #endif
 
 /* Free memory returned by the gmk_expand() function.  */
-void GMK_EXPORT gmk_free (char *str);
+GMK_EXPORT void gmk_free (char *str);
 
 /* Allocate memory in GNU make's context.  */
-char * GMK_EXPORT gmk_alloc (unsigned int len);
+GMK_EXPORT char *gmk_alloc (unsigned int len);
 
 /* Run $(eval ...) on the provided string BUFFER.  */
-void GMK_EXPORT gmk_eval (const char *buffer, const gmk_floc *floc);
+GMK_EXPORT void gmk_eval (const char *buffer, const gmk_floc *floc);
 
 /* Run GNU make expansion on the provided string STR.
    Returns an allocated buffer that the caller must free with gmk_free().  */
-char * GMK_EXPORT gmk_expand (const char *str);
+GMK_EXPORT char *gmk_expand (const char *str);
 
 /* Register a new GNU make function NAME (maximum of 255 chars long).
    When the function is expanded in the makefile, FUNC will be invoked with
@@ -60,14 +61,19 @@ char * GMK_EXPORT gmk_expand (const char *str);
 
    MIN_ARGS is the minimum number of arguments the function requires.
    MAX_ARGS is the maximum number of arguments (or 0 if there's no maximum).
-   MIN_ARGS and MAX_ARGS must be >= 0 and <= 255.
+   MIN_ARGS and MAX_ARGS may not exceed 255.
 
-   If EXPAND_ARGS is 0, the arguments to the function will not be expanded
-   before FUNC is called.  If EXPAND_ARGS is non-0, they will be expanded.
+   The FLAGS value may be GMK_FUNC_DEFAULT, or one or more of the following
+   flags OR'd together:
+
+     GMK_FUNC_NOEXPAND: the arguments to the function will be not be expanded
+                        before FUNC is called.
 */
-void GMK_EXPORT gmk_add_function (const char *name,
-                                  char *(*func)(const char *nm,
-                                                int argc, char **argv),
-                                  int min_args, int max_args, int expand_args);
+GMK_EXPORT void gmk_add_function (const char *name, gmk_func_ptr func,
+                                  unsigned int min_args, unsigned int max_args,
+                                  unsigned int flags);
+
+#define GMK_FUNC_DEFAULT    0x00
+#define GMK_FUNC_NOEXPAND   0x01
 
 #endif  /* _GNUMAKE_H_ */
