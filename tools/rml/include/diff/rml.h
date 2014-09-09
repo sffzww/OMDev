@@ -457,6 +457,7 @@ STATIC_INLINE rml_uint_t rml_default_hash(unsigned char* str)
 #define RML_PRIM_INT_GE(X,Y)    RML_PRIM_MKBOOL(RML_FIXNUM_GE((X),(Y)))
 #define RML_PRIM_INT_GT(X,Y)    RML_PRIM_MKBOOL(RML_FIXNUM_GT((X),(Y)))
 #define RML_PRIM_INT_EQ(X,Y)    RML_PRIM_MKBOOL(RML_FIXNUM_EQ((X),(Y)))
+
 /* bit operations */
 #define RML_PRIM_INT_BIT_NOT(X)      RML_IMMEDIATE(RML_TAGFIXNUM(~(RML_UNTAGFIXNUM(X))))
 #define RML_PRIM_INT_BIT_AND(X,Y)    RML_IMMEDIATE(RML_TAGFIXNUM( (RML_UNTAGFIXNUM(X)  |  RML_UNTAGFIXNUM(Y)) ))
@@ -478,6 +479,9 @@ STATIC_INLINE rml_uint_t rml_default_hash(unsigned char* str)
 /* references */
 #define RML_PRIM_REF_EQ(X,Y)     ((X == Y) ? RML_TRUE : RML_FALSE)
 #define RML_PRIM_REF_INT(X)      ( RML_ISIMM(X) ? X : RML_IMMEDIATE(RML_TAGFIXNUM((rml_uint_t)RML_UNTAGPTR(X))) )
+
+/* lists */
+#define RML_PRIM_LIST_EMPTY(x)      RML_PRIM_MKBOOL(RML_GETHDR(x) == RML_NILHDR)
 
 /* values */
 /* return the constructor */
