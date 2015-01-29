@@ -1,0 +1,149 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Curves</title><meta content="DocBook XSL Stylesheets V1.73.2" name="generator"><link rel="start" href="index.html" title="GRIF 2013Fault Tree"><link rel="up" href="index.html" title="GRIF 2013Fault Tree"><link rel="prev" href="ar01s07.html" title="Computations"><link rel="next" href="ar01s09.html" title="Databases"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="Courbes"></a>Curves</h2></div></div></div><p><a name="courbes.Courbes"></a>
+	<p>
+		The curves can be drawn to study the model and the results better. To do this, click left on 
+		the corresponding icon on the vertical task bar then draw a box. This box will be the space 
+		assigned to displaying the curve(s). Initially it is only a white box with two axes without 
+		graduation.
+	</p>
+	<p>
+		<span class="guibutton">Charts</span> icon:
+	</p>	
+	<p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./courbes/icone.gif" align="middle"></div></div>  
+	</p>
+	<p>
+		We must now define the curves to be drawn. To do this, click right on the box to display the 
+		<b>Charts Edit</b> window.
+		
+	</p>
+</p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="courbes.Courbes.fenetre"></a>Edit curves window</h3></div></div></div><p>
+		The edit curves window is the same for all the GRIF modules.
+	</p><p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./courbes/edition_courbes_en.gif" align="middle"></div></div>  
+	</p><p>
+		The window is divided into several sections: 
+	</p><div class="orderedlist"><ol type="1"><li><p>
+			<b>Charts title</b>: enters a title for the graph.
+		</p></li><li><p>
+			<b>Data list</b>: this part includes a table with several columns in which the different curves on the graph are listed 
+			(name, description, display, curve colour, curve style, curve thickness, display average). 
+			A number of different buttons are available above this table. 
+			
+			<div class="itemizedlist"><ul type="disc" compact><li><p>
+					<img src="./courbes/nouveau.gif">: 
+					Selects a result of computations to display. 
+					It sends the user back to the Select results window to add a curve plot to the graph (see. <a class="xref" href="ar01s08.html#courbes.CourbesCA" title="Curves from data in result-bank">&laquo;&nbsp;Curves from data in result-bank&nbsp;&raquo;</a>).
+				</p></li><li><p>
+					<img src="./courbes/comp.gif">: 
+					Compares several results from different calculations for the same data. 
+					It sends the user to the Compare results window to add a curve plot to the graph (see <a class="xref" href="ar01s08.html#courbes.CourbesCA.comp" title="Comparative curves from data in results bank">&laquo;&nbsp;Comparative curves from data in results bank &nbsp;&raquo;</a>).
+				</p></li><li><p>
+					<span class="guibutton">Edit</span>: edits the plot of the selected curve.
+				</p></li><li><p>
+					<span class="guibutton">Delete</span> <img src="./courbes/supprimer.gif">: deletes the plot of the curve selected on the graph. 
+				</p></li><li><p>
+					<span class="guibutton">Up</span> <img src="./courbes/monter.gif">: moves up the plot of the curve selected in the list. 
+				</p></li><li><p>
+					<span class="guibutton">Down</span> <img src="./courbes/descendre.gif">: moves down the plot of the curve selected in the list.
+				</p></li><li><p>
+					<span class="guibutton">Save</span>: saves the list of points calculated to plot the selected curves in .csv format. 
+					This export does not contain the generic values. 
+					To obtain an export with the generic values, right click on the curve and select <span class="guibutton">Individual export</span>.
+				</p></li><li><p>
+					<span class="guibutton">Duplicate</span>: creates a new curve identical to the curve selected.
+				</p></li><li><p>
+					<span class="guibutton">Freeze</span><img src="./courbes/gel.gif">: 
+					freezes the display of the curve, which will no longer be updated automatically according computation results.
+				</p></li></ul></div>
+		</p><p>
+			For each curve, the user can specify the colour, point style, line thickness and display.
+		</p></li><li><p>
+		<b>Computation options</b>: enables the user to enter settings for the computation (optional depending on the module).
+		</p></li><li><p>
+			<b>Style</b>: this section concerns the curve display. 
+			<div class="itemizedlist"><ul type="disc" compact><li><p>
+					<b>Type of style</b>: specifies the type of all the curves on the graph (line, histogram, etc.).
+					 N.B. In the case of a histogram, the bars that exceed the display area will be displayed in shading to show 
+					 the user that s/he must change the display intervals so that the entire bar can be displayed. 
+				</p></li><li><p>
+					<b>Intervals</b> defines the display limits for the curve. 
+					<b>Automatic without peak</b>: the graph will not display the "peaks" of specific cases of exceptional 
+					values which would make the graph illegible. Even if the peaks are not displayed on the graph, 
+					the user can display their values using the choices proposed in the option <b>Display peak values</b>.
+				</p></li><li><p>
+					<b>X and Y intervals</b>: specification of the display interval on the X and Y axes 
+					(default intervals or intervals defined by the user). 
+					The last function enables users to "zoom in" on the most interesting parts of the graph. 
+				</p></li><li><p>
+					The axis unit can be selected according to the type of computation result. 
+					For example for units of time, the user can enter hours, days, months or years. 
+				</p></li><li><p>
+					The <img src="./courbes/oeil.gif"> button determines whether or not the unit is displayed on the graph.
+				</p></li><li><p>
+					The <b>log</b> boxes are used to activate the logarithmic scale on the axis in question. 
+					N.B. 0 cannot be represented on a log scale, remember to enter a start value that is strictly positive (e.g. E-10). 
+					If 0 is entered, the log scale will begin at an arbitrary value E-15. Where the computation engine allows, 
+					the <b>trust interval</b> can be displayed by ticking the corresponding box. 
+				</p></li><li><p>
+					<b>Areas</b>: distinguishes a range of values on a coloured background. 
+				</p></li><li><p>
+					In the histogram style, a box can be ticked to create a cumulative histogram.  
+				</p></li></ul></div>
+		</p></li><li><p>
+			<b>Display options</b>: activates the <b>Display title</b> function (display graph title) 
+			and the <b>Display generic values</b> function (display min, max and average for each curve). 
+		</p></li></ol></div><p>
+		When a curve is edited, the edit curve window often includes 3 parts: the times at which the computations are performed, 
+		what has been calculated and the extra information (generic values) that should or should not be displayed below the curve. 
+	</p><p>
+		Comment: it is sometimes necessary to refresh all the graphs in a document. 
+		This can be done using the <b>Tools / Refresh</b> command, 
+		or the keyboard shortcut F5 or the <img src="./courbes/rafraichir.gif"> icon.
+	</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="N412F2"></a>Selection of results window</h3></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="courbes.CourbesCA"></a>Curves from data in result-bank</h4></div></div></div><p>
+				When you click the <span class="guibutton">Add</span> button in the <b>Data list</b> 
+				part you reach a window for curves setup. 
+				Each curve displays data stored in the result-bank. The following window helps users to specify how to retrieve
+				data.
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./courbes/CourbeCA.gif" align="middle"></div></div>  
+			</p><p>
+				<div class="itemizedlist"><ul type="disc"><li><p>
+						<b>Legend</b>: legend of the curve.
+					</p></li><li><p>
+						<b>Computation selection</b>: select the computation in the result-bank.
+					</p></li><li><p>
+						<b>Result to be displayed</b>: each computation contains many results. 
+						Select the one you want to be drawn.
+					</p></li><li><p>
+						Vous avez la possibilit&eacute; d'afficher la liste des points en sp&eacute;cifiant les donn&eacute;es voulues sur chacun des axes ; 
+						ou vous avez la possibilit&eacute; d'afficher les temps pass&eacute;s dans les zones.
+					</p></li><li><p>
+						<b>Axes</b>: When a result is selected, select what must be in X-Axe and what 
+						must be in Y-Axe.
+					</p></li><li><p>
+						<b>Value to be displayed</b>: Then you can display addition informations about the result (min, max, moyenne ....)
+					</p></li></ul></div>
+			</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="courbes.CourbesCA.comp"></a>Comparative curves from data in results bank </h4></div></div></div><p>
+				When the user clicks on <b>Compare</b> in the <b>Data list</b> section, a window opens enabling the user to specify the curve to be plotted. 
+				S/he can then choose whether or not to display a result from several different computations. 
+				
+				The following window is used to indicate the way in which the information is to be recovered. 
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./courbes/CourbeCAComp.gif" align="middle"></div></div>  
+			</p><p>
+				<div class="itemizedlist"><ul type="disc"><li><p>
+						<b>Legend</b>: curve legend. 
+					</p></li><li><p>
+						<b>Computation selection</b>: the user can select the different computations to be used from the results bank. 
+						Hold down the Ctrl button to select several different computations.
+					</p></li><li><p>
+						<b>Result to be displayed</b>: a computation often contains several results and this file tree structure 
+						is used to specify the result that the user wants to display. 
+					</p></li><li><p>
+						<b>Information to show</b>: indicates which data are to be displayed on the y-axis.
+					</p></li><li><p>
+						<b>For which point?</b>: indicates which point of the computation is to be compared to the others.
+					</p></li><li><p>
+						<b>Display x-axis values according to</b>: indicates which data must be displayed on the x-axis. 
+					</p></li><li><p>
+						<b>Value to be displayed</b>: finally, certain extra data can be displayed (min, max, average, etc.) 
+					</p></li></ul></div>
+			</p></div></div></div></body></html>

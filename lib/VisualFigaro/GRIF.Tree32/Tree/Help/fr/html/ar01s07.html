@@ -1,0 +1,472 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Calculs</title><meta content="DocBook XSL Stylesheets V1.73.2" name="generator"><link rel="start" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="up" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="prev" href="ar01s06.html" title="Impression"><link rel="next" href="ar01s08.html" title="Courbes"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="section" lang="fr"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="Calculs"></a>Calculs</h2></div></div></div><p>
+		Sous le module Arbre de d&eacute;faillance, il est possible d'utiliser les deux
+		moteurs de calcul suivants:
+		<div class="itemizedlist"><ul type="disc" compact><li><p>
+				Albizia
+			</p></li><li><p>
+				MOCA.
+			</p></li></ul></div>
+		Ces deux options de calcul sont accessibles depuis le menu <b>Donn&eacute;es et calculs</b>
+		de la barre des t&acirc;ches.
+	</p><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="Calculs.Albizia.V2V4"></a>Calculs par Albizia</h3></div></div></div><p>
+			Les calculs par Albizia s'effectuent en deux &eacute;tapes:
+		</p><p>
+			<div class="itemizedlist"><ul type="disc" compact><li><p>
+					le parametrage des calculs;
+				</p></li><li><p>
+					la lecture des r&eacute;sultats dans la banque de resultat.
+				</p></li></ul></div>
+		</p><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Calculs.Albizia.V2V4.Parametrage"></a>Param&eacute;trage des calculs</h4></div></div></div><p>
+				La fen&ecirc;tre de param&eacute;trage des calculs est accessible de deux mani&egrave;res diff&eacute;rentes : soit par le menu 
+				<b>Donn&eacute;es et calculs - configuration et lancement du calcul</b>.
+			</p><p>
+				La fen&ecirc;tre de param&eacute;trage qui est ainsi ouverte est appel&eacute;e 
+				<b>Lancement des calculs Albizia</b>.
+				
+			</p><p>
+				La fen&ecirc;tre de param&eacute;trage se d&eacute;compose en de trois onglets (1 par type de calcul).
+			</p><div class="section" lang="fr"><div class="titlepage"><div><div><h5 class="title"><a name="Calculs.Albizia.V2V4.Parametrage.Proba"></a>Param&eacute;trage des calculs de probabilit&eacute;s</h5></div></div></div><p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/Aralia_Parametrage_1.gif" align="middle"></div></div>  
+				<div class="itemizedlist"><ul type="disc"><li><p>
+						<b>Cible</b>: permet de d&eacute;finir la cible des calculs. Deux choix 
+						sont possibles : <b>Sommet</b> pour le(s) sommet(s) de l'arbre et 
+						<b>Noeud s&eacute;lectionn&eacute;</b> pour le noeud actuellement s&eacute;lectionn&eacute; 
+						dans l'arbre.
+					</p></li><li><p>
+						<b>Calcul</b>: permet de param&eacute;trer les options de calculs.
+						<p>
+							<div class="itemizedlist"><ul type="circle" compact><li><p>
+									<b>Temps de calcul : It&eacute;ration De</b> A 
+									<b>&agrave;</b> B <b>pas</b> C: les calculs 
+									seront effectu&eacute;s pour des valeurs de t allant de A &agrave; B par pas de C.
+								</p></li><li><p>
+									<b>Temps de calcul : Liste de temps</b>: les calculs 
+									seront effectu&eacute;s pour les valeurs de t donn&eacute;es dans cette liste.
+								</p></li><li><p>
+									<b>Afficher les points de discontinuit&eacute;</b>: sp&eacute;cifie 
+									au moteur de calcul que les points de discontinuit&eacute; doivent &ecirc;tre pris 
+									en compte.
+								</p></li><li><p>
+									<b>Temps exprim&eacute;s en</b>: Les valeurs sp&eacute;cifi&eacute;es plus haut sont
+									trait&eacute; comme &eacute;tant des heures. Si vous souhait&eacute; changer l'unit&eacute;, vous pouvez choisir 
+									Heures, Jours, Mois, Ann&eacute;es
+								</p></li><li><p>
+									<b>Calculer la valeur moyenne sur [0, t]</b>: sp&eacute;cifie 
+									au moteur de calcul que la valeur moyenne de chaque grandeur &agrave; calculer 
+									devra &ecirc;tre calcul&eacute;e pour chaque temps de calcul.
+								</p></li><li><p>
+									<b>Calculer l'int&eacute;grale sur [0, t]</b>: sp&eacute;cifie 
+									au moteur de calcul que l'int&eacute;grale de chaque grandeur &agrave; calculer 
+									devra &ecirc;tre calcul&eacute;e pour chaque temps de calcul.
+								</p></li></ul></div>
+						</p>
+					</p></li><li><p>
+					<b>Propagation d'incertitudes</b>: permet d'activer la propagation d'incertitude,
+						et de sp&eacute;cifier les param&egrave;tres de calculs et les r&eacute;sultats voulus.
+						<p>
+							<div class="itemizedlist"><ul type="circle" compact><li><p>
+									<b>Nombre d'histoires</b> : nombre d'histoires (simulation de Monte-Carlo) effectu&eacute;es.
+								</p></li><li><p>
+									<b>Intervalle de confiance &agrave;</b> : indique &agrave; combien de pourcent l'
+									intervalle de confiance sera fourni
+								</p></li><li><p>
+									<b>Quantiles choisis</b> : Avec les r&eacute;sultats de toutes les histoires, 
+									un calcul de quantiles est effectu&eacute;. Mais il existe toujours plusieurs possibilit&eacute;s 
+									de choisir des bornes contenant X pourcents des valeurs. Ici il est possible de 
+									prendre l'intervale &agrave; gauche (commencant au minimum et finissant au quantile X%), ou a droite
+									(commencant a 100-X % et finissant au maximum), ou intervalle centr&eacute;.
+								</p></li></ul></div>
+						</p>
+					</p></li><li><p>
+						<b>Type de calculs</b>: permet de d&eacute;finir les calcul &agrave; effectuer.
+						<p>
+							<div class="itemizedlist"><ul type="circle" compact><li><p>
+									<b>Indisponibilit&eacute;</b> : qui selon les normes et pays est not&eacute;e Q(t), U(t) ou PFD(t)
+								</p></li><li><p>
+									<b>Disponibilit&eacute;</b> : A(t) = 1 - U(t)
+								</p></li><li><p>
+									<b>Intensit&eacute; Inconditionnelle de D&eacute;faillance</b> : qui selon les normes et pays est not&eacute;e W(t), UFI(t) ou PFH(t). 
+									C'est la probabilit&eacute; que le syst&egrave;me tombe en panne entre t et t+dt, sachant qu'&agrave; t=0 le syst&egrave;me n'est pas d&eacute;faillant. 
+								</p></li><li><p>
+									<b>Intensit&eacute; Conditionnelle de D&eacute;faillance (Lambda eq)</b> : qui selon les normes et pays est not&eacute;e CFI(t), <span class="symbol">&#955;</span>eq(t) ou <span class="symbol">&#955;</span>Vesely(t).
+									C'est la probabilit&eacute; que le syst&egrave;me tombe en panne entre t et t+dt, sachant que le syst&egrave;me n'est pas d&eacute;faillant &agrave; t et qu'&agrave; t=0 il n'&eacute;tait pas d&eacute;faillant non plus. 
+								</p></li><li><p>
+									<b>Defiabilit&eacute;</b> : F(t) = 1 - R(t)
+								</p></li><li><p>
+									<b>Fiabilit&eacute;</b> : R(t) = R(t)=exp[-(Int&eacute;grale de 0 &agrave; t) de LbdEq(u)du]. 
+									Ici on remarque donc que la fiabilit&eacute; est bas&eacute;e sur le lambda &eacute;quivalent et non sur le lambda r&eacute;el. 
+									C'est une bonne approximation qui est de plus conservative. 
+									Il n'est de toute fa&ccedil;on pas possible de calculer une fiabilit&eacute; sur un arbre de d&eacute;faillance.
+									Pour les syst&egrave;mes compos&eacute;s de composants non r&eacute;parables, le r&eacute;sulat est m&ecirc;me &eacute;xact (puisqu'il est &eacute;gal &agrave; la disponibilit&eacute;).
+								</p></li><li><p>
+									<b>Calcul de temps pass&eacute; dans les zones</b> : Pour les valeurs 
+									ci dessus, cette options permet de savoir 
+									quel pourcentage du temps elles sont rest&eacute;es dans tel ou tel interval. Ces intervalles
+									sont configurables en cliquant sur le bouton configuration. Ils sont par d&eacute;faut configur&eacute;s
+									pour les calcul SIL.
+									<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/zones.gif" align="middle"></div></div>  
+								</p></li></ul></div>
+						</p>
+					</p></li></ul></div>
+				</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h5 class="title"><a name="Calculs.Albizia.V2V4.Parametrage.Products"></a>Param&eacute;trage des calculs de coupes</h5></div></div></div><p>
+					<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/Aralia_Parametrage_2.gif" align="middle"></div></div>  
+					<div class="itemizedlist"><ul type="disc"><li><p>
+						<b>Cible</b>: permet de d&eacute;finir la cible des calculs. Deux choix 
+						sont possibles : <b>Sommet</b> pour le(s) sommet(s) de l'arbre et 
+						<b>Noeud s&eacute;lectionn&eacute;</b> pour le noeud actuellement s&eacute;lectionn&eacute; 
+						dans l'arbre.
+					</p></li><li><p>
+						<b>Nombre de coupes</b>: le nombre de coupes minimales de 
+						syst&egrave;me (pas limitation d'ordre).
+					</p></li><li><p>
+						<b>Nombre de coupes par ordre</b>: la synth&egrave;se du nombre de 
+						coupes pour chaque ordre (pas limitation d'ordre).
+					</p></li><li><p>
+						<b>Liste de coupes</b>: la liste des coupes minimales du 
+						syst&egrave;me. L'ordre maximal peut &ecirc;tre fix&eacute; gr&acirc;ce &agrave; l'option 
+						<b>Limiter l'ordre des coupes affich&eacute;es</b>.
+					</p></li><li><p>
+						<b>Limiter l'ordre des coupes affich&eacute;es</b>: permet de limiter 
+						l'ordre des coupes affich&eacute;es. Les coupes d'ordre sup&eacute;rieur &agrave; l'ordre saisi ne 
+						seront pas affich&eacute;es.
+					</p></li><li><p>
+						<b>Calculer la probabilit&eacute; des coupes &agrave;</b>: permet d'indiquer 
+						&agrave; quel temps seront calcul&eacute;es les probabilit&eacute;s des coupes.
+					</p></li></ul></div>
+				</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h5 class="title"><a name="Calculs.Albizia.V2V4.Parametrage.IF"></a>Param&eacute;trage des calculs de facteur d'importance</h5></div></div></div><p>
+					<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/Aralia_Parametrage_3.gif" align="middle"></div></div>  
+					<div class="itemizedlist"><ul type="disc"><li><p>
+						<b>Cible, temps de calculs, incertitudes</b> : cf. Calcul de probabilit&eacute;s
+					</p></li><li><p>
+						<b>Types de calculs</b>: permet de d&eacute;finir les facteurs d'importance
+						&agrave; calculer.
+						<p>
+							<div class="itemizedlist"><ul type="circle" compact><li><p>
+									<b>Birnbaum (MIF)</b>
+								</p></li><li><p>
+									<b>Critique (CIF)</b>
+								</p></li><li><p>
+									<b>Fussel-Vesely (DIF)</b>
+								</p></li><li><p>
+									<b>Risk Achievement Worth (RAW)</b>
+								</p></li><li><p>
+									<b>Risk Reduction Worth (RRW)</b>
+								</p></li></ul></div>
+						</p>
+					</p></li></ul></div>
+			</p><p>
+				La configuration manuelle du calcul MIF permet de choisir l'algorithme utilis&eacute;.
+				<div class="itemizedlist"><ul type="disc" compact><li><p>
+						<b>D&eacute;riv&eacute;e partielle:</b> Utilisation d'un algorithme rapide bas&eacute;e sur les d&eacute;riv&eacute;e partielle. A n'utiliser que pour les arbres coh&eacute;rents.
+					</p></li><li><p>
+						<b>Cofacteur Exclusif:</b>  Utilisation d'un algorithme (moins rapide) utilisant le cofacteur exclusif afin de rester valide sur les formules non coh&eacute;rentes.
+					</p></li><li><p>
+						<b>BDD:</b> Utilisation d'un algorithme bas&eacute; sur les BDD (seulement pour arbres coh&eacute;rents)
+					</p></li></ul></div>
+				En mode automatique, c'est l'algorithme <b>D&eacute;riv&eacute;e partielle</b> qui est utilis&eacute;, sauf si l'abre est non coh&eacute;rent (N&eacute;gation, XOR, IfThenElse ...).
+			</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h5 class="title"><a name="Calculs.Albizia.UFI.Cfg"></a>Configuration du calcul d'UFI</h5></div></div></div><p>
+				GRIF permet (via le moteur Albizia) d'effectuer des calculs d'UFI sur des abres non coh&eacute;rents.
+				La mode automatique permet de prendre en compte tous les cas de figure, mais il est possible de sp&eacute;cifier les
+				algorithme &agrave; utiliser.
+				Il existe deux mani&egrave;res de calculer l'UFI :
+				<div class="itemizedlist"><ul type="disc" compact><li><p>
+						<b>Calcul UFI via MIF</b> Ceci est la m&eacute;thode "classique". Soit un syst&egrave;me S compos&eacute;s de plusieurs composants c, l'UFI (aussi not&eacute; w) du syst&egrave;me est &eacute;gale &agrave; la 
+								UFI<sub>S</sub> = w<sub>S</sub><span class="symbol">&#931;</span> MIF(S,c)*w<sub>c</sub>.
+								Cet algorithme est moins performant que celui bas&eacute; sur les BDD, mais fonctionne sur les arbres non coh&eacute;rents (si le MIF est bien calcul&eacute;).
+					</p></li><li><p>
+						<b>Calcul UFI via BDD</b> Ceci est la m&eacute;thode "rapide" qui est bas&eacute;e sur le parcourt d'un BDD.
+								Cette m&eacute;thode n'est pas applicable sur les arbres non-coh&eacute;rents, sauf cas particulier des calculs avec &eacute;v&eacute;nements initiateurs (cf options ci-dessous). 
+					</p></li></ul></div>
+				</p><p>
+					Pour expliquer l'option <b>Prise en compte de l'ordre "non-iniatiateur" puis "initiateur"</b> prenons un cas simple : un syst&egrave;me compos&eacute; d'un barri&egrave;re de 
+					s&eacute;curit&eacute; qui met le syst&egrave;me dans un &eacute;tat s&ucirc;r lors de la detection d'un &eacute;v&eacute;nement initiateur.
+					L'&eacute;v&eacute;nement redout&eacute; est la non d&eacute;tection de l'&eacute;v&eacute;nement initiateur par la barri&egrave;re.
+					La fr&eacute;quence de l'&eacute;v&eacute;nement redout&eacute; r&eacute;sulte de deux cas de figure :
+					<div class="itemizedlist"><ul type="disc" compact><li><p>
+							la barri&egrave;re est d&eacute;j&agrave; en panne (avec une certaine probabilit&eacute;) et l'&eacute;v&eacute;nement iniateur se produit (avec une certaine fr&eacute;quence)
+						</p></li><li><p>
+							l'&eacute;v&eacute;nement iniateur s'est d&eacute;ja produit (avec une certaine probabilit&eacute;) et la barri&egrave;re tombe en panne (avec une certaine fr&eacute;quence)
+						</p></li></ul></div>
+					Le deuxi&egrave;me cas ne nous interesse pas car le syst&egrave;me s'est d&eacute;j&agrave; mis en protection. Donc il est possible de ne pas prendre en compte ce cas de figure dans les calculs d'UFI.
+					C'est ce qui est fait si l'option <b>Prise en compte de l'ordre "non-iniatiateur" puis "initiateur"</b> est coch&eacute;e.
+					Cette option fonctionne avec les deux algorithmes et &agrave; l'avantage de rendre valide l'algorithme <b>Calcul UFI via BDD</b> s'il la partie initiateur est coh&eacute;rente.
+				</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h5 class="title"><a name="Calculs.LambdaCompMethod"></a>Configuration de la m&eacute;thode de calcul du Lambda des DCC</h5></div></div></div><p>
+			Lorsqu'une d&eacute;faillance de cause commune est utilis&eacute;e, le logiciel calcul un lambdaDCC qui sera utilis&eacute; pour la DCC.
+			C'est ce param&egrave;tre qui sera multipli&eacute; par le Beta. Puisque les composants ont diff&eacute;rents lambdas, 
+			il y a plusieurs m&eacute;thode de calculer le lambdaDCC &agrave; partir de la liste des lambdas.
+			Five methods are available :
+			<div class="itemizedlist"><ul type="disc" compact><li><p> 
+					Minimum : Utilise le lambda minimum. Non recommand&eacute;.
+				</p></li><li><p> 
+					Maximum : Utilise le lambda maximum afin de rester concervatif. Solution utilis&eacute;e dans GRIF 2013 et versions ant&eacute;rieures. Peux &ecirc;tre p&eacute;nalisante lorsque les lambdas des composants sont tr&egrave;s vari&eacute;s.
+				</p></li><li><p>
+					Moyenne : Utilise la moyenne arithm&eacute;tique des lambdas des composants impact&eacute;s.
+				</p></li><li><p>
+					Moyenne g&eacute;om&eacute;trique (M&eacute;thode PDS): Utilise la moyenne g&eacute;om&eacute;trique des lambdas des composants impact&eacute;s. M&eacute;thode PDS pr&eacute;conis&eacute;e par le Sintef. Cette m&eacute;thode fonctionne bien m&ecirc;me avec des lambdas vari&eacute;s.
+				</p></li><li><p>
+					Moyenne arithm&eacute;tique : Utilise la moyenne quadratique des lambdas des composants impact&eacute;s.
+				</p></li></ul></div>
+		</p><div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/LambdaCCFMethod_fr.gif" align="middle"></div></div></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="N40FF9"></a>R&eacute;sultats Albizia</h4></div></div></div><p>
+		Les r&eacute;sultats sont pr&eacute;sent&eacute; sous la forme d'une fen&ecirc;tre compos&eacute;e de 4 onglets.
+			<div class="itemizedlist"><ul type="disc" compact><li><p>
+					<b>Probabilit&eacute;</b>
+				</p></li><li><p>
+					<b>Facteurs d'importance</b>
+				</p></li><li><p>
+					<b>Coupes</b>
+				</p></li><li><p>
+					<b>XML</b>
+				</p></li></ul></div>
+		</p><p>
+			L'onglet <b>Probabilit&eacute;s</b> regroupe les r&eacute;sultats de tous les calculs de probabilit&eacute;s. La partie sup&eacute;rieure
+			affiche les pourcentage de temps pass&eacute;s dans chaque zone (si le calcul a &eacute;t&eacute; demand&eacute;). 
+			Ensuite un tableau de synth&egrave;se pr&eacute;sente le minimum, le maximum, la moyenne, la somme. Dans le cas de calcul 
+			avec propagation d'incertitude, une colonne suppl&eacute;mentaire affiche l'intervalle de confiance de la moyenne.
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/resultats_Proba.gif" align="middle"></div></div>  
+			</p><p>
+			L'onglet <b>Facteurs d'importance</b> affiche les facteurs d'importance pour tous les &eacute;v&eacute;nements 
+			pour les systems sp&eacute;cifi&eacute;s.
+			</p><p>
+			L'onglet <b>Coupes</b> pr&eacute;sente les r&eacute;sultats du calcul de coupe. Dans la synth&egrave;se, une coupe d'ordre 0 signifie
+			que l'ev&eacute;nement redout&eacute; est toujours vrai, cela peut arriver si certaines partie sont forc&eacute;es &agrave; VRAI. 
+			</p><p>
+			L'onglet <b>XML</b> contient la sortie XML d'Albizia
+			</p></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="Calculs.Moca"></a>Calculs par MOCA</h3></div></div></div><p>
+		Les calculs par MOCA-RP V12 s'effectuent en trois &eacute;tapes principales:
+	</p><p>
+		<div class="itemizedlist"><ul type="disc" compact><li><p>
+				le param&eacute;trage g&eacute;n&eacute;ral;
+			</p></li><li><p>
+				le lancement proprement dit;
+			</p></li><li><p>
+				la lecture du fichier r&eacute;sultat.
+			</p></li></ul></div>
+	</p><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Moca.Calculs.Parametrage"></a>Param&eacute;trage des calculs</h4></div></div></div><p>
+			La fen&ecirc;tre de param&eacute;trage des calculs est accessible de deux mani&egrave;res diff&eacute;rentes:
+			soit par le menu <b>Donn&eacute;es et calculs - Donn&eacute;es Moca</b> soit par
+			<b>Donn&eacute;es et calculs - Lancer Moca 12...</b>. La diff&eacute;rence entre les deux
+			est que dans le second cas, l'&eacute;tape de param&eacute;trage est directement suivie par l'&eacute;tape de 
+			lancement des calculs.
+		</p><p>
+			La fen&ecirc;tre de param&eacute;trage qui est ainsi ouverte est appel&eacute;e 
+			<b>Lancement des calculs Moca</b>:
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/General_information.gif" align="middle"></div></div>  
+		</p><p>
+			Cette fen&ecirc;tre de param&eacute;trage est compos&eacute;e de plusieurs parties:
+		</p><p>
+			<div class="orderedlist"><ol type="1"><li><p>
+					<b>Titre</b>: permet de donner un titre au fichier r&eacute;sultat.
+				</p></li><li><p>
+					<b>Temps de calcul par d&eacute;faut</b>: 
+					<p>
+						<div class="itemizedlist"><ul type="disc" compact><li><p>
+								<b>It&eacute;ration De</b> A <b>&agrave;</b> B <b>pas</b> C:
+								les calculs seront effectu&eacute;s pour des valeurs de t allant de A &agrave; B par pas de C.	
+							</p></li><li><p>
+								<b>Liste de temps</b>: les calculs seront effectu&eacute;s pour les valeurs de t donn&eacute;es
+								dans cette liste.
+							</p></li><li><p>
+								<b>Calcul effectu&eacute; &agrave;</b>: les calculs sont effectu&eacute;s 
+								par d&eacute;faut juste apr&egrave;s le tir des transitions, mais il est possible 
+								de choisir de calculer &agrave; t-Epsilon (juste avant le tir), ou au deux instants.
+							</p></li><li><p>
+								<b>Unit&eacute;</b>: les calculs sont effectu&eacute;s 
+								par d&eacute;faut en heures. Il est possible de sp&eacute;cifier l'unit&eacute; dans laquelle ont &eacute;t&eacute; saisis les temps de calcul.
+								Attention, les r&eacute;sultats seront toujours afficher en heures.
+							</p></li></ul></div>
+					</p>
+				</p></li><li><p>
+					<b>G&eacute;n&eacute;ral</b>: 
+					<p>
+						<div class="itemizedlist"><ul type="disc" compact><li><p>
+								<b>Nombre d'histoires</b> : Nombre d'histoires (NH) &agrave; simuler
+							</p></li><li><p>
+								<b>1er N&deg; au hasard</b>: Graine du g&eacute;n&eacute;rateur de nombres al&eacute;atoires.
+							</p></li><li><p>
+								<b>Temps de calcul maximum</b>: Temps (en secondes) au bout duquel 
+								Moca arr&ecirc;tera de simuler de nouvelles histoires.
+							</p></li><li><p>
+								<b>Dur&eacute;e automatique de l'histoire</b>: Si cette case est coch&eacute;e, 
+								GRIF va calculer la dur&eacute;e de l'histoire en fonction des temps de calcul de l'ensemble 
+								des variables et &eacute;tats statistiques. Sinon l'utilisateur peut sp&eacute;cifier la 
+								<b>Dur&eacute;e d'une histoire</b>
+							</p></li><li><p>
+								<b>Calcul multi-processeurs</b>: Permet d'activer le calcul multi-processeurs
+								et d'indiquer le nombre d'instances Moca lanc&eacute;es.
+							</p></li><li><p>
+								<b>Activer la propagation d'incertitude</b>: 
+								Activation ou non des calculs de propagation des incertitudes (simulation &agrave; double-d&eacute;tente):
+								il est n&eacute;cessaire ici de sp&eacute;cifier le nombre de jeux de param&egrave;tres "jou&eacute;s" (le nombre r&eacute;el 
+								d'histoire ainsi simul&eacute; sera de "nombre de jeux de param&egrave;tres x nombre d'histoires &agrave; simuler"
+								et sera affich&eacute; dans le champ "Nombre total d'histoires").
+							</p></li></ul></div>
+					</p>
+				</p></li><li><p>
+					<b>Variables</b>: 
+					<p>
+						L'onglet variables rappelle et permet de modifier la configuration du calcul pour chaque variable.
+						Si le document contient des &eacute;tats statistiques, un onglet suppl&eacute;mentaire sera disponible.
+					</p>
+				</p></li><li><p>
+					<b>Options de Sortie</b>: permet de param&eacute;trer la sortie.
+					<p>
+						<div class="itemizedlist"><ul type="disc" compact><li><p>
+								Impression ou non de la description du r&eacute;seau de Petri dans le 
+								fichier r&eacute;sultat
+							</p></li><li><p>
+								Impression du fichier r&eacute;sultat permettant de le recharger &agrave; l'aide 
+								d'un tableur (type EXCEL)
+							</p></li><li><p>
+								Impression ou non des d&eacute;lais censur&eacute;s
+							</p></li><li><p>
+								Nombre de sorties durant la simulation (si 2, alors il y aura une
+								sortie au bout de NH/2 et une au bout de NH)
+							</p></li></ul></div>
+					</p>
+				</p></li><li><p>
+					<b>Options avanc&eacute;es</b>: utilis&eacute; pour configurer les options avanc&eacute;es.
+					<p>
+						<div class="itemizedlist"><ul type="disc" compact><li><p>
+								Vous pouvez choisir la limite pour le nombre de tirs instantan&eacute;s
+								avant d&eacute;tection d'une boucle.
+							</p></li></ul></div>
+					</p>
+				</p></li></ol></div>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Moca.Calculs.Resultats.New"></a>Lecture des r&eacute;sultats (Nouvelle interface)</h4></div></div></div><p>
+			A partir de GRIF 2010, les r&eacute;sultats sont pr&eacute;sent&eacute;s dans une fen&ecirc;tre avec diff&eacute;rents onglets
+			et tableaux.
+		</p><div class="section" lang="fr"><div class="titlepage"><div><div><h5 class="title"><a name="Moca.Calculs.Resultats.New.Detail"></a>Pr&eacute;sentation des donn&eacute;es Moca</h5></div></div></div><p>
+				Les donn&eacute;es Moca sont pr&eacute;sent&eacute;es sous la forme d'une fen&ecirc;tre 
+				contenant 6 onglets principaux : variables, places, transitions, XML, 
+				sortie stantard, info.
+			</p><div class="section" lang="fr"><div class="titlepage"><div><div><h6 class="title"><a name="N41109"></a>Onglet variables</h6></div></div></div><p>
+					L'onglet <b>Variables</b> contient toutes les informations calcul&eacute;es
+					pour les variables (ou &eacute;tats statistiques).
+					<div class="itemizedlist"><ul type="disc" compact><li><p>
+						<b>Valeurs</b> : Contient toutes les valeurs des variables
+						pour tous les types de statistiques calcul&eacute;s.
+					</p></li><li><p>
+						<b>Historique (en fin d'histoire)</b> : Contient l'historique des valeurs
+						en fin d'histoire pour tous les types de statistiques calcul&eacute;s.
+					</p></li><li><p>
+						<b>Histogramme de taille fixe</b> : Contient les histogrammes
+						calcul&eacute;s par Moca <a class="link" href=""> 
+						(cf chapitre sur les histogrammes) </a>
+					</p></li><li><p>
+						<b>Histogramme de classe &eacute;quiprobable</b> : Contient les histogrammes
+						calcul&eacute;s par Moca <a class="link" href=""> 
+						(cf chapitre sur les histogrammes) </a>
+					</p></li><li><p>
+						<b>Histogramme &agrave; intervalles d&eacute;finis</b> : Contient les histogrammes
+						calcul&eacute;s par Moca <a class="link" href=""> 
+						(cf chapitre sur les histogrammes) </a>
+					</p></li><li><p>
+						<b>Chronogramme</b> : Contient le chronogramme de chaque variable.
+						Les temps sont calcul&eacute;s automatiquement par Moca.
+					</p></li></ul></div>
+				</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h6 class="title"><a name="N41144"></a>Onglet Places</h6></div></div></div><p>
+					Il contient les temps de s&eacute;jour et les marquages moyens pour toutes les places
+					du r&eacute;seau de Petri. 
+				</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h6 class="title"><a name="N41149"></a>Onglet Transitions</h6></div></div></div><p>
+					L'onglet Transitions contient la f&eacute;quence de tir de chaque transition ainsi
+					que l'historique du tir des transitions pour chaque histoire.
+				</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h6 class="title"><a name="N4114E"></a>Onglets suppl&eacute;mentaires</h6></div></div></div><p>
+					Des onglets suppl&eacute;mentaires affichent les r&eacute;sultats de mani&egrave;re plus "brute".
+					L'onglet XML contient la sortie XML du moteur de calcul, c'est &agrave; partir de ce 
+					document que les valeurs ont &eacute;t&eacute; extraites. Ce fichier peut &ecirc;tre r&eacute;utilis&eacute;
+					pour un post-traitement ult&eacute;rieur.
+				</p><p>
+					L'onglet sortie standard affiche la sortie standard du processus Moca. 
+					(disponible seulement apr&egrave;s le calcul)
+				</p><p>
+					L'onglet info regroupe les informations relatives au calcul (temps de simulation,
+					dur&eacute;e d'histoire, nombre d'histoires jou&eacute;es)
+				</p></div></div></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="calculs.resultats.new"></a>Tableaux et Panneaux de pr&eacute;sentation des r&eacute;sultats</h3></div></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="calculs.resultats.new.table"></a>Tableau de r&eacute;sultats</h4></div></div></div><p>
+			Les tableaux de r&eacute;sultats sont compos&eacute;s des donn&eacute;es en elle m&ecirc;me et d'une partie sup&eacute;rieure
+			permettant de configurer l'affichage du tableau.
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/ResultTable.gif" align="middle"></div></div>
+		</p><p>
+			Les colonnes sont triables en effectuant un clic sur leur en-t&ecirc;te, l'icone 
+			<span class="guiicon"><img src="./calculs/But-Filter.gif"></span> permet de fixer un
+			filtre sur le tableau en le d&eacute;finissant grace &agrave; la f&ecirc;netre suivante.
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/BoxFilter.gif" align="middle"></div></div>
+			Lorsque le filtre est en place, un petit (+) apparait &agrave; cot&eacute; du titre de la colonne filtr&eacute;e.
+			Il est possible de supprimer le filtre en cliquant sur le bouton 
+			<span class="guiicon"><img src="./calculs/But-Filter-Remove.gif"></span>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="calculs.resultats.new.table.export"></a>Export des donn&eacute;es</h4></div></div></div><p>
+			Les valeurs visibles du tableau peuvent &ecirc;tre export&eacute;es au format CSV en cliquant sur l'icone
+			<span class="guiicon"><img src="./calculs/But-CSV.gif"></span>.
+		</p><p>
+			Il est aussi possible d'afficher les r&eacute;sultats sous la forme d'une courbe 
+			en cliquant sur l'icone
+			<span class="guiicon"><img src="./calculs/But-Chart.gif"></span>.
+			Les donn&eacute;es &agrave; utiliser en abscises et en ordoonn&eacute;es doivent &ecirc;tre sp&eacute;cifi&eacute;es 
+			dans la fen&ecirc;tre suivante :
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/BoxChartSetup.gif" align="middle"></div></div>
+			
+			La courbe est ensuite pr&eacute;sent&eacute;e dans une fen&ecirc;tre :
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/Chart.gif" align="middle"></div></div>
+			La courbe peut enfin &ecirc;tre enregistr&eacute;e dans le document en cours 
+			grace au bouton situ&eacute; dessous.
+		</p><p>
+			Nb : Une fois la courbe dans le document les points sont fig&eacute;s.
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="calculs.resultats.new.panels"></a>Panneaux de pr&eacute;sentation des r&eacute;sultats</h4></div></div></div><p>
+			Les panneaux de pr&eacute;sentation des r&eacute;sultats ont &eacute;t&eacute; cr&eacute;&eacute;s pour am&eacute;liorer
+			l'acc&egrave;s aux donn&eacute;es dans les tableaux comportant de nombreuses colonnes.
+			L'objectif est de faire un tri pr&eacute;alable pour ne garder que les donn&eacute;es voulues.
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/ResultPanel.gif" align="middle"></div></div>
+			Ce panneau est compos&eacute; d'un menu d&eacute;roulant en haut &agrave; gauche qui permet de supprimer 
+			la colonne voulue et de cr&eacute;er une liste &agrave; gauche qui contient toutes les
+			valeurs distinctes qui se trouvaient dans la colonne supprim&eacute;e. Le fait de cliquer
+			sur une valeur de la liste modifie le tableau pour ne pr&eacute;senter que les lignes dont 
+			la colonne supprim&eacute;e contenait la valeur s&eacute;lectionn&eacute;e.
+		</p><p>
+			Le menu d&eacute;roulant en haut &agrave; droite permet de choisir une colonne C qui sera utilis&eacute;e pour 
+			decouper le tableau en plusieurs tableaux qui sont mis chacun dans un onglet dont le titre
+			est egal &agrave; la valeur par laquelle la colonne C est filtr&eacute;e. 
+			La colonne C est supprim&eacute;e des tableaux car elle contient toujours 
+			la m&ecirc;me valeur pour un onglet donn&eacute;.
+		</p></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="calculs.batch"></a>Calcul par lots</h3></div></div></div><p>
+		Afin de faire des &eacute;tudes de sensibilit&eacute;, ou tous simplement pour comparer des r&eacute;sultats avec diff&eacute;rents param&egrave;tres,
+		il est utile pour pouvoir enchainer plusieurs calculs avec une petite modification sur le mod&egrave;le.  Pour cela 
+		il faut utiliser le menu <b>Donn&eacute;es et Calculs/ Calcul par lots</b>.
+	</p><p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/LaunchBatch.gif" align="middle"></div></div>
+		La fen&ecirc;tre de lancement d'un batch est compos&eacute;e de deux parties, la parie sup&eacute;rieure permet de nomer le batch 
+		et de sp&eacute;cifier le nombre de calcul &agrave; enchainer. Ensuite chaque calcul doit &ecirc;tre configur&eacute; :
+		<div class="itemizedlist"><ul type="disc" compact><li><p>
+				<b>Nom du calcul :</b> pour identifier le calcul dans les r&eacute;sultats
+			</p></li><li><p>
+				<b>Options de calculs : </b> contient toutes les options concernant le calcul (temps, types ...)
+			</p></li><li><p>
+				<b>Modification du mod&egrave;le : </b>indique les modifications qui seront effectu&eacute;es sur le mod&egrave;le 
+				avant de lancer les calculs. Vous pouvez ajouter autant de modifications que vous le souhaitez avec le boutons +.
+				Chaque modification est r&eacute;alis&eacute;s en 4 parties :
+				<div class="orderedlist"><ol type="1" compact><li><p>
+						1 menu d&eacute;roulant indiquant le type d'objet &agrave; modifier
+					</p></li><li><p>
+						1 menu d&eacute;roulant d&eacute;roulant indiquant l'objet lui m&ecirc;me
+					</p></li><li><p>
+						1 menu d&eacute;roulant pour indiquer quelle information doit &ecirc;tre modifi&eacute;e pour cet objet 
+						(valeur pour un param&egrave;tre, loi pour d'autre type d'objet ...) 
+					</p></li><li><p>
+						Enfin une cellule permet de sp&eacute;cifier la nouvelle valeur
+					</p></li></ol></div>
+			</p></li></ul></div>
+		L'exemple du dessus montre donc un batch de 2 calculs, dont le premier calcul est effectu&eacute; en fixant le param&egrave;tre
+		lambda &agrave; la valeur 1.0E-5 et le param&egrave;tre mu &agrave; la valeur 0.1.
+	</p><p>
+		Apr&egrave;s un calcul, le mod&egrave;le est toujours repositionn&eacute; dans son &eacute;tat d'origine sans modification.
+	</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="calculs.resultats.new.bank"></a>Banque de r&eacute;sultats</h3></div></div></div><p>
+		Tous les calculs de GRIF sont stock&eacute;s dans une banque de r&eacute;sultats qui est acc&eacute;ssible dans un onglet sur
+		la droite du module.
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./calculs/DataBank.gif" align="middle"></div></div>
+		La banque de resultat permet de r&eacute;afficher les resultats en double-cliquant dessus. 
+		Il y a un resultat de calcul par defaut pour chaque moteur de calcul, c'est ici que sont stock&eacute; les calculs
+		"normaux". Ensuite chaque r&eacute;pertoire <span class="guiicon"><img src="./calculs/batch.gif"></span> 
+		correspond &agrave; un calcul par lots (batch), il contient autant de r&eacute;sultats que demand&eacute; lors de calcul batch.
+		Enfin, le r&eacute;pertoire <span class="guiicon"><img src="./calculs/flake16.gif"></span>
+		contient les r&eacute;sultats des courbes qui ont &eacute;t&eacute; fig&eacute;es.
+	</p></div></div></body></html>

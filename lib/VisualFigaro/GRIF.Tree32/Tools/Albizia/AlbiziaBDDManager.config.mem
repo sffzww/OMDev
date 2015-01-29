@@ -1,0 +1,9 @@
+com.total.albizia.bdd.BDDCacheOperation.Max=33554393
+com.total.albizia.bdd.BDDCacheOperation.Ratio=0.75
+com.total.albizia.bdd.BDDCacheOperation.Size=1048573
+com.total.albizia.bdd.BDDManager.BDDHashCache=com.total.albizia.bdd.BDDCacheOperationStat
+com.total.albizia.bdd.BDDManager.BDDTable=com.total.albizia.bdd.BDDTableStat
+com.total.albizia.bdd.BDDTable.HashTableMax=33554393
+com.total.albizia.bdd.BDDTable.HashTableRatio=0.5
+com.total.albizia.bdd.BDDTable.HashTableSize=1048573
+com.total.albizia.bdd.BDDTable.MaxPage=1024

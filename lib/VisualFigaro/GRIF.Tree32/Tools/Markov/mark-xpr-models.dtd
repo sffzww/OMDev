@@ -1,0 +1,335 @@
+<!--
+  == Mark-XPR version 1.1
+  == DTD for Mark-XPR models
+  == Author: A. Rauzy
+  == Copyright (c) 2005 ARBoost Technologies
+  ==
+  == Table of contents
+  == =================
+  == 0) Preliminaries
+  == 1) Root node
+  == 2) Parameters
+  ==    2.1) Declaration
+  ==    2.2) Expressions
+  == 3) Graphs
+  ==    3.1) Declaration
+  ==    3.2) Properties
+  ==    3.3) States
+  ==    3.4) Transitions
+  == 4) Matrices
+  ==    4.1) Declaration
+  ==    4.2) Cells
+  -->
+
+<!--
+  == 0) Preliminaries
+  == ================
+  == Mark-XPR models may be very large. This has several consequences
+  == on their XML grammar:
+  == 1) Data structures must be allocated in advance. So, the number
+  ==    of states, transitions, ..., is always declared before
+  ==    any information is given on these objects.
+  == 2) Graphs, matrices, states, transitions, ... are uniquely
+  ==    referenced by means of a number that ranges from 1 to
+  ==    the number of graphs in the model, matrices in the model,
+  ==    states in the graph, transitions in the graph, ...
+  == 3) In order to reduce the size of XML files, one uses short names
+  ==    for elements and attributes. E.g. stt for state, trs for transition,
+  ==    num for number and so on.
+  ==    DTD syntax does allow to describe such idea. So, the following
+  ==    description is somehow not natural. E.g. it is not possible
+  ==    to specify in the DTD that the attribute "number" (or "num")
+  ==    is required.
+  == 4) Elements states, transitions, parameters are used in different
+  ==    contexts, with different lists of attributes. Since these different
+  ==    uses refer to the same objects, it would have been strange to
+  ==    use different names. But here too, DTD syntax is not flexible
+  ==    enough to describe that.
+  == 5) Most of the attributes have to be integers or floatting point
+  ==    numbers. This too cannot be described with DTD syntax.
+  == As a result, a number of entities are declared below, to
+  == solve these problems.
+  -->
+
+    <!--
+      == Attributes number, source, target and parameter are integers
+      == that refer to an object of the description.
+      == The first three attributes are required.
+      -->
+
+<!ENTITY % attribute.number "
+   number CDATA #IMPLIED
+   num    CDATA #IMPLIED
+   ">
+
+<!ENTITY % attribute.source "
+   source CDATA #IMPLIED
+   src    CDATA #IMPLIED
+   ">
+
+<!ENTITY % attribute.target "
+   target CDATA #IMPLIED
+   tgt    CDATA #IMPLIED
+   ">
+
+<!ENTITY % attribute.parameter "
+   target CDATA #IMPLIED
+   tgt    CDATA #IMPLIED
+   ">
+
+    <!--
+      == Attributes name are identifiers
+      == These attributes are implied (in the DTD sense).
+      -->
+
+<!ENTITY % attribute.name "
+   name CDATA #IMPLIED
+   nam  CDATA #IMPLIED
+   ">
+
+    <!--
+      == Attributes value and initial are floatting point numbers
+      -->
+
+<!ENTITY % attribute.value "
+   value CDATA #IMPLIED
+   val   CDATA #IMPLIED
+   ">
+
+<!ENTITY % attribute.initial "
+   initial CDATA #IMPLIED
+   ini     CDATA #IMPLIED
+   ">
+
+    <!--
+      == Attributes immediate are floatting point numbers
+      -->
+
+<!ENTITY % attribute.immediate "
+   immediate (yes | no) #IMPLIED
+   imm       (yes | no) #IMPLIED
+   ">
+
+<!-- 
+  == 1) Root node
+  == ============
+  == A Mark-XPR model is a sequence of declarations
+  == of parameters, graphs and transition matrices
+  == The number of parameters, graphs and matrices must
+  == be declared.
+  -->
+
+<!ELEMENT xprmodel ((parameter | prm | graph | grp | matrice | mat)*)>
+
+<!ATTLIST xprmodel
+   parameters CDATA "0" 
+   graphs     CDATA "0" 
+   matrices   CDATA "0" 
+   >
+
+
+<!--
+  == 2) Parameters
+  == =============
+  == A parameter is uniquely refered by its number (that ranges
+  == from 1 to the number of parameters in the model).
+  -->
+
+<!--
+  == 2.1) Parameter declaration
+  == ==========================
+  == A parameter may have a name. It has either an attribute value
+  == or its value is defined by means of an expression.
+  == Values are floatting point numbers.
+  == When a parameter is refered into an expression, its only
+  == attribute is its number
+  -->
+
+<!ENTITY % expression "(
+     constant  | cst
+   | parameter | prm
+   | add | sub | mul | div
+   )">
+
+<!ENTITY % parameter.attributes "
+   %attribute.number;
+   %attribute.name;
+   %attribute.value;
+   ">
+
+<!ELEMENT parameter ((%expression;)?)>
+<!ELEMENT prm       ((%expression;)?)>
+
+<!ATTLIST parameter %parameter.attributes;>
+<!ATTLIST prm       %parameter.attributes;>
+
+<!--
+  == 2.2) Expressions
+  == ================
+  == Constants are floatting point numbers.
+  == Parameters in this context have only one attribute: their number.
+  -->
+
+<!ENTITY % constant.attributes "
+   %attribute.value;
+   ">
+
+<!ELEMENT constant EMPTY>
+<!ELEMENT cst      EMPTY>
+
+<!ATTLIST constant %constant.attributes;>
+<!ATTLIST cst      %constant.attributes;>
+
+<!ELEMENT add ((%expression;)*)>
+<!ELEMENT sub (%expression; , %expression;)>
+<!ELEMENT mul ((%expression;)*)>
+<!ELEMENT div (%expression; , %expression;)>
+
+<!--
+  == 3) Graphs
+  == =========
+  == A graph is uniquely refered by its number (that ranges
+  == from 1 to the number of graphs in the model).
+  -->
+
+<!--
+  == 3.1) Graph declarations
+  == =======================
+  == A graph may have a name.
+  == It is made of states, transitions and properties.
+  == The numbers of these objects must be declared.
+  -->
+  
+<!ELEMENT graph (properties | states | transitions)>
+<!ELEMENT grp   (properties | states | transitions)>
+
+<!ATTLIST graph
+   %attribute.number;
+   %attribute.name;
+   properties  CDATA "0"
+   states      CDATA "0"
+   transitions CDATA "0"
+   >
+
+<!--
+  == 3.2) Graph properties
+  == =====================
+  == A graph property is uniquely refered by its number (that ranges
+  == from 1 to the number of properties of the graph).
+  == It may have a name.
+  == A property defines a floatting point value for each state of
+  == the graph. By default, the value is 0.
+  == In that context, a state must have two attributes: a number
+  == that defines it, and a value.
+  -->
+
+<!ENTITY % property.attributes "
+   %attribute.number;
+   %attribute.name;
+   ">
+
+<!ELEMENT properties ((property | prp)*)>
+
+<!ELEMENT property (state*)>
+<!ELEMENT prp      (state*)>
+
+<!ATTLIST property %property.attributes;>
+<!ATTLIST prp      %property.attributes;>
+
+<!--
+  == 3.3) Graph states
+  == =================
+  == A graph state is uniquely refered by its number (that ranges
+  == from 1 to the number of states of the graph).
+  == It may have a name.
+  == It may have also an initial probability (which is by default 0).
+  == Attribute value is of no effect in the context of state declaration,
+  == but is mandatory in the context of property declaration.
+  -->
+
+<!ENTITY % state.attributes "
+   %attribute.number;
+   %attribute.name;
+   %attribute.initial;
+   %attribute.immediate;
+   %attribute.value;
+   ">
+
+<!ELEMENT states ((state | stt)*)>
+
+<!ELEMENT state EMPTY>
+<!ELEMENT stt   EMPTY>
+
+<!ATTLIST state %state.attributes;>
+<!ATTLIST stt   %state.attributes;>
+
+<!--
+  == 3.4) Graph transitions
+  == ======================
+  == A graph transition is uniquely refered by its number (that ranges
+  == from 1 to the number of transitions of the graph).
+  == It has a source and a target that must be valid state numbers
+  == A transition has a rate. This probability can be either given as a value
+  == (a floatting point number) or via a parameter (i.e. a valid
+  -->
+
+<!ENTITY % transition.attributes "
+   number    CDATA #IMPLIED
+   num       CDATA #IMPLIED
+   source    CDATA #IMPLIED
+   src       CDATA #IMPLIED
+   target    CDATA #IMPLIED
+   tgt       CDATA #IMPLIED
+   value     CDATA #IMPLIED
+   val       CDATA #IMPLIED
+   parameter CDATA #IMPLIED
+   prm       CDATA #IMPLIED
+   ">
+
+<!ELEMENT transitions ((transition | trs)*)>
+
+<!ELEMENT transition EMPTY>
+<!ELEMENT trs        EMPTY>
+
+<!ATTLIST transition %transition.attributes;>
+<!ATTLIST trs        %transition.attributes;>
+
+<!--
+  == 4) Transition matrices
+  == ======================
+  == A transition matrix is uniquely refered by its number (that ranges
+  == from 1 to the number of matrices in the model).
+  -->
+
+<!--
+  == 4.1) Matrix declaration
+  == =======================
+  == A matrix may have a name. It has a source graph and a target
+  == graph. Both must be valid graph numbers.
+  == A matrix has a number of cells. This number must be declared.
+  -->
+
+<!ELEMENT matrix (transitions)>
+
+<!ATTLIST matrix
+   %attribute.number;
+   %attribute.name;
+   %attribute.source;
+   %attribute.target;
+   transitions CDATA "0"
+   >
+
+<!--
+  == 4.2) Matrix transitions
+  == =======================
+  == A matrix may have a name. It has a source graph and a target
+  == graph. Both must be valid graph numbers.
+  == A matrix has a number of cells. This number must be declared.
+  == Each cell of the matrix represents a transition and has therefore
+  == a probability. This probability can be either given as a value
+  == (a floatting point number) or via a parameter (i.e. a valid
+  == parameter number).
+  -->
+
+    <!-- see section 3.4) -->
+

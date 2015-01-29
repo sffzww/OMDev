@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<labels>
+	<label key="file" val="Fichier"/>
+	<label key="pid" val="PID"/>
+	<label key="comment" val="Commentaire"/>
+	<label key="name" val="Nom"/>
+	<label key="value" val="Valeur"/>
+	<label key="define" val="Définition"/>
+	<label key="num" val="ID"/>
+	<label key="event" val="Evénement"/>
+	<label key="law" val="Loi"/>
+	<label key="title" val="Titre"/>
+	<label key="version" val="Version"/>
+	<label key="report" val="Rapport"/>
+	<label key="synthese" val="Synthèse"/>
+	<label key="detail" val="Détail"/>
+	<label key="number" val="Numéro de SIF"/>
+	<label key="rev" val="Révision"/>
+	<label key="date" val="Date"/>
+	<label key="auth" val="Réalisé par"/>
+	<label key="checker" val="Vérifié par"/>
+	<label key="validator" val="Validé par"/>
+	<label key="loc" val="Localisation/Projet"/>
+	<label key="unit" val="Unité procédé"/>
+	<label key="func" val="Fonction de la SIF"/>
+	<label key="desc" val="Descriptif de la SIF"/>
+	<label key="sensors" val="Capteurs"/>
+	<label key="solver" val="Solveur"/>
+	<label key="actuators" val="Actionneurs"/>
+	<label key="pid" val="PID"/>
+	<label key="source" val="Source des données"/>
+	<label key="cmt" val="Commentaires"/>
+	<label key="expvalue" val="SIL requis"/>
+	<label key="obtvalue" val="SIL calculé"/>
+	<label key="exprrf" val="RRF requis"/>
+	<label key="obtrrf" val="RRF calculé"/>
+	<label key="maxsilsensors" val="Max SIL capteurs (Contraintes Architecturale)"/>
+	<label key="maxsilactuators" val="Max SIL actionneurs (Contraintes Architecturale)"/>
+	<label key="realisedsil" val="SIL réalisé pour la SIF"/>
+	<label key="conclusion" val="Conclusion du SIL pour la SIF"/>
+	<label key="component" val="Composant"/>
+	<label key="parameters" val="Paramètres"/>
+	<label key="otherparameters" val="Autres paramètres"/>
+	<label key="solverPFD" val="Solveur PFD"/>
+	<label key="solverPFH" val="Solveur PFH"/>
+	<label key="solverSIL" val="Solveur SIL"/>
+	<label key="textundercurvePFD" val="PFDavg sur "/>
+	<label key="textundercurvePFH" val="PFH sur "/>
+	<label key="constant" val="Constante"/>
+	<label key="lawtype0" val="Test unité en marche"/>
+	<label key="lawtype1" val="Test unité à l'arrêt"/>
+	<label key="lawtype2" val="Non testé"/>
+	<label key="HOUR" val="Heures"/>
+	<label key="YEAR" val="Ans"/>
+	<label key="MONTH" val="Mois"/>
+	<label key="DAY" val="Jours"/>
+	<label key="partialnb" val="Test(s) de Course Partielle"/>
+	<label key="partialeff" val="Efficacité"/>
+	<label key="mttr2" val="Temps d'échange"/>
+	<label key="rmk" val="Remarque"/>
+	<label key="lawtypeSimple" val="Simple"/>
+	<label key="lawtypeAdvanced" val="Avancée"/>
+	<label key="part" val="Partie"/>
+	<label key="channel" val="Canal"/>
+	<label key="betachannel" val="Beta(s) du Canal"/>
+	<label key="actuator" val="Actionneur"/>
+	<label key="subactuator" val="sous-actionneur"/>
+	<label key="subactuators" val="sous-actionneurs"/>
+	<label key="config" val="Configuration"/>
+	<label key="period" val="Periode"/>
+	<label key="betasub" val="Beta sous-actionneurs"/>
+	<label key="pfd" val="PFD Avg"/>
+	<label key="pfh" val="PFH"/>
+	<label key="rrf" val="RRF"/>
+	<label key="silComputed" val="SIL Calculé"/>
+	<label key="contribution" val="Contribution (%)"/>
+	<label key="sensorPart" val="Partie Capteur(s)"/>
+	<label key="solverPart" val="Partie Solveur"/>
+	<label key="actuatorPart" val="Partie Actionneur(s)"/>
+	<label key="sifPart" val="SIF"/>
+	<label key="khiStroke" val="Khi course partielle"/>
+	<label key="piStroke" val="Pi course partielle"/>
+	
+</labels>

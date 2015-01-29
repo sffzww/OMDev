@@ -1,0 +1,53 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Help with common cause failures</title><meta content="DocBook XSL Stylesheets V1.73.2" name="generator"><link rel="start" href="index.html" title="GRIF 2013Fault Tree"><link rel="up" href="index.html" title="GRIF 2013Fault Tree"><link rel="prev" href="ar01s02.html" title="Creating a fault tree"><link rel="next" href="ar01s04.html" title="Laws and uncertainties"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="AideCCF"></a>Help with common cause failures</h2></div></div></div><p>
+	To facilitate the creation of model, the Fault Tree  module allows the creation of CCF(Common Cause Failure),
+	and to link a logical entity(<b>Event</b>, <b>Block</b>) to one or more common cause failures.
+	
+	CCF are available in the data table. There is no graphical entity associated with CCF.
+	The logical entity associated with an active CCF are graphically marked by a yellow flash :
+	
+	<div class="mediaobject" align="center"><img src="./ccf/eclairs.gif" align="middle"></div>
+	</p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="AideCCF.Creation"></a>Creating a CCF</h3></div></div></div><p>
+			The creation of a new CCF is possible in different ways :
+			<div class="orderedlist"><ol type="1" compact><li><p>
+		    	 click <span class="guibutton">Add</span> button on table data, 
+			</p></li><li><p>
+				Use the contextual menu on logical entities : 
+				<b>CCF - Add new CCF</b> 
+				
+				<div class="mediaobject" align="center"><img src="./ccf/menuCtx.gif" align="middle"></div>
+			</p></li></ol></div>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="AideCCF.Edition"></a>Editing a CCF</h3></div></div></div><p>
+			You can edit the properties of a CCF in different ways :
+			<div class="orderedlist"><ol type="1" compact><li><p>
+		    	 Double-Click on a cell of the CCF table, and edit.
+			</p></li><li><p>
+				Use the contextual menu on a table raw and click on <b>Property</b> action
+		    	 <div class="mediaobject" align="center"><img src="./ccf/tableau_menuCtx_prop.gif" align="middle"></div>
+				
+				A configuration window opens :
+				<div class="mediaobject" align="center"><img src="./ccf/proprietes.gif" align="middle"></div>
+			</p></li></ol></div>
+		</p><p><a name="AideCCF.Edition.law"></a>
+			Two types of laws are now possible for a CCF:
+			<div class="orderedlist"><ol type="1" compact><li><p>
+		    	The beta-total law : Beta parameter is applied to the laws of concerned components.
+		    	Singularities : 
+		    	<div class="orderedlist"><ol type="a" compact><li><p>
+				    	A component can be concerned by several CCF using beta-total law.
+					</p></li><li><p>
+						The sum of the beta set on the CCF must be strictly less than 1 for a component.
+					</p></li><li><p>
+						The supported laws for a component are exponential, constant and test-periodic.
+					</p></li></ol></div>
+			</p></li><li><p>
+		    	The beta-nuclear law : The laws of the components are replaced by the law defined by the CCF.
+		    	Singularities : 
+		    	<div class="orderedlist"><ol type="a" compact><li><p>
+				    	A component must be linked to only one CCF using beta-nuclear law.
+					</p></li><li><p>
+						Laws of components are no longer used.
+					</p></li><li><p>
+						The supported laws for CCF are exponential, constant and periodic-test.
+					</p></li></ol></div>
+			</p></li></ol></div>
+		</p></div></div></body></html>

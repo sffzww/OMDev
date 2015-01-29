@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE itemizedlist [
+<!ENTITY % DefineEntity SYSTEM "Define.entity">
+%DefineEntity;
+]>
+
+<itemizedlist spacing="compact">
+	<listitem> <simpara>
+		<code>def</code> est la loi de tir par défaut 
+		(généralement employé dans les réseaux de Petri)
+	</simpara> </listitem>
+	<listitem> <simpara>
+		<code>sol <symbol>&#x003B3;</symbol><subscript>1</subscript>, <symbol>&#x003B3;</symbol><subscript>2</subscript>, ..., <symbol>&#x003B3;</symbol><subscript>n</subscript></code> 
+		est une loi de tir à la sollicitation pour n+1 arcs avals. 
+	</simpara> </listitem>
+	<listitem> <simpara>
+		<code>sol2 <symbol>&#x003B3;</symbol><subscript>1</subscript>, #P<subscript>1</subscript>, <symbol>&#x003B3;</symbol><subscript>2</subscript>, #P<subscript>2</subscript>, ..., <symbol>&#x003B3;</symbol><subscript>n</subscript>, #P<subscript>n</subscript></code> 
+		est une seconde loi de tir à la sollicitation pour n+1 places avales. 
+		Cette seconde loi permet de spécifier explicitement la place qui est associée à chaque gamma.
+	</simpara> </listitem>
+	<listitem> <simpara>
+		<code>spec n, p<subscript>1</subscript>,...,p<subscript>m</subscript></code> 
+		est la n<superscript>ième</superscript> loi spéciale qui prend 
+		p<subscript>1</subscript>,...,p<subscript>m</subscript> en paramètres. 
+		Les lois spéciales permettent d'ajouter de nouvelles lois directement en C à 
+		l'aide d'une API de programmation (Cf. <xref linkend="Moca.Moca12.API"/>)
+	</simpara> </listitem>
+</itemizedlist>

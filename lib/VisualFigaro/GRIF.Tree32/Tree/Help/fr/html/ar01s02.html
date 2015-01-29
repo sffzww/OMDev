@@ -1,0 +1,680 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Cr&eacute;ation d'un arbre de d&eacute;faillance</title><meta content="DocBook XSL Stylesheets V1.73.2" name="generator"><link rel="start" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="up" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="prev" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="next" href="ar01s03.html" title="Aide sur les d&eacute;faillances de causes communes"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="section" lang="fr"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="Diagramme"></a>Cr&eacute;ation d'un arbre de d&eacute;faillance</h2></div></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="Diagramme.Saisie"></a>Saisie de l'arbre</h3></div></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Saisie.Porte"></a>Saisie des portes</h4></div></div></div><p>
+			Pour saisir les diff&eacute;rentes <b>Portes</b>, il suffit de s&eacute;lectionner le symbole 
+			correspondant sur la barre d'outils verticale. Ensuite &agrave; chaque clic gauche de la souris sur la surface 
+			de saisie graphique, un nouvel &eacute;l&eacute;ment est cr&eacute;&eacute;. Chacune des portes du mod&egrave;le est caract&eacute;ris&eacute;e 
+			par cinq param&egrave;tres:
+			<div class="orderedlist"><ol type="1" compact><li><p>
+	    		Un <b>num&eacute;ro</b>: le num&eacute;ro et le type sont les vrais identifiants 
+	    		des portes (ceux qui seront utilis&eacute;s par le moteur de calcul). C'est pour cette raison que lorsque 
+	    		l'utilisateur souhaite changer le num&eacute;ro de certaines portes il doit faire attention au fait que
+	    		deux portes ne peuvent pas avoir un num&eacute;ro identique. Ils sont incr&eacute;ment&eacute;s automatiquement au fur et &agrave; mesure 
+	    		de la cr&eacute;ation de nouveaux &eacute;l&eacute;ments.
+	   		</p></li><li><p>
+	    		Un <b>nom</b>: C'est un param&egrave;tre qui est d&eacute;fini automatiquement et qui ne peut pas &ecirc;tre
+	    		modifi&eacute; par l'utilisateur. Le nom de chaque porte est compos&eacute; de son "type" suivit de son "num&eacute;ro" 
+	    		(ex.: "And1" ou "KofN3").
+			</p></li><li><p>
+	    		Un <b>entier "K sur N"</b>: Ce champ n'est accessible que dans le cas des portes de type
+	    		<b>K sur N</b>. Il permet &agrave; l'utilisateur de choisir la valeur de <b>K</b>
+	    		(par d&eacute;faut <b>K</b> vaut 1).
+			</p></li><li><p>
+	   			Un <b>commentaire</b>: Ce champ permet d'ajouter du texte &agrave; l'int&eacute;rieur de la porte. Cette
+	   			fonction a pour but de faciliter la lecture du mod&egrave;le (en sp&eacute;cifiant la particularit&eacute; de ces &eacute;l&eacute;ments). 
+			</p></li><li><p>
+	   			Un <b>type</b>: Une fois qu'une porte a &eacute;t&eacute; cr&eacute;&eacute;e, il est possible de modifier son type parmi
+	   			les cinq types disponibles au niveau de la liste d&eacute;roulante.
+			</p></li></ol></div>
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/SaisiePortes.gif" align="middle"></div></div>  
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Saisie.Evt"></a>Saisie des &eacute;v&eacute;nements</h4></div></div></div><p>
+			Pour saisir les <b>Ev&eacute;nements</b> du mod&egrave;le, il suffit de s&eacute;lectionner le symbole 
+			correspondant sur la barre d'outils verticale. Ensuite &agrave; chaque clic gauche de la souris sur la surface 
+			de saisie graphique, un nouvel &eacute;l&eacute;ment est cr&eacute;&eacute;. Chacun des &eacute;v&eacute;nements du mod&egrave;le est caract&eacute;ris&eacute; 
+			par cinq param&egrave;tres:
+			<div class="orderedlist"><ol type="1" compact><li><p>
+	    		Un <b>num&eacute;ro</b>: le num&eacute;ro et le type sont les vrais identifiants des &eacute;v&eacute;nements 
+	    		(ceux qui seront utilis&eacute;s par le moteur de calcul). C'est pour cette raison que lorsque 
+	    		l'utilisateur souhaite changer le num&eacute;ro de certains &eacute;v&eacute;nements il doit faire attention au fait que
+	    		deux &eacute;v&eacute;nements ne peuvent pas avoir un num&eacute;ro identique. Ils sont incr&eacute;ment&eacute;s automatiquement au fur et &agrave; mesure 
+	    		de la cr&eacute;ation de nouveaux &eacute;l&eacute;ments.
+	   		</p></li><li><p>
+	    		Un <b>nom</b>: Le nom par d&eacute;faut qui est attribu&eacute; aux &eacute;v&eacute;nements est <b>Evti</b>
+	    		pour le i&egrave;me &eacute;l&eacute;ment cr&eacute;&eacute;. Il est conseill&eacute; &agrave; l'utilisateur de remplacer ce nom par quelque chose de plus
+	    		mn&eacute;motechnique afin de faciliter la lecture du mod&egrave;le.
+			</p></li><li><p>
+	   			Un <b>commentaire</b>: Ce champ permet d'ajouter du texte &agrave; l'int&eacute;rieur de l'&eacute;v&eacute;nement. Cette
+	   			fonction a pour but de faciliter la lecture du mod&egrave;le (en sp&eacute;cifiant la particularit&eacute; de ces &eacute;l&eacute;ments). 
+			</p></li><li><p>
+	   			Une <b>loi</b>: C'est l'&eacute;l&eacute;ment qui va servir &agrave; mod&eacute;liser l'aspect al&eacute;atoire
+	   			de l'&eacute;v&eacute;nement. 
+	   			L'utilisateur a la possibilit&eacute; de choisir parmi vingt trois lois qui doivent dans un deuxi&egrave;me temps 
+	   			&ecirc;tre param&eacute;tr&eacute;es (cf. ult&eacute;rieurement la description d&eacute;taill&eacute;e des loi).
+			</p></li><li><p>
+	   			Un <b>type</b>: Une fois qu'un &eacute;v&eacute;nement a &eacute;t&eacute; cr&eacute;&eacute;, il est possible de modifier son type parmi
+	   			les quatre types disponibles au niveau de la liste d&eacute;roulante.
+			</p></li></ol></div>
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/SaisieEvt.gif" align="middle"></div></div>  
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Saisie.Initiator"></a>Notion d'&eacute;v&eacute;nement initiateur pour le calcul de fr&eacute;quence UFI</h4></div></div></div><p>
+			Pour chaque porte ou &eacute;v&eacute;nement, il est possible via un clic-droit d'indiquer qu'elle/il est <b>initiateur</b>. Cela doit s'entendre dans 
+			le sens "arbre d'&eacute;v&eacute;nement" du terme. Dans un arbre d'&eacute;vement, l'&eacute;v&eacute;nement initiateur est celui qui arrive avant que les barri&egrave;res
+			ne mettent le syst&egrave;me dans un &eacute;tat de s&eacute;curit&eacute;. Pour que l'&eacute;v&eacute;nement redout&eacute; se produise il faut donc que l'&eacute;v&eacute;nement initiateur
+			survienne apr&egrave;s la d&eacute;faillance des barri&egrave;res. Le fait de positionner un &eacute;venement <b>initiateur</b> signifie qu'il devra arriver apr&egrave;s 
+			les &eacute;v&eacute;nements non-initiateurs. Cela aura un impact sur le calcul de fr&eacute;quence UFI, cette propri&eacute;t&eacute; n'a pas d'impact sur les calcul de proba ou de Lambda
+			&eacute;quivalent.
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Saisie.Conn"></a>Saisie des liens</h4></div></div></div><p>
+			Une fois les portes et les &eacute;v&eacute;nements cr&eacute;&eacute;s, il faut les connecter entre eux afin d'&eacute;tablir la logique
+			de l'arbre. Il existe deux types de connexions possibles: les connexions "porte -&gt; porte" et les connexions
+			"porte -&gt; &eacute;v&eacute;nement". Pour r&eacute;aliser une connexion, il suffit de:
+			<div class="orderedlist"><ol type="1" compact><li><p>
+	    		Cliquer sur l'ic&ocirc;ne correspondante de la barre d'outils verticale.
+	   		</p></li><li><p>
+	    		S&eacute;lectionner la porte de d&eacute;part en faisant un clic gauche sur la zone sp&eacute;cifique 
+	    		(point pour les portes "ET", croix pour les portes "OU"...) et laisser le bouton enfonc&eacute;.
+			</p></li><li><p>
+	   			Faire glisser la souris jusqu'&agrave; l'&eacute;l&eacute;ment qui doit &ecirc;tre connect&eacute;.
+			</p></li><li><p>
+	   			Rel&acirc;cher la souris.
+			</p></li></ol></div>
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/SaisieConn.gif" align="middle"></div></div>  
+		</p><p>
+			Remarque: L'ic&ocirc;ne ci-dessus ne permet de cr&eacute;er qu'un seul lien &agrave; la fois. Si l'utilisateur
+			souhaite en cr&eacute;er plusieurs &agrave; la suite sans avoir &agrave; res&eacute;lectionner &agrave; chaque fois l'ic&ocirc;ne
+			de cr&eacute;ation de liens, il peut utiliser l'ic&ocirc;ne juste en dessous: 
+			<span class="guibutton">Liens (plusieurs)</span>.
+			<p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/SaisieConnPLS.gif" align="middle"></div></div>  
+		</p>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Saisie.Negation"></a>La porte N&eacute;gation</h4></div></div></div><p>
+			C'est une porte un peu particuli&egrave;re qui permet d'inverser la logique du sous-arbre qui
+			est en aval.
+ 		</p><p>
+			Pour ins&eacute;rer une "N&eacute;gation" dans un arbre il suffit de:
+			<div class="itemizedlist"><ul type="disc" compact><li><p>
+					modifier le type d'une porte existante &agrave; l'aide de la liste d&eacute;roulante;
+				</p></li><li><p>
+					OU cr&eacute;er une nouvelle porte de type "N&eacute;gation":
+					<div class="orderedlist"><ol type="1" compact><li><p>
+							Faire un clic gauche sur l'ic&ocirc;ne correspondante de la barre d'outils verticale.
+						</p></li><li><p>
+							Ensuite &agrave; chaque clic gauche de la souris sur la surface de saisie graphique, 
+							un nouvel &eacute;l&eacute;ment est cr&eacute;&eacute;.
+						</p></li><li><p>
+							Il suffit ensuite de param&eacute;trer et connecter la "N&eacute;gation" comme une porte
+							classique: relier la partie haute (au-dessus du rond) &agrave; la partie basse d'une porte
+							et relier la partie basse (au-dessous du rond) &agrave; la partie haute d'un &eacute;v&eacute;nement ou
+							d'une porte.
+						</p></li></ol></div>
+				</p></li></ul></div>
+ 		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/Negation.gif" align="middle"></div></div>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Reseau.Saisie.Commentaire"></a>Saisie des commentaires</h4></div></div></div><p>
+			Pour ajouter un commentaire n'importe o&ugrave; sur le mod&egrave;le il suffit de cliquer sur 
+			l'ic&ocirc;ne repr&eacute;sentant un crayon et de se placer sur un endroit de la zone de saisie 
+			graphique. La bo&icirc;te de dialogue <b>Commentaire</b> s'ouvre et il est
+			alors possible de saisir le commentaire d&eacute;sir&eacute;.
+ 		</p><p>
+			Remarque : le caract&egrave;re "%" est un caract&egrave;re sp&eacute;cial, il doit &ecirc;tre doubl&eacute; "%%" pour pouvoir afficher "%".
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/SaisieComment.gif" align="middle"></div></div>
+		</p><p>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Saisie.ChampsDynamiques"></a>Champs dynamiques</h4></div></div></div><p>
+	<p>
+		Il peut s'av&eacute;rer int&eacute;ressant d'afficher sur le mod&egrave;le la valeur d'un param&egrave;tre ou de toute autre
+		information dont la valeur peut &ecirc;tre modifi&eacute;e. De la m&ecirc;me mani&egrave;re il est parfois utile d'afficher le
+		r&eacute;sultat d'un calcul &agrave; c&ocirc;t&eacute; du syst&egrave;me auquel il correspond.
+		Pour cela, il suffit d'utiliser des champs dynamiques en s&eacute;lectionnant 
+		l'ic&ocirc;ne correspondante dans la barre d'outils verticale:
+	</p>
+	<p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ChDyn.gif" align="middle"></div></div>  
+	</p>
+	<p>
+		Les champs dynamiques sont en quelque sorte des "commentaires am&eacute;lior&eacute;s". En effet, non seulement ils permettent 
+		de saisir des mots ou des phrases mais il est &eacute;galement possible d'ins&eacute;rer des valeurs du mod&egrave;le ou des r&eacute;sultats.
+	</p>
+	<p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ChDyn2.gif" align="middle"></div></div>  
+	</p>
+	<p>
+		Si vous souhaitez acc&eacute;der &agrave; une information sur une donn&eacute;e de votre mod&egrave;le la syntaxe est la suivante :
+	</p>
+	<p>
+		$data.'type de donn&eacute;e'.'champ servant &agrave; la recherche de la donn&eacute;e'('valeur que doit v&eacute;rifier le champ').'information que l'on souhaite afficher'
+	</p>
+	<p>
+		Nous pouvons donc interpr&eacute;ter la premi&egrave;re ligne de l'image ci-dessus comme :
+		Je cherche un "parameter" dont le "name" est "lambda" et je souhaite afficher sa "value".
+		Lorsque les premi&egrave;res lettres sont saisies, un syst&egrave;me de compl&eacute;tion aide &agrave; saisir le script sans erreur.
+	</p>
+	<p>
+		Si vous souhaiter acc&eacute;der &agrave; un r&eacute;sultat dans la banque de r&eacute;sultats, la syntaxe est la suivante :
+	</p>
+	<p>
+		$result.bank('chemin du calcul dans la banque').target('resultat cible').'ce que vous souhaitez afficher'.'&agrave; quel moment'
+	</p>
+	<p>
+		Nous pouvons donc interpr&eacute;ter la premi&egrave;re ligne de l'image ci-dessous comme :
+		je cherche un r&eacute;sultat dans la banque "default-Moca" pour la cible "stat3 de la variable available", je souhaite
+		afficher la "value" au "dernier" temps. Si last avait &eacute;t&eacute; remplac&eacute; par time(10), on aurait obtenu
+		la valeur &agrave; t=10.
+		Lorsque les premi&egrave;res lettres, un syst&egrave;me de compl&eacute;tion aide &agrave; saisir le script sans erreur, il ouvre m&ecirc;me une fen&ecirc;tre pour s&eacute;lectionner la cible.
+	</p>
+	<p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ChDyn3.gif" align="middle"></div></div>  
+	</p>
+	<p>
+		Il est aussi possible d'afficher une synth&egrave;se du calcul en rempla&ccedil;ant 'ce que vous souhaitez afficher' par <b>summary</b>. Dans ce cas 
+		<b>summary</b> est le dernier mot du script.
+	</p>
+	</p><p>
+		Un bouton a &eacute;t&eacute; rajout&eacute; dans la version 2013, il permet de g&eacute;n&eacute;rer facilement un script de donn&eacute;e du mod&egrave;le.
+	</p></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="Diagramme.Parametrage"></a>Param&eacute;trage des &eacute;l&eacute;ments</h3></div></div></div><p>
+		De mani&egrave;re g&eacute;n&eacute;rale tous les &eacute;l&eacute;ments graphiques peuvent &ecirc;tre &eacute;dit&eacute;s en faisant un double-clic
+		ou avec le menu <b>Edition - Propri&eacute;t&eacute;s</b>, ou encore avec la combinaison de 
+		touches <b>Alt + Entr&eacute;e</b>.
+	</p><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Parametrage.Portes"></a>Param&eacute;trage des portes</h4></div></div></div><p>
+			Lorsque l'utilisateur fait un clic droit sur une porte, il a la possibilit&eacute; de modifier n'importe
+			quel param&egrave;tre (except&eacute; le nom):
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamPorte.gif" align="middle"></div></div>  
+			</p>
+			<div class="itemizedlist"><ul type="disc"><li><p>
+					changer le <b>num&eacute;ro</b>;
+				</p></li><li><p>
+					sp&eacute;cifier la valeur de <b>K</b> si la porte est de type "K sur N";
+				</p></li><li><p>
+					lire et/ou modifier la partie <b>commentaire</b>;
+				</p></li><li><p>
+					modifier le type de la porte parmi les cinq types disponibles dans la liste d&eacute;roulante:
+					<div class="itemizedlist"><ul type="circle" compact><li><p>
+							Porte "OU": une logique de type "OU" est appliqu&eacute;e aux &eacute;l&eacute;ments connect&eacute;s en aval.
+						</p></li><li><p>
+							Porte "ET": une logique de type "ET" est appliqu&eacute;e aux &eacute;l&eacute;ments connect&eacute;s en aval.
+						</p></li><li><p>
+							Porte "K sur N": une logique de type "K sur N" est appliqu&eacute;e aux &eacute;l&eacute;ments connect&eacute;s en aval.
+						</p></li><li><p>
+							Porte "Commentaire": cette porte n'a aucun impact du point de vue logique et sert simplement
+							&agrave; commenter la branche sur laquelle elle se trouve.
+						</p></li><li><p>
+							Porte "N&eacute;gation": cf. pr&eacute;c&eacute;demment. 
+						</p></li></ul></div>
+					<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamPorte2.gif" align="middle"></div></div>  
+					</p>
+				</p></li></ul></div>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Parametrage.Evt"></a>Param&eacute;trage des &eacute;v&eacute;nements</h4></div></div></div><p>
+			Lorsque l'utilisateur fait un clic droit sur un &eacute;v&eacute;nement, il a la possibilit&eacute; de modifier n'importe
+			quel param&egrave;tre:
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamEvenement.gif" align="middle"></div></div>  
+			</p>
+			<div class="itemizedlist"><ul type="disc"><li><p>
+					changer le <b>num&eacute;ro</b>;
+				</p></li><li><p>
+					saisir le <b>nom</b> de l'&eacute;v&eacute;nement;
+				</p></li><li><p>
+					lire et/ou modifier la partie <b>commentaire</b>;
+				</p></li><li><p>
+					lire et/ou modifier la <b>loi</b> qui r&eacute;git l'&eacute;v&eacute;nement.
+				</p></li><li><p>
+					modifier le type parmi les quatre types disponibles dans la liste d&eacute;roulante:
+					<div class="itemizedlist"><ul type="circle" compact><li><p>
+							Ev&eacute;nement &eacute;l&eacute;mentaire;
+						</p></li><li><p>
+							Ev&eacute;nement de base;
+						</p></li><li><p>
+							Ev&eacute;nement &agrave; d&eacute;velopper ult&eacute;rieurement;
+						</p></li><li><p>
+							Ev&eacute;nement "Maison".
+						</p></li></ul></div>
+					<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamEvt.gif" align="middle"></div></div>  
+					</p>
+					<p>
+						La d&eacute;nomination de ces &eacute;v&eacute;nements a simplement un impact de type "graphique" sur la 
+						structure de l'arbre. Il n'y a aucun impact sur la fonction logique qui sera g&eacute;n&eacute;r&eacute;e 
+						pour r&eacute;aliser les calculs. Le but est simplement d'aider &agrave; la (re)lecture de l'arbre
+						de d&eacute;faillance.
+					</p>
+				</p></li></ul></div>
+			<p>
+				Le param&eacute;trage de la partie loi se fait en plusieurs &eacute;tapes:
+				<div class="orderedlist"><ol type="1"><li><p>
+						Choisir la loi parmi les vingt trois disponibles de la liste d&eacute;roulante. 
+					</p></li><li><p>
+						Param&eacute;trer la loi (une liste d&eacute;roulante des param&egrave;tres du mod&egrave;le est accessible pour
+						chaque champ &agrave; remplir).
+						<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamEvt1.gif" align="middle"></div></div>  
+						</p>
+					</p></li><li><p>
+						Possibilit&eacute; d'introduire des calculs d'incertitude pour chacun des param&egrave;tres 
+						avec choix de la loi et des param&egrave;tres correspondants (cf. ult&eacute;rieurement la description
+						d&eacute;taill&eacute;e des calculs d'incertitudes sur les param&egrave;tres).
+						<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamEvt2.gif" align="middle"></div></div>  
+						</p>
+					</p></li></ol></div>
+			</p>
+		</p></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="Diagramme.Renvoi"></a>Utilisation des renvois</h3></div></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Renvoi.Portes"></a>Renvois sur les portes</h4></div></div></div><p><a name="Diagramme.Renvoi.Justification"></a>
+	La notion de <b>renvoi</b> (ou &eacute;l&eacute;ment r&eacute;p&eacute;t&eacute;) a &eacute;t&eacute; introduite dans le module
+	Arbre de d&eacute;faillance pour quatre raisons essentielles&nbsp;:
+	<div class="itemizedlist"><ul type="disc" compact><li><p>
+	    	Faire communiquer des diff&eacute;rentes portions du mod&egrave;le entre elles;
+		</p></li><li><p>
+			Eviter les mod&egrave;les graphiquement trop charg&eacute;s et ainsi pr&eacute;server la lisibilit&eacute;;
+		</p></li><li><p>
+			Faciliter l'utilisation de la fonction <b>Grouper</b> (cf. ult&eacute;rieurement);
+	    </p></li><li><p>
+			Mettre en &eacute;vidence l'essentiel et l'accessoire.
+	    </p></li></ul></div>
+</p><p>
+			Soit un arbre de d&eacute;faillances comportant trois &eacute;v&eacute;nements de base, une porte "OU" (&eacute;v&eacute;nement redout&eacute;)
+			et une porte "ET":
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/Renvoi.gif" align="middle"></div></div>
+		</p><p>
+			Le but ici est de cr&eacute;er un renvoi vers la porte appel&eacute;e "And2" afin de pouvoir dissocier le sous-arbre
+			de "And2" de l'arbre principal. Voici la mani&egrave;re de proc&eacute;der:
+			<div class="orderedlist"><ol type="1"><li><p>
+					Supprimer le lien existant entre la porte "Or1" et la porte "And2".
+				</p></li><li><p>
+					Faire un clic gauche sur l'ic&ocirc;ne <span class="guibutton">Renvoi identique</span> de la barre
+					d'outils verticale puis cliquer sur la porte "And2".
+					<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/Renvoi1.gif" align="middle"></div></div>
+					</p> 
+				</p></li><li><p>
+					Connecter le renvoi ainsi cr&eacute;&eacute; avec la porte "Or1".
+					<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/Renvoi2.gif" align="middle"></div></div>
+					</p> 
+				</p></li></ol></div>
+		</p><p>	
+			A c&ocirc;t&eacute; du renvoi sur la porte "And2" figurent le nom de la porte d'origine et le num&eacute;ro de la page
+			&agrave; laquelle se trouve la porte d'origine.  
+		</p><p>	
+			Tout en &eacute;tant li&eacute;s du point de vue "logique de calcul", les deux arbres sont maintenant totalement
+			ind&eacute;pendants du point de vue graphique. Il est maintenant possible de les placer sur des pages diff&eacute;rentes
+			ou dans des groupes diff&eacute;rents (cf. ult&eacute;rieurement).
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Renvoi.Evts"></a>Renvois sur les &eacute;v&eacute;nements ou &eacute;v&eacute;nements dupliqu&eacute;s</h4></div></div></div><p>
+			Du point de vue logique, il est possible qu'un &eacute;v&eacute;nement ait "un impact" sur plusieurs "branches" d'un m&ecirc;me
+			arbre. Afin de mod&eacute;liser correctement ce cas de figure, il est n&eacute;cessaire de dupliquer cet &eacute;v&eacute;nement.
+			Pour cela, il suffit de s&eacute;lectionner l'ic&ocirc;ne correspondante de la barre d'outils verticale puis de cliquer
+			sur l'&eacute;v&eacute;nement &agrave; dupliquer:
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/Dupliquer.gif" align="middle"></div></div>
+			</p>
+			L'&eacute;v&eacute;nement venant d'&ecirc;tre dupliqu&eacute; est maintenant marqu&eacute; en gris fonc&eacute; tandis que l'&eacute;v&eacute;nement 
+			dupliqu&eacute; est color&eacute; en gris clair.
+			A c&ocirc;t&eacute; du renvoi figurent le nom et le num&eacute;ro de la page de l'&eacute;v&eacute;nement d'origine.  
+		</p><p>
+			Il suffit maintenant d'ins&eacute;rer l'&eacute;v&eacute;nement dupliqu&eacute; dans le mod&egrave;le sachant qu'&agrave; chaque instant
+			son &eacute;tat sera &eacute;gal &agrave; celui de l'&eacute;v&eacute;nement d'origine.
+		</p><p>
+			Remarque: Evidement, si l'&eacute;v&eacute;nement d'origine est supprim&eacute; alors l'&eacute;v&eacute;nement dupliqu&eacute; l'est aussi.
+		</p></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="Reseau.PagesGroupes"></a>Gestion des pages et des groupes</h3></div></div></div><p>
+		L'utilisation des renvois nous a permis d'obtenir deux r&eacute;seaux n'ayant 
+		plus aucun lien graphique entre eux. Ils communiquent uniquement par le biais des 
+		<b>renvois</b>. Cela peut &ecirc;tre mis &agrave; profit, par exemple, pour mettre 
+		chaque sous partie sur une page diff&eacute;rente :
+		<div class="orderedlist"><ol type="1" compact><li><p>
+		    	Cr&eacute;er une nouvelle page en cliquant sur l'ic&ocirc;ne correspondante de la barre 
+		    	d'ic&ocirc;ne (ou bien utiliser le menu <b>Outils - Nouvelle Page</b>). 
+		    	Une page num&eacute;ro 2 est ainsi cr&eacute;&eacute;e.
+			</p></li><li><p>
+				Revenir sur la page 1 en s&eacute;lectionnant la page &agrave; l'aide du s&eacute;lectionneur de page 
+				de la barre de commandes id&eacute;ographiques (ou bien utiliser le menu <b>
+				Outils - Gestionnaire de pages</b>).
+			</p></li><li><p>
+				S&eacute;lectionner la partie &agrave; d&eacute;placer.
+		    </p></li><li><p>
+		    	Ouvrir le menu <b>Outils - Changement de page</b>.
+		    </p></li><li><p>
+		    	S&eacute;lectionner la page 2 et faire <span class="guibutton">OK</span>. La partie s&eacute;lectionn&eacute;e 
+		    	se trouve transf&eacute;r&eacute;e sur la page 2 mais elle continue &agrave; communiquer avec 
+		    	la page 1 gr&acirc;ce aux <b>renvois</b>.
+		    </p></li></ol></div>
+		<p>
+			Remarque: Dans le cas de gros mod&egrave;les, le d&eacute;coupage d&eacute;crit ci-dessus est tr&egrave;s utile.
+		</p>
+	</p><p>
+		Une autre possibilit&eacute; pour saisir un r&eacute;seau est de mettre en &#339;uvre la notion de 
+		<b>Groupe</b>. Cela est rendu possible gr&acirc;ce aux <b>renvois</b> 
+		et au fait que les donn&eacute;es soient globales pour le document, cela permet de cr&eacute;er des 
+		sous-parties bien s&eacute;par&eacute;es :
+		<div class="orderedlist"><ol type="1" compact><li><p>
+		    	S&eacute;lectionner une sous-partie.
+			</p></li><li><p>
+				Utiliser le menu <b>Groupe - Grouper</b>. Une bo&icirc;te de dialogue s'ouvre alors et 
+				demande le nom &agrave; donner au groupe en cours de cr&eacute;ation.
+			</p></li><li><p>
+				Entrer le nom d&eacute;sir&eacute; et cliquer sur <span class="guibutton">OK</span> 
+				(par exemple "System 1"). Le groupe est cr&eacute;&eacute;: le sous r&eacute;seau est remplac&eacute; 
+				par un rectangle affect&eacute; du nom choisi.
+		    </p></li></ol></div>
+		Il est &eacute;galement possible de cr&eacute;er directement un groupe vide avec 
+		le menu <b>Groupe - Nouveau Groupe</b> ou l'outil groupe dans la barre d'outils
+		&agrave; gauche.
+	</p><p>
+		<div class="mediaobject" align="center"><img src="./reseau/Groupe1.gif" align="middle"></div>
+	</p><p>
+		<div class="mediaobject" align="center"><img src="./reseau/Groupe2.gif" align="middle"></div>
+	</p><p>
+		Chaque groupe peut ensuite &ecirc;tre <b>&eacute;dit&eacute;</b>, <b>renomm&eacute;</b> ou 
+		<b>dissoci&eacute;</b> gr&acirc;ce aux commandes contenues dans le menu <b>Groupe</b>.
+		Le groupe peut aussi &ecirc;tre &eacute;dit&eacute; avec un clic droit ou avec la "fl&egrave;che vers le bas" situ&eacute;e
+		&agrave; gauche du gestionnaire de pages. En mode <b>Edition</b>, le sous-mod&egrave;le peut 
+		alors &ecirc;tre modifi&eacute; &agrave; la convenance de l'utilisateur.
+		Lorsque la modification est termin&eacute;e on revient &agrave; la figure pr&eacute;c&eacute;dente en quittant 
+		l'&eacute;dition de groupe avec le menu <b>Groupe - Quitter Edition Groupe</b>, ou en 
+		utilisant la "fl&egrave;che vers le haut" situ&eacute;e &agrave; gauche du gestionnaire de page.
+		Il est aussi possible d'attribuer une image &agrave; un groupe avec la commande <b>Groupe - Changer d'image</b>.
+	</p><p>
+		Remarque: Il est possible de grouper des groupes de mani&egrave;re r&eacute;cursive.
+	</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="AideSaisie"></a>Aide &agrave; la saisie</h3></div></div></div><p>
+	Afin de faciliter la cr&eacute;ation de mod&egrave;le, le module Arbre de d&eacute;faillance dispose
+	de diff&eacute;rentes aides &agrave; la saisie permettant d'automatiser les actions chronophages.
+	</p><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.CCRSansRenvoi"></a>Copier / Coller / Renum&eacute;roter (sans Renvoi)</h4></div></div></div><p>
+			Pour aider &agrave; la saisie des parties r&eacute;p&eacute;titives des Arbre de d&eacute;faillance, des m&eacute;canismes 
+			de "Copier&nbsp;/&nbsp;Coller et Renum&eacute;roter " ont &eacute;t&eacute; mis en place.
+			Cette op&eacute;ration s'effectue en six &eacute;tapes :
+			<div class="orderedlist"><ol type="1" compact><li><p>
+		    	S&eacute;lectionner la partie &agrave; copier.
+			</p></li><li><p>
+				Cliquer sur l'ic&ocirc;ne <span class="guibutton">Copier</span>, ou utiliser le menu 
+				<b>Edition - Copier</b> ou encore le raccourci Ctrl + C.
+			</p></li><li><p>
+				Cliquer sur l'ic&ocirc;ne <span class="guibutton">Coller et Renum&eacute;roter</span>, ou 
+				utiliser le menu  <b>Edition - Coller et Renum&eacute;roter</b> 
+				ou encore le raccourci Ctrl + R. 
+		    </p></li><li><p>
+				Une fen&ecirc;tre appara&icirc;t et permet de choisir le num&eacute;ro de d&eacute;part de la renum&eacute;rotation
+				(attention &agrave; ne pas donner des num&eacute;ros d&eacute;j&agrave; utilis&eacute;s dans le mod&egrave;le).
+			</p></li><li><p>
+				La partie pr&eacute;alablement s&eacute;lectionn&eacute;e est copi&eacute;e et la copie est s&eacute;lectionn&eacute;e.
+			</p></li><li><p>
+				D&eacute;placer la copie vers l'emplacement d&eacute;sir&eacute;.
+			</p></li></ol></div>
+		
+			<p><a name="AideSaisie.CCRSR"></a>
+	On obtient alors l'arbre repr&eacute;sent&eacute; sur la figure ci-contre : 
+	<div class="itemizedlist"><ul type="disc" compact><li><p>
+			les portes <b>Or1</b> et <b>And2</b> de l'arbre original sont
+			devenus <b>Or3</b> et <b>And4</b> pour la copie;
+		</p></li><li><p>
+			les &eacute;v&eacute;nements <b>Evt1</b>, <b>Evt2</b> et <b>Evt3</b> 
+			de l'arbre original sont devenus <b>Evt4</b>, <b>Evt5</b> et 
+			<b>Evt6</b> pour la copie.
+		</p></li></ul></div>
+	<p>
+		<div class="mediaobject" align="center"><img src="./aidesaisie/CCRSansRenvoi.gif" align="middle"></div>
+	</p>
+</p>
+		</p><p><a name="AideSaisie.CCInterDoc"></a>
+			Lors d'une copie vers un nouveau document, les &eacute;ventuels conflits de donn&eacute;es sont g&eacute;r&eacute;s
+			dans la fen&ecirc;tre suivante : 
+			
+			<div class="mediaobject" align="center"><img src="./aidesaisie/InterDocConflit.gif" align="middle"></div>
+			
+			Cette fen&ecirc;tre pr&eacute;sente l'ensemble des donn&eacute;es qui portent le m&ecirc;me nom
+			dans le document source et le document cible. Trois choix sont propos&eacute;s
+			<div class="orderedlist"><ol type="1" compact><li><p>
+				Utiliser les donn&eacute;es du document de destination, ceci remplacera les occurrences
+				&agrave; la donn&eacute;e du document source par la donn&eacute;e portant le m&ecirc;me nom dans le document
+				de destination.
+			</p></li><li><p>
+				Cr&eacute;er une copie pour toutes les donn&eacute;es en conflit, ceci remplacera les occurrences
+				&agrave; la donn&eacute;e du document source par copie portant un nom suffix&eacute; par "copie".
+			</p></li><li><p>
+				R&eacute;gler les conflits manuellement, ceci permet de choisir s'il faut utiliser l'existant
+				ou pas suivant les donn&eacute;es. Il est aussi possible de sp&eacute;cifier le nom de la copie en 
+				double-cliquant sur la case de la colonne "document de destination". Les noms inscrits
+				dans cette colonne sont naturellement masqu&eacute;s lorsque la case 
+				<b>Utiliser existant</b> est coch&eacute;e, puisque c'est la donn&eacute;e qui est d&eacute;j&agrave; dans 
+				le document de destination qui sera utilis&eacute;e.
+			</p></li></ol></div>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.CCRRenvoi"></a>Copier / Coller / Renum&eacute;roter (avec Renvoi)</h4></div></div></div><p>
+			<p><a name="AideSaisie.CCRAR"></a>
+	<p>
+	La commande "Copier / Coller et Renum&eacute;roter" permet en fait de cr&eacute;er de 
+	nouvelles "instances" c'est &agrave; dire de nouveaux sous-arbres similaires 
+	au sous-arbre copi&eacute;:
+	</p>
+	<div class="itemizedlist"><ul type="disc"><li><p>
+			M&ecirc;me structure graphique;
+		</p></li><li><p>
+			M&ecirc;mes param&egrave;tres;
+		</p></li><li><p>
+			Le num&eacute;ro et le nom des &eacute;v&eacute;nements et des portes changent (nouveau nom: <b>Evti</b> 
+			pour les &eacute;v&eacute;nements et <b>"type de porte"i</b> pour les portes o&ugrave; 
+			<b>i</b> est le nouveau num&eacute;ro);
+		</p></li><li><p>
+			M&ecirc;mes commentaires.
+		</p></li></ul></div>
+	<p>
+		Lorsque des renvois identiques font partie de la s&eacute;lection qui va faire l'objet d'un 
+		"Copier / Coller et Renum&eacute;roter", alors ils vont rester inchang&eacute;s pour la copie.
+		Ils vont toujours "pointer" vers la m&ecirc;me porte si celle-ci ne fait pas partie de la copie.
+		<p>
+			<div class="mediaobject" align="center"><img src="./aidesaisie/CCRAvecRenvoi1.gif" align="middle"></div>
+		</p>
+		<p>
+			Sur l'exemple ci-dessus, la porte <b>Or1</b> et l'&eacute;v&eacute;nement <b>Evt1</b>
+			ont bien &eacute;t&eacute; renum&eacute;rot&eacute;s. Concernant le renvoi vers la porte <b>And2</b>, il n'a 
+			pas &eacute;t&eacute; modifi&eacute;.
+		</p>
+	</p>
+	<p>
+		Lorsque une porte qui fait l'objet d'un renvoi fait partie de la s&eacute;lection qui va &ecirc;tre 
+		"Copier / Coller et Renum&eacute;roter" et si le renvoi lui-m&ecirc;me n'y est pas, alors elle va &ecirc;tre 
+		renum&eacute;rot&eacute;e de mani&egrave;re classique.
+		<p>
+			<div class="mediaobject" align="center"><img src="./aidesaisie/CCRAvecRenvoi2.gif" align="middle"></div>
+		</p>
+		<p>
+			Sur l'exemple ci-dessus, tous les &eacute;v&eacute;nements et toutes les portes ont &eacute;t&eacute; renum&eacute;rot&eacute;s
+			normalement.
+		</p>
+	</p>
+	<p>
+		Lorsque des renvois identiques (et leur place d'origine	correspondante) font partie de la 
+		s&eacute;lection qui va faire l'objet d'un "Copier / Coller et Renum&eacute;roter", alors de nouveaux renvois
+		vont &ecirc;tre cr&eacute;&eacute;s et ils seront li&eacute;s aux nouvelles portes.
+		<p>
+			<div class="mediaobject" align="center"><img src="./aidesaisie/CCRAvecRenvoi3.gif" align="middle"></div>
+		</p>
+		<p>
+			Sur l'exemple ci-dessus, la porte faisant l'objet d'un renvoi a &eacute;t&eacute; renum&eacute;rot&eacute;e 
+			(<b>And2</b> -&gt; <b>And4</b>) donc son renvoi a lui aussi &eacute;t&eacute; modifi&eacute;.
+		</p>
+	</p>
+</p>
+		</p><p><a name="AideSaisie.Naviguer.Renvois"></a>
+			Il est possible de naviguer entre les diff&eacute;rents renvois d'un &eacute;l&eacute;ment, 
+			en utilisant le menu <b>Outils/Naviguer vers les renvois</b>.
+			Une fen&ecirc;tre s'ouvre et affiche la liste des renvois. Cliquer sur un renvoi
+			positionne automatiquement la vue sur celui-ci. Il est possible de revenir 
+			&agrave; l'&eacute;l&eacute;ment original et cliquant sur son nom dans la partie sup&eacute;rieure de la fen&ecirc;tre. 
+		</p></div><p><a name="AideSaisie.CCRAVL"></a>
+	
+</p><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.CC"></a>Copier / Coller ordinaire</h4></div></div></div><p>
+		En plus de la commande "Copier / Coller et Renum&eacute;roter", il existe une 
+		fonction "Copier / Coller" ordinaire. Elle permet de faire une simple copie sans
+		renum&eacute;rotation. On obtient ainsi des &eacute;l&eacute;ments en double ce qui, d'un point de vue formel,
+		est incorrect mais qui doit &ecirc;tre tol&eacute;r&eacute; de mani&egrave;re transitoire afin de faciliter la saisie.
+	</p><p>
+		Toutes les fois que cela est possible, la fonction "Copier / Coller / Renum&eacute;roter" doit
+		donc &ecirc;tre pr&eacute;f&eacute;r&eacute;e &agrave; "Copier / Coller" simple afin de minimiser le risque d'erreur. 
+		Mais quand elle est tout de m&ecirc;me utilis&eacute;e, c'est &agrave; l'utilisateur de prendre ses 
+		pr&eacute;cautions pour r&eacute;tablir, in fine, une num&eacute;rotation correcte afin de faire dispara&icirc;tre 
+		les doublons. 
+	</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.ModifGlobal"></a>Modification Globale</h4></div></div></div><p>
+			<p><a name="AideSaisie.ModGlobale"></a>
+	
+	Au cours de l'&eacute;laboration de votre Arbre de d&eacute;faillance, il peut &ecirc;tre n&eacute;cessaire de modifier une
+	grande partie des &eacute;l&eacute;ments: changer les noms, les num&eacute;ros... 
+	La fonction "Modification globale" du menu <b>Edition</b> permet de r&eacute;aliser 
+	des modifications en masse:
+	<div class="itemizedlist"><ul type="disc"><li><p>
+			Utiliser la fonction <b>Edition / Modification globale</b>.
+		</p></li><li><p>
+			Choisir le type d'&eacute;l&eacute;ment &agrave; modifier parmi les onglets disponibles.
+		</p></li><li><p>
+			La partie "Rechercher / Remplacer" permet de changer une cha&icirc;ne de caract&egrave;res pr&eacute;sente
+			dans un ou plusieurs label. Elle est remplac&eacute;e par la chaine inscrite dans la partie 
+			"Remplacer".
+		</p></li><li><p>
+			La partie "Renum&eacute;roter" permet de proc&eacute;der &agrave; une modification des num&eacute;ros. Il suffit 
+			de marquer un num&eacute;ro de <b>D&eacute;but</b> puis de pr&eacute;ciser un 
+			<b>Pas</b> constant ou un <b>Ajout</b> d'une valeur constante 
+			aux num&eacute;ros actuels.
+		</p></li><li><p>
+			Cliquer sur <span class="guibutton">OK</span> pour revenir au graphique. Les modifications sont
+			valid&eacute;es.
+		</p></li></ul></div>
+	<p>
+		Remarque: Les changements de nom et les renum&eacute;rotations peuvent se faire &eacute;ventuellement
+		&agrave; la main en prenant les pr&eacute;cautions qui s'imposent (&eacute;viter les doublons...). Il suffit de
+		cliquer dans la colonne <b>Num&eacute;ro futur</b> ou <b>Nom futur</b>
+		et de saisir le changement sans oublier de le valider &agrave; l'aide de la touche "ENTREE".
+	</p>
+	
+	<div class="mediaobject" align="center"><img src="./aidesaisie/ModGlobale.gif" align="middle"></div>
+	
+</p>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.ModifSelection"></a>Modification de la s&eacute;lection</h4></div></div></div><p>
+			<p><a name="AideSaisie.ModS"></a>
+	<p>
+		La fonction "Modification de la s&eacute;lection" est l'&eacute;quivalent d'une "Modification globale"
+		mais appliqu&eacute;e seulement aux &eacute;l&eacute;ments s&eacute;lectionn&eacute;s. En effet, seuls les &eacute;v&eacute;nements et portes
+		 s&eacute;lectionn&eacute;s vont pouvoir &ecirc;tre modifi&eacute;s.
+	</p>
+	<p>
+		Remarque: La fonction "Modification de la s&eacute;lection" ne permet pas de modifier
+		les param&egrave;tres du mod&egrave;le mais elle peut permettre d'en cr&eacute;er des nouveaux.
+	</p>
+</p>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Properties"></a>Propri&eacute;t&eacute;s du document / Gestion des images</h4></div></div></div><p>
+		Le menu <b>Fichier - Propri&eacute;t&eacute;s du document</b> 
+		permet de m&eacute;moriser un certain nombre d'informations concernant le document : nom, version, commentaire ...
+		Ces informations sont accessibles dans l'onglet <b>G&eacute;n&eacute;ral</b>.
+		<div class="mediaobject" align="center"><img src="./aidesaisie/PropGeneral.gif" align="middle"></div>
+	</p><p>
+		Les images sont tr&egrave;s utiles pour repr&eacute;senter les sous-syst&egrave;mes.
+		GRIF 2013 permet aussi de m&eacute;moriser un ensemble d'images qui pourront &ecirc;tre utilis&eacute;es plus tard
+		dans l'application (groupes, prototypes). La gestion des images s'effectue dans l'onglet 
+		<b>Images</b>.
+		<div class="mediaobject" align="center"><img src="./aidesaisie/PropImages.gif" align="middle"></div>
+		Il est possible d'ajouter des images au document &agrave; l'aide de l'ic&ocirc;ne 
+		<span class="guiicon"><img src="./aidesaisie/new.gif"></span>. Un double-clic dans la colonne 
+		<b>Fichier</b> permet de s&eacute;lectionner le fichier image de type jpg, gif ou png.
+		Il est possible d'associer une description
+		ou un nom &agrave; l'image en faisant un double-clic dans la colonne <b>Description</b>. 
+	</p><p>
+		Une fois dans le document, l'image peut &ecirc;tre associ&eacute;e &agrave; un groupe &agrave; l'aide du menu 
+		<b>Groupe - Changer l'image</b> 
+	</p><p>
+		Les images sont m&eacute;moris&eacute;es &agrave; l'int&eacute;rieur du document, 
+		veillez &agrave; ajouter des images de taille raisonnable.
+		Les images &eacute;tant dans le document, 
+		il faudra r&eacute;p&eacute;ter l'op&eacute;ration si le fichier image est modifi&eacute; &agrave; l'ext&eacute;rieur de l'application.
+	</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Alignement"></a>Alignement</h4></div></div></div><p>
+			Afin d'am&eacute;liorer la lisibilit&eacute; du mod&egrave;le, il est possible d'aligner verticalement
+			ou horizontalement les &eacute;l&eacute;ments s&eacute;lectionn&eacute;s. Il suffit pour cela d'utiliser la commande
+			<b>Aligner</b> du menu <b>Outils</b>.
+			<p><a name="AideSaisie.Aligne"></a>
+	La figure ci-dessous montre le fonctionnement de la commande. Aligner verticalement 
+	diff&eacute;rents &eacute;l&eacute;ments s&eacute;lectionn&eacute;s s'effectue de la mani&egrave;re suivante:
+	<div class="orderedlist"><ol type="1"><li><p>
+			S&eacute;lectionner les &eacute;l&eacute;ments (&eacute;l&eacute;ments du mod&egrave;le, commentaires, champs dynamiques...) &agrave; aligner;
+		</p></li><li><p>
+			Aller dans le menu <b>Outils</b> et s&eacute;lectionner la fonction 
+			<b>Aligner</b>;
+		</p></li><li><p>
+			Choisir le type d'alignement: <b>Aligner au centre</b>;
+		</p></li><li><p>
+			Faire un clic gauche.
+		</p></li></ol></div>
+	<div class="mediaobject" align="center"><img src="./aidesaisie/Aligne.gif" align="middle"></div>
+	<p>
+		De m&ecirc;me, pour aligner des &eacute;l&eacute;ments horizontalement, il suffit de s&eacute;lectionner le type 
+		<b>Aligner au milieu</b> qui aligne les ordonn&eacute;es en maintenant les 
+		abscisses constantes. Le principe est le m&ecirc;me que celui d&eacute;crit ci-dessus.
+	</p>
+</p>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Multi"></a>S&eacute;lection multiple</h4></div></div></div><p>
+			Il peut s'av&eacute;rer parfois utile de s&eacute;lectionner plusieurs &eacute;l&eacute;ments dispos&eacute;s aux diff&eacute;rents 
+			coins de la zone de saisie. Pour simplifier ce type de s&eacute;lection, il suffit de cliquer 
+			un &agrave; un sur chacun des &eacute;l&eacute;ments vis&eacute;s en maintenant la touche Shift du clavier enfonc&eacute;e.
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Connex"></a>S&eacute;lection de partie connexe</h4></div></div></div><p>
+		Il est parfois difficile de s&eacute;lectionner une partie connexe d'un mod&egrave;le. Pour simplifier
+		la s&eacute;lection, il suffit de s&eacute;lectionner un &eacute;l&eacute;ment graphique puis d'utiliser 
+		le menu	<b>S&eacute;lectionner une partie connexe</b> du menu <b>Edition</b>.
+		Il est possible d'effectuer directement la s&eacute;lection connexe en cliquant sur l'&eacute;l&eacute;ment
+		avec le bouton Ctrl enfonc&eacute;.
+	</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.PageSize"></a>Zoom et taille de page</h4></div></div></div><p>
+			Si lors d'une mod&eacute;lisation, la taille de la page n'est pas suffisante, il est possible d'en 
+			changer la taille en utilisant les menus 
+			<b>Augmenter la taille de la page</b> (<span class="keycap"><strong>Control</strong></span>+<span class="keycap"><strong>Pav&eacute; num&eacute;rique +</strong></span>),  
+			<b>Diminuer la taille de la page</b> (<span class="keycap"><strong>Control</strong></span>+<span class="keycap"><strong>Pav&eacute; num&eacute;rique -</strong></span>), 
+			<b>Taille de la page</b> (<span class="keycap"><strong>Control</strong></span>+<span class="keycap"><strong>Pav&eacute; num&eacute;rique /</strong></span>)
+			du menu <b>Outils</b>.
+		</p><p>
+			Le menu <b>Taille de la page</b> permet d'&eacute;diter directement les dimensions des pages.
+			<div class="mediaobject" align="center"><img src="./aidesaisie/PageSize.gif" align="middle"></div>
+		</p><p>
+			Les zooms des pages peuvent &ecirc;tre modifi&eacute;s soit par le menu de la barre d'ic&ocirc;nes :
+			<div class="mediaobject" align="center"><img src="./aidesaisie/PageZoom.gif" align="middle"></div>
+			Soit en s&eacute;lectionnant la vue et effectuant un <span class="keycap"><strong>Control</strong></span>+<span class="keycap"><strong>roulette haut</strong></span> pour zoomer ou
+			<span class="keycap"><strong>Control</strong></span>+<span class="keycap"><strong>roulette bas</strong></span> pour d&eacute;zoomer.
+		</p><p>
+			Le verrou situ&eacute; dans la barre d'ic&ocirc;nes permet d'appliquer le zoom sur la page courante ou sur l'ensemble des pages du document.
+			<div class="informaltable"><table border="0"><colgroup><col><col></colgroup><tbody><tr><td align="center"><div class="mediaobject"><img src="./aidesaisie/PageZoomLock.gif"></div></td><td> <p>
+						Le zoom est appliqu&eacute; &agrave; toutes les pages du document.
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./aidesaisie/PageZoomUnLock.gif"></div></td><td> <p>
+						Le zoom est appliqu&eacute; uniquement &agrave; la page courante.
+					</p> </td></tr></tbody></table></div>
+		</p><p>
+			A noter que si un &eacute;l&eacute;ment est s&eacute;lectionn&eacute; sur la page, le zoom centrera la page sur cet &eacute;l&eacute;ment.
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Reticule"></a>R&eacute;ticule</h4></div></div></div><p>
+			Afin de pouvoir r&eacute;aliser rapidement un mod&egrave;le ordonn&eacute; et lisible, le <b>r&eacute;ticule</b> 
+			permet d'aligner (de mani&egrave;re moins pr&eacute;cise que la fonction <b>Aligner</b> du menu 
+			<b>Outils</b>) les diff&eacute;rents &eacute;l&eacute;ments entre eux.
+			L'activation (ou d&eacute;sactivation) du <b>r&eacute;ticule</b> s'effectue au niveau de 
+			l'onglet <b>Graphiques</b> du menu <b>Option</b>.
+			<p><a name="AideSaisie.Retic"></a>
+	La figure ci-dessous montre comment aligner facilement et rapidement un &eacute;l&eacute;ment par rapport
+	&agrave; un autre:
+	<div class="mediaobject" align="center"><img src="./aidesaisie/Reticule.gif" align="middle"></div>
+	<p>
+		De m&ecirc;me, pour aligner des &eacute;l&eacute;ments horizontalement, il suffit de s&eacute;lectionner le type 
+		<b>Aligner au milieu</b> qui aligne les ordonn&eacute;es en maintenant les 
+		abscisses constantes. Le principe est le m&ecirc;me que celui d&eacute;crit ci-dessus.
+	</p>		
+</p>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Glue"></a>Glue/Association graphique</h4></div></div></div><p>
+			Lorsque les objets sont positionn&eacute;s &agrave; votre convenance, 
+			il est possible de figer un ensemble d'objet les s&eacute;lectionnant et en faisant un clic droit
+			puis <b>Associer</b>. Cette commande groupe (au sens graphique et non hi&eacute;rarchique) 
+			les objets s&eacute;lectionn&eacute;s, de telle sorte qu'en d&eacute;placer un d&eacute;place les autres.
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Line"></a>Ligne</h4></div></div></div><p>
+			Afin de pouvoir dessiner des lignes, polylignes ou fl&egrave;ches, l'outil <b>Ligne</b> 
+			peut &ecirc;tre utilis&eacute;. Dessinez la ligne puis &eacute;ditez ses propri&eacute;t&eacute;s pour construire une fl&egrave;che.
+		</p><p>
+		<div class="mediaobject" align="center"><img src="./aidesaisie/PropLine.gif" align="middle"></div>
+		</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="Reseau.Tableaux.Clean"></a>Nettoyage des tableaux</h4></div></div></div><p>
+			Des donn&eacute;es peuvent ne plus &ecirc;tre utilis&eacute;es et il est parfois n&eacute;cessaire 
+			de supprimer toutes les donn&eacute;es inutilis&eacute;es. Pour cela utilisez le menu
+			<b>Donn&eacute;es et Calculs / Supprimer les donn&eacute;es inutilis&eacute;e</b>
+		</p><p>
+			<div class="mediaobject" align="center"><img src="./aidesaisie/Nettoyage_fr.gif" align="middle"></div>
+			La fen&ecirc;tre ci-dessus s'affiche et pr&eacute;sente toutes les donn&eacute;es inutilis&eacute;es.
+			S&eacute;lectionnez les donn&eacute;es que vous souhaitez vraiment supprimer puis cliquez sur OK.
+		</p></div><p><a name="AideSaisie.Layout"></a>
+		
+</p><p><a name="AideSaisie.+"></a>
+		
+</p></div></div></body></html>

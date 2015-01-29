@@ -1,0 +1,645 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Creating a fault tree</title><meta content="DocBook XSL Stylesheets V1.73.2" name="generator"><link rel="start" href="index.html" title="GRIF 2013Fault Tree"><link rel="up" href="index.html" title="GRIF 2013Fault Tree"><link rel="prev" href="index.html" title="GRIF 2013Fault Tree"><link rel="next" href="ar01s03.html" title="Help with common cause failures"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="Diagramme"></a>Creating a fault tree</h2></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="Diagramme.Saisie"></a>Entering the tree</h3></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Saisie.Porte"></a>Entering gates</h4></div></div></div><p>
+			To enter the different <b>Gates</b>, select the corresponding symbol on 
+			the vertical toolbar. A new element is then created whenever you click right on the 
+			graphical entry area. Each of the model's gates has five parameters:
+			<div class="orderedlist"><ol type="1" compact><li><p>
+	    		A <b>number</b>: These numbers are, with the type, the gates' true 
+	    		identifiers (those which will be used by the computation engine). That is why, 
+	    		when you wish to change the numbers of certain gates, you must remember that 
+	    		two gates cannot have an identical number. They are automatically incremented 
+	    		as new elements are created.
+	   		</p></li><li><p>
+	    		A <b>name</b>: It is a parameter which is defined automatically and 
+	    		which cannot be modified by the user. The name of each gate consists of its "type" 
+	    		followed by its "number" (e.g.: "And1" or "KofN3").
+			</p></li><li><p>
+	    		A <b>"K out of N" integer</b>: This field is only accessible in the case of 
+	    		<b>K out of N</b> gates. It allows you to choose the value of <b>K</b>
+	    		(<b>K</b> equals 1 by default).
+			</p></li><li><p>
+	   			A <b>comment</b>: This field adds text inside the gate. This function 
+	   			makes the model more legible (by giving the specific features of these elements).
+			</p></li><li><p>
+	   			A <b>type</b>: When a gate has been created, its type can be modified 
+	   			to one of the five types available in the drop-down list.
+			</p></li></ol></div>
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/SaisiePortes.gif" align="middle"></div></div>  
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Saisie.Evt"></a>Entering events</h4></div></div></div><p>
+			To enter the model's <b>Events</b>, select the corresponding symbol on the 
+			vertical toolbar. 
+			A new element is then created whenever you click left on the graphical entry area.
+			Each of the model's events has five parameters:
+			<div class="orderedlist"><ol type="1" compact><li><p>
+	    		A <b>number</b>: These numbers are, with the type, the events' true 
+	    		identifiers (those used by the computation engine). That is why, when you wish to 
+	    		modify the numbers of certain events, you must remember that two events cannot have 
+	    		an identical number. They are automatically incremented as new elements are created.
+	   		</p></li><li><p>
+	    		A <b>name</b>: The default name assigned to the events is  <b>Evti</b>
+	    		for the "i" the element created. You are recommended to replace this name by something 
+	    		more mnemonic to increase the model's legibility.
+			</p></li><li><p>
+	   			A <b>comment</b>: This field adds text inside the event. This function 
+	   			increases the model's legibility (by giving the specific features of these elements).
+			</p></li><li><p>
+	   			A <b>law</b>: This element is used to model the event's random aspect. 
+	   			You can choose from many laws which must then be configured (cf. detailed 
+	   			description of the laws later on in this document).
+			</p></li><li><p>
+	   			A <b>type</b>: When an event has been created, its type can be 
+	   			modified from the four types available in the drop-down list.
+			</p></li></ol></div>
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/SaisieEvt.gif" align="middle"></div></div>  
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Saisie.Initiator"></a>Initiator event for frequency computation (UFI)</h4></div></div></div><p>
+			For each gate or event, you can set it <b>initiator</b> (with a right clik).
+			This attribut must be seen from an "Event-Tree" point of view. In an event-tree an initiator is an event that must happen
+			befo barriers set the system in a safe mode. In order to have a Top-event, iniator event must happen after barriers failure.
+			Setting  <b>initiator</b> attribut on and event means that it must appear after the "non-initiator" events.
+			This setting has an impact on UFI computation only. There is no impact on Probability of Equivalent lambda.
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Saisie.Conn"></a>Entering links</h4></div></div></div><p>
+			When the gates and events have been created, they must be interconnected to establish 
+			the tree's logic. There are two possible types of connections: "gate -&gt; gate" and 
+			"gate -&gt; event" connections.
+			To make a connection, proceed as follows:
+
+			<div class="orderedlist"><ol type="1" compact><li><p>
+	    		Click the corresponding icon on the vertical toolbar.
+	   		</p></li><li><p>
+	    		Select the start gate by a click left on the specific zone 
+	    		(a dot for "AND" gates, a cross for "OR" gates, etc.) and keep the button pressed.
+			</p></li><li><p>
+	   			Move the mouse to the element to be connected.
+			</p></li><li><p>
+	   			Release the mouse button.
+			</p></li></ol></div>
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/SaisieConn.gif" align="middle"></div></div>  
+		</p><p>
+			NB: The above icon only allows a single link to be created at a time. 
+			If you wish to create several links in succession without having to reselect 
+			the link creation icon each time, use the icon shown below:
+			<span class="guibutton">Links (several)</span>.
+			<p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/SaisieConnPLS.gif" align="middle"></div></div>  
+		</p>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Saisie.Negation"></a>NOT gate</h4></div></div></div><p>
+			It is a very specific gate which inverts the logic of the subtree which is downstream of it.
+ 		</p><p>
+			To insert a "Negation" in a tree, proceed as follows:
+			<div class="itemizedlist"><ul type="disc" compact><li><p>
+					change the type of an existing gate by using the drop down list;
+				</p></li><li><p>
+					OR create a new a new gate with the type "Negation":
+					<div class="orderedlist"><ol type="1" compact><li><p>
+							Click left on the corresponding icon on the vertical toolbar.
+						</p></li><li><p>
+							A new element will then be created whenever you click left on the graphical entry area.
+						</p></li><li><p>
+							You then just have to configure and connect the "Negation" like a 
+							conventional gate: link the top part (above the circle) to the bottom 
+							part of a gate and link the bottom part (below the circle) to the top 
+							part of an event or gate.
+						</p></li></ol></div>
+				</p></li></ul></div>
+ 		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/Negation.gif" align="middle"></div></div>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Reseau.Saisie.Commentaire"></a>Entering Comments</h4></div></div></div><p>
+			To add a comment anywhere on the chart, click the pencil icon and place yourself on a 
+			point in the graphical input zone. The <b>Comment</b> dialogue box opens where you can enter 
+			the desired comment.
+ 		</p><p>
+			Note: Character "%" is a reserved character, it must be type twice "%%" in order to display "%".
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/SaisieComment.gif" align="middle"></div></div>
+		</p><p>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Saisie.ChampsDynamiques"></a>Dynamic fields</h4></div></div></div><p>
+	<p>
+		It may be useful to observe the change in the different parameters of the model. 
+		It is also usefull to see a result next to its corresponding system.
+		To do this, use dynamic fields by selecting the corresponding icon on the vertical tool bar:
+	</p>
+	<p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ChDyn.gif" align="middle"></div></div>  
+	</p>
+	<p>
+		The dynamic fields are a type of "improved comments". They can be used not only to enter words or phrases but also to insert model values
+		or results.
+	</p>
+	<p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ChDyn2.gif" align="middle"></div></div>  
+	</p>
+		<p>
+		If you want to display informations about a data of the model, you must use the following syntax:
+	</p>
+	<p>
+		$data.'type of data'.'field used o search data'('value that the field must match).'information you want to display for the selected data'
+	</p>
+	<p>
+		We can analyze the above windows as follows:
+		I am looking for a "parameter" which "name" is 'lambda", and I want to display its "value".
+		When you type the first letters, a completion system helps to type script without error.
+	</p>
+	<p>
+		If you want to display a result of the result-bank, the syntax is the following:
+	</p>
+	<p>
+		$result.bank('path in the bank').target('target result').'what you want to display'.'at what time'
+	</p>
+	<p>
+		We can analyze the next picture as follows:
+		I am looking for a result which path in the bank is "default-Moca", I want results for "TS3 for 'available' valriable" and
+		I want its value for the "last" time. If last is replaced by time(10) we obtain value at t=10. 
+	</p>
+	<p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ChDyn3.gif" align="middle"></div></div>  
+	</p>
+	<p>
+		You can also display a summary of result. Replace 'what you want to display' by <b>summary</b>. 
+		In this case, <b>summary</b> is the last word of this script.
+	</p>
+	</p><p>
+		A button has been added in 2013 version, it is a script generator for model data.
+	</p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="Diagramme.Parametrage"></a>Configuring the elements</h3></div></div></div><p>
+		All the graphical elements can normally be edited with a double-click on 
+		them or using the <b>Edit - Properties</b> menu, 
+		or using the shortcut <b>Alt + Enter</b>.
+	</p><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Parametrage.Portes"></a>Configuring the gates</h4></div></div></div><p>
+			When you click right on a gate, you can modify any parameter (except the name):
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamPorte.gif" align="middle"></div></div>  
+			</p>
+			<div class="itemizedlist"><ul type="disc"><li><p>
+					change the <b>number</b>;
+				</p></li><li><p>
+					specify the value of <b>K</b> if the gate is a "K out of N" type;
+				</p></li><li><p>
+					read and/or modify the <b>comment</b> part;
+				</p></li><li><p>
+					modify the type of gate to one of the five types available in the drop-down list:
+					<div class="itemizedlist"><ul type="circle" compact><li><p>
+							"OR" gate: an "OR" type logic gate is applied to the elements connected downstream.
+						</p></li><li><p>
+							"AND" gate: an "AND" type logic is applied to the elements connected downstream.
+						</p></li><li><p>
+							"K of N": a "K of N" type logic is applied to the elements connected upstream.
+						</p></li><li><p>
+							"Comment" gate: this gate has no effect from the logic viewpoint and is only used to comment on the branch where it is located.
+						</p></li><li><p>
+							"NOT" gate: cf. above.
+						</p></li></ul></div>
+					<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamPorte2.gif" align="middle"></div></div>  
+					</p>
+				</p></li></ul></div>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Parametrage.Evts"></a>Configuring the events</h4></div></div></div><p>
+			When you click right on a gate, you can modify any parameter (except the name):
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamEvenement.gif" align="middle"></div></div>  
+			</p>
+			<div class="itemizedlist"><ul type="disc"><li><p>
+					to change the <b>number</b>;
+				</p></li><li><p>
+					to enter the event <b>name</b>;
+				</p></li><li><p>
+					to read and/or modify the <b>comment part</b>;
+				</p></li><li><p>
+					to read and/or modify the law <b>governing</b> the event.
+				</p></li><li><p>
+					to modify the type to one of the four available types in the drop-down list:
+					<div class="itemizedlist"><ul type="circle" compact><li><p>
+							Elementary event;
+						</p></li><li><p>
+							Basic event;
+						</p></li><li><p>
+							To be developed event;
+						</p></li><li><p>
+							"Home" event.
+						</p></li></ul></div>
+					<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamEvt.gif" align="middle"></div></div>  
+					</p>
+					<p>
+						The names of these events simply have a "graphical" impact on the tree structure.
+						There is no impact on the logic function which will be generated to 
+						perform the computations. 
+						The aim is simply to simplify re(reading) the fault tree
+					</p>
+				</p></li></ul></div>
+			<p>
+				The law part is configured in several steps:
+				<div class="orderedlist"><ol type="1"><li><p>
+						Choose the law from the twenty-three available in the drop-down list. 
+					</p></li><li><p>
+						Configure the law (a drop-down list of the module's parameters is 
+						available for each field to be filled in).
+						<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamEvt1.gif" align="middle"></div></div>  
+						</p>
+					</p></li><li><p>
+						Uncertainty computations can be introduced for each of the parameters, 
+						with a choice of the law and of the corresponding parameters (cf. later 
+						on in this document: a detailed description of the uncertainty computations 
+						on the parameters).
+						<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/ParamEvt2.gif" align="middle"></div></div>  
+						</p>
+					</p></li></ol></div>
+			</p>
+		</p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="Diagramme.Renvoi"></a>Using shortcuts</h3></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Renvoi.Portes"></a>Identical Transfer Gates (or Shortcuts on gates)</h4></div></div></div><p><a name="Diagramme.Renvoi.Justification"></a>
+	The concept of a <b>shortcut</b> (or repeated element) was introduced in the 
+	Fault Tree module for four main reasons:
+	<div class="itemizedlist"><ul type="disc" compact><li><p>
+	    	To link together portions of the model;
+		</p></li><li><p>
+			To avoid graphicaly complex model, and keep readability;
+		</p></li><li><p>
+		    To simplify the use of the <b>Group</b> function (cf. below);
+	    </p></li><li><p>
+			To highlight what is essential and what is not.
+	    </p></li></ul></div>
+</p><p>
+			Let a fault tree contain three base events, one "OR" gate (critical event) 
+			and one "AND" gate.
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/Renvoi.gif" align="middle"></div></div>
+		</p><p>
+			The aim here is to create a shortcut to the gate (identical trasfert gate) called "And2" to be able to 
+			dissociate the "And2" subtree from the main tree. Proceed as follows:
+			<div class="orderedlist"><ol type="1"><li><p>
+					Delete the existing link between gate "Or1" and gate "And2".
+				</p></li><li><p>
+					Click left on the <span class="guibutton">Transfert Gate</span> of tool-bar then click on "And2" Gate.
+					<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/Renvoi1.gif" align="middle"></div></div>
+					</p> 
+				</p></li><li><p>
+					Connect the shortcut created in this manner to gate "Or1".
+					<p>
+						<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/Renvoi2.gif" align="middle"></div></div>
+					</p> 
+				</p></li></ol></div>
+		</p><p>	
+			The name of the original gate and the page number where the original gate is located 
+			are shown beside the shortcut to gate "And2".
+		</p><p>	
+			Although linked from the "computational logic" viewpoint, the two trees are now 
+			totally graphically independent. They can now be placed on different pages or in 
+			different groups (cf. later on in this document).
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Diagramme.Renvoi.Evts"></a>Repeated events (or Shortcuts on events)</h4></div></div></div><p>
+			From the logic viewpoint an event can have an "impact" on several "branches" of the 
+			same tree.
+			To correctly model this case, this event must be duplicated. 
+			To do this, select the corresponding icon on the vertical toolbar, 
+			then click the event to be duplicated:
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./reseau/Dupliquer.gif" align="middle"></div></div>
+			</p>
+			The event which has just been duplicated is now marked in dark grey whereas the 
+			duplicated event is shown in light grey. The name and number of the original event's 
+			page are shown beside the shortcut.
+		</p><p>
+			The repeated event must now be inserted in the model, given that at each instant 
+			its state will be equal to that of the original event.
+		</p><p>
+			NB: Obviously, if the original event is deleted then the duplicated event is also deleted.
+		</p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="Reseau.PagesGroupes"></a>Page and group management</h3></div></div></div><p>
+		The use of shortcuts allowed us to obtain two Fault Tree which have no graphical link 
+		between them. They communicate only by <b>shortcuts</b>. This can be used, 
+		for example, to place 
+		each subpart on a different page:
+		<div class="orderedlist"><ol type="1" compact><li><p>
+		    	Create a new page by clicking the corresponding icon in the icon bar 
+		    	(or use menu <b>Tools - New Page</b>). A page number 2 is thus created.
+			</p></li><li><p>
+				Return to page 1 by selecting the page using the page selector in the ideographic 
+				command bar (or use menu <b>Tools - Page manager</b>).
+			</p></li><li><p>
+				Select the part to be moved.
+		    </p></li><li><p>
+		    	Open menu <b>Tools - Change page</b>.
+		    </p></li><li><p>
+		    	Select page 2 and click <span class="guibutton">OK</span>. The part selected is transferred 
+		    	to page 2 but it continues to communicate with page 1 via the <b>shortcuts</b>.
+		    </p></li></ol></div>
+		<p>
+			Note: For large models the division method described above is very useful.
+		</p>
+	</p><p>
+		Another possibility for entering large Fault Tree is to use the <b>Group</b> concept. 
+		This is made possible by the <b>shortcuts</b> and the fact that the data is 
+		global for a document. This allows quite separate subparts to be created:
+		<div class="orderedlist"><ol type="1" compact><li><p>
+		    	Select a subpart.
+			</p></li><li><p>
+				Use menu <b>Group - Group</b>. A dialogue box then opens asking for the 
+				name to be given to the group being created.
+			</p></li><li><p>
+				Enter the desired name and click <span class="guibutton">OK</span> 
+				(e.g.: "System 1"). The group is created: the subnet is replaced by a rectangle 
+				assigned with the chosen name.
+		    </p></li></ol></div>
+		You can also create an empty group with <b>Group - New Group</b> menu 
+		or group tool in the left toolbar.
+	</p><p>
+		<div class="mediaobject" align="center"><img src="./reseau/Groupe1.gif" align="middle"></div>
+	</p><p>
+		<div class="mediaobject" align="center"><img src="./reseau/Groupe2.gif" align="middle"></div>
+	</p><p>
+		Each group can then be <b>edited</b>, <b>renamed</b> or 
+		<b>ungrouped</b> using the commands in the <b>Group</b> menu. 
+		The group can also be edited with a click right or using the "cursor down arrow" on the left 
+		of the page manager. 
+		In Edit mode, the submodel can then be modified as you wish. 
+		When the modification is terminated you return to the previous figure by exiting group 
+		editing by menu <b>Group - Quit Group Edition</b>, or using the "cursor up arrow" 
+		on the left of the page manager.
+		It's also possible to choose a picture for a group by using <b>Group - Change Picture</b> menu.
+		
+	</p><p>
+		Note: Groups can be grouped recursively.
+	</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="AideSaisie"></a>Data Entry Aids</h3></div></div></div><p>
+		To simplify model creation the Fault Tree module has different data 
+		entry aids to automate time-consuming operations.
+	</p><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.CCRSansRenvoi"></a>Copy / Paste / Renumber (without shortcut)</h4></div></div></div><p>
+			To assist with the entry of the repeated parts of the Fault Tree 
+			"Copy / Paste and Renumber" mechanisms have been provided. 
+			This operation is carried out in 6 steps:
+			<div class="orderedlist"><ol type="1" compact><li><p>
+		    	Select the part to be copied.
+			</p></li><li><p>
+				Click the <span class="guibutton">Copy</span> icon, or use menu <b>Edit - Copy</b> 
+				or the shortcut Ctrl + C.
+			</p></li><li><p>
+				Click the <span class="guibutton">Paste and Renumber</span> icon, or use menu 
+				<b>Edit - Paste and Renumber</b> or the shortcut Ctrl + R.
+		    </p></li><li><p>
+				A window appears where you choose the start number for the renumbering.
+			</p></li><li><p>
+				The previously selected part is copied and the copy is selected.
+			</p></li><li><p>
+				Move the copy to the desired location.
+			</p></li></ol></div>
+		
+			<p><a name="AideSaisie.CCRSR"></a>
+	We then obtain the tree shown in the figure below:
+	<div class="itemizedlist"><ul type="disc" compact><li><p>
+			<b>Or1</b> and <b>And2</b> gates 
+			from original tree are become <b>Or3</b> and <b>And4</b>
+			for the copy;
+		</p></li><li><p>
+			<b>Evt1</b>, <b>Evt2</b> and <b>Evt3</b> events 
+			from original tree are become  <b>Evt4</b>, <b>Evt5</b> and 
+			<b>Evt6</b> for the copy.
+		</p></li></ul></div>
+	<p>
+		<div class="mediaobject" align="center"><img src="./aidesaisie/CCRSansRenvoi.gif" align="middle"></div>
+	</p>
+</p>
+		</p><p><a name="AideSaisie.CCInterDoc"></a>
+			When copying to a new document, any data conflicts are handled in the following window:
+			<div class="mediaobject" align="center"><img src="./aidesaisie/InterDocConflit.gif" align="middle"></div>
+			This window shows all the data which has the same name in the source document and the 
+			destination document. There are three choices:
+			<div class="orderedlist"><ol type="1" compact><li><p>
+				Use data of destination document, this will replace the occurrences of the data 
+				in the source document by the data with the same name in the destination document.
+			</p></li><li><p>
+				Create a copy for each data in conflict, this will replace the occurrences of 
+				the data in the source document by a copy with a name with the suffix "copy".
+			</p></li><li><p>
+				Manually manage conflict, this allows you to choose whether you use the existing 
+				data or not, depending on the data. You can also specify the name of the copy by 
+				double clicking on the box in the "destination document" column. The names in this 
+				column are normally masked when the <b>Use existing</b> check box is 
+				selected, since it is the data which is already in the destination document which 
+				will be used.
+			</p></li></ol></div>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.CCRRenvoi"></a>Copy / Paste / Renumber (with shortcut)</h4></div></div></div><p>
+			<p><a name="AideSaisie.CCRAR"></a>
+	<p>
+		The "Copy / Paste and Renumber" command creates new "instances" i.e. 
+		new subtree similar to the subtree copied:
+	</p>
+	<div class="itemizedlist"><ul type="disc"><li><p>
+			Same graphical structure;
+		</p></li><li><p>
+			Same parameters;
+		</p></li><li><p>
+			The number and name of the events and gates change (new name: <b>Evti</b> 
+			for events and <b>"type of gate"i</b> for the gates, 
+			where <b>i</b> is the new number).
+		</p></li><li><p>
+			Same comments.
+		</p></li></ul></div>
+	<p>
+		When identical transfer gates are part of the selection to be Copied / Pasted and Renumbered, 
+		they will then remain unchanged for the copy. They shall always point to the same gate 
+		if this gate is not part included in the selection to be copied.
+		<p>
+			<div class="mediaobject" align="center"><img src="./aidesaisie/CCRAvecRenvoi1.gif" align="middle"></div>
+		</p>
+		<p>
+			In the above example, gate <b>Or1</b> an event <b>Evt1</b> 
+			have been renumbered normally. 
+			The shortcut to gate <b>And2</b> has not been modified.
+		</p>
+	</p>
+	<p>
+		When a gate that part of a shortcut is also part of a selection hat is going to be 
+		"Copied /Pasted and Renumbered" and if the shortcut itself is not present, 
+		then the gate will be renumbered in the conventional manner.
+		<p>
+			<div class="mediaobject" align="center"><img src="./aidesaisie/CCRAvecRenvoi2.gif" align="middle"></div>
+		</p>
+		<p>
+			In the above example, all of the events and gates have been renumbered normally.
+		</p>
+	</p>
+	<p>
+		When identical transfer gate (and their corresponding original gate) are included in the 
+		selection to be "Copied / Pasted and Renumbered", then new shortcuts will be created and 
+		they will be linked to the new gates.
+		<p>
+			<div class="mediaobject" align="center"><img src="./aidesaisie/CCRAvecRenvoi3.gif" align="middle"></div>
+		</p>
+		<p>
+			In the above example, the gate that is linked to a shortcut has been renumbered 
+			(<b>And2</b> -&gt; <b>And4</b>) and so its shortcut has also 
+			been modified.
+		</p>
+	</p>
+</p>
+		</p><p><a name="AideSaisie.Naviguer.Renvois"></a>
+			You can navigate between an element's different shortcuts, using menu 
+			<b>Tools/Navigate to shortcuts</b>. A window opens and displays the list of 
+			shortcuts. Clicking on a shortcut automatically positions the view on this shortcut. 
+			You can return to the original element by clicking on its name at the top of the window.
+		</p></div><p><a name="AideSaisie.CCRAVL"></a>
+	
+</p><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.CC"></a>Ordinary Copy/Paste</h4></div></div></div><p>
+		In addition to the "Copy / Paste and Renumber" command there is an ordinary "Copy / Paste" 
+		function. It is used to make a single copy without renumbering. We thus obtain double 
+		elements which, from a formal viewpoint, is incorrect but which must be temporarily 
+		tolerated to simplify data entry.
+	</p><p>
+		Where possible, the "Copy / Paste and Renumber" function must be used in preference to the 
+		simple "Copy / Paste" function to minimise the risk of errors. But when it is used you must 
+		take the necessary precautions to re-establish the correct numbering to eliminate the 
+		duplicates.
+	</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.ModifGlobal"></a>Overall change</h4></div></div></div><p>
+			<p><a name="AideSaisie.ModGlobale"></a>
+	When creating the Fault Tree it may be necessary to change a large part of the elements in the 
+	models: changing the names, numbers, etc. The "Replace all" function in the 
+	<b>Edit</b> menu allows you to perform overall changes:
+	<div class="itemizedlist"><ul type="disc"><li><p>
+			Use the <b>Edit / Overall changes</b> function.
+		</p></li><li><p>
+			Choose the type of elements to be modified among available tabs.
+		</p></li><li><p>
+			The "Find / Replace" part changes a character string present in one or more variable 
+			labels, place labels or transition labels. It is replaced by the string entered in the 
+			"Replace" part. 
+		</p></li><li><p>
+			The "Renumber" part only concerns the places. It is used to change place numbers. 
+			You indicate a <b>Start</b> number then specify a constant <b>Step</b>, 
+			or <b>Add</b> a constant value 
+			to the current numbers. 
+		</p></li><li><p>
+			Click <span class="guibutton">OK</span> to return to the chart. The changes are validated.
+		</p></li></ul></div>
+	<p>
+		Note: The name changes and renumbering can be done manually if the necessary precautions 
+		are taken (avoiding duplicates, etc.). You click the <b>Future number</b> 
+		or <b>Future name</b> column and enter the change. 
+		Do not forget to validate it with the "ENTER" key.
+	</p>
+	
+	<div class="mediaobject" align="center"><img src="./aidesaisie/ModGlobale.gif" align="middle"></div>
+	
+</p>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.ModifSelection"></a>Selection change</h4></div></div></div><p>
+			<p><a name="AideSaisie.ModS"></a>
+	<p>
+		The "Replace selection" function is equivalent to a "Replace all" but only applied to the selected elements.
+		Only the selected gates and events can be replaced.
+	</p>
+	<p>
+		NB: The "Replace selection" function does not allow the model's parameters to be replaced.
+	</p>
+</p>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Properties"></a>Document properties / Images management</h4></div></div></div><p>
+		<b>File - Doucument properties</b> menu enable to save information about 
+		document : name, version, comment, ...
+		These informations are available in  <b>General</b> tab.
+		<div class="mediaobject" align="center"><img src="./aidesaisie/PropGeneral.gif" align="middle"></div>
+	</p><p>
+		Images may be very useful to represent sub-system.
+		GRIF 2013 enables to save images that can be used in different parts of software (groupes, 
+		prototypes, ...). Images management is made in  
+		<b>Images</b> tab.
+		<div class="mediaobject" align="center"><img src="./aidesaisie/PropImages.gif" align="middle"></div>
+		To add a new picture into document, use 
+		<span class="guiicon"><img src="./aidesaisie/new.gif"></span> icon.
+		A double click in <b>File</b> column enables to select an picture (jpg, gif or png).
+		A double click in <b>Description</b> column enables to give a name or a 
+		description to selected image.
+	</p><p>
+		Once in document, picture can be linked to a groupe with
+		<b>Group - Picture change</b> menu. 
+	</p><p>
+		Images are saved indide document, pay attention to picture size.
+		Because images are inside document, you have to re-add picture if picture is modified erternaly. 
+	</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Alignement"></a>Alignment</h4></div></div></div><p>
+			To improve the legibility of the model the selected elements can be aligned vertically 
+			or horizontally. To do this, use the <b>Align</b> command in the 
+			<b>Tools</b> menu.
+			<p><a name="AideSaisie.Aligne"></a>
+	The following figure shows how the command works. For example, to align selected places and 
+	transitions vertically, proceed as follows:
+	<div class="orderedlist"><ol type="1"><li><p>
+			Select the elements (places, transitions, comments, etc.) to be aligned;
+		</p></li><li><p>
+			Go into the <b>Tools</b> menu and select the <b>Align</b> function;
+		</p></li><li><p>
+			Choose the type of alignment: <b>Align center</b>;
+		</p></li><li><p>
+			Click left on the mouse.
+		</p></li></ol></div>
+	<div class="mediaobject" align="center"><img src="./aidesaisie/Aligne.gif" align="middle"></div>
+	<p>
+		Similarly, to align elements horizontally select the type <b>Align middle</b> which aligns 
+		the ordinates while keeping the abscissa constant. The principle is the same as that 
+		described above.
+	</p>
+</p>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Multi"></a>Multiple selection</h4></div></div></div><p>
+			It may sometimes be useful to select several elements located in the four corners 
+			of the input zone. To simplify this type of selection click on each of the desired 
+			elements one by one while holding down the Shift key on the keyboard.
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Connex"></a>Selecting connex (adjacent) parts</h4></div></div></div><p>
+		It is sometimes difficult to select an additional part of a model. To simplify the 
+		selection process, select a graphical element then use menu <b>Select connex part</b> in 
+		the <b>Edit</b> menu. The additional part can be selected directly by clicking on the element 
+		while keeping the Control button pressed.
+	</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.PageSize"></a>Zoom and page size</h4></div></div></div><p>
+			When creating a model, if the page size is not big enough, it can be changed using the menus : 
+			<b>Increase page size</b> (<span class="keycap"><strong>Control</strong></span>+<span class="keycap"><strong>Keypad +</strong></span>),  
+			<b>Reduce page size</b> (<span class="keycap"><strong>Control</strong></span>+<span class="keycap"><strong>Keypad -</strong></span>), 
+			<b>Page size </b> (<span class="keycap"><strong>Control</strong></span>+<span class="keycap"><strong>Keypad /</strong></span>)
+			under the <b>Tools</b> menu.
+		</p><p>
+			The <b>Page size</b> menu allows the user to edit the page dimensions directly. 
+			<div class="mediaobject" align="center"><img src="./aidesaisie/PageSize.gif" align="middle"></div>
+		</p><p>
+			Page zooms can be modified either by using the toolbar menu:
+			<div class="mediaobject" align="center"><img src="./aidesaisie/PageZoom.gif" align="middle"></div>
+			Or by selecting the display and using <span class="keycap"><strong>Control</strong></span>+<span class="keycap"><strong>mouse wheel scroll up</strong></span> to zoom or 
+			<span class="keycap"><strong>Control</strong></span>+<span class="keycap"><strong>mouse wheel scroll down</strong></span> to zoom out.
+		</p><p>
+			The padlock on the toolbar is used to apply the zoom to the current page or to all pages in the document.
+			<div class="informaltable"><table border="0"><colgroup><col><col></colgroup><tbody><tr><td align="center"><div class="mediaobject"><img src="./aidesaisie/PageZoomLock.gif"></div></td><td> <p>
+						The zoom applies to all pages in the document. 
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./aidesaisie/PageZoomUnLock.gif"></div></td><td> <p>
+						The zoom is applied only to the current page.
+					</p> </td></tr></tbody></table></div>
+		</p><p>
+			Note that if an element is selected on the page, the zoom will centre the page on that element.
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Reticule"></a>Cross hair</h4></div></div></div><p>
+			To be able to create an ordered and legible model quickly, the <b>cross hair</b> 
+			can be used to align the different elements with each other (but less accurately than the 
+			<b>Align</b> function in the Tools menu).
+			The <b>cross hair</b> is enabled (or disabled) in the 
+			<b>Graphics</b> tab of the <b>Option</b> menu.
+			<p><a name="AideSaisie.Retic"></a>
+    The following picture show how to quickly align two element of the model. 
+	<div class="mediaobject" align="center"><img src="./aidesaisie/Reticule.gif" align="middle"></div>
+	<p>
+		In order to align horizontally, select <b>Align au middle</b> which align
+		keeping constant abscissa.
+	</p>		
+</p>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Glue"></a>Gluing/Associating graphics</h4></div></div></div><p>
+			When objects are where you want,
+			you can glue a set of object by right-clicking and selecting <b>Glue</b>. 
+			This command create a group (a graphical one, not a hierarchical one)
+			with selected objects, so that moving one moves the others.
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="AideSaisie.Line"></a>Line</h4></div></div></div><p>
+			To be able to draw a line, polyline or arrow, the <b>Line</b> 
+			can be used. Draw the line and edit properties of line to make an arrow.
+		</p><p>
+		<div class="mediaobject" align="center"><img src="./aidesaisie/PropLine.gif" align="middle"></div>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Reseau.Tableaux.Clean"></a>Table Cleaning</h4></div></div></div><p>
+			Data may not be used anymore, it can be used usefull to delete every unused data.
+			To facilitate removal, use <b>Data and Computations / Unused data deletion</b> menu.
+		</p><p>
+			<div class="mediaobject" align="center"><img src="./aidesaisie/Nettoyage_en.gif" align="middle"></div>
+			
+			This window displays unused data.
+			Select data you realy yan to delete and click OK.
+		</p></div><p><a name="AideSaisie.Layout"></a>
+		
+</p><p><a name="AideSaisie.+"></a>
+		
+</p></div></div></body></html>

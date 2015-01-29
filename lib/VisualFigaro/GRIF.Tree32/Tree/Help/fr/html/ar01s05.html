@@ -1,0 +1,193 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Exemple d'arbre de d&eacute;faillances</title><meta content="DocBook XSL Stylesheets V1.73.2" name="generator"><link rel="start" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="up" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="prev" href="ar01s04.html" title="Lois et incertitudes"><link rel="next" href="ar01s06.html" title="Impression"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="section" lang="fr"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="Exemple.diagramme"></a>Exemple d'arbre de d&eacute;faillances</h2></div></div></div><p>
+		Voici un arbre de d&eacute;faillance mod&eacute;lisant le comportement d'un syst&egrave;me de s&eacute;curit&eacute; quelconque
+		ayant deux &eacute;tats possibles: "marche" / "panne" (ou "disponible" / "indisponible"). Le but 
+		&eacute;tait donc de construire un arbre permettant d'&eacute;valuer l'indisponibilit&eacute; moyenne du syst&egrave;me.
+	</p><p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./exemple/Exemple.gif" align="middle"></div></div>  
+	</p><p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./exemple/Exempleb.gif" align="middle"></div></div>  
+	</p><p>
+		L'arbre ci-dessus comporte neuf &eacute;v&eacute;nements:
+		<div class="itemizedlist"><ul type="disc"><li><p>
+		    	<b>LS</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: 1
+		    		</p></li><li><p>
+		    			Commentaire: "Logic"
+		    		</p></li><li><p>
+		    			Loi: loi <b>exponentielle</b> avec 
+		    			"Lambda" = <b>Lambda1</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>SV1</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: 2
+		    		</p></li><li><p>
+		    			Commentaire: "Valve 1"
+		    		</p></li><li><p>
+		    			Loi: loi de <b>test p&eacute;riodique simple</b> avec 
+		    			"Lambda" = <b>Lambda2</b>,
+		    			"Tau" = <b>Test</b> et
+		    			"T0" = <b>0</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>SV2</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: 3
+		    		</p></li><li><p>
+		    			Commentaire: "Valve 2"
+		    		</p></li><li><p>
+		    			Loi: loi de <b>test p&eacute;riodique simple</b> avec 
+		    			"Lambda" = <b>Lambda2</b>,
+		    			"Tau" = <b>Test</b> et
+		    			"T0" = <b>10</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>S1</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: 4
+		    		</p></li><li><p>
+		    			Commentaire: "Sensor 1"
+		    		</p></li><li><p>
+		    			Loi: loi <b>indisponibilit&eacute;</b> avec 
+		    			"Gamma" = <b>Gamma</b>,
+		    			"Lambda" = <b>Lambda1</b> et
+		    			"Mu" = <b>Mu2</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>S2</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: 5
+		    		</p></li><li><p>
+		    			Commentaire: "Sensor 2"
+		    		</p></li><li><p>
+		    			Loi: loi <b>indisponibilit&eacute;</b> avec 
+		    			"Gamma" = <b>Gamma</b>,
+		    			"Lambda" =&agrave; <b>Lambda1</b> et
+		    			"Mu" = <b>Mu2</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>S3</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: 6
+		    		</p></li><li><p>
+		    			Commentaire: "Sensor 3"
+		    		</p></li><li><p>
+		    			Loi: loi <b>indisponibilit&eacute;</b> avec 
+		    			"Gamma" = <b>Gamma</b>,
+		    			"Lambda" = <b>Lambda1</b> et
+		    			"Mu" = <b>Mu2</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>R</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: 7
+		    		</p></li><li><p>
+		    			Commentaire: "Relay"
+		    		</p></li><li><p>
+		    			Loi: loi <b>indisponibilit&eacute;</b> avec 
+		    			"Gamma" = <b>0</b>,
+		    			"Lambda" = <b>10e-4</b> et
+		    			"Mu" = <b>Mu1</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>SS_1</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: 8
+		    		</p></li><li><p>
+		    			Commentaire: "Sub-system 1"
+		    		</p></li><li><p>
+		    			Loi: loi de <b>test p&eacute;riodique compl&egrave;te</b> avec 
+		    			"Lambda" = <b>Lambda1</b>,
+		    			"Lambda*" = <b>Lambda1</b>,
+		    			"Mu" = <b>Mu1</b>,
+		    			"Tau" = <b>4380</b>,
+		    			"T&eacute;ta" = <b>4380</b>,
+		    			"Gamma" = <b>0</b>,
+		    			"Pi" = <b>10</b>,
+		    			"X" = <b>0</b>,
+		    			"Sigma" = <b>1</b> et
+		    			"Om&eacute;ga" = <b>0</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>SS_2</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: 9
+		    		</p></li><li><p>
+		    			Commentaire: "Sub-system 2"
+		    		</p></li><li><p>
+		    			Loi: loi de <b>test p&eacute;riodique compl&egrave;te</b> avec 
+		    			"Lambda" = <b>Lambda1</b>,
+		    			"Lambda*" = <b>Lambda1</b>,
+		    			"Mu" = <b>Mu1</b>,
+		    			"Tau" = <b>4380</b>,
+		    			"T&eacute;ta" = <b>10</b>,
+		    			"Gamma" = <b>0</b>,
+		    			"Pi" = <b>10</b>,
+		    			"X" = <b>0</b>,
+		    			"Sigma" = <b>1</b> et
+		    			"Om&eacute;ga" = <b>0</b>.
+		    		</p></li></ul></div>
+			</p></li></ul></div>
+		 <p>
+		 </p>
+		 		 
+		 La logique de l'arbre est r&eacute;git par quatre portes:
+		 <div class="itemizedlist"><ul type="disc" compact><li><p>
+				<b>Div1</b>
+				<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: <b>1</b>
+		    		</p></li><li><p>
+		    			Nom: <b>Or1</b>
+		    		</p></li><li><p>
+		    			Commentaire: "ER"
+		    		</p></li><li><p>
+		    			Type: "OU"
+		    		</p></li></ul></div>
+		    </p></li><li><p>
+				<b>Div1</b>
+				<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: <b>2</b>
+		    		</p></li><li><p>
+		    			Nom: <b>And2</b>
+		    		</p></li><li><p>
+		    			Commentaire: "VALVES"
+		    		</p></li><li><p>
+		    			Type: "ET"
+		    		</p></li></ul></div>
+		    </p></li><li><p>
+				<b>Div1</b>
+				<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: <b>3</b>
+		    		</p></li><li><p>
+		    			Nom: <b>KofN3</b>
+		    		</p></li><li><p>
+		    			Commentaire: "SENSORS"
+		    		</p></li><li><p>
+		    			Type: "K sur N"
+		    		</p></li></ul></div>
+		    </p></li><li><p>
+				<b>Div1</b>
+				<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Num&eacute;ro: <b>4</b>
+		    		</p></li><li><p>
+		    			Nom: <b>Or4</b>
+		    		</p></li><li><p>
+		    			Commentaire: "Sub-systems"
+		    		</p></li><li><p>
+		    			Type: "OU"
+		    		</p></li></ul></div>
+		    </p></li></ul></div>
+		 <p>
+		 </p>
+		<p>
+		 </p>
+	</p><p>
+		Dans cet exemple, diff&eacute;rents types de loi plus ou moins simple ont &eacute;t&eacute; utilis&eacute;s.
+		Elabor&eacute; en peu de temps, il a permis de mod&eacute;liser plusieurs composants plus ou moins
+		complexes: non-r&eacute;parables, r&eacute;parables, p&eacute;riodiquement test&eacute;s, avec probabilit&eacute; de d&eacute;faillance &agrave; la 
+		sollicitation... 
+	</p><p>
+		A l'aide de cet arbre, il est maintenant possible de lancer des calculs diverses sur les diff&eacute;rentes
+		portes ou &eacute;v&eacute;nements: calculs d'indisponibilit&eacute;, de d&eacute;fiabilit&eacute; (avec MOCA), etc.
+	</p></div></body></html>

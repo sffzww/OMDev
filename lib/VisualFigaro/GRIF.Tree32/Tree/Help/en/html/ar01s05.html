@@ -1,0 +1,193 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Example of a Fault Tree</title><meta content="DocBook XSL Stylesheets V1.73.2" name="generator"><link rel="start" href="index.html" title="GRIF 2013Fault Tree"><link rel="up" href="index.html" title="GRIF 2013Fault Tree"><link rel="prev" href="ar01s04.html" title="Laws and uncertainties"><link rel="next" href="ar01s06.html" title="Printing"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="Exemple.diagramme"></a>Example of a Fault Tree</h2></div></div></div><p>
+		Here is a fault tree modeling the behaviour of any safety system with two possible 
+		states: "work" / "failed" (or "available" / "unavailable"). The aim is thus to construct 
+		a tree allowing us to evaluate the system's mean unavailability.
+	</p><p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./exemple/Exemple.gif" align="middle"></div></div>  
+	</p><p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./exemple/Exempleb.gif" align="middle"></div></div>  
+	</p><p>
+		The above tree has nine events:
+		<div class="itemizedlist"><ul type="disc"><li><p>
+		    	<b>LS</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: 1
+		    		</p></li><li><p>
+		    			Comment: "Logic"
+		    		</p></li><li><p>
+		    			Law: <b>exponential</b> law with 
+		    			"Lambda" = <b>Lambda1</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>SV1</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: 2
+		    		</p></li><li><p>
+		    			Comment: "Valve 1"
+		    		</p></li><li><p>
+		    			Law: <b>simple periodic test</b> law with 
+		    			"Lambda" = <b>Lambda2</b>,
+		    			"Tau" = <b>Test</b> and
+		    			"T0" = <b>0</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>SV2</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: 3
+		    		</p></li><li><p>
+		    			Comment: "Valve 2"
+		    		</p></li><li><p>
+		    			Law: <b>simple periodic test</b> law with 
+		    			"Lambda" = <b>Lambda2</b>,
+		    			"Tau" = <b>Test</b> and
+		    			"T0" = <b>10</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>S1</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: 4
+		    		</p></li><li><p>
+		    			Comment: "Sensor 1"
+		    		</p></li><li><p>
+		    			Law: <b>unavailability</b> with 
+		    			"Gamma" = <b>Gamma</b>,
+		    			"Lambda" = <b>Lambda1</b> and
+		    			"Mu" = <b>Mu2</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>S2</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: 5
+		    		</p></li><li><p>
+		    			Comment: "Sensor 2"
+		    		</p></li><li><p>
+		    			Law: <b>unavailability</b> with 
+		    			"Gamma" = <b>Gamma</b>,
+		    			"Lambda" = <b>Lambda1</b> and
+		    			"Mu" = <b>Mu2</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>S3</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: 6
+		    		</p></li><li><p>
+		    			Comment: "Sensor 3"
+		    		</p></li><li><p>
+		    			Law: <b>unavailability</b> with 
+		    			"Gamma" = <b>Gamma</b>,
+		    			"Lambda" = <b>Lambda1</b> and
+		    			"Mu" = <b>Mu2</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>R</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: 7
+		    		</p></li><li><p>
+		    			Comment: "Relay"
+		    		</p></li><li><p>
+		    			Law: <b>unavailability</b> with 
+		    			"Gamma" = <b>0</b>,
+		    			"Lambda" = <b>10e-4</b> and
+		    			"Mu" = <b>Mu1</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>SS_1</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: 8
+		    		</p></li><li><p>
+		    			Comment: "Sub-system 1"
+		    		</p></li><li><p>
+		    			Law: <b>full periodic test </b> law with 
+		    			"Lambda" = <b>Lambda1</b>,
+		    			"Lambda*" = <b>Lambda1</b>,
+		    			"Mu" = <b>Mu1</b>,
+		    			"Tau" = <b>4380</b>,
+		    			"Teta" = <b>4380</b>,
+		    			"Gamma" = <b>0</b>,
+		    			"Pi" = <b>10</b>,
+		    			"X" = <b>0</b>,
+		    			"Sigma" = <b>1</b> and
+		    			"Omega" = <b>0</b>.
+		    		</p></li></ul></div>
+			</p></li><li><p>
+		    	<b>SS_2</b>
+		    	<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: 9
+		    		</p></li><li><p>
+		    			Comment: "Sub-system 2"
+		    		</p></li><li><p>
+		    			Law: <b>full periodic test </b> law with 
+		    			"Lambda" = <b>Lambda1</b>,
+		    			"Lambda*" = <b>Lambda1</b>,
+		    			"Mu" = <b>Mu1</b>,
+		    			"Tau" = <b>4380</b>,
+		    			"Teta" = <b>10</b>,
+		    			"Gamma" = <b>0</b>,
+		    			"Pi" = <b>10</b>,
+		    			"X" = <b>0</b>,
+		    			"Sigma" = <b>1</b> and
+		    			"Omega" = <b>0</b>.
+		    		</p></li></ul></div>
+			</p></li></ul></div>
+		 <p>
+		 </p>
+		 		 
+		 The tree's logic is governed by four gates:
+		 <div class="itemizedlist"><ul type="disc" compact><li><p>
+				<b>Div1</b>
+				<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: <b>1</b>
+		    		</p></li><li><p>
+		    			Name: <b>Or1</b>
+		    		</p></li><li><p>
+		    			Comment: "ER"
+		    		</p></li><li><p>
+		    			Type: "OR"
+		    		</p></li></ul></div>
+		    </p></li><li><p>
+				<b>Div1</b>
+				<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: <b>2</b>
+		    		</p></li><li><p>
+		    			Name: <b>And2</b>
+		    		</p></li><li><p>
+		    			Comment: "VALVES"
+		    		</p></li><li><p>
+		    			Type: "AND"
+		    		</p></li></ul></div>
+		    </p></li><li><p>
+				<b>Div1</b>
+				<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: <b>3</b>
+		    		</p></li><li><p>
+		    			Name: <b>KofN3</b>
+		    		</p></li><li><p>
+		    			Comment: "SENSORS"
+		    		</p></li><li><p>
+		    			Type: "K out of N"
+		    		</p></li></ul></div>
+		    </p></li><li><p>
+				<b>Div1</b>
+				<div class="itemizedlist"><ul type="circle" compact><li><p>
+		    			Number: <b>4</b>
+		    		</p></li><li><p>
+		    			Name: <b>Or4</b>
+		    		</p></li><li><p>
+		    			Comment: "Sub-systems"
+		    		</p></li><li><p>
+		    			Type: "OR"
+		    		</p></li></ul></div>
+		    </p></li></ul></div>
+		 <p>
+		 </p>
+		<p>
+		 </p>
+	</p><p>
+		In this example, different types of more or less simple laws have been used. It was 
+		produced in a short time and allowed several more or less complex components to 
+		be modelled: non repairable, repairable, periodically-tested,
+		with probability of failure on demand, etc.
+	</p><p>
+		Using this tree, we can now run various computations on the different gates or events: 
+		unavailability computations, unreliability computations, etc.
+	</p></div></body></html>

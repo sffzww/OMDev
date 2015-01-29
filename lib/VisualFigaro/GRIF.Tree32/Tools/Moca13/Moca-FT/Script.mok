@@ -1,0 +1,34 @@
+clear all;
+
+set delay 900;
+set seed 12345681.00;
+
+set format Proba-Aralia {
+  Info 
+"
+NbrStorie : %$S
+InitSeed  : %.2$C
+CurSeed   : %.2$L
+Duration  : %.2$D
+
+"
+  Xt 2 "Probability " 
+    Values "%-12.12$M" "Mean" 
+	Select * "%-12.14$N" "Name          " 
+	Times "%-12.12$t" "Times" 
+	"	"
+  Xt 2 "Probability " 
+    Values "%-12.12$S" "StdDev" 
+	Select * "%-12.14$N" "Name          " 
+	Times "%-12.12$t" "Times" 
+	"	"
+};
+
+load Aralia "#0" "-duration #2 -times 'from 0.0001 to #2 step #3' -types '2'";
+
+simul Aralia {story #4};
+
+display "Result of file '#0' from #4 story" > "#1";
+display result Aralia Proba-Aralia >> "#1";
+
+exit;

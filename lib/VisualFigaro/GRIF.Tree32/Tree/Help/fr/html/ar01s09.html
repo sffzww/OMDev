@@ -1,0 +1,95 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Bases de donn&eacute;es</title><meta content="DocBook XSL Stylesheets V1.73.2" name="generator"><link rel="start" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="up" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="prev" href="ar01s08.html" title="Courbes"><link rel="next" href="ar01s10.html" title="Enregistrer"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="section" lang="fr"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="datamanager.Data"></a>Bases de donn&eacute;es</h2></div></div></div><p>
+		Dans chaque module de GRIF, il est possible d'&eacute;tablir une connexion &agrave; une base de donn&eacute;es.
+		Il y a la possibilit&eacute; de faire deux connexions de type diff&eacute;rent:
+	</p><div class="itemizedlist"><ul type="disc" compact><li><p>
+			connexion &agrave; un fichier de type CSV;
+		</p></li><li><p>
+			connexion par un lien JDBC.
+		</p></li></ul></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="datamanager.Data.Configuration.CSV"></a>Connexion &agrave; un fichier de type CSV</h3></div></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="datamanager.Data.CSV.FormeBDD"></a>Forme de la base de donn&eacute;es</h4></div></div></div><p>
+				Ce type de connexion est le plus simple &agrave; r&eacute;aliser. Un fichier de type CSV a pour extension ".csv".
+				C'est un simple fichier texte o&ugrave; les diff&eacute;rents champs sont s&eacute;par&eacute;s pas des virgules, des tabulations 
+				ou des points-virgules. C'est la forme la plus simple que peut avoir une base de donn&eacute;es.
+			</p><p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./datamanager/CSV.gif" align="middle"></div></div>  
+			</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="datamanager.Data.CSV.Connexion"></a>Connexion</h4></div></div></div><p>
+				Pour connecter GRIF &agrave; cette base de donn&eacute;es, il suffit d'aller dans le menu
+				<b>Outils - Connexion &agrave; un fichier CSV</b>. Une bo&icirc;te de dialogue 
+				appara&icirc;t alors:
+			</p><p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./datamanager/connectionCSV.gif" align="middle"></div></div>  
+			</p><p>
+				Cette fen&ecirc;tre est divis&eacute;e en trois parties:
+			</p><div class="itemizedlist"><ul type="disc"><li><p>
+					Dans un premier temps, il faut enter le chemin menant au fichier CSV. Pour cela, un explorer
+					est &agrave; disposition (bouton <span class="guibutton">...</span>). Une fonction <b>Test</b>
+					permet de v&eacute;rifier la connexion.
+				</p></li><li><p>
+					Ensuite, il faut enter les noms des cinq champs du fichier CSV.
+				</p></li><li><p>
+					Enfin, il faut pr&eacute;ciser le type de s&eacute;parateurs utilis&eacute;s dans le fichier CSV.
+				</p></li></ul></div><p>
+				Attention: Il est important de noter que pour r&eacute;aliser une connexion de type CSV, il
+				est imp&eacute;ratif que toute la base soit sur une seule feuille.
+			</p></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="datamanager.Data.ODBC.Configuration"></a>Connexion par un lien JDBC (exemple avec connecteur ODBC)</h3></div></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="datamanager.Data.ODBC.FormeBDD"></a>Forme de la base de donn&eacute;es</h4></div></div></div><p>
+				Au d&eacute;part, la base de donn&eacute;es peut &ecirc;tre sous la forme d'un fichier de type EXCEL ou ACCESS. 
+				Ensuite, &agrave; l'aide du syst&egrave;me d'exploitation, il est n&eacute;cessaire de cr&eacute;er une source de donn&eacute;es
+				syst&egrave;me de type ODBC. Dans le cas de WINDOWS par exemple, cette op&eacute;ration s'effectue 
+				au niveau du menu "Panneau de configuration - Outils d'administration - source de donn&eacute;es (ODBC)".
+				Voici l'exemple d'une base de donn&eacute;es sous EXCEL:			 
+			</p><p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./datamanager/ODBC.gif" align="middle"></div></div>  
+			</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="datamanager.Data.ODBC.Connection"></a>Connexion</h4></div></div></div><p>
+				Pour connecter GRIF &agrave; cette base de donn&eacute;e de type ODBC, il suffit d'aller dans le menu
+				<b>Outils - Options de l'application - Base de donn&eacute;es</b>. 
+				L'utilisateur se retrouve alors avec une fen&ecirc;tre &agrave; compl&eacute;ter de la mani&egrave;re suivante:
+			</p><p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./datamanager/connectionODBC.gif" align="middle"></div></div>  
+			</p><p>
+				Remarques:
+			</p><div class="orderedlist"><ol type="1"><li><p>
+					<b>Driver JDBC</b> est le nom du driver JDBC (ex: sun.jdbc.odbc.JdbcOdbcDriver)
+				</p></li><li><p>
+					<b>Connexion &agrave; la base</b> est constitu&eacute; du lien ODBC suivit du chemin d'acc&egrave;s &agrave; la base (ex: jdbc:odbc:C:\...\repDatabase)
+				</p></li><li><p>
+					Les champs <b>Login</b> et <b>Mot de passe</b> sont inutiles ici. 
+				</p></li><li><p>
+					La requ&ecirc;te SQL <b>SELECT ID,NOM,VALEUR,DESCRIPTION,DIMENSION FROM [Feuil1$]</b> permet la r&eacute;cup&eacute;ration des donn&eacute;es de la base.
+					<b>Feuil1</b> est le nom de la feuille EXCEL sur laquelle sont les donn&eacute;es.
+				</p></li></ol></div></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="datamanager.Data.Utilisation"></a>Utilisation</h3></div></div></div><p>
+			L'objectif est maintenant de relier certains param&egrave;tres du mod&egrave;le &agrave; la base de donn&eacute;es. Pour cela,
+			il faut commencer par faire afficher la colonne <b>Connect&eacute; &agrave;</b> au niveau du tableau
+			des param&egrave;tres (faire un clic droit sur la partie haute des colonnes).
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./datamanager/LinkedTo.gif" align="middle"></div></div>  
+		</p><p>
+			Il suffit ensuite de faire un double clic dans la colonne <b>Connect&eacute; &agrave;</b> pour voir
+			appara&icirc;tre les &eacute;l&eacute;ments de la base de donn&eacute;es. Une fois qu'un de ces &eacute;l&eacute;ments a &eacute;t&eacute; s&eacute;lectionn&eacute;, il faut
+			cliquer sur <span class="guibutton">OK</span> pour valider la connexion. Le param&egrave;tre prend alors la valeur
+			de l'&eacute;l&eacute;ment auquel il est maintenant reli&eacute;. 
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./datamanager/connectionParam.gif" align="middle"></div></div>  
+		</p><p>
+			Remarque: Le bouton en bas de tableau intitul&eacute; <span class="guibutton">D&eacute;connecter de la base</span>
+			permet de casser le lien entre le param&egrave;tre et l'&eacute;l&eacute;ment de la base de donn&eacute;es.
+		</p><p>
+			Si certaines valeurs de la base de donn&eacute;es &agrave; laquelle est li&eacute; GRIF sont modifi&eacute;es, il est possible 
+			de faire une mise &agrave; jour des param&egrave;tres connect&eacute;s &agrave; cette base. Pour cela, il suffit de faire appara&icirc;tre
+			la fen&ecirc;tre <b>Base de donn&eacute;es</b> en allant sur <b>Donn&eacute;es et calculs - Mise &agrave; jour 
+			depuis la base de donn&eacute;es</b>.
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./datamanager/Update.gif" align="middle"></div></div>  
+		</p><p>
+			Les param&egrave;tres dont la valeur n'est pas &agrave; jour sont automatiquement d&eacute;tect&eacute;s et marqu&eacute;s en gras.
+			Il est alors possible de s&eacute;lectionner un ou plusieurs de ces param&egrave;tres afin de les mettre &agrave; jour en utilisant
+			le bouton <span class="guibutton">Mettre &agrave; jour la s&eacute;lection</span>. Deux autres boutons sont &agrave; disposition
+			pour faciliter la s&eacute;lection: <span class="guibutton">D&eacute;s&eacute;lectionner tout</span> (permet de d&eacute;s&eacute;lectionner
+			tous les param&egrave;tres du tableau) et <span class="guibutton">S&eacute;lectionner tout</span> (permet de s&eacute;lectionner tous 
+			les param&egrave;tres du tableau).			
+		</p><p>
+			Il est aussi possible de copier directement des param&egrave;tres depuis la base,
+			en utilisant le menu <b>Donn&eacute;es et Calculs/Base de Donn&eacute;es/Copier des param&egrave;tres de la base</b>.
+			Une fen&ecirc;tre s'ouvre et permet de s&eacute;lectionner les param&egrave;tres que vous souhaitez copier dans le document.
+			Les param&egrave;tres cr&eacute;&eacute;s seront automatiquement reli&eacute;s au bon param&egrave;tre dans la base.
+			
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./datamanager/Load.gif" align="middle"></div></div>  
+		</p></div></div></body></html>

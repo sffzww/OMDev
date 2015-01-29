@@ -1,0 +1,156 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Courbes</title><meta content="DocBook XSL Stylesheets V1.73.2" name="generator"><link rel="start" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="up" href="index.html" title="GRIF 2013Arbre de d&eacute;faillance"><link rel="prev" href="ar01s07.html" title="Calculs"><link rel="next" href="ar01s09.html" title="Bases de donn&eacute;es"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="section" lang="fr"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="Courbes"></a>Courbes</h2></div></div></div><p><a name="courbes.Courbes"></a>
+	<p>
+		Afin de mieux &eacute;tudier le mod&egrave;le et les r&eacute;sultats, il est possible de tracer des courbes. Pour cela, il
+		suffit de faire un clic gauche sur l'ic&ocirc;ne correspondante de la barre des t&acirc;ches verticale puis de 
+		tracer un cadre. Ce cadre sera l'espace allou&eacute; &agrave; l'affichage de la ou les courbes. Au d&eacute;part ce n'est 
+		qu'un cadre blanc avec deux axes non gradu&eacute;s.
+	</p>
+	<p>
+		Ic&ocirc;ne <span class="guibutton">Graphique</span>:
+	</p>	
+	<p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./courbes/icone.gif" align="middle"></div></div>  
+	</p>
+	<p>
+		Il faut maintenant d&eacute;finir les courbes &agrave; tracer. Pour cela, il suffit de faire un clic droit sur le cadre
+		et faire ainsi appara&icirc;tre la fen&ecirc;tre d'&eacute;dition des courbes. 
+		
+	</p>
+</p><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="courbes.Courbes.fenetre"></a>Fen&ecirc;tre d'&eacute;dition des courbes</h3></div></div></div><p>
+		La fen&ecirc;tre d'&eacute;dition des courbes est la m&ecirc;me pour tous les modules de GRIF.
+	</p><p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./courbes/edition_courbes_en.gif" align="middle"></div></div>  
+	</p><p>
+		Cette fen&ecirc;tre est divis&eacute;e en plusieurs parties:
+	</p><div class="orderedlist"><ol type="1"><li><p>
+			<b>Titre du graphique</b>: permet de donner un titre au graphique.
+		</p></li><li><p>
+			<b>Liste de donn&eacute;es</b>: Cette partie comporte un tableau de plusieurs colonnes dans lequel 
+		sont list&eacute;es les diff&eacute;rentes courbes du graphique (nom, description, affichage, couleur de courbe, 
+		style de courbe, &eacute;paisseur de courbe, affichage le la moyenne). Au-dessus de ce tableau, plusieurs boutons sont disponibles.
+			<div class="itemizedlist"><ul type="disc" compact><li><p>
+					<img src="./courbes/nouveau.gif">: 
+					Permet de s&eacute;lectionner un r&eacute;sultat de calculs &agrave; afficher. 
+					Il renvoie l'utilisateur vers la fen&ecirc;tre <b>S&eacute;lection de r&eacute;sultats</b> afin
+					d'ajouter un trac&eacute; de courbe au graphique (cf. <a class="xref" href="ar01s08.html#courbes.CourbesCA" title="Courbes depuis les donn&eacute;es de la banque de r&eacute;sultats">&laquo;&nbsp;Courbes depuis les donn&eacute;es de la banque de r&eacute;sultats&nbsp;&raquo;</a>).
+				</p></li><li><p>
+					<img src="./courbes/comp.gif">: 
+					Permet de comparer plusieurs r&eacute;sultats de calculs diff&eacute;rents pour une m&ecirc;me donn&eacute;e. 
+					Il renvoie l'utilisateur vers la fen&ecirc;tre <b>Comparaison de r&eacute;sultats</b> afin
+					d'ajouter un trac&eacute; de courbe au graphique (cf. <a class="xref" href="ar01s08.html#courbes.CourbesCA.comp" title="Courbes comparatives depuis les donn&eacute;es de la banque de r&eacute;sultats">&laquo;&nbsp;Courbes comparatives depuis les donn&eacute;es de la banque de r&eacute;sultats&nbsp;&raquo;</a>).
+				</p></li><li><p>
+					<span class="guibutton">Editer</span>: modifie le trac&eacute; de courbe s&eacute;lectionn&eacute;.
+				</p></li><li><p>
+					<span class="guibutton">Supprimer</span> <img src="./courbes/supprimer.gif">: supprime le trac&eacute; de courbe s&eacute;lectionn&eacute; du graphique.
+				</p></li><li><p>
+					<span class="guibutton">Monter</span> <img src="./courbes/monter.gif">: fait remonter le trac&eacute; de courbe s&eacute;lectionn&eacute; dans la liste.
+				</p></li><li><p>
+					<span class="guibutton">Descendre</span> <img src="./courbes/descendre.gif">: fait descendre le trac&eacute; de courbe s&eacute;lectionn&eacute; dans la liste.
+				</p></li><li><p>
+					<span class="guibutton">Enregistrer</span>: enregistre sous format CSV la liste des points calcul&eacute;s
+					pour le trac&eacute; des courbes s&eacute;lectionn&eacute;s. Cet export ne contient pas les grandeurs g&eacute;n&eacute;riques,
+					pour avoir un export avec les grandeurs g&eacute;n&eacute;riques il faut faire un clic droit sur la 
+					courbe et faire <span class="guibutton">Export individuel</span>.
+				</p></li><li><p>
+					<span class="guibutton">Dupliquer</span>: cr&eacute;e une nouvelle courbe exactement identique au trac&eacute; de 
+					courbe s&eacute;lectionn&eacute;e.
+				</p></li><li><p>
+					<span class="guibutton">Figer</span><img src="./courbes/gel.gif">: Permet de figer l'affichage de cette courbe. 
+					Cette derni&egrave;re ne se mettra plus automatiquement &agrave; jour en fonction des r&eacute;sultats de calculs.
+				</p></li></ul></div>
+		</p><p>
+			Pour chaque courbe il est possible de sp&eacute;cifier sa couleur, son style de points, son &eacute;paisseur et son affichage.
+		</p></li><li><p>
+		<b>Options de calcul</b>: permet de param&eacute;trer le calcul (optionnel suivant les modules).
+		</p></li><li><p>
+			<b>Style</b>: Cette partie concerne l'affichage des courbes. 
+			<div class="itemizedlist"><ul type="disc" compact><li><p>
+					<b>Type de style</b>: sp&eacute;cification du type de toutes les courbes du graphique 
+					(ligne, histogramme, ...). Attention, dans le cas du style histogramme, 
+					les barres sortant de la zone d'affichage seront affich&eacute;es en d&eacute;grad&eacute; pour
+					pr&eacute;venir l'utilisateur qu'il doit changer les intervalles d'affichages pour 
+					voir la barre enti&egrave;rement.
+				</p></li><li><p>
+					<b>Intervalles</b> permet de d&eacute;finir les bornes d'affichage de la courbe.
+					<b>Automatiques sans pic</b> : le graphique ne fera pas apparaitre les "pics", cas particuliers de valeurs hors normes, qui rendrait illisible le graphique.
+					Sans afficher ces pics graphiquement, il est donn&eacute; la possibilit&eacute; de faire paraitre leurs valeurs en utilisant les choix propos&eacute;s par l'option <b>Afficher les valeurs des pics</b>.
+				</p></li><li><p>
+					<b>Intervalles sur X et Y</b>: sp&eacute;cification de l'intervalle d'affichage des axes
+					X et Y (intervalles par d&eacute;faut ou d&eacute;finis par l'utilisateur). Cette derni&egrave;re fonction peut 
+					permettre par exemple de "zoomer" sur les parties les plus int&eacute;ressantes du graphique.
+				</p></li><li><p>
+					L'unit&eacute; des axes peut &ecirc;tre choisie en fonction du type de r&eacute;sultat de calculs. 
+					Par exemple pour des unit&eacute;s de temps, l'unit&eacute; pourra &ecirc;tre choisie parmi heures, jours, mois et ann&eacute;es.
+				</p></li><li><p>
+					Le bouton <img src="./courbes/oeil.gif"> permet d'afficher ou non l'unit&eacute; sur le graphique.
+				</p></li><li><p>
+					Les cases <b>log</b> permettent d'activer l'&eacute;chelle logarithmique sur l'axe concern&eacute;.
+					Attention, le 0 n'est pas repr&eacute;sentable en &eacute;chelle log, pensez &agrave; indiquer un d&eacute;but strictement positif (E-10 par exemple).
+					Si 0 est indiqu&eacute;, l'&eacute;chelle log commencera &agrave; une valeur arbitraire E-15.
+					Lorsque le moteur de calcul le permet, il est possible d'<b>afficher 
+					l'intervalle de confiance</b>, en cochant la case correspondante. 
+				</p></li><li><p>
+					<b>Zones</b>: Permet de distinguer sur un fond de couleur les plages de valeurs (zones).
+				</p></li><li><p>
+					En style histogramme, une case &agrave; cocher permet de faire un histogramme cumul&eacute;. 
+				</p></li></ul></div>
+		</p></li><li><p>
+			<b>Option d'affichage</b>: permet d'activer ou non la fonction <b>Afficher le titre</b>
+			(affichage du titre du graphique) et la fonction <b>Afficher les grandeurs g&eacute;n&eacute;riques</b> 
+			(affichage du min, du max et de la moyenne de chaque courbe).
+		</p></li></ol></div><p>
+		Lorsqu'une courbe est &eacute;dit&eacute;e, la fen&ecirc;tre d'&eacute;dition d'une courbe contient souvent 3 parties : 
+		les temps auxquels le calcul est r&eacute;alis&eacute;, ce qui est calcul&eacute;, les informations suppl&eacute;mentaires 
+		(grandeurs g&eacute;n&eacute;riques) qui doivent &ecirc;tre affich&eacute;es ou non sous la courbe.
+	</p><p>
+		Remarque :  il est parfois n&eacute;cessaire de rafra&icirc;chir tous les graphiques d'un document.
+		Pour cela il faut utiliser la commande <b>Outils / Rafra&icirc;chir</b> 
+		ou utiliser le raccourci clavier F5 ou l'ic&ocirc;ne <img src="./courbes/rafraichir.gif">.  
+	</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h3 class="title"><a name="N412FF"></a>Fen&ecirc;tres de s&eacute;lection des r&eacute;sultats</h3></div></div></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="courbes.CourbesCA"></a>Courbes depuis les donn&eacute;es de la banque de r&eacute;sultats</h4></div></div></div><p>
+				Lorsque l'utilisateur clique sur le bouton <span class="guibutton">Ajouter</span> de la partie 
+				<b>Liste de donn&eacute;es</b>, une fen&ecirc;tre permet de sp&eacute;cifier la courbe &agrave; tracer.
+				Toutes les courbes repr&eacute;sentent des informations stock&eacute;es dans la base. La fen&ecirc;tre suivante permet d'indiquer la 
+				mani&egrave;re de r&eacute;cup&eacute;rer ces informations.
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./courbes/CourbeCA.gif" align="middle"></div></div>  
+			</p><p>
+				<div class="itemizedlist"><ul type="disc"><li><p>
+						<b>L&eacute;gende</b>: l&eacute;gende de la courbe.
+					</p></li><li><p>
+						<b>S&eacute;lection du calcul</b>: permet de choisir dans la banque de r&eacute;sultats le calcul &agrave; utiliser.
+					</p></li><li><p>
+						<b>R&eacute;sultat &agrave; afficher</b>: un calcul contient souvent plusieurs r&eacute;sultats, cette arborescence
+						permet de sp&eacute;cifier le r&eacute;sultat que l'on souhaite dans le calcul.
+					</p></li><li><p>
+						Vous avez la possibilit&eacute; d'afficher la liste des points en sp&eacute;cifiant les donn&eacute;es voulues sur chacun des axes ; 
+						ou vous avez la possibilit&eacute; d'afficher les temps pass&eacute;s dans les zones.
+					</p></li><li><p>
+						<b>Axes</b>: Permet d'indiquer ce qui doit &ecirc;tre mis en abscisse et en ordonn&eacute;e.
+					</p></li><li><p>
+						<b>Grandeurs &agrave; afficher</b>: Enfin il en possible d'afficher certaines informations suppl&eacute;mentaires (min, max, moyenne ....)
+					</p></li></ul></div>
+			</p></div><div class="section" lang="fr"><div class="titlepage"><div><div><h4 class="title"><a name="courbes.CourbesCA.comp"></a>Courbes comparatives depuis les donn&eacute;es de la banque de r&eacute;sultats</h4></div></div></div><p>
+				Lorsque l'utilisateur clique sur le bouton <span class="guibutton">Comparer</span> de la partie 
+				<b>Liste de donn&eacute;es</b>, une fen&ecirc;tre permet de sp&eacute;cifier la courbe &agrave; tracer.
+				On peut alors choisir d'afficher un r&eacute;sultat issu de plusieurs calculs diff&eacute;rents.
+				
+				La fen&ecirc;tre suivante permet d'indiquer la mani&egrave;re de r&eacute;cup&eacute;rer ces informations.
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./courbes/CourbeCAComp.gif" align="middle"></div></div>  
+			</p><p>
+				<div class="itemizedlist"><ul type="disc"><li><p>
+						<b>L&eacute;gende</b>: l&eacute;gende de la courbe.
+					</p></li><li><p>
+						<b>Calculs &agrave; utiliser</b>: permet de choisir dans la banque de r&eacute;sultats les diff&eacute;rents calculs &agrave; utiliser.
+						Maintenez la touche Ctrl appuyez pour effectuer une s&eacute;lection multiple des calculs.
+					</p></li><li><p>
+						<b>R&eacute;sultat &agrave; afficher</b>: un calcul contient souvent plusieurs r&eacute;sultats, cette arborescence
+						permet de sp&eacute;cifier le r&eacute;sultat que l'on souhaite afficher.
+					</p></li><li><p>
+						<b>Information &agrave; afficher</b>: Indique quelle donn&eacute;e doit &ecirc;tre affich&eacute;e en ordonn&eacute;e.
+					</p></li><li><p>
+						<b>Pour quel point ?</b>: Indique quel point du calcul doit &ecirc;tre compar&eacute; aux autres.
+					</p></li><li><p>
+						<b>Afficher les abscisses suivant la valeur</b>: Indique quelle donn&eacute;e doit &ecirc;tre affich&eacute;e en abscisse.
+					</p></li><li><p>
+						<b>Grandeurs &agrave; afficher</b>: Enfin il en possible d'afficher certaines informations suppl&eacute;mentaires (min, max, moyenne ....)
+					</p></li></ul></div>
+			</p></div></div></div></body></html>

@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<!DOCTYPE JaGrif-Tree SYSTEM "file:/Dtd/TDoc.dtd">
+<JaGrif-Tree>
+	<dtd-version id="8" baseid="4" appl="4.9.1.alpha5"/>
+	<license type="PROTEC" soc="SOC_DEMO"/>
+	<gen name="" date="10 décembre 2008" vers="" aut="cxu" file="E&#x003A;\workspace\JaGrif4\install\bin\Tree\Samples\Sample1.jtr"></gen>
+	<options>
+		<option key="Aralia" id="Optconfrange" value="true"/>
+		<option key="Element" id="Zoom" value="1.0"/>
+		<option key="Moca" id="NbrTries" value="10000"/>
+		<option key="Histo" id="Display.St" value="2"/>
+		<option key="Moca" id="DelayCompute" value="10.0"/>
+		<option key="Aralia" id="Sum" value="false"/>
+		<option key="Display" id="Grid.Draw" value="false"/>
+		<option key="Link" id="Arrow.Width" value="4.0"/>
+		<option key="Aralia" id="Tracefile" value="trace.txt"/>
+		<option key="Remark" id="Width" value="100"/>
+		<option key="Gate" id="KofN" value="true"/>
+		<option key="Aralia" id="Cutsnumber" value="false"/>
+		<option key="Moca" id="NetPrint" value="false"/>
+		<option key="Gate" id="ReportLoc" value="false"/>
+		<option key="Courbe" id="Stylegrid" value="true"/>
+		<option key="Aralia" id="Mean" value="false"/>
+		<option key="Courbe" id="VerticalAbsHisto" value="true"/>
+		<option key="Aralia" id="Traceactivated" value="false"/>
+		<option key="Courbe" id="Stylepointssize" value="5"/>
+		<option key="Comment" id="Size" value="10.0"/>
+		<option key="Moca" id="AutoDuration" value="true"/>
+		<option key="Aralia" id="Factorrrw" value="false"/>
+		<option key="PolyLink" id="Hide.Distance" value="10"/>
+		<option key="Courbe" id="Transparency" value="true"/>
+		<option key="Aralia" id="Factormif" value="false"/>
+		<option key="Aralia" id="Optdigits" value="6"/>
+		<option key="Aralia" id="Cutslist" value="false"/>
+		<option key="Courbe" id="Styleaxesnames" value="true"/>
+		<option key="Courbe" id="Titlealign" value="CENTER"/>
+		<option key="Node" id="Size" value="10.0"/>
+		<option key="Event" id="Law.Default" value="[Aralia]periodic-test 1E-6 4.38E4 4.38E4"/>
+		<option key="Aralia" id="Factordif" value="false"/>
+		<option key="Moca" id="NbProc" value="2"/>
+		<option key="Link" id="Size" value="10.0"/>
+		<option key="Moca" id="NbrDisplay" value="1"/>
+		<option key="Report" id="Height" value="20"/>
+		<option key="Aralia" id="Optleavproba" value="false"/>
+		<option key="Aralia" id="Cutssynthesys" value="false"/>
+		<option key="Aralia" id="Factorraw" value="false"/>
+		<option key="Symbol" id="Height" value="30"/>
+		<option key="Aralia" id="Optstddev" value="true"/>
+		<option key="Moca" id="NbrHistory" value="10"/>
+		<option key="Link" id="Arrow.Height" value="8.0"/>
+		<option key="Courbe" id="Drawsil" value="true"/>
+		<option key="Event" id="Lawautoparam" value="false"/>
+		<option key="Moca" id="OutTab" value="1"/>
+		<option key="Histo" id="Unlimited" value="false"/>
+		<option key="Courbe" id="Stylelegende" value="true"/>
+		<option key="Tool" id="DrawDesc" value="true"/>
+		<option key="Gate" id="Size" value="10.0"/>
+		<option key="Aralia" id="Target" value="0"/>
+		<option key="Remark" id="Height" value="40"/>
+		<option key="Report" id="Ref" value="true"/>
+		<option key="Moca" id="OldStdOutPut" value="false"/>
+		<option key="Event" id="Desc" value="true"/>
+		<option key="Moca" id="NbrHistoPerTries" value="10000"/>
+		<option key="Courbe" id="Genesize" value="15.0"/>
+		<option key="Moca" id="Seed" value="1.2345681E7"/>
+		<option key="Aralia" id="Targetname" value=""/>
+		<option key="Courbe" id="Stylelegendsize" value="12"/>
+		<option key="CommentDyn" id="Size" value="10.0"/>
+		<option key="Aralia" id="Opttimemin" value="false"/>
+		<option key="Aralia" id="Cutslimitorder" value="false"/>
+		<option key="Print" id="Filename" value="true"/>
+		<option key="Report" id="Width" value="30"/>
+		<option key="Moca" id="MultiProc" value="false"/>
+		<option key="Tool" id="DrawLabel" value="true"/>
+		<option key="Courbe" id="Maxpointnumber" value="10000"/>
+		<option key="Aralia" id="Sil" value="false"/>
+		<option key="Courbe" id="Stylecoordsize" value="9"/>
+		<option key="Aralia" id="Opttimemax" value="false"/>
+		<option key="Aralia" id="Optparamval" value="false"/>
+		<option key="Courbe" id="Encadre" value="true"/>
+		<option key="Aralia" id="Opterrfact" value="false"/>
+		<option key="Event" id="Law" value="true"/>
+		<option key="Aralia" id="Opttries" value="false"/>
+		<option key="Aralia" id="Discont" value="false"/>
+		<option key="Aralia" id="Probaw" value="false"/>
+		<option key="Aralia" id="Probability" value="true"/>
+		<option key="Aralia" id="Default.Cmd" value="/*No define default Cmd*/"/>
+		<option key="PolyLink" id="Adjust.Alpha" value="15.0"/>
+		<option key="Display" id="Reticule" value="true"/>
+		<option key="PolyLink" id="Adjust.Delta" value="30"/>
+		<option key="Aralia" id="Activatepropag" value="false"/>
+		<option key="Histo" id="Class.Tr" value="10"/>
+		<option key="Moca" id="DelayHistory" value="10000.0"/>
+		<option key="Moca" id="English" value="false"/>
+		<option key="Moca" id="Title" value="Default Title"/>
+		<option key="Aralia" id="Factorcif" value="false"/>
+		<option key="Courbe" id="Savepoints" value="true"/>
+		<option key="Aralia" id="Cutsordermax" value="1"/>
+		<option key="Aralia4" id="Default.Cmd" value="echo &quot;\nRoots = &quot;;\ndisplay roots(*);\necho &quot;\n&quot;;\ncompute BDD to good-BDD roots(*);\ncompute ZPI from good-BDD to good-ZPI roots(*);\ncompute SoP from good-ZPI to good-SOP roots(*) {\n\tverify &#x003A;&gt;order &lt;= 3\n};\nsort literals &lt; &#x003A;&gt;name good-SOP roots(*);\nsort products &lt; &#x003A;&gt;order good-SOP roots(*);\ndisplay products good-SOP roots(*) {\n};\n"/>
+		<option key="Digits" id="Format" value="10.0 1.0 1 2 false true"/>
+		<option key="Print" id="Date" value="true"/>
+		<option key="Display" id="Grid.Size" value="40"/>
+		<option key="Aralia" id="Optmean" value="true"/>
+		<option key="Courbe" id="Titlesize" value="14.0"/>
+		<option key="Aralia" id="Probalbdeq" value="false"/>
+		<option key="Gate" id="Name" value="true"/>
+		<option key="Aralia" id="Nbhisto" value="1"/>
+		<option key="Courbe" id="Geneencadre" value="false"/>
+		<option key="Gate" id="Desc" value="true"/>
+		<option key="Courbe" id="Stylegridgraph" value="true"/>
+		<option key="Aralia" id="Optquantiles" value="0"/>
+		<option key="Courbe" id="Styletransparency" value="false"/>
+		<option key="Moca" id="PrintDelay" value="false"/>
+		<option key="Courbe" id="Maxpointnumbertosave" value="50000"/>
+		<option key="Print" id="PageNumber" value="true"/>
+		<option key="Event" id="Law.Default.Used" value="true"/>
+		<option key="Aralia" id="Times" value="at 8760"/>
+		<option key="Group" id="Size" value="10.0"/>
+		<option key="Histo" id="Class.St" value="10"/>
+		<option key="Display" id="Grid.Actived" value="false"/>
+		<option key="PolyLink" id="Adjust.Exclude" value="10"/>
+		<option key="Print" id="Border" value="true"/>
+		<option key="Marge" id="Height" value="5"/>
+		<option key="Moca" id="ActivateTries" value="false"/>
+		<option key="Report" id="Location" value="true"/>
+		<option key="Event" id="Name" value="true"/>
+		<option key="Symbol" id="Width" value="30"/>
+		<option key="Histo" id="Display.Tr" value="1"/>
+		<option key="Document" id="Zoom" value="1.0"/>
+	</options>
+	<pages-manager>
+		<page id="1" name="Page 1" w="1200.0" h="850.0">
+			<grf id="0" t="link" src="12" dest="8"/>
+			<grf id="1" t="link" src="11" dest="8"/>
+			<grf id="2" t="link" src="10" dest="7"/>
+			<grf id="3" t="link" src="9" dest="7"/>
+			<grf id="4" t="link" src="8" dest="6"/>
+			<grf id="5" t="link" src="7" dest="6"/>
+			<grf id="6" t="gate" x="278" y="37"/>
+			<grf id="7" t="gate" x="101" y="158"/>
+			<grf id="8" t="gate" x="460" y="158"/>
+			<grf id="9" t="evt" x="25" y="288"/>
+			<grf id="10" t="evt" x="193" y="288"/>
+			<grf id="11" t="evt" x="366" y="288"/>
+			<grf id="12" t="evt" x="547" y="288"/>
+			<grf id="13" t="cou" x="26" y="479" w="730" h="315">
+				<courbes title="" dtitle="true" dgene="false">
+					<courbe-data id="0" type="aralia4" leg="Unavailability" comp="compute Pr Or1 from 0 to 8760 step 24">
+						<courbe-pt x="0.0" y="0.0"/>
+						<courbe-pt x="24.0" y="0.00112442"/>
+						<courbe-pt x="48.0" y="0.00438806"/>
+						<courbe-pt x="72.0" y="0.00962862"/>
+						<courbe-pt x="96.0" y="0.0166875"/>
+						<courbe-pt x="120.0" y="0.0254105"/>
+						<courbe-pt x="144.0" y="0.0356487"/>
+						<courbe-pt x="168.0" y="0.0472589"/>
+						<courbe-pt x="192.0" y="0.0601041"/>
+						<courbe-pt x="216.0" y="0.0740533"/>
+						<courbe-pt x="240.0" y="0.0889826"/>
+						<courbe-pt x="264.0" y="0.104774"/>
+						<courbe-pt x="288.0" y="0.121317"/>
+						<courbe-pt x="312.0" y="0.138508"/>
+						<courbe-pt x="336.0" y="0.156247"/>
+						<courbe-pt x="360.0" y="0.174445"/>
+						<courbe-pt x="384.0" y="0.193016"/>
+						<courbe-pt x="408.0" y="0.211881"/>
+						<courbe-pt x="432.0" y="0.230966"/>
+						<courbe-pt x="456.0" y="0.250204"/>
+						<courbe-pt x="480.0" y="0.269533"/>
+						<courbe-pt x="504.0" y="0.288895"/>
+						<courbe-pt x="528.0" y="0.308238"/>
+						<courbe-pt x="552.0" y="0.327515"/>
+						<courbe-pt x="576.0" y="0.346682"/>
+						<courbe-pt x="600.0" y="0.365701"/>
+						<courbe-pt x="624.0" y="0.384535"/>
+						<courbe-pt x="648.0" y="0.403155"/>
+						<courbe-pt x="672.0" y="0.42153"/>
+						<courbe-pt x="696.0" y="0.439638"/>
+						<courbe-pt x="720.0" y="0.457455"/>
+						<courbe-pt x="744.0" y="0.00112442"/>
+						<courbe-pt x="768.0" y="0.00438806"/>
+						<courbe-pt x="792.0" y="0.00962862"/>
+						<courbe-pt x="816.0" y="0.0166875"/>
+						<courbe-pt x="840.0" y="0.0254105"/>
+						<courbe-pt x="864.0" y="0.0356487"/>
+						<courbe-pt x="888.0" y="0.0472589"/>
+						<courbe-pt x="912.0" y="0.0601041"/>
+						<courbe-pt x="936.0" y="0.0740533"/>
+						<courbe-pt x="960.0" y="0.0889826"/>
+						<courbe-pt x="984.0" y="0.104774"/>
+						<courbe-pt x="1008.0" y="0.121317"/>
+						<courbe-pt x="1032.0" y="0.138508"/>
+						<courbe-pt x="1056.0" y="0.156247"/>
+						<courbe-pt x="1080.0" y="0.174445"/>
+						<courbe-pt x="1104.0" y="0.193016"/>
+						<courbe-pt x="1128.0" y="0.211881"/>
+						<courbe-pt x="1152.0" y="0.230966"/>
+						<courbe-pt x="1176.0" y="0.250204"/>
+						<courbe-pt x="1200.0" y="0.269533"/>
+						<courbe-pt x="1224.0" y="0.288895"/>
+						<courbe-pt x="1248.0" y="0.308238"/>
+						<courbe-pt x="1272.0" y="0.327515"/>
+						<courbe-pt x="1296.0" y="0.346682"/>
+						<courbe-pt x="1320.0" y="0.365701"/>
+						<courbe-pt x="1344.0" y="0.384535"/>
+						<courbe-pt x="1368.0" y="0.403155"/>
+						<courbe-pt x="1392.0" y="0.42153"/>
+						<courbe-pt x="1416.0" y="0.439638"/>
+						<courbe-pt x="1440.0" y="0.457455"/>
+						<courbe-pt x="1464.0" y="0.00112442"/>
+						<courbe-pt x="1488.0" y="0.00438806"/>
+						<courbe-pt x="1512.0" y="0.00962862"/>
+						<courbe-pt x="1536.0" y="0.0166875"/>
+						<courbe-pt x="1560.0" y="0.0254105"/>
+						<courbe-pt x="1584.0" y="0.0356487"/>
+						<courbe-pt x="1608.0" y="0.0472589"/>
+						<courbe-pt x="1632.0" y="0.0601041"/>
+						<courbe-pt x="1656.0" y="0.0740533"/>
+						<courbe-pt x="1680.0" y="0.0889826"/>
+						<courbe-pt x="1704.0" y="0.104774"/>
+						<courbe-pt x="1728.0" y="0.121317"/>
+						<courbe-pt x="1752.0" y="0.138508"/>
+						<courbe-pt x="1776.0" y="0.156247"/>
+						<courbe-pt x="1800.0" y="0.174445"/>
+						<courbe-pt x="1824.0" y="0.193016"/>
+						<courbe-pt x="1848.0" y="0.211881"/>
+						<courbe-pt x="1872.0" y="0.230966"/>
+						<courbe-pt x="1896.0" y="0.250204"/>
+						<courbe-pt x="1920.0" y="0.269533"/>
+						<courbe-pt x="1944.0" y="0.288895"/>
+						<courbe-pt x="1968.0" y="0.308238"/>
+						<courbe-pt x="1992.0" y="0.327515"/>
+						<courbe-pt x="2016.0" y="0.346682"/>
+						<courbe-pt x="2040.0" y="0.365701"/>
+						<courbe-pt x="2064.0" y="0.384535"/>
+						<courbe-pt x="2088.0" y="0.403155"/>
+						<courbe-pt x="2112.0" y="0.42153"/>
+						<courbe-pt x="2136.0" y="0.439638"/>
+						<courbe-pt x="2160.0" y="0.457455"/>
+						<courbe-pt x="2184.0" y="0.00112442"/>
+						<courbe-pt x="2208.0" y="0.00438806"/>
+						<courbe-pt x="2232.0" y="0.00962862"/>
+						<courbe-pt x="2256.0" y="0.0166875"/>
+						<courbe-pt x="2280.0" y="0.0254105"/>
+						<courbe-pt x="2304.0" y="0.0356487"/>
+						<courbe-pt x="2328.0" y="0.0472589"/>
+						<courbe-pt x="2352.0" y="0.0601041"/>
+						<courbe-pt x="2376.0" y="0.0740533"/>
+						<courbe-pt x="2400.0" y="0.0889826"/>
+						<courbe-pt x="2424.0" y="0.104774"/>
+						<courbe-pt x="2448.0" y="0.121317"/>
+						<courbe-pt x="2472.0" y="0.138508"/>
+						<courbe-pt x="2496.0" y="0.156247"/>
+						<courbe-pt x="2520.0" y="0.174445"/>
+						<courbe-pt x="2544.0" y="0.193016"/>
+						<courbe-pt x="2568.0" y="0.211881"/>
+						<courbe-pt x="2592.0" y="0.230966"/>
+						<courbe-pt x="2616.0" y="0.250204"/>
+						<courbe-pt x="2640.0" y="0.269533"/>
+						<courbe-pt x="2664.0" y="0.288895"/>
+						<courbe-pt x="2688.0" y="0.308238"/>
+						<courbe-pt x="2712.0" y="0.327515"/>
+						<courbe-pt x="2736.0" y="0.346682"/>
+						<courbe-pt x="2760.0" y="0.365701"/>
+						<courbe-pt x="2784.0" y="0.384535"/>
+						<courbe-pt x="2808.0" y="0.403155"/>
+						<courbe-pt x="2832.0" y="0.42153"/>
+						<courbe-pt x="2856.0" y="0.439638"/>
+						<courbe-pt x="2880.0" y="0.457455"/>
+						<courbe-pt x="2904.0" y="0.00112442"/>
+						<courbe-pt x="2928.0" y="0.00438806"/>
+						<courbe-pt x="2952.0" y="0.00962862"/>
+						<courbe-pt x="2976.0" y="0.0166875"/>
+						<courbe-pt x="3000.0" y="0.0254105"/>
+						<courbe-pt x="3024.0" y="0.0356487"/>
+						<courbe-pt x="3048.0" y="0.0472589"/>
+						<courbe-pt x="3072.0" y="0.0601041"/>
+						<courbe-pt x="3096.0" y="0.0740533"/>
+						<courbe-pt x="3120.0" y="0.0889826"/>
+						<courbe-pt x="3144.0" y="0.104774"/>
+						<courbe-pt x="3168.0" y="0.121317"/>
+						<courbe-pt x="3192.0" y="0.138508"/>
+						<courbe-pt x="3216.0" y="0.156247"/>
+						<courbe-pt x="3240.0" y="0.174445"/>
+						<courbe-pt x="3264.0" y="0.193016"/>
+						<courbe-pt x="3288.0" y="0.211881"/>
+						<courbe-pt x="3312.0" y="0.230966"/>
+						<courbe-pt x="3336.0" y="0.250204"/>
+						<courbe-pt x="3360.0" y="0.269533"/>
+						<courbe-pt x="3384.0" y="0.288895"/>
+						<courbe-pt x="3408.0" y="0.308238"/>
+						<courbe-pt x="3432.0" y="0.327515"/>
+						<courbe-pt x="3456.0" y="0.346682"/>
+						<courbe-pt x="3480.0" y="0.365701"/>
+						<courbe-pt x="3504.0" y="0.384535"/>
+						<courbe-pt x="3528.0" y="0.403155"/>
+						<courbe-pt x="3552.0" y="0.42153"/>
+						<courbe-pt x="3576.0" y="0.439638"/>
+						<courbe-pt x="3600.0" y="0.457455"/>
+						<courbe-pt x="3624.0" y="0.00112442"/>
+						<courbe-pt x="3648.0" y="0.00438806"/>
+						<courbe-pt x="3672.0" y="0.00962862"/>
+						<courbe-pt x="3696.0" y="0.0166875"/>
+						<courbe-pt x="3720.0" y="0.0254105"/>
+						<courbe-pt x="3744.0" y="0.0356487"/>
+						<courbe-pt x="3768.0" y="0.0472589"/>
+						<courbe-pt x="3792.0" y="0.0601041"/>
+						<courbe-pt x="3816.0" y="0.0740533"/>
+						<courbe-pt x="3840.0" y="0.0889826"/>
+						<courbe-pt x="3864.0" y="0.104774"/>
+						<courbe-pt x="3888.0" y="0.121317"/>
+						<courbe-pt x="3912.0" y="0.138508"/>
+						<courbe-pt x="3936.0" y="0.156247"/>
+						<courbe-pt x="3960.0" y="0.174445"/>
+						<courbe-pt x="3984.0" y="0.193016"/>
+						<courbe-pt x="4008.0" y="0.211881"/>
+						<courbe-pt x="4032.0" y="0.230966"/>
+						<courbe-pt x="4056.0" y="0.250204"/>
+						<courbe-pt x="4080.0" y="0.269533"/>
+						<courbe-pt x="4104.0" y="0.288895"/>
+						<courbe-pt x="4128.0" y="0.308238"/>
+						<courbe-pt x="4152.0" y="0.327515"/>
+						<courbe-pt x="4176.0" y="0.346682"/>
+						<courbe-pt x="4200.0" y="0.365701"/>
+						<courbe-pt x="4224.0" y="0.384535"/>
+						<courbe-pt x="4248.0" y="0.403155"/>
+						<courbe-pt x="4272.0" y="0.42153"/>
+						<courbe-pt x="4296.0" y="0.439638"/>
+						<courbe-pt x="4320.0" y="0.457455"/>
+						<courbe-pt x="4344.0" y="0.00112442"/>
+						<courbe-pt x="4368.0" y="0.00438806"/>
+						<courbe-pt x="4392.0" y="0.00962862"/>
+						<courbe-pt x="4416.0" y="0.0166875"/>
+						<courbe-pt x="4440.0" y="0.0254105"/>
+						<courbe-pt x="4464.0" y="0.0356487"/>
+						<courbe-pt x="4488.0" y="0.0472589"/>
+						<courbe-pt x="4512.0" y="0.0601041"/>
+						<courbe-pt x="4536.0" y="0.0740533"/>
+						<courbe-pt x="4560.0" y="0.0889826"/>
+						<courbe-pt x="4584.0" y="0.104774"/>
+						<courbe-pt x="4608.0" y="0.121317"/>
+						<courbe-pt x="4632.0" y="0.138508"/>
+						<courbe-pt x="4656.0" y="0.156247"/>
+						<courbe-pt x="4680.0" y="0.174445"/>
+						<courbe-pt x="4704.0" y="0.193016"/>
+						<courbe-pt x="4728.0" y="0.211881"/>
+						<courbe-pt x="4752.0" y="0.230966"/>
+						<courbe-pt x="4776.0" y="0.250204"/>
+						<courbe-pt x="4800.0" y="0.269533"/>
+						<courbe-pt x="4824.0" y="0.288895"/>
+						<courbe-pt x="4848.0" y="0.308238"/>
+						<courbe-pt x="4872.0" y="0.327515"/>
+						<courbe-pt x="4896.0" y="0.346682"/>
+						<courbe-pt x="4920.0" y="0.365701"/>
+						<courbe-pt x="4944.0" y="0.384535"/>
+						<courbe-pt x="4968.0" y="0.403155"/>
+						<courbe-pt x="4992.0" y="0.42153"/>
+						<courbe-pt x="5016.0" y="0.439638"/>
+						<courbe-pt x="5040.0" y="0.457455"/>
+						<courbe-pt x="5064.0" y="0.00112442"/>
+						<courbe-pt x="5088.0" y="0.00438806"/>
+						<courbe-pt x="5112.0" y="0.00962862"/>
+						<courbe-pt x="5136.0" y="0.0166875"/>
+						<courbe-pt x="5160.0" y="0.0254105"/>
+						<courbe-pt x="5184.0" y="0.0356487"/>
+						<courbe-pt x="5208.0" y="0.0472589"/>
+						<courbe-pt x="5232.0" y="0.0601041"/>
+						<courbe-pt x="5256.0" y="0.0740533"/>
+						<courbe-pt x="5280.0" y="0.0889826"/>
+						<courbe-pt x="5304.0" y="0.104774"/>
+						<courbe-pt x="5328.0" y="0.121317"/>
+						<courbe-pt x="5352.0" y="0.138508"/>
+						<courbe-pt x="5376.0" y="0.156247"/>
+						<courbe-pt x="5400.0" y="0.174445"/>
+						<courbe-pt x="5424.0" y="0.193016"/>
+						<courbe-pt x="5448.0" y="0.211881"/>
+						<courbe-pt x="5472.0" y="0.230966"/>
+						<courbe-pt x="5496.0" y="0.250204"/>
+						<courbe-pt x="5520.0" y="0.269533"/>
+						<courbe-pt x="5544.0" y="0.288895"/>
+						<courbe-pt x="5568.0" y="0.308238"/>
+						<courbe-pt x="5592.0" y="0.327515"/>
+						<courbe-pt x="5616.0" y="0.346682"/>
+						<courbe-pt x="5640.0" y="0.365701"/>
+						<courbe-pt x="5664.0" y="0.384535"/>
+						<courbe-pt x="5688.0" y="0.403155"/>
+						<courbe-pt x="5712.0" y="0.42153"/>
+						<courbe-pt x="5736.0" y="0.439638"/>
+						<courbe-pt x="5760.0" y="0.457455"/>
+						<courbe-pt x="5784.0" y="0.00112442"/>
+						<courbe-pt x="5808.0" y="0.00438806"/>
+						<courbe-pt x="5832.0" y="0.00962862"/>
+						<courbe-pt x="5856.0" y="0.0166875"/>
+						<courbe-pt x="5880.0" y="0.0254105"/>
+						<courbe-pt x="5904.0" y="0.0356487"/>
+						<courbe-pt x="5928.0" y="0.0472589"/>
+						<courbe-pt x="5952.0" y="0.0601041"/>
+						<courbe-pt x="5976.0" y="0.0740533"/>
+						<courbe-pt x="6000.0" y="0.0889826"/>
+						<courbe-pt x="6024.0" y="0.104774"/>
+						<courbe-pt x="6048.0" y="0.121317"/>
+						<courbe-pt x="6072.0" y="0.138508"/>
+						<courbe-pt x="6096.0" y="0.156247"/>
+						<courbe-pt x="6120.0" y="0.174445"/>
+						<courbe-pt x="6144.0" y="0.193016"/>
+						<courbe-pt x="6168.0" y="0.211881"/>
+						<courbe-pt x="6192.0" y="0.230966"/>
+						<courbe-pt x="6216.0" y="0.250204"/>
+						<courbe-pt x="6240.0" y="0.269533"/>
+						<courbe-pt x="6264.0" y="0.288895"/>
+						<courbe-pt x="6288.0" y="0.308238"/>
+						<courbe-pt x="6312.0" y="0.327515"/>
+						<courbe-pt x="6336.0" y="0.346682"/>
+						<courbe-pt x="6360.0" y="0.365701"/>
+						<courbe-pt x="6384.0" y="0.384535"/>
+						<courbe-pt x="6408.0" y="0.403155"/>
+						<courbe-pt x="6432.0" y="0.42153"/>
+						<courbe-pt x="6456.0" y="0.439638"/>
+						<courbe-pt x="6480.0" y="0.457455"/>
+						<courbe-pt x="6504.0" y="0.00112442"/>
+						<courbe-pt x="6528.0" y="0.00438806"/>
+						<courbe-pt x="6552.0" y="0.00962862"/>
+						<courbe-pt x="6576.0" y="0.0166875"/>
+						<courbe-pt x="6600.0" y="0.0254105"/>
+						<courbe-pt x="6624.0" y="0.0356487"/>
+						<courbe-pt x="6648.0" y="0.0472589"/>
+						<courbe-pt x="6672.0" y="0.0601041"/>
+						<courbe-pt x="6696.0" y="0.0740533"/>
+						<courbe-pt x="6720.0" y="0.0889826"/>
+						<courbe-pt x="6744.0" y="0.104774"/>
+						<courbe-pt x="6768.0" y="0.121317"/>
+						<courbe-pt x="6792.0" y="0.138508"/>
+						<courbe-pt x="6816.0" y="0.156247"/>
+						<courbe-pt x="6840.0" y="0.174445"/>
+						<courbe-pt x="6864.0" y="0.193016"/>
+						<courbe-pt x="6888.0" y="0.211881"/>
+						<courbe-pt x="6912.0" y="0.230966"/>
+						<courbe-pt x="6936.0" y="0.250204"/>
+						<courbe-pt x="6960.0" y="0.269533"/>
+						<courbe-pt x="6984.0" y="0.288895"/>
+						<courbe-pt x="7008.0" y="0.308238"/>
+						<courbe-pt x="7032.0" y="0.327515"/>
+						<courbe-pt x="7056.0" y="0.346682"/>
+						<courbe-pt x="7080.0" y="0.365701"/>
+						<courbe-pt x="7104.0" y="0.384535"/>
+						<courbe-pt x="7128.0" y="0.403155"/>
+						<courbe-pt x="7152.0" y="0.42153"/>
+						<courbe-pt x="7176.0" y="0.439638"/>
+						<courbe-pt x="7200.0" y="0.457455"/>
+						<courbe-pt x="7224.0" y="0.00112442"/>
+						<courbe-pt x="7248.0" y="0.00438806"/>
+						<courbe-pt x="7272.0" y="0.00962862"/>
+						<courbe-pt x="7296.0" y="0.0166875"/>
+						<courbe-pt x="7320.0" y="0.0254105"/>
+						<courbe-pt x="7344.0" y="0.0356487"/>
+						<courbe-pt x="7368.0" y="0.0472589"/>
+						<courbe-pt x="7392.0" y="0.0601041"/>
+						<courbe-pt x="7416.0" y="0.0740533"/>
+						<courbe-pt x="7440.0" y="0.0889826"/>
+						<courbe-pt x="7464.0" y="0.104774"/>
+						<courbe-pt x="7488.0" y="0.121317"/>
+						<courbe-pt x="7512.0" y="0.138508"/>
+						<courbe-pt x="7536.0" y="0.156247"/>
+						<courbe-pt x="7560.0" y="0.174445"/>
+						<courbe-pt x="7584.0" y="0.193016"/>
+						<courbe-pt x="7608.0" y="0.211881"/>
+						<courbe-pt x="7632.0" y="0.230966"/>
+						<courbe-pt x="7656.0" y="0.250204"/>
+						<courbe-pt x="7680.0" y="0.269533"/>
+						<courbe-pt x="7704.0" y="0.288895"/>
+						<courbe-pt x="7728.0" y="0.308238"/>
+						<courbe-pt x="7752.0" y="0.327515"/>
+						<courbe-pt x="7776.0" y="0.346682"/>
+						<courbe-pt x="7800.0" y="0.365701"/>
+						<courbe-pt x="7824.0" y="0.384535"/>
+						<courbe-pt x="7848.0" y="0.403155"/>
+						<courbe-pt x="7872.0" y="0.42153"/>
+						<courbe-pt x="7896.0" y="0.439638"/>
+						<courbe-pt x="7920.0" y="0.457455"/>
+						<courbe-pt x="7944.0" y="0.00112442"/>
+						<courbe-pt x="7968.0" y="0.00438806"/>
+						<courbe-pt x="7992.0" y="0.00962862"/>
+						<courbe-pt x="8016.0" y="0.0166875"/>
+						<courbe-pt x="8040.0" y="0.0254105"/>
+						<courbe-pt x="8064.0" y="0.0356487"/>
+						<courbe-pt x="8088.0" y="0.0472589"/>
+						<courbe-pt x="8112.0" y="0.0601041"/>
+						<courbe-pt x="8136.0" y="0.0740533"/>
+						<courbe-pt x="8160.0" y="0.0889826"/>
+						<courbe-pt x="8184.0" y="0.104774"/>
+						<courbe-pt x="8208.0" y="0.121317"/>
+						<courbe-pt x="8232.0" y="0.138508"/>
+						<courbe-pt x="8256.0" y="0.156247"/>
+						<courbe-pt x="8280.0" y="0.174445"/>
+						<courbe-pt x="8304.0" y="0.193016"/>
+						<courbe-pt x="8328.0" y="0.211881"/>
+						<courbe-pt x="8352.0" y="0.230966"/>
+						<courbe-pt x="8376.0" y="0.250204"/>
+						<courbe-pt x="8400.0" y="0.269533"/>
+						<courbe-pt x="8424.0" y="0.288895"/>
+						<courbe-pt x="8448.0" y="0.308238"/>
+						<courbe-pt x="8472.0" y="0.327515"/>
+						<courbe-pt x="8496.0" y="0.346682"/>
+						<courbe-pt x="8520.0" y="0.365701"/>
+						<courbe-pt x="8544.0" y="0.384535"/>
+						<courbe-pt x="8568.0" y="0.403155"/>
+						<courbe-pt x="8592.0" y="0.42153"/>
+						<courbe-pt x="8616.0" y="0.439638"/>
+						<courbe-pt x="8640.0" y="0.457455"/>
+						<courbe-pt x="8664.0" y="0.00112442"/>
+						<courbe-pt x="8688.0" y="0.00438806"/>
+						<courbe-pt x="8712.0" y="0.00962862"/>
+						<courbe-pt x="8736.0" y="0.0166875"/>
+						<courbe-pt x="8760.0" y="0.0254105"/>
+						<generic key="Min" val="0.0"/>
+						<generic key="Max" val="0.457455"/>
+						<generic key="Mean" val="0.1954849713114755"/>
+					</courbe-data>
+					<courbe-data id="1" type="MocaAralia" leg="Unreliability" comp="Or1 1 10000 from 0 to 8760 step 24">
+						<courbe-pt x="0.0" y="1.0"/>
+						<courbe-pt x="24.0" y="7.671653241273E-4"/>
+						<courbe-pt x="48.0" y="0.0042194092827"/>
+						<courbe-pt x="72.0" y="0.01150747986191"/>
+						<courbe-pt x="96.0" y="0.01649405446874"/>
+						<courbe-pt x="120.0" y="0.02550824702723"/>
+						<courbe-pt x="144.0" y="0.03605677023399"/>
+						<courbe-pt x="168.0" y="0.04871499808209"/>
+						<courbe-pt x="192.0" y="0.06367472190257"/>
+						<courbe-pt x="216.0" y="0.07825086306099"/>
+						<courbe-pt x="240.0" y="0.09244342155735"/>
+						<courbe-pt x="264.0" y="0.1106635980054"/>
+						<courbe-pt x="288.0" y="0.1292673571155"/>
+						<courbe-pt x="312.0" y="0.1449942462601"/>
+						<courbe-pt x="336.0" y="0.1641733793633"/>
+						<courbe-pt x="360.0" y="0.1835443037975"/>
+						<courbe-pt x="384.0" y="0.1998465669352"/>
+						<courbe-pt x="408.0" y="0.216724204066"/>
+						<courbe-pt x="432.0" y="0.2324510932106"/>
+						<courbe-pt x="456.0" y="0.2525891829689"/>
+						<courbe-pt x="480.0" y="0.2721518987342"/>
+						<courbe-pt x="504.0" y="0.2924817798236"/>
+						<courbe-pt x="528.0" y="0.3112773302647"/>
+						<courbe-pt x="552.0" y="0.3262370540852"/>
+						<courbe-pt x="576.0" y="0.343498273878"/>
+						<courbe-pt x="600.0" y="0.3642117376295"/>
+						<courbe-pt x="624.0" y="0.3833908707326"/>
+						<courbe-pt x="648.0" y="0.4012274645186"/>
+						<courbe-pt x="672.0" y="0.4194476409666"/>
+						<courbe-pt x="696.0" y="0.4351745301112"/>
+						<courbe-pt x="720.0" y="0.4528193325662"/>
+						<courbe-pt x="744.0" y="0.4530111238972"/>
+						<courbe-pt x="768.0" y="0.4555044112006"/>
+						<courbe-pt x="792.0" y="0.4589566551592"/>
+						<courbe-pt x="816.0" y="0.4626006904488"/>
+						<courbe-pt x="840.0" y="0.469888761028"/>
+						<courbe-pt x="864.0" y="0.4773686229382"/>
+						<courbe-pt x="888.0" y="0.4825469888761"/>
+						<courbe-pt x="912.0" y="0.4925201380898"/>
+						<courbe-pt x="936.0" y="0.4984656693517"/>
+						<courbe-pt x="960.0" y="0.5065209052551"/>
+						<courbe-pt x="984.0" y="0.5143843498274"/>
+						<courbe-pt x="1008.0" y="0.5237821250479"/>
+						<courbe-pt x="1032.0" y="0.5331799002685"/>
+						<courbe-pt x="1056.0" y="0.542194092827"/>
+						<courbe-pt x="1080.0" y="0.5531261986958"/>
+						<courbe-pt x="1104.0" y="0.5646336785577"/>
+						<courbe-pt x="1128.0" y="0.5759493670886"/>
+						<courbe-pt x="1152.0" y="0.5857307249712"/>
+						<courbe-pt x="1176.0" y="0.5981971614883"/>
+						<courbe-pt x="1200.0" y="0.6091292673571"/>
+						<courbe-pt x="1224.0" y="0.620444955888"/>
+						<courbe-pt x="1248.0" y="0.6321442270809"/>
+						<courbe-pt x="1272.0" y="0.644610663598"/>
+						<courbe-pt x="1296.0" y="0.6551591868048"/>
+						<courbe-pt x="1320.0" y="0.6657077100115"/>
+						<courbe-pt x="1344.0" y="0.6752972765631"/>
+						<courbe-pt x="1368.0" y="0.6856540084388"/>
+						<courbe-pt x="1392.0" y="0.6963943229766"/>
+						<courbe-pt x="1416.0" y="0.7031070195627"/>
+						<courbe-pt x="1440.0" y="0.7134637514384"/>
+						<courbe-pt x="1464.0" y="0.7136555427695"/>
+						<courbe-pt x="1488.0" y="0.7149980820867"/>
+						<courbe-pt x="1512.0" y="0.7176831607211"/>
+						<courbe-pt x="1536.0" y="0.7211354046797"/>
+						<courbe-pt x="1560.0" y="0.7240122746452"/>
+						<courbe-pt x="1584.0" y="0.7266973532796"/>
+						<courbe-pt x="1608.0" y="0.7303413885692"/>
+						<courbe-pt x="1632.0" y="0.7355197545071"/>
+						<courbe-pt x="1656.0" y="0.7395473724588"/>
+						<courbe-pt x="1680.0" y="0.7441503644035"/>
+						<courbe-pt x="1704.0" y="0.7485615650173"/>
+						<courbe-pt x="1728.0" y="0.7552742616034"/>
+						<courbe-pt x="1752.0" y="0.759301879555"/>
+						<courbe-pt x="1776.0" y="0.765055619486"/>
+						<courbe-pt x="1800.0" y="0.7679324894515"/>
+						<courbe-pt x="1824.0" y="0.7742616033755"/>
+						<courbe-pt x="1848.0" y="0.7802071346375"/>
+						<courbe-pt x="1872.0" y="0.7865362485616"/>
+						<courbe-pt x="1896.0" y="0.7930571538166"/>
+						<courbe-pt x="1920.0" y="0.7970847717683"/>
+						<courbe-pt x="1944.0" y="0.8003452243959"/>
+						<courbe-pt x="1968.0" y="0.8076332949751"/>
+						<courbe-pt x="1992.0" y="0.8120444955888"/>
+						<courbe-pt x="2016.0" y="0.8164556962025"/>
+						<courbe-pt x="2040.0" y="0.8227848101266"/>
+						<courbe-pt x="2064.0" y="0.8277713847334"/>
+						<courbe-pt x="2088.0" y="0.8325661680092"/>
+						<courbe-pt x="2112.0" y="0.8377445339471"/>
+						<courbe-pt x="2136.0" y="0.8413885692367"/>
+						<courbe-pt x="2160.0" y="0.8461833525125"/>
+						<courbe-pt x="2184.0" y="0.8461833525125"/>
+						<courbe-pt x="2208.0" y="0.8469505178366"/>
+						<courbe-pt x="2232.0" y="0.8479094744918"/>
+						<courbe-pt x="2256.0" y="0.8484848484848"/>
+						<courbe-pt x="2280.0" y="0.849635596471"/>
+						<courbe-pt x="2304.0" y="0.8507863444572"/>
+						<courbe-pt x="2328.0" y="0.8525124664365"/>
+						<courbe-pt x="2352.0" y="0.8540467970848"/>
+						<courbe-pt x="2376.0" y="0.8563482930572"/>
+						<courbe-pt x="2400.0" y="0.8586497890295"/>
+						<courbe-pt x="2424.0" y="0.861718450326"/>
+						<courbe-pt x="2448.0" y="0.8636363636364"/>
+						<courbe-pt x="2472.0" y="0.867280398926"/>
+						<courbe-pt x="2496.0" y="0.8716915995397"/>
+						<courbe-pt x="2520.0" y="0.87360951285"/>
+						<courbe-pt x="2544.0" y="0.8757192174914"/>
+						<courbe-pt x="2568.0" y="0.8789796701189"/>
+						<courbe-pt x="2592.0" y="0.8810893747603"/>
+						<courbe-pt x="2616.0" y="0.8839662447257"/>
+						<courbe-pt x="2640.0" y="0.8887610280015"/>
+						<courbe-pt x="2664.0" y="0.891446106636"/>
+						<courbe-pt x="2688.0" y="0.8929804372842"/>
+						<courbe-pt x="2712.0" y="0.8962408899118"/>
+						<courbe-pt x="2736.0" y="0.89777522056"/>
+						<courbe-pt x="2760.0" y="0.9010356731876"/>
+						<courbe-pt x="2784.0" y="0.9046797084772"/>
+						<courbe-pt x="2808.0" y="0.9065976217875"/>
+						<courbe-pt x="2832.0" y="0.9110088224012"/>
+						<courbe-pt x="2856.0" y="0.9138856923667"/>
+						<courbe-pt x="2880.0" y="0.9161871883391"/>
+						<courbe-pt x="2904.0" y="0.9163789796701"/>
+						<courbe-pt x="2928.0" y="0.9169543536632"/>
+						<courbe-pt x="2952.0" y="0.9171461449942"/>
+						<courbe-pt x="2976.0" y="0.9179133103184"/>
+						<courbe-pt x="3000.0" y="0.9188722669735"/>
+						<courbe-pt x="3024.0" y="0.9196394322977"/>
+						<courbe-pt x="3048.0" y="0.9200230149597"/>
+						<courbe-pt x="3072.0" y="0.9211737629459"/>
+						<courbe-pt x="3096.0" y="0.9221327196011"/>
+						<courbe-pt x="3120.0" y="0.9240506329114"/>
+						<courbe-pt x="3144.0" y="0.9255849635596"/>
+						<courbe-pt x="3168.0" y="0.9265439202148"/>
+						<courbe-pt x="3192.0" y="0.927886459532"/>
+						<courbe-pt x="3216.0" y="0.9296125815113"/>
+						<courbe-pt x="3240.0" y="0.9311469121596"/>
+						<courbe-pt x="3264.0" y="0.9328730341389"/>
+						<courbe-pt x="3288.0" y="0.9345991561181"/>
+						<courbe-pt x="3312.0" y="0.9361334867664"/>
+						<courbe-pt x="3336.0" y="0.9384349827388"/>
+						<courbe-pt x="3360.0" y="0.9393939393939"/>
+						<courbe-pt x="3384.0" y="0.9418872266974"/>
+						<courbe-pt x="3408.0" y="0.9430379746835"/>
+						<courbe-pt x="3432.0" y="0.9447640966628"/>
+						<courbe-pt x="3456.0" y="0.9468738013042"/>
+						<courbe-pt x="3480.0" y="0.9487917146145"/>
+						<courbe-pt x="3504.0" y="0.9512850019179"/>
+						<courbe-pt x="3528.0" y="0.9528193325662"/>
+						<courbe-pt x="3552.0" y="0.9541618718834"/>
+						<courbe-pt x="3576.0" y="0.9553126198696"/>
+						<courbe-pt x="3600.0" y="0.9562715765247"/>
+						<courbe-pt x="3624.0" y="0.9564633678558"/>
+						<courbe-pt x="3648.0" y="0.9566551591868"/>
+						<courbe-pt x="3672.0" y="0.9568469505178"/>
+						<courbe-pt x="3696.0" y="0.9570387418489"/>
+						<courbe-pt x="3720.0" y="0.9574223245109"/>
+						<courbe-pt x="3744.0" y="0.9574223245109"/>
+						<courbe-pt x="3768.0" y="0.9574223245109"/>
+						<courbe-pt x="3792.0" y="0.957614115842"/>
+						<courbe-pt x="3816.0" y="0.9581894898351"/>
+						<courbe-pt x="3840.0" y="0.9583812811661"/>
+						<courbe-pt x="3864.0" y="0.9589566551592"/>
+						<courbe-pt x="3888.0" y="0.9599156118143"/>
+						<courbe-pt x="3912.0" y="0.9604909858074"/>
+						<courbe-pt x="3936.0" y="0.9612581511316"/>
+						<courbe-pt x="3960.0" y="0.9620253164557"/>
+						<courbe-pt x="3984.0" y="0.9627924817798"/>
+						<courbe-pt x="4008.0" y="0.9629842731109"/>
+						<courbe-pt x="4032.0" y="0.963943229766"/>
+						<courbe-pt x="4056.0" y="0.9643268124281"/>
+						<courbe-pt x="4080.0" y="0.9650939777522"/>
+						<courbe-pt x="4104.0" y="0.9660529344074"/>
+						<courbe-pt x="4128.0" y="0.9668200997315"/>
+						<courbe-pt x="4152.0" y="0.9672036823936"/>
+						<courbe-pt x="4176.0" y="0.9683544303797"/>
+						<courbe-pt x="4200.0" y="0.969696969697"/>
+						<courbe-pt x="4224.0" y="0.9704641350211"/>
+						<courbe-pt x="4248.0" y="0.9716148830073"/>
+						<courbe-pt x="4272.0" y="0.9719984656694"/>
+						<courbe-pt x="4296.0" y="0.9731492136555"/>
+						<courbe-pt x="4320.0" y="0.9742999616417"/>
+						<courbe-pt x="4344.0" y="0.9742999616417"/>
+						<courbe-pt x="4368.0" y="0.9742999616417"/>
+						<courbe-pt x="4392.0" y="0.9746835443038"/>
+						<courbe-pt x="4416.0" y="0.9748753356348"/>
+						<courbe-pt x="4440.0" y="0.9750671269659"/>
+						<courbe-pt x="4464.0" y="0.97583429229"/>
+						<courbe-pt x="4488.0" y="0.9762178749521"/>
+						<courbe-pt x="4512.0" y="0.9766014576141"/>
+						<courbe-pt x="4536.0" y="0.9767932489451"/>
+						<courbe-pt x="4560.0" y="0.9779439969313"/>
+						<courbe-pt x="4584.0" y="0.9781357882624"/>
+						<courbe-pt x="4608.0" y="0.9790947449175"/>
+						<courbe-pt x="4632.0" y="0.9792865362486"/>
+						<courbe-pt x="4656.0" y="0.9794783275796"/>
+						<courbe-pt x="4680.0" y="0.9800537015727"/>
+						<courbe-pt x="4704.0" y="0.9810126582278"/>
+						<courbe-pt x="4728.0" y="0.9813962408899"/>
+						<courbe-pt x="4752.0" y="0.982163406214"/>
+						<courbe-pt x="4776.0" y="0.9829305715382"/>
+						<courbe-pt x="4800.0" y="0.9835059455313"/>
+						<courbe-pt x="4824.0" y="0.9838895281933"/>
+						<courbe-pt x="4848.0" y="0.9840813195244"/>
+						<courbe-pt x="4872.0" y="0.9844649021864"/>
+						<courbe-pt x="4896.0" y="0.9852320675105"/>
+						<courbe-pt x="4920.0" y="0.9854238588416"/>
+						<courbe-pt x="4944.0" y="0.9867663981588"/>
+						<courbe-pt x="4968.0" y="0.9869581894898"/>
+						<courbe-pt x="4992.0" y="0.9875335634829"/>
+						<courbe-pt x="5016.0" y="0.987917146145"/>
+						<courbe-pt x="5040.0" y="0.9883007288071"/>
+						<courbe-pt x="5064.0" y="0.9883007288071"/>
+						<courbe-pt x="5088.0" y="0.9883007288071"/>
+						<courbe-pt x="5112.0" y="0.9883007288071"/>
+						<courbe-pt x="5136.0" y="0.9883007288071"/>
+						<courbe-pt x="5160.0" y="0.9883007288071"/>
+						<courbe-pt x="5184.0" y="0.9883007288071"/>
+						<courbe-pt x="5208.0" y="0.9886843114691"/>
+						<courbe-pt x="5232.0" y="0.9888761028002"/>
+						<courbe-pt x="5256.0" y="0.9890678941312"/>
+						<courbe-pt x="5280.0" y="0.9892596854622"/>
+						<courbe-pt x="5304.0" y="0.9898350594553"/>
+						<courbe-pt x="5328.0" y="0.9898350594553"/>
+						<courbe-pt x="5352.0" y="0.9904104334484"/>
+						<courbe-pt x="5376.0" y="0.9906022247794"/>
+						<courbe-pt x="5400.0" y="0.9915611814346"/>
+						<courbe-pt x="5424.0" y="0.9917529727656"/>
+						<courbe-pt x="5448.0" y="0.9917529727656"/>
+						<courbe-pt x="5472.0" y="0.9917529727656"/>
+						<courbe-pt x="5496.0" y="0.9917529727656"/>
+						<courbe-pt x="5520.0" y="0.9917529727656"/>
+						<courbe-pt x="5544.0" y="0.9919447640967"/>
+						<courbe-pt x="5568.0" y="0.9919447640967"/>
+						<courbe-pt x="5592.0" y="0.9921365554277"/>
+						<courbe-pt x="5616.0" y="0.9923283467587"/>
+						<courbe-pt x="5640.0" y="0.9923283467587"/>
+						<courbe-pt x="5664.0" y="0.9925201380898"/>
+						<courbe-pt x="5688.0" y="0.9927119294208"/>
+						<courbe-pt x="5712.0" y="0.9930955120829"/>
+						<courbe-pt x="5736.0" y="0.9932873034139"/>
+						<courbe-pt x="5760.0" y="0.9934790947449"/>
+						<courbe-pt x="5784.0" y="0.9934790947449"/>
+						<courbe-pt x="5808.0" y="0.993862677407"/>
+						<courbe-pt x="5832.0" y="0.993862677407"/>
+						<courbe-pt x="5856.0" y="0.993862677407"/>
+						<courbe-pt x="5880.0" y="0.994054468738"/>
+						<courbe-pt x="5904.0" y="0.994246260069"/>
+						<courbe-pt x="5928.0" y="0.9944380514001"/>
+						<courbe-pt x="5952.0" y="0.9944380514001"/>
+						<courbe-pt x="5976.0" y="0.9948216340621"/>
+						<courbe-pt x="6000.0" y="0.9950134253932"/>
+						<courbe-pt x="6024.0" y="0.9950134253932"/>
+						<courbe-pt x="6048.0" y="0.9950134253932"/>
+						<courbe-pt x="6072.0" y="0.9952052167242"/>
+						<courbe-pt x="6096.0" y="0.9952052167242"/>
+						<courbe-pt x="6120.0" y="0.9953970080552"/>
+						<courbe-pt x="6144.0" y="0.9955887993863"/>
+						<courbe-pt x="6168.0" y="0.9955887993863"/>
+						<courbe-pt x="6192.0" y="0.9955887993863"/>
+						<courbe-pt x="6216.0" y="0.9957805907173"/>
+						<courbe-pt x="6240.0" y="0.9959723820483"/>
+						<courbe-pt x="6264.0" y="0.9961641733794"/>
+						<courbe-pt x="6288.0" y="0.9961641733794"/>
+						<courbe-pt x="6312.0" y="0.9965477560414"/>
+						<courbe-pt x="6336.0" y="0.9965477560414"/>
+						<courbe-pt x="6360.0" y="0.9967395473725"/>
+						<courbe-pt x="6384.0" y="0.9967395473725"/>
+						<courbe-pt x="6408.0" y="0.9973149213656"/>
+						<courbe-pt x="6432.0" y="0.9975067126966"/>
+						<courbe-pt x="6456.0" y="0.9975067126966"/>
+						<courbe-pt x="6480.0" y="0.9976985040276"/>
+						<courbe-pt x="6504.0" y="0.9976985040276"/>
+						<courbe-pt x="6528.0" y="0.9976985040276"/>
+						<courbe-pt x="6552.0" y="0.9976985040276"/>
+						<courbe-pt x="6576.0" y="0.9976985040276"/>
+						<courbe-pt x="6600.0" y="0.9976985040276"/>
+						<courbe-pt x="6624.0" y="0.9976985040276"/>
+						<courbe-pt x="6648.0" y="0.9976985040276"/>
+						<courbe-pt x="6672.0" y="0.9976985040276"/>
+						<courbe-pt x="6696.0" y="0.9976985040276"/>
+						<courbe-pt x="6720.0" y="0.9976985040276"/>
+						<courbe-pt x="6744.0" y="0.9976985040276"/>
+						<courbe-pt x="6768.0" y="0.9976985040276"/>
+						<courbe-pt x="6792.0" y="0.9976985040276"/>
+						<courbe-pt x="6816.0" y="0.9978902953586"/>
+						<courbe-pt x="6840.0" y="0.9980820866897"/>
+						<courbe-pt x="6864.0" y="0.9980820866897"/>
+						<courbe-pt x="6888.0" y="0.9980820866897"/>
+						<courbe-pt x="6912.0" y="0.9984656693517"/>
+						<courbe-pt x="6936.0" y="0.9984656693517"/>
+						<courbe-pt x="6960.0" y="0.9988492520138"/>
+						<courbe-pt x="6984.0" y="0.9988492520138"/>
+						<courbe-pt x="7008.0" y="0.9988492520138"/>
+						<courbe-pt x="7032.0" y="0.9988492520138"/>
+						<courbe-pt x="7056.0" y="0.9988492520138"/>
+						<courbe-pt x="7080.0" y="0.9988492520138"/>
+						<courbe-pt x="7104.0" y="0.9988492520138"/>
+						<courbe-pt x="7128.0" y="0.9988492520138"/>
+						<courbe-pt x="7152.0" y="0.9988492520138"/>
+						<courbe-pt x="7176.0" y="0.9988492520138"/>
+						<courbe-pt x="7200.0" y="0.9988492520138"/>
+						<courbe-pt x="7224.0" y="0.9988492520138"/>
+						<courbe-pt x="7248.0" y="0.9988492520138"/>
+						<courbe-pt x="7272.0" y="0.9988492520138"/>
+						<courbe-pt x="7296.0" y="0.9988492520138"/>
+						<courbe-pt x="7320.0" y="0.9988492520138"/>
+						<courbe-pt x="7344.0" y="0.9988492520138"/>
+						<courbe-pt x="7368.0" y="0.9988492520138"/>
+						<courbe-pt x="7392.0" y="0.9988492520138"/>
+						<courbe-pt x="7416.0" y="0.9988492520138"/>
+						<courbe-pt x="7440.0" y="0.9988492520138"/>
+						<courbe-pt x="7464.0" y="0.9988492520138"/>
+						<courbe-pt x="7488.0" y="0.9988492520138"/>
+						<courbe-pt x="7512.0" y="0.9988492520138"/>
+						<courbe-pt x="7536.0" y="0.9988492520138"/>
+						<courbe-pt x="7560.0" y="0.9990410433448"/>
+						<courbe-pt x="7584.0" y="0.9990410433448"/>
+						<courbe-pt x="7608.0" y="0.9990410433448"/>
+						<courbe-pt x="7632.0" y="0.9992328346759"/>
+						<courbe-pt x="7656.0" y="0.9992328346759"/>
+						<courbe-pt x="7680.0" y="0.9992328346759"/>
+						<courbe-pt x="7704.0" y="0.9992328346759"/>
+						<courbe-pt x="7728.0" y="0.9992328346759"/>
+						<courbe-pt x="7752.0" y="0.9992328346759"/>
+						<courbe-pt x="7776.0" y="0.9992328346759"/>
+						<courbe-pt x="7800.0" y="0.9994246260069"/>
+						<courbe-pt x="7824.0" y="0.9994246260069"/>
+						<courbe-pt x="7848.0" y="0.9994246260069"/>
+						<courbe-pt x="7872.0" y="0.9994246260069"/>
+						<courbe-pt x="7896.0" y="0.9994246260069"/>
+						<courbe-pt x="7920.0" y="0.9994246260069"/>
+						<courbe-pt x="7944.0" y="0.9994246260069"/>
+						<courbe-pt x="7968.0" y="0.9994246260069"/>
+						<courbe-pt x="7992.0" y="0.9994246260069"/>
+						<courbe-pt x="8016.0" y="0.9994246260069"/>
+						<courbe-pt x="8040.0" y="0.9994246260069"/>
+						<courbe-pt x="8064.0" y="0.9994246260069"/>
+						<courbe-pt x="8088.0" y="0.9994246260069"/>
+						<courbe-pt x="8112.0" y="0.9994246260069"/>
+						<courbe-pt x="8136.0" y="0.9994246260069"/>
+						<courbe-pt x="8160.0" y="0.9994246260069"/>
+						<courbe-pt x="8184.0" y="0.9994246260069"/>
+						<courbe-pt x="8208.0" y="0.9994246260069"/>
+						<courbe-pt x="8232.0" y="0.9994246260069"/>
+						<courbe-pt x="8256.0" y="0.9994246260069"/>
+						<courbe-pt x="8280.0" y="0.9994246260069"/>
+						<courbe-pt x="8304.0" y="0.9994246260069"/>
+						<courbe-pt x="8328.0" y="0.9994246260069"/>
+						<courbe-pt x="8352.0" y="0.9994246260069"/>
+						<courbe-pt x="8376.0" y="0.9994246260069"/>
+						<courbe-pt x="8400.0" y="0.9994246260069"/>
+						<courbe-pt x="8424.0" y="0.9994246260069"/>
+						<courbe-pt x="8448.0" y="0.9994246260069"/>
+						<courbe-pt x="8472.0" y="0.9994246260069"/>
+						<courbe-pt x="8496.0" y="0.9994246260069"/>
+						<courbe-pt x="8520.0" y="0.9994246260069"/>
+						<courbe-pt x="8544.0" y="0.9994246260069"/>
+						<courbe-pt x="8568.0" y="0.9994246260069"/>
+						<courbe-pt x="8592.0" y="0.9994246260069"/>
+						<courbe-pt x="8616.0" y="0.9996164173379"/>
+						<courbe-pt x="8640.0" y="0.9996164173379"/>
+						<courbe-pt x="8664.0" y="0.9996164173379"/>
+						<courbe-pt x="8688.0" y="0.9996164173379"/>
+						<courbe-pt x="8712.0" y="0.9996164173379"/>
+						<courbe-pt x="8736.0" y="0.9996164173379"/>
+						<courbe-pt x="8760.0" y="0.9996164173379"/>
+						<generic key="Min" val="7.671653241273E-4"/>
+						<generic key="Max" val="1.0"/>
+						<generic key="Mean" val="0.8572937179125"/>
+					</courbe-data>
+					<style type="line" w="730" h="309">
+						<style-options>
+							<style-option key="Limit" id="BeginY" value="0.0"/>
+							<style-option key="Limit" id="BeginX" value="0.0"/>
+							<style-option key="Echelle" id="Auto" value="true"/>
+							<style-option key="Limit" id="EndX" value="0.0"/>
+							<style-option key="Limit" id="EndY" value="0.0"/>
+							<style-option key="Confidence" id="Show" value="false"/>
+							<style-option key="Grid" id="Y" value="0.0"/>
+							<style-option key="Grid" id="X" value="0.0"/>
+							<style-option key="Limit" id="Auto" value="true"/>
+							<style-option key="Echelle" id="X" value="0.0"/>
+							<style-option key="Echelle" id="Y" value="0.0"/>
+							<style-option key="Unit" id="Y" value="HOUR"/>
+							<style-option key="Logarithmic" id="X" value="false"/>
+							<style-option key="Unit" id="X" value="HOUR"/>
+							<style-option key="Axes" id="Color" value="BLACK"/>
+							<style-option key="Logarithmic" id="Y" value="false"/>
+						</style-options>
+						<courbe-options id="0">
+							<courbe-option key="Courbe" id="Show" value="true"/>
+							<courbe-option key="Courbe" id="Color" value="BLACK"/>
+							<courbe-option key="Courbe" id="Heavy" value="1"/>
+							<courbe-option key="Courbe" id="ShowMean" value="false"/>
+							<courbe-option key="Courbe" id="Point" value="0"/>
+						</courbe-options>
+						<courbe-options id="1">
+							<courbe-option key="Courbe" id="Show" value="true"/>
+							<courbe-option key="Courbe" id="Color" value="RED"/>
+							<courbe-option key="Courbe" id="ShowMean" value="false"/>
+							<courbe-option key="Courbe" id="Heavy" value="1"/>
+							<courbe-option key="Courbe" id="Point" value="0"/>
+						</courbe-options>
+					</style>
+				</courbes>
+			</grf>
+		</page>
+	</pages-manager>
+	<atts></atts>
+	<logicals-manager next-id="13" stat-type="1, 2, 4, 6" compute-time="">
+		<evt id="3" num="1" behavior="DEFAULT">
+			<law id="[Aralia]periodic-test-6"><pval val="0.0010"/><pval val="720.0"/><pval val="0.0"/></law>
+		</evt>
+		<evt id="4" num="2" behavior="DEFAULT">
+			<law id="[Aralia]periodic-test-6"><pval val="0.0010"/><pval val="720.0"/><pval val="0.0"/></law>
+		</evt>
+		<evt id="5" num="3" behavior="DEFAULT">
+			<law id="[Aralia]periodic-test-6"><pval val="0.0010"/><pval val="720.0"/><pval val="0.0"/></law>
+		</evt>
+		<evt id="6" num="4" behavior="DEFAULT">
+			<law id="[Aralia]periodic-test-6"><pval val="0.0010"/><pval val="720.0"/><pval val="0.0"/></law>
+		</evt>
+		<link id="11" src="5" dest="2"/>
+		<link id="10" src="4" dest="1"/>
+		<link id="12" src="6" dest="2"/>
+		<link id="7" src="1" dest="0"/>
+		<link id="9" src="3" dest="1"/>
+		<link id="8" src="2" dest="0"/>
+		<gate id="0" num="1" behavior="DEFAULT">
+		</gate>
+		<gate id="1" num="2" typ="1" behavior="DEFAULT">
+		</gate>
+		<gate id="2" num="3" typ="1" behavior="DEFAULT">
+		</gate>
+	</logicals-manager>
+	<mediator>
+		<connect grph="0" logic="12"/>
+		<connect grph="1" logic="11"/>
+		<connect grph="2" logic="10"/>
+		<connect grph="3" logic="9"/>
+		<connect grph="4" logic="8"/>
+		<connect grph="5" logic="7"/>
+		<connect grph="6" logic="0"/>
+		<connect grph="7" logic="1"/>
+		<connect grph="8" logic="2"/>
+		<connect grph="9" logic="3"/>
+		<connect grph="10" logic="4"/>
+		<connect grph="11" logic="5"/>
+		<connect grph="12" logic="6"/>
+	</mediator>
+	<sifs>
+	
+	</sifs>
+</JaGrif-Tree>

@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<!DOCTYPE section  [
+<!ENTITY % DefineEntity SYSTEM "Define.entity">
+%DefineEntity;
+]>
+<section id="Moca.Moca12.Law.Fire" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Lois de tir de &MOK_NAME;</title>
+	
+	<para> 
+		Les lois de tir actuellement disponibles sont les suivantes :
+		<xi:include href="FireList.xml"/>
+	</para>
+	<para> 
+		Au niveau de la description du réseau, les lois sont repérées par le mot-clef
+		<command>TIR</command> suivi du nom de la loi et des paramètres décrits 
+		par l'utilisateur. Exemple : <command>TIR sol g1,g2,g3</command>
+	</para>
+
+
+	<section id="Moca.Moca12.Law.Fire.def">
+		<title>Loi de tir par défaut {<command>def</command>}</title>
+		<para> 
+			Cette loi ne prend pas de paramètres et correspond à la manière usuelle 
+			de tirer une transition dans un réseau de Petri ; à savoir :
+			<itemizedlist>
+				<listitem> <simpara>
+					Suppression pour chaque place amont d'un nombre n<subscript>i</subscript>
+					de jetons (où n<subscript>i</subscript> est le poids de l'arc reliant 
+					la place amont i de la transition) 
+				</simpara> </listitem>
+				<listitem> <simpara>
+					Ajout pour chaque place avale d'un nombre m<subscript>j</subscript> 
+					de jetons (où m<subscript>j</subscript> est le poids de l'arc reliant 
+					la place avale j de la transition)
+				</simpara> </listitem>
+			</itemizedlist>
+		</para>
+	</section>
+
+
+	<section id="Moca.Moca12.Law.Fire.sol">
+		<title>Loi de tir à la sollicitation {<command>sol|sol2 ...</command>}</title>
+		<para> 
+			Au moment où un composant est sollicité pour changer d'état, il existe 
+			une certaine probabilité notée <symbol>&#x03B3;</symbol> qu'à ce moment précis, le composant 
+			reste dans l'état en cours, tombe en panne, ne change pas d'état correctement. 
+			Si on représente ce phénomène à l'aide d'un réseau de Petri, on utilise 
+			une transition ayant deux arcs avals, l'un menant vers le changement d'état, 
+			l'autre vers un état de panne. Mais, lorsque la transition est tirée, 
+			seul un des deux arcs avals transmet un jeton dans sa place avale 
+			(l'autre en transmet zéro) et ceci avec une fréquence égale à <symbol>&#x03B3;</symbol> 
+			pour l'arc menant vers l'état de panne et (1-<symbol>&#x03B3;</symbol>) pour l'autre.
+		</para> 
+		<para> 
+			Dans les versions précédentes de &MOK_NAME;, pour prendre en compte des 
+			défaillances à la sollicitation, on utilisait les lois <code>SOL1</code>, 
+			<code>SOL2</code> et <code>SOL3</code>. 
+			Chacune avait des caractéristiques spécifiques 
+			(nombre de paramètres, avec ou sans délai, poids des arcs avals 
+			strictement égal à 1 ou pas, ...). 
+		</para> 
+		<para> 
+			La loi de tir à la sollicitation <command>sol ...</command> 
+			a comme objectif de fournir à l'utilisateur une loi générique pour prendre 
+			en compte toutes les défaillances à la sollicitation. 
+			Les paramètres associés à cette loi sont les n probabilités de défaillance à la sollicitation 
+			<symbol>&#x003B3;</symbol><subscript>1</subscript>, <symbol>&#x003B3;</symbol><subscript>2</subscript>, ..., <symbol>&#x003B3;</symbol><subscript>n</subscript>
+			pour une transition ayant n+1 arcs avals. 
+			Cette loi définit implicitement l'attribution des probabilités de distribution aux places avales
+			en fonction de l'ordre du numéro des places avales. 
+			La place avale qui porte le plus petit numéro aura une probabilité d'être 
+			choisi de <symbol>&#x03B3;</symbol><subscript>1</subscript>.
+		</para> 
+		<para> 
+			Une seconde loi de tir à la sollicitation <command>sol2 ...</command> 
+			fonctionne de la même manière que la première loi, mais l'attribution des
+			probabilités aux places avales est explicite.
+			Les paramètres associés à cette loi sont 
+			<symbol>&#x003B3;</symbol><subscript>1</subscript>, #P<subscript>1</subscript>, <symbol>&#x003B3;</symbol><subscript>2</subscript>, #P<subscript>2</subscript>, ..., <symbol>&#x003B3;</symbol><subscript>n</subscript>, #P<subscript>n</subscript>
+			pour une transition ayant n+1 places avales. 
+			Il doit donc y avoir un arc aval entre chaque place P<subscript>i</subscript> et la transition.
+			La probabilité que la place avale P<subscript>i</subscript> soit choisie est
+			égale à <symbol>&#x03B3;</symbol><subscript>i</subscript>.
+		</para> 
+		<para> 
+			Dans les 2 cas, la somme des <symbol>&#x003B3;</symbol><subscript>i</subscript> 
+			doit être inférieure ou égale à 1.
+		</para> 
+		<para> 
+			Le mécanisme de tir ne diffère d'un tir par défaut que pour l'ajout de jetons 
+			dans les places avales. Dans cette dernière phase :
+			<itemizedlist spacing="compact">
+				<listitem> <simpara>
+					Tir Z au hasard et de manière équiprobable entre 0 et 1 
+				</simpara> </listitem>
+				<listitem> <simpara>
+					Calcul de k de la manière suivante : 
+					<itemizedlist spacing="compact">
+						<listitem> <simpara>
+							k = -1 ; i = 1
+						</simpara> </listitem>
+						<listitem> <para>
+							Tant que (k est égal à -1)
+							<itemizedlist spacing="compact">
+								<listitem> <simpara>
+									Si i &gt; n alors k = n+1
+								</simpara> </listitem>
+								<listitem> <simpara>
+									sinon si (Z <symbol>&#x02264;</symbol> <symbol>&#x02211;</symbol><superscript>i</superscript><subscript>k=1</subscript><symbol>&#x003B3;</symbol><subscript>k</subscript> alors k = i 
+								</simpara> </listitem>
+								<listitem> <simpara>
+									i = i + 1 
+								</simpara> </listitem>
+							</itemizedlist>
+						</para> </listitem>
+					</itemizedlist>
+				</simpara> </listitem>
+				<listitem> <simpara>
+					Ajout uniquement pour la k<superscript>ième</superscript> place 
+					d'un nombre m<subscript>k</subscript> de jetons (où m<subscript>k</subscript>
+					est le poids de l'arc reliant la k<superscript>ième</superscript> 
+					place à la transition). 
+				</simpara> </listitem>
+			</itemizedlist>
+		</para> 
+	</section>
+
+
+	<section id="Moca.Moca12.Law.Fire.spec">
+		<title>Loi spéciale {<command>spec ...</command>}</title>
+		<para> 
+			Le type <code>spec</code> ne correspond pas à une mais à un ensemble de lois 
+			que l'utilisateur peut définir lui-même à l'aide d'un sous-programme C. 
+			Un exemple est donné au chapitre : <xref linkend="Moca.Moca12.API"/>.
+		</para> 
+		<para> 
+			Les paramètres de cette loi sont son numéro (n), ainsi que les m paramètres 
+			p<subscript>1</subscript>,...,p<subscript>m</subscript>
+			dont l'utilisateur aura besoin lors de la simulation.
+		</para> 
+		<para> 
+			Le mécanisme de tir de la transition est laissé à la responsabilité de 
+			l'utilisateur. Afin de ne pas engendrer des perturbations avec le moteur 
+			de calcul, il est recommandé de modifier le marquage d'une place que s'il 
+			existe un arc entre la dite place et la transition et il est recommandé de 
+			modifier la valeur d'une variable que si on retrouve cette variable dans 
+			les affectations de la transition.
+		</para>
+	</section>
+
+</section>

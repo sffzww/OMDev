@@ -1,0 +1,10 @@
+ID,NAME,VALUE,DESCRIPTION,DIMENSION
+000001,Lambda,0.001,Exemple of Lamda,RATE
+000002,Lambda_PT,1.2E-6,Exemple of Lamda for Pressure transmitter,RATE
+000003,Lambda_SDV,8.5E-6,Exemple of Lamda for Shutdown Valve,RATE
+000004,Lambda2,1.23E-4,Another exemple of Lamda,RATE
+000005,Mu,0.01,Exemple of Mu,RATE
+000006,Mu_2days,0.02083,Exemple of Mu for 2 day MTTR,RATE
+000007,Gamma,0.5,Exemple of Gamma,PROBABILITY
+000008,DC,0.83,Exemple of Diagnostic coverage,PROBABILITY
+000009,ProdMax,1000.0,Exemple de Production maximum,OTHER

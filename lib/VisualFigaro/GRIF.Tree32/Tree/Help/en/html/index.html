@@ -1,0 +1,293 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>GRIF 2013Fault Tree</title><meta content="DocBook XSL Stylesheets V1.73.2" name="generator"><meta name="description" content="This document is the user manual of Fault Tree module of GRIF 2013"><link rel="start" href="index.html" title="GRIF 2013Fault Tree"><link rel="next" href="ar01s02.html" title="Creating a fault tree"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="UserManual"></a><p>GRIF 2013</p><p>Fault Tree</p></h2></div><div><h3 class="subtitle"><i>User Manual</i></h3></div><div><div class="author"><h3 class="author"><span class="firstname">Cyrille</span> <span class="surname">Folleau</span></h3><div class="affiliation"><div class="address"><p><span style="white-space: pre;">
+				<code class="email">&lt;<a class="email" href="mailto:cyrille.folleau@satodev.fr">cyrille.folleau@satodev.fr</a>&gt;</code>
+			</span></p></div></div></div></div><div><div class="author"><h3 class="author"><span class="firstname">Nicolas</span> <span class="surname">Clav&eacute;</span></h3><div class="affiliation"><div class="address"><p><span style="white-space: pre;">
+				<code class="email">&lt;<a class="email" href="mailto:Fractal Syst%C3%A8me">Fractal Syst&egrave;me</a>&gt;</code>
+			</span></p></div></div></div></div><div><p class="copyright">Copyright &copy; 2013 Total</p></div><div><div class="abstract"><p class="title"><b>Abstract</b></p><p>
+				This document is the user manual of <span class="application">Fault Tree</span> module 
+				of <span class="application">GRIF 2013</span>
+			</p></div></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="index.html#Presentation">Presentation of the interface</a></span></dt><dd><dl><dt><span class="section"><a href="index.html#Presentation.MainWindow">Main window of the Fault Tree module</a></span></dt><dt><span class="section"><a href="index.html#Presentation.Menus">Description of the Menus</a></span></dt><dt><span class="section"><a href="index.html#Presentation.Toolsbar">Vertical toolbar</a></span></dt><dt><span class="section"><a href="index.html#Reseau.Tableaux">Data Editing Tables</a></span></dt><dt><span class="section"><a href="index.html#Presentation.Arbo">Tree view</a></span></dt></dl></dd><dt><span class="section"><a href="ar01s02.html">Creating a fault tree</a></span></dt><dd><dl><dt><span class="section"><a href="ar01s02.html#Diagramme.Saisie">Entering the tree</a></span></dt><dt><span class="section"><a href="ar01s02.html#Diagramme.Parametrage">Configuring the elements</a></span></dt><dt><span class="section"><a href="ar01s02.html#Diagramme.Renvoi">Using shortcuts</a></span></dt><dt><span class="section"><a href="ar01s02.html#Reseau.PagesGroupes">Page and group management</a></span></dt><dt><span class="section"><a href="ar01s02.html#AideSaisie">Data Entry Aids</a></span></dt></dl></dd><dt><span class="section"><a href="ar01s03.html">Help with common cause failures</a></span></dt><dd><dl><dt><span class="section"><a href="ar01s03.html#AideCCF.Creation">Creating a CCF</a></span></dt><dt><span class="section"><a href="ar01s03.html#AideCCF.Edition">Editing a CCF</a></span></dt></dl></dd><dt><span class="section"><a href="ar01s04.html">Laws and uncertainties</a></span></dt><dd><dl><dt><span class="section"><a href="ar01s04.html#Lois.Lois">Description of the laws</a></span></dt><dt><span class="section"><a href="ar01s04.html#Incert.incert">Uncertainties on the parameters</a></span></dt></dl></dd><dt><span class="section"><a href="ar01s05.html">Example of a Fault Tree</a></span></dt><dt><span class="section"><a href="ar01s06.html">Printing</a></span></dt><dt><span class="section"><a href="ar01s07.html">Computations</a></span></dt><dd><dl><dt><span class="section"><a href="ar01s07.html#Calculs.Albizia.V2V4">Albizia computations</a></span></dt><dt><span class="section"><a href="ar01s07.html#Calculs.Moca">MOCA computations</a></span></dt><dt><span class="section"><a href="ar01s07.html#calculs.resultats.new">Tables and Panels to display results</a></span></dt><dt><span class="section"><a href="ar01s07.html#calculs.batch">Batch computation</a></span></dt><dt><span class="section"><a href="ar01s07.html#calculs.resultats.new.bank">Result Bank</a></span></dt></dl></dd><dt><span class="section"><a href="ar01s08.html">Curves</a></span></dt><dd><dl><dt><span class="section"><a href="ar01s08.html#courbes.Courbes.fenetre">Edit curves window</a></span></dt><dt><span class="section"><a href="ar01s08.html#N412F2">Selection of results window</a></span></dt></dl></dd><dt><span class="section"><a href="ar01s09.html">Databases</a></span></dt><dd><dl><dt><span class="section"><a href="ar01s09.html#datamanager.Data.Configuration.CSV">Connection to a CSV file</a></span></dt><dt><span class="section"><a href="ar01s09.html#datamanager.Data.ODBC.Configuration">Connection via a JDBC link (example with ODBC connector)</a></span></dt><dt><span class="section"><a href="ar01s09.html#datamanager.Data.Utilisation">Operation</a></span></dt></dl></dd><dt><span class="section"><a href="ar01s10.html">Save</a></span></dt><dd><dl><dt><span class="section"><a href="ar01s10.html#enregistrer.Enregistrer.fichier">Model</a></span></dt><dt><span class="section"><a href="ar01s10.html#enregistrer.Enregistrer.fichier.rtf">RTF File</a></span></dt><dt><span class="section"><a href="ar01s10.html#enregistrer.Enregistrer.InputData">Input data</a></span></dt><dt><span class="section"><a href="ar01s10.html#enregistrer.Enregistrer.OutputData">Results</a></span></dt><dt><span class="section"><a href="ar01s10.html#enregistrer.Enregistrer.courbes">Curves</a></span></dt></dl></dd><dt><span class="section"><a href="ar01s11.html">Options of GRIF - Fault Tree</a></span></dt><dd><dl><dt><span class="section"><a href="ar01s11.html#option.OPTION_TAB_002_EXECUTABLES">Executables</a></span></dt><dt><span class="section"><a href="ar01s11.html#option.OPTION_TAB_004_BDD">Database</a></span></dt><dt><span class="section"><a href="ar01s11.html#option.OPTION_TAB_006_LANGUAGE">Language</a></span></dt><dt><span class="section"><a href="ar01s11.html#option.OPTION_TAB_008_OPTIONS">Options</a></span></dt><dt><span class="section"><a href="ar01s11.html#option.OPTION_TAB_010_GRAPH">Graphics</a></span></dt><dt><span class="section"><a href="ar01s11.html#option.OPTION_TAB_011_DIGITS">Digital format</a></span></dt><dt><span class="section"><a href="ar01s11.html#option.OPTION_TAB_021_EVENT">Events</a></span></dt><dt><span class="section"><a href="ar01s11.html#option.OPTION_TAB_025_DOOR_REP">Gates/Shortcuts</a></span></dt><dt><span class="section"><a href="ar01s11.html#option.OPTION_TAB_115_COURBE">Curves</a></span></dt></dl></dd></dl></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="Presentation"></a>Presentation of the interface</h2></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="Presentation.MainWindow"></a>Main window of the Fault Tree module</h3></div></div></div><p>
+		The main window is divided into several parts:
+		</p><div class="itemizedlist"><ul type="disc" compact><li><p>
+	    	<b>Title bar</b>: The title bar shows the names of the module and file being edited.
+		</p></li><li><p>
+			<b>Menu bar</b>: The menu bar gives access to all the application's functions. 
+		</p></li><li><p>
+			<b>Icon bar (shortcuts)</b>: The shortcut bar is an icon bar (horizontal) which gives faster access to the most common functions.
+	    </p></li><li><p>
+			<b>Tool bar</b>: The tool bar (vertical) allows you to select the elements for modeling.
+		</p></li><li><p>
+			<b>Input zone</b>: A maximum amount of space has been left for the graphical input zone for creating the model.
+		</p></li><li><p>
+			<b>Tree</b>: A tree is "hiden" between input zone and tool bar. It enables to walk through pages and groups of the document.
+		</p></li><li><p>
+			<b>Set of tables</b>: Tables are gathered in "hiden" tabs on the right.
+		</p></li></ul></div><p>
+		<div class="informalfigure"><div class="mediaobject" align="center"><img src="./presentation/MainWindow.gif" align="middle"></div></div>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="Presentation.Menus"></a>Description of the Menus</h3></div></div></div><div class="orderedlist"><p><a name="Presentation+b"></a>
+	
+</p><ol type="1" compact><li><p>
+			<p>
+				The <b>File</b> menu contains the standard commands used in this type of 
+				menu (open, close, save, print, etc.). The properties (name, creation date, created 
+				by, description, version) can be accessed and modified by selecting  
+				<b>Document properties</b>.
+				The <b>Document statistics</b> provide information on the model's 
+				complexity. It is also possible to access a certain number (configurable) of recently 
+				modified files.
+			</p>
+			<p>
+				The icon bar just under the menus proposes shortcuts for most of the <b>File</b> commands:
+			</p>
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./presentation/MenuFile.gif" align="middle"></div></div> 
+			</p>
+		</p></li><li><p>
+			<p>
+				The <b>Edit</b> menu contains all the commands needed to edit the model 
+				being input graphically.
+			</p>
+			<p>
+				The icon bar just under the menus proposes shortcuts for most of the 
+				<b>Edit</b> commands:
+			</p>
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./presentation/MenuEdit.gif" align="middle"></div></div> 
+			</p>
+		</p></li><li><p>
+			<p>
+				The <b>Tools</b> menu contains all the commands needed to manage 
+				the current model (page management, alignments, options, etc.).
+			</p>
+			<p>
+				The icon bar just under the menus proposes shortcuts for most of the 
+				<b>Tools</b> commands:
+			</p>
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./presentation/MenuTools.gif" align="middle"></div></div> 
+			</p>
+		</p></li><li><p>
+			<p>
+				The <b>Document</b> menu gives access to all the documents being 
+				created or modified.
+			</p>
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./presentation/MenuDocument.gif" align="middle"></div></div> 
+			</p>
+		</p></li><li><p>
+			<p>
+				The <b>Fault Tree</b> menu contains all the commands needed to produce the graphical part of the current model.
+			</p>
+			<p>
+				The vertical icon bar on the left of the application provides shortcuts for each of 
+				the <b>Fault Tree</b> commands (cf. vertical tool bar).
+			</p>
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./presentation/MenuMod.gif" align="middle"></div></div> 
+			</p>
+		</p></li><li><p>
+			<p>
+				The <b>Data and Computations </b> menu is divided into two parts: 
+				data management (creation and management of the different parameters) and 
+				configuration/computation launch (computation time, desired computation, etc.)..
+			</p>
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./presentation/MenuData.gif" align="middle"></div></div> 
+			</p>
+			<p><a name="Presentation+"></a>
+	<p>
+		NB: The <b>Verify</b> function detects any errors in the model: 
+		data without values (equal to <b>NaN</b>), events having the same name, etc.
+	</p>
+</p>
+		</p></li><li><p>
+			<p>
+				The <b>Group</b> menu concerns the input and management of submodels 
+				grouped into independent subassemblies.
+			</p>
+			<p>
+				The icon bar just under the menus proposes shortcuts for two of the 
+				<b>Group</b> commands:
+			</p>
+			<p>
+				<div class="informalfigure"><div class="mediaobject" align="center"><img src="./presentation/MenuGroup.gif" align="middle"></div></div> 
+			</p>
+		</p></li><li><p>
+			<p>
+				Finally, the <b>Help</b> menu accesses the on-line Help, the Help topics and to "About".
+			</p>
+		</p></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="Presentation.Toolsbar"></a>Vertical toolbar</h3></div></div></div><p>
+		Each operating safety model has its own icons. All the graphical symbols for 
+		the fault trees are shown on the vertical icon bar on the left of the 
+		data input screen.
+		</p><p>
+			<div class="informalfigure"><div class="mediaobject" align="center"><img src="./presentation/Toolsbar.gif" align="middle"></div></div>  
+		</p><p>
+		The vertical toolbar contains the following items:
+		</p><div class="itemizedlist"><ul type="disc" compact><li><p>
+	    	<b>Select</b> selects the desired elements.
+		</p></li><li><p>
+	    	<b>"AND" gate </b> to add a logic gate of the type "AND" 
+	    	(represented by a flat-based geometrical figure).
+		</p></li><li><p>
+			<b>"Or" gate </b> to add a logic gate of the type "OR" 
+			(represented by a curved-based geometrical figure).
+		</p></li><li><p>
+			<b>"K out of N"</b> to add a logic gate of the type "K out of N" 
+			(represented by a geometrical figure with a double flat base).
+	    </p></li><li><p>
+			<b>"Comment" gate </b> to insert a block (represented by a rectangle) 
+			containing only comments in the model.
+		</p></li><li><p>
+			<b>Elementary event</b> represented by a diamond shape.
+		</p></li><li><p>
+			<b>Basic event</b> represented by a circle.
+		</p></li><li><p>
+			<b>To be developed event </b> represented by two diamond shapes, one inside the other.
+		</p></li><li><p>
+			<b>Home" event</b> represented by a shape vaguely resembling a house.
+		</p></li><li><p>
+			<b>Negation</b> represented by a small circle.
+		</p></li><li><p>
+			<b>Link (one only) </b> to create one connection (and only one) between 
+			an input (gate) and an output (gate or event).
+		</p></li><li><p>
+			<b>Links (many)</b> to create connections between the inputs (gates) 
+			and the outputs (gates and events).
+		</p></li><li><p>
+			<b>Identical transfer gate </b> represented by a triangle.
+		</p></li><li><p>
+			<b>Repeated event</b> represented by a circle.
+		</p></li><li><p>
+			<b>Comment</b> to add text directly to the graphic.
+		</p></li><li><p>
+			<b>Dynamic display</b> to display the value of a model element.
+		</p></li><li><p>
+			<b>Charts</b> to draw charts representing computations on the model.
+		</p></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="Reseau.Tableaux"></a>Data Editing Tables</h3></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Reseau.Tableaux.Presentation"></a>Description of the Tables</h4></div></div></div><p>
+			To create or modify data (parameters, variables, etc.), tables are available in the 
+			<b>Data and Computations menu</b> and in tabs at the right of the view. All the GRIF 2013 data tables operate in 
+			the same manner.
+			<p>
+			</p>
+			<div class="mediaobject" align="center"><img src="./presentation/tableaux/TableauCst_en.gif" align="middle"></div>
+		</p><p>
+			The data editing table/panel is divided into 3 parts:
+			<div class="itemizedlist"><ul type="disc" compact><li><p>
+			    	The top part containing the buttons.
+				</p></li><li><p>
+					The main part containing the data table.
+				</p></li><li><p>
+					The bottom part indicating what the selected data is used for.
+			    </p></li></ul></div>
+		</p><div class="informaltable"><table border="0"><colgroup><col><col></colgroup><tbody><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/./But-Save.gif"></div></td><td> <p>
+						Saves the table in a text file.
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/./But-Edit.gif"></div></td><td> <p> 
+						Opens the table in a text editor (that defined in the Options). 
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/./cols.gif"></div></td><td> <p> 
+						Opens the column manager.
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/./display.gif"></div></td><td> <p> 
+						When the <span class="guibutton">display selection</span> button is pressed,
+						a click in the table leads to the selection in the input area. 
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/./But-Filter.gif"></div></td><td> <p> 
+						Displays the data filtering part.
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/./multiEdit.gif"></div></td><td> <p> 
+						Multiple modifications made to all the selected data.
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/./But-New.gif"></div></td><td> <p> 
+						Creates new data.
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/duplicate.gif"></div></td><td> <p> 
+						Duplicate the selected data (ask a new name)
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/But-Del.gif"></div></td><td> <p> 
+						Deletes the selected data (one or many).
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/But-Check.gif"></div></td><td> <p> 
+						Enables data filtering or not.
+					</p> </td></tr><tr><td align="center"><div class="mediaobject"><img src="./presentation/tableaux/But-FilterChoice.gif"></div></td><td> <p> 
+						Defines the filter to be applied to the data.
+					</p> </td></tr></tbody></table></div><p>
+			Filtering allows you to display only what is necessary in a table. Several filtering 
+			criteria can be combined, as shown below:
+			<p>
+			</p>
+			<div class="mediaobject" align="center"><img src="./presentation/tableaux/FilterChoice_en.gif" align="middle"></div>
+		</p><p>
+			Select  <span class="guibutton">AND</span> or <span class="guibutton">OR</span> to choose the type of 
+			association between each line (filter criterion). A line is a Boolean expression 
+			divided into 3 parts:
+			<div class="orderedlist"><ol type="1" compact><li><p>
+					the first is the column on which the filter is used;
+				</p></li><li><p>
+					the second is the comparator;
+				</p></li><li><p>
+					the third is the value to which the data will be compared.
+				</p></li></ol></div>
+			<p>
+				If the Boolean expression is true, the data will be kept (displayed); 
+				otherwise the data will be masked. When the filter is enabled its value is displayed 
+				between &lt; and &gt;.
+			</p>
+		</p><p>
+			The data in a column can be sorted by double clicking the header of this column. 
+			The first double click will sort the data in ascending order (small triangle pointing 
+			upwards). The second double click on the same header will sort the column in descending 
+			order (small triangle pointing downwards).
+		</p><p>
+			A table can contain many columns, some columns may be unnecessary in certain cases. 
+			The "linked to database" column is unnecessary when no database is available. It is 
+			thus possible to choose the columns to be displayed and their order. To do this, 
+			click right on a table header, or click the <span class="guibutton">Columns Manager</span> 
+			button, the following window opens: 
+			<p>
+			</p>
+			<div class="mediaobject" align="center"><img src="./presentation/tableaux/TableauCstCol_en.gif" align="middle"></div>
+		</p><p>
+			You can choose the columns to be displayed by selecting (or deselecting) the 
+			corresponding check boxes. The arrows on the right are used to move the columns up or 
+			down in the list to choose the order of the columns. The <b>Disable data sorting
+			</b> check box 
+			disables the data sorting. This improves the application's performance with 
+			very complex models.
+		</p><p><a name="Reseau.Tableaux.Multi"></a>
+			To modify data, double click the box to be modified. When several lines are selected 
+			(using the CTRL or SHIFT keys) changes can be made to all the selected data by using 
+			<span class="guibutton">Multiple changes</span>. A window then opens to allow you to make these 
+			changes.
+			<div class="mediaobject" align="center"><img src="./presentation/tableaux/TableauEditionMulti_en.gif" align="middle"></div>
+			Items which cannot be modified are greyed. The white lines indicate that the selected 
+			data does not have the same value for the field in question. A new value can be entered 
+			which will be taken into account for all the selected data. The lines with no background 
+			colour indicate that all the selected data has the same value for this field (in this 
+			example the selected data is all "Float"); they can be changed to give a new value to 
+			all the selected data.
+		</p><p>
+			The bottom table in the data table indicates which elements in the model use the 
+			selected data. The first column of this table gives the name of these elements; the 
+			second indicates their location in the document (page, group). Clicking on a line in 
+			this bottom table opens the page where the element is located and selects the element.
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Reseau.Tableaux.Tabs"></a>Table accessibility</h4></div></div></div><p>
+			As mentioned above, the tables can be accessed via the <b>Data and Computations</b> menu; 
+			in this case, each table is displayed in a separate window.
+		</p><p>
+			To avoid having too many windows open, all the tables are grouped together in tabs on the right-hand side of the application. 
+			This area can be hidden/displayed using the small arrows above the input zone. 
+			<div class="mediaobject" align="center"><img src="./presentation/tableaux/TableauxOnglets_en.gif" align="middle"></div>
+			It is possible to choose the tables in this zone by right clicking on the tabs. 
+			A contextual menu appears, in which the user can select the tables s/he wishes to display. 
+			
+			<div class="mediaobject" align="center"><img src="./presentation/tableaux/TableauxOngletsSel.gif" align="middle"></div>
+		</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Reseau.Tableaux.Creation"></a>Data creation</h4></div></div></div><p>
+	<p>
+		The <b>Parameter editor</b> is used to create "real" parameters. 
+		The following window is only used to choose the name of the new parameter. 
+		Its value must be entered later directly in the parameter table.
+		<div class="mediaobject" align="center"><img src="./reseau/CreationCst.gif" align="middle"></div>
+	</p>
+</p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="Presentation.Arbo"></a>Tree view</h3></div></div></div><p>
+			<div class="mediaobject" align="center"><img src="./presentation/Arbo.gif" align="middle"></div>
+			To help users to walk through the document (pages, groups ans sub-groups), a tree is
+			available on the left of the application.
+			By default, every element is displayed, you can use <span class="guibutton">Filter</span>
+			button in order to select elements you want to display or not.
+		</p><p>	
+			You can expand or collapse a node in a recursive way with a right click on the node. 
+		</p><p>	
+			As explained for tables on the right, you can "hide" the tree.
+		</p></div></div><p><a name="terminator"></a></p></div></body></html>
