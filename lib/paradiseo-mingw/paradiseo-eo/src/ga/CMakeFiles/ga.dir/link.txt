@@ -1,2 +1,0 @@
-C:/Qt/2010.05/mingw/bin/ar.exe cr ../../lib/libga.a  CMakeFiles/ga.dir/make_algo_scalar_ga.cpp.obj CMakeFiles/ga.dir/make_checkpoint_ga.cpp.obj CMakeFiles/ga.dir/make_continue_ga.cpp.obj CMakeFiles/ga.dir/make_genotype_ga.cpp.obj CMakeFiles/ga.dir/make_op_ga.cpp.obj CMakeFiles/ga.dir/make_pop_ga.cpp.obj CMakeFiles/ga.dir/make_run_ga.cpp.obj
-C:/Qt/2010.05/mingw/bin/ranlib.exe ../../lib/libga.a
