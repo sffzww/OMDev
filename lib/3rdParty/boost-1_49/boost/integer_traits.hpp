@@ -124,6 +124,8 @@ class integer_traits<wchar_t>
     //  - gcc 2.95.x on HP-UX
     // (also, std::numeric_limits<wchar_t> appears to return the wrong values).
     public detail::integer_traits_base<wchar_t, 0, UINT_MAX>
+#elif defined(__TRICORE__)
+    public detail::integer_traits_base<wchar_t, 0, UINT_MAX>
 #else
 #error No WCHAR_MIN and WCHAR_MAX present, please adjust integer_traits<> for your compiler.
 #endif
