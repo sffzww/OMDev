@@ -137,11 +137,11 @@
 #  define BOOST_NO_SWPRINTF
 #  define BOOST_NO_STD_WSTRING
 #  define BOOST_NO_STD_WSTREAMBUF
+#  define BOOST_NO_INTRINSIC_WCHAR_T
 #endif
 
 // Generally available headers:
 #define BOOST_HAS_UNISTD_H
-#define BOOST_HAS_STDINT_H
 #define BOOST_HAS_DIRENT_H
 #define BOOST_HAS_SLIST
 
@@ -173,6 +173,7 @@
 #  define BOOST_HAS_PTHREAD_MUTEXATTR_SETTYPE
 #  define BOOST_HAS_LOG1P
 #  define BOOST_HAS_EXPM1
+#  define BOOST_HAS_STDINT_H
 #endif
 
 // Functionality available for DKMs only:
@@ -202,10 +203,8 @@
 // vxWorks-around: <time.h> #defines CLOCKS_PER_SEC as sysClkRateGet() but
 //                 miserably fails to #include the required <sysLib.h> to make
 //                 sysClkRateGet() available! So we manually include it here.
-#ifdef __RTP__
-#  include <time.h>
-#  include <sysLib.h>
-#endif
+#include <time.h>
+#include <sysLib.h>
 
 // vxWorks-around: In <stdint.h> the macros INT32_C(), UINT32_C(), INT64_C() and
 //                 UINT64_C() are defined errorneously, yielding not a signed/
@@ -213,7 +212,7 @@
 //                 type. Eventually this leads to compile errors in ratio_fwd.hpp,
 //                 when trying to define several constants which do not fit into a
 //                 long type! We correct them here by redefining.
-#include <cstdint>
+//#include <cstdint>
 
 // Some macro-magic to do the job
 #define VX_JOIN(X, Y)     VX_DO_JOIN(X, Y)
@@ -260,7 +259,14 @@ extern "C" {
 
 // vxWorks has ftruncate() only, so we do simulate truncate():
 inline int truncate(const char *p, off_t l){
+  
+  // The API for kernel projects has an additional argument for the file mode. 
+  // For NFS devices, this third parameter to open( ) is normally used to specify the mode of the file. (e.g. 0644) 
+#ifdef _WRS_KERNEL
+  int fd = open(p, O_WRONLY, 666);
+#else  
   int fd = open(p, O_WRONLY);
+#endif  
   if (fd == -1){
     errno = EACCES;
     return -1;
