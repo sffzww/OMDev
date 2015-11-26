@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CMAKE-GENERATORS" "7" "July 31, 2014" "3.0.1" "CMake"
+.TH "CMAKE-GENERATORS" "7" "November 12, 2015" "3.4.0" "CMake"
 .SH NAME
 cmake-generators \- CMake Generators Reference
 .
@@ -51,34 +51,37 @@ when creating a new build tree.
 These generators support command\-line build tools.  In order to use them,
 one must launch CMake from a command\-line prompt whose environment is
 already configured for the chosen compiler and build tool.
+.SS Makefile Generators
 .SS Borland Makefiles
 .sp
 Generates Borland makefiles.
 .SS MSYS Makefiles
 .sp
-Generates MSYS makefiles.
+Generates makefiles for use with MSYS \fBmake\fP under the MSYS shell.
 .sp
-The makefiles use /bin/sh as the shell.  They require msys to be
-installed on the machine.
+Use this generator in a MSYS shell prompt and using \fBmake\fP as the build
+tool.  The generated makefiles use \fB/bin/sh\fP as the shell to launch build
+rules.  They are not compatible with a Windows command prompt.
+.sp
+To build under a Windows command prompt, use the
+\fBMinGW Makefiles\fP generator.
 .SS MinGW Makefiles
 .sp
-Generates a make file for use with mingw32\-make.
+Generates makefiles for use with \fBmingw32\-make\fP under a Windows command
+prompt.
 .sp
-The makefiles generated use cmd.exe as the shell.  They do not require
-msys or a unix shell.
+Use this generator under a Windows command prompt with MinGW in the \fBPATH\fP
+and using \fBmingw32\-make\fP as the build tool.  The generated makefiles use
+\fBcmd.exe\fP as the shell to launch build rules.  They are not compatible with
+MSYS or a unix shell.
+.sp
+To build under the MSYS shell, use the \fBMSYS Makefiles\fP generator.
 .SS NMake Makefiles
 .sp
 Generates NMake makefiles.
 .SS NMake Makefiles JOM
 .sp
 Generates JOM makefiles.
-.SS Ninja
-.sp
-Generates build.ninja files (experimental).
-.sp
-A build.ninja file is generated into the build tree.  Recent versions
-of the ninja program can build the project through the "all" target.
-An "install" target is also provided.
 .SS Unix Makefiles
 .sp
 Generates standard UNIX makefiles.
@@ -89,17 +92,46 @@ default make target.  A "make install" target is also provided.
 .SS Watcom WMake
 .sp
 Generates Watcom WMake makefiles.
+.SS Ninja Generator
+.SS Ninja
+.sp
+Generates build.ninja files.
+.sp
+A build.ninja file is generated into the build tree.  Recent versions
+of the ninja program can build the project through the "all" target.
+An "install" target is also provided.
 .SS IDE Build Tool Generators
 .sp
 These generators support Integrated Development Environment (IDE)
 project files.  Since the IDEs configure their own environment
 one may launch CMake from any environment.
+.SS Visual Studio Generators
 .SS Visual Studio 6
 .sp
-Generates Visual Studio 6 project files.
+Deprected.  Generates Visual Studio 6 project files.
+.sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+This generator is deprecated and will be removed
+in a future version of CMake.  It will still be
+possible to build with VS 6 tools using the
+\fBNMake Makefiles\fP generator.
+.UNINDENT
+.UNINDENT
 .SS Visual Studio 7
 .sp
-Generates Visual Studio .NET 2002 project files.
+Deprected.  Generates Visual Studio .NET 2002 project files.
+.sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+This generator is deprecated and will be removed
+in a future version of CMake.  It will still be
+possible to build with VS 7.0 tools using the
+\fBNMake Makefiles\fP generator.
+.UNINDENT
+.UNINDENT
 .SS Visual Studio 7 .NET 2003
 .sp
 Generates Visual Studio .NET 2003 project files.
@@ -107,36 +139,79 @@ Generates Visual Studio .NET 2003 project files.
 .sp
 Generates Visual Studio 8 2005 project files.
 .sp
-It is possible to append a space followed by the platform name to
-create project files for a specific target platform.  E.g.  "Visual
-Studio 8 2005 Win64" will create project files for the x64 processor.
+The \fBCMAKE_GENERATOR_PLATFORM\fP variable may be set
+to specify a target platform name.
+.sp
+For compatibility with CMake versions prior to 3.1, one may specify
+a target platform name optionally at the end of this generator name:
+.INDENT 0.0
+.TP
+.B \fBVisual Studio 8 2005 Win64\fP
+Specify target platform \fBx64\fP\&.
+.TP
+.B \fBVisual Studio 8 2005 <WinCE\-SDK>\fP
+Specify target platform matching a Windows CE SDK name.
+.UNINDENT
 .SS Visual Studio 9 2008
 .sp
 Generates Visual Studio 9 2008 project files.
 .sp
-It is possible to append a space followed by the platform name to
-create project files for a specific target platform.  E.g.  "Visual
-Studio 9 2008 Win64" will create project files for the x64 processor;
-"Visual Studio 9 2008 IA64" for Itanium.
+The \fBCMAKE_GENERATOR_PLATFORM\fP variable may be set
+to specify a target platform name.
+.sp
+For compatibility with CMake versions prior to 3.1, one may specify
+a target platform name optionally at the end of this generator name:
+.INDENT 0.0
+.TP
+.B \fBVisual Studio 9 2008 Win64\fP
+Specify target platform \fBx64\fP\&.
+.TP
+.B \fBVisual Studio 9 2008 IA64\fP
+Specify target platform \fBItanium\fP\&.
+.TP
+.B \fBVisual Studio 9 2008 <WinCE\-SDK>\fP
+Specify target platform matching a Windows CE SDK name.
+.UNINDENT
 .SS Visual Studio 10 2010
 .sp
 Generates Visual Studio 10 (VS 2010) project files.
 .sp
-It is possible to append a space followed by the platform name to
-create project files for a specific target platform.  E.g.
-"Visual Studio 10 2010 Win64" will create project files for the
-x64 processor; "Visual Studio 10 2010 IA64" for Itanium.
+The \fBCMAKE_GENERATOR_PLATFORM\fP variable may be set
+to specify a target platform name.
+.sp
+For compatibility with CMake versions prior to 3.1, one may specify
+a target platform name optionally at the end of this generator name:
+.INDENT 0.0
+.TP
+.B \fBVisual Studio 10 2010 Win64\fP
+Specify target platform \fBx64\fP\&.
+.TP
+.B \fBVisual Studio 10 2010 IA64\fP
+Specify target platform \fBItanium\fP\&.
+.UNINDENT
 .sp
 For compatibility with CMake versions prior to 3.0, one may specify this
-generator using the name "Visual Studio 10" without the year component.
+generator using the name \fBVisual Studio 10\fP without the year component.
 .SS Visual Studio 11 2012
 .sp
 Generates Visual Studio 11 (VS 2012) project files.
 .sp
-It is possible to append a space followed by the platform name to
-create project files for a specific target platform.  E.g.
-"Visual Studio 11 2012 Win64" will create project files for the
-x64 processor; "Visual Studio 11 2012 ARM" for ARM.
+The \fBCMAKE_GENERATOR_PLATFORM\fP variable may be set
+to specify a target platform name.
+.sp
+For compatibility with CMake versions prior to 3.1, one may specify
+a target platform name optionally at the end of this generator name:
+.INDENT 0.0
+.TP
+.B \fBVisual Studio 11 2012 Win64\fP
+Specify target platform \fBx64\fP\&.
+.TP
+.B \fBVisual Studio 11 2012 ARM\fP
+Specify target platform \fBARM\fP\&.
+.TP
+.B \fBVisual Studio 11 2012 <WinCE\-SDK>\fP
+Specify target platform matching a Windows CE SDK name.
+.UNINDENT
 .sp
 For compatibility with CMake versions prior to 3.0, one may specify this
 generator using the name "Visual Studio 11" without the year component.
@@ -144,13 +219,64 @@ generator using the name "Visual Studio 11" without the year component.
 .sp
 Generates Visual Studio 12 (VS 2013) project files.
 .sp
-It is possible to append a space followed by the platform name to
-create project files for a specific target platform.  E.g.
-"Visual Studio 12 2013 Win64" will create project files for the
-x64 processor; "Visual Studio 12 2013 ARM" for ARM.
+The \fBCMAKE_GENERATOR_PLATFORM\fP variable may be set
+to specify a target platform name.
+.sp
+For compatibility with CMake versions prior to 3.1, one may specify
+a target platform name optionally at the end of this generator name:
+.INDENT 0.0
+.TP
+.B \fBVisual Studio 12 2013 Win64\fP
+Specify target platform \fBx64\fP\&.
+.TP
+.B \fBVisual Studio 12 2013 ARM\fP
+Specify target platform \fBARM\fP\&.
+.UNINDENT
 .sp
 For compatibility with CMake versions prior to 3.0, one may specify this
 generator using the name "Visual Studio 12" without the year component.
+.SS Visual Studio 14 2015
+.sp
+Generates Visual Studio 14 (VS 2015) project files.
+.sp
+The \fBCMAKE_GENERATOR_PLATFORM\fP variable may be set
+to specify a target platform name.
+.sp
+For compatibility with CMake versions prior to 3.1, one may specify
+a target platform name optionally at the end of this generator name:
+.INDENT 0.0
+.TP
+.B \fBVisual Studio 14 2015 Win64\fP
+Specify target platform \fBx64\fP\&.
+.TP
+.B \fBVisual Studio 14 2015 ARM\fP
+Specify target platform \fBARM\fP\&.
+.UNINDENT
+.SS Other Generators
+.SS Green Hills MULTI
+.sp
+Generates Green Hills MULTI project files (experimental, work\-in\-progress).
+.sp
+Customizations are available through the following cache variables:
+.INDENT 0.0
+.IP \(bu 2
+\fBGHS_BSP_NAME\fP
+.IP \(bu 2
+\fBGHS_CUSTOMIZATION\fP
+.IP \(bu 2
+\fBGHS_GPJ_MACROS\fP
+.IP \(bu 2
+\fBGHS_OS_DIR\fP
+.UNINDENT
+.sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+This generator is deemed experimental as of CMake 3.4.0
+and is still a work in progress.  Future versions of CMake
+may make breaking changes as the generator matures.
+.UNINDENT
+.UNINDENT
 .SS Xcode
 .sp
 Generate Xcode project files.
@@ -318,6 +444,6 @@ Generate with \fBNinja\fP\&.
 Generate with \fBUnix Makefiles\fP\&.
 .UNINDENT
 .SH COPYRIGHT
-2000-2014 Kitware, Inc.
+2000-2015 Kitware, Inc.
 .\" Generated by docutils manpage writer.
 .

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CMAKE-TOOLCHAINS" "7" "July 31, 2014" "3.0.1" "CMake"
+.TH "CMAKE-TOOLCHAINS" "7" "November 12, 2015" "3.4.0" "CMake"
 .SH NAME
 cmake-toolchains \- CMake Toolchains Reference
 .
@@ -127,7 +127,12 @@ hidden visibility, if supported by the compiler.
 .sp
 If \fBcmake(1)\fP is invoked with the command line parameter
 \fB\-DCMAKE_TOOLCHAIN_FILE=path/to/file\fP, the file will be loaded early to set
-values for the compilers. A typical cross\-compiling toolchain has content such
+values for the compilers.
+The \fBCMAKE_CROSSCOMPILING\fP variable is set to true when CMake is
+cross\-compiling.
+.SS Cross Compiling for Linux
+.sp
+A typical cross\-compiling toolchain for Linux has content such
 as:
 .INDENT 0.0
 .INDENT 3.5
@@ -135,12 +140,14 @@ as:
 .nf
 .ft C
 set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR arm)
 
 set(CMAKE_SYSROOT /home/devel/rasp\-pi\-rootfs)
 set(CMAKE_STAGING_PREFIX /home/devel/stage)
 
-set(CMAKE_C_COMPILER /home/devel/gcc\-4.7\-linaro\-rpi\-gnueabihf/bin/arm\-linux\-gnueabihf\-gcc)
-set(CMAKE_CXX_COMPILER /home/devel/gcc\-4.7\-linaro\-rpi\-gnueabihf/bin/arm\-linux\-gnueabihf\-g++)
+set(tools /home/devel/gcc\-4.7\-linaro\-rpi\-gnueabihf)
+set(CMAKE_C_COMPILER ${tools}/bin/arm\-linux\-gnueabihf\-gcc)
+set(CMAKE_CXX_COMPILER ${tools}/bin/arm\-linux\-gnueabihf\-g++)
 
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
@@ -152,6 +159,9 @@ set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 .UNINDENT
 .sp
 The \fBCMAKE_SYSTEM_NAME\fP is the CMake\-identifier of the target platform
+to build for.
+.sp
+The \fBCMAKE_SYSTEM_PROCESSOR\fP is the CMake\-identifier of the target architecture
 to build for.
 .sp
 The \fBCMAKE_SYSROOT\fP is optional, and may be specified if a sysroot
@@ -174,9 +184,10 @@ artifacts. Generally, includes, libraries and packages should be found in the
 target system prefixes, whereas executables which must be run as part of the build
 should be found only on the host and not on the target. This is the purpose of
 the \fBCMAKE_FIND_ROOT_PATH_MODE_*\fP variables.
+.SS Cross Compiling using Clang
 .sp
-Some compilers are inherently cross compilers, such as Clang and the QNX QCC
-compiler. The \fBCMAKE_<LANG>_COMPILER_TARGET\fP can be set to pass a
+Some compilers such as Clang are inherently cross compilers.
+The \fBCMAKE_<LANG>_COMPILER_TARGET\fP can be set to pass a
 value to those supported compilers when compiling:
 .INDENT 0.0
 .INDENT 3.5
@@ -184,6 +195,7 @@ value to those supported compilers when compiling:
 .nf
 .ft C
 set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR arm)
 
 set(triple arm\-linux\-gnueabihf)
 
@@ -196,7 +208,16 @@ set(CMAKE_CXX_COMPILER_TARGET ${triple})
 .UNINDENT
 .UNINDENT
 .sp
-Or, for QCC:
+Similarly, some compilers do not ship their own supplementary utilities
+such as linkers, but provide a way to specify the location of the external
+toolchain which will be used by the compiler driver. The
+\fBCMAKE_<LANG>_COMPILER_EXTERNAL_TOOLCHAIN\fP variable can be set in a
+toolchain file to pass the path to the compiler driver.
+.SS Cross Compiling for QNX
+.sp
+As the Clang compiler the QNX QCC compile is inherently a cross compiler.
+And the \fBCMAKE_<LANG>_COMPILER_TARGET\fP can be set to pass a
+value to those supported compilers when compiling:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -214,16 +235,144 @@ set(CMAKE_CXX_COMPILER_TARGET ${arch})
 .fi
 .UNINDENT
 .UNINDENT
+.SS Cross Compiling for Windows CE
 .sp
-Similarly, some compilers do not ship their own supplementary utilities
-such as linkers, but provide a way to specify the location of the external
-toolchain which will be used by the compiler driver. The
-\fBCMAKE_<LANG>_COMPILER_EXTERNAL_TOOLCHAIN\fP variable can be set in a
-toolchain file to pass the path to the compiler driver.
+Cross compiling for Windows CE requires the corresponding SDK being
+installed on your system.  These SDKs are usually installed under
+\fBC:/Program Files (x86)/Windows CE Tools/SDKs\fP\&.
 .sp
-The \fBCMAKE_CROSSCOMPILING\fP variable is set to true when CMake is
-cross\-compiling.
+A toolchain file to configure a Visual Studio generator for
+Windows CE may look like this:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+set(CMAKE_SYSTEM_NAME WindowsCE)
+
+set(CMAKE_SYSTEM_VERSION 8.0)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+set(CMAKE_GENERATOR_TOOLSET CE800) # Can be omitted for 8.0
+set(CMAKE_GENERATOR_PLATFORM SDK_AM335X_SK_WEC2013_V310)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The \fBCMAKE_GENERATOR_PLATFORM\fP tells the generator which SDK to use.
+Further \fBCMAKE_SYSTEM_VERSION\fP tells the generator what version of
+Windows CE to use.  Currently version 8.0 (Windows Embedded Compact 2013) is
+supported out of the box.  Other versions may require one to set
+\fBCMAKE_GENERATOR_TOOLSET\fP to the correct value.
+.SS Cross Compiling for Windows 10 Universal Applications
+.sp
+A toolchain file to configure a Visual Studio generator for a
+Windows 10 Universal Application may look like this:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+set(CMAKE_SYSTEM_NAME WindowsStore)
+set(CMAKE_SYSTEM_VERSION 10.0)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+A Windows 10 Universal Application targets both Windows Store and
+Windows Phone.  Specify the \fBCMAKE_SYSTEM_VERSION\fP variable
+to be \fB10.0\fP to build with the latest available Windows 10 SDK.
+Specify a more specific version (e.g. \fB10.0.10240.0\fP for RTM)
+to build with the corresponding SDK.
+.SS Cross Compiling for Windows Phone
+.sp
+A toolchain file to configure a Visual Studio generator for
+Windows Phone may look like this:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+set(CMAKE_SYSTEM_NAME WindowsPhone)
+set(CMAKE_SYSTEM_VERSION 8.1)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Cross Compiling for Windows Store
+.sp
+A toolchain file to configure a Visual Studio generator for
+Windows Store may look like this:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+set(CMAKE_SYSTEM_NAME WindowsStore)
+set(CMAKE_SYSTEM_VERSION 8.1)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Cross Compiling using NVIDIA Nsight Tegra
+.sp
+A toolchain file to configure a Visual Studio generator to
+build using NVIDIA Nsight Tegra targeting Android may look
+like this:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+set(CMAKE_SYSTEM_NAME Android)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The \fBCMAKE_GENERATOR_TOOLSET\fP may be set to select
+the Nsight Tegra "Toolchain Version" value.
+.sp
+See also target properties:
+.INDENT 0.0
+.IP \(bu 2
+\fBANDROID_ANT_ADDITIONAL_OPTIONS\fP
+.IP \(bu 2
+\fBANDROID_API_MIN\fP
+.IP \(bu 2
+\fBANDROID_API\fP
+.IP \(bu 2
+\fBANDROID_ARCH\fP
+.IP \(bu 2
+\fBANDROID_ASSETS_DIRECTORIES\fP
+.IP \(bu 2
+\fBANDROID_GUI\fP
+.IP \(bu 2
+\fBANDROID_JAR_DEPENDENCIES\fP
+.IP \(bu 2
+\fBANDROID_JAR_DIRECTORIES\fP
+.IP \(bu 2
+\fBANDROID_JAVA_SOURCE_DIR\fP
+.IP \(bu 2
+\fBANDROID_NATIVE_LIB_DEPENDENCIES\fP
+.IP \(bu 2
+\fBANDROID_NATIVE_LIB_DIRECTORIES\fP
+.IP \(bu 2
+\fBANDROID_PROCESS_MAX\fP
+.IP \(bu 2
+\fBANDROID_PROGUARD_CONFIG_PATH\fP
+.IP \(bu 2
+\fBANDROID_PROGUARD\fP
+.IP \(bu 2
+\fBANDROID_SECURE_PROPS_PATH\fP
+.IP \(bu 2
+\fBANDROID_SKIP_ANT_STEP\fP
+.IP \(bu 2
+\fBANDROID_STL_TYPE\fP
+.UNINDENT
 .SH COPYRIGHT
-2000-2014 Kitware, Inc.
+2000-2015 Kitware, Inc.
 .\" Generated by docutils manpage writer.
 .

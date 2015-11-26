@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CMAKE-PROPERTIES" "7" "July 31, 2014" "3.0.1" "CMake"
+.TH "CMAKE-PROPERTIES" "7" "November 12, 2015" "3.4.0" "CMake"
 .SH NAME
 cmake-properties \- CMake Properties Reference
 .
@@ -67,6 +67,220 @@ This property is obsolete.  Use \fBAUTOGEN_TARGETS_FOLDER\fP instead.
 If not set, CMake uses the \fBFOLDER\fP property of the parent target as a
 default value for this property.  See also the documentation for the
 \fBFOLDER\fP target property and the \fBAUTOMOC\fP target property.
+.SS CMAKE_C_KNOWN_FEATURES
+.sp
+List of C features known to this version of CMake.
+.sp
+The features listed in this global property may be known to be available to the
+C compiler.  If the feature is available with the C compiler, it will
+be listed in the \fBCMAKE_C_COMPILE_FEATURES\fP variable.
+.sp
+The features listed here may be used with the \fBtarget_compile_features()\fP
+command.  See the \fBcmake\-compile\-features(7)\fP manual for information on
+compile features and a list of supported compilers.
+.sp
+The features known to this version of CMake are:
+.INDENT 0.0
+.TP
+.B \fBc_function_prototypes\fP
+Function prototypes, as defined in \fBISO/IEC 9899:1990\fP\&.
+.TP
+.B \fBc_restrict\fP
+\fBrestrict\fP keyword, as defined in \fBISO/IEC 9899:1999\fP\&.
+.TP
+.B \fBc_static_assert\fP
+Static assert, as defined in \fBISO/IEC 9899:2011\fP\&.
+.TP
+.B \fBc_variadic_macros\fP
+Variadic macros, as defined in \fBISO/IEC 9899:1999\fP\&.
+.UNINDENT
+.SS CMAKE_CXX_KNOWN_FEATURES
+.sp
+List of C++ features known to this version of CMake.
+.sp
+The features listed in this global property may be known to be available to the
+C++ compiler.  If the feature is available with the C++ compiler, it will
+be listed in the \fBCMAKE_CXX_COMPILE_FEATURES\fP variable.
+.sp
+The features listed here may be used with the \fBtarget_compile_features()\fP
+command.  See the \fBcmake\-compile\-features(7)\fP manual for information on
+compile features and a list of supported compilers.
+.sp
+The features known to this version of CMake are:
+.INDENT 0.0
+.TP
+.B \fBcxx_aggregate_default_initializers\fP
+Aggregate default initializers, as defined in \fI\%N3605\fP\&.
+.TP
+.B \fBcxx_alias_templates\fP
+Template aliases, as defined in \fI\%N2258\fP\&.
+.TP
+.B \fBcxx_alignas\fP
+Alignment control \fBalignas\fP, as defined in \fI\%N2341\fP\&.
+.TP
+.B \fBcxx_alignof\fP
+Alignment control \fBalignof\fP, as defined in \fI\%N2341\fP\&.
+.TP
+.B \fBcxx_attributes\fP
+Generic attributes, as defined in \fI\%N2761\fP\&.
+.TP
+.B \fBcxx_attribute_deprecated\fP
+\fB[[deprecated]]\fP attribute, as defined in \fI\%N3760\fP\&.
+.TP
+.B \fBcxx_auto_type\fP
+Automatic type deduction, as defined in \fI\%N1984\fP\&.
+.TP
+.B \fBcxx_binary_literals\fP
+Binary literals, as defined in \fI\%N3472\fP\&.
+.TP
+.B \fBcxx_constexpr\fP
+Constant expressions, as defined in \fI\%N2235\fP\&.
+.TP
+.B \fBcxx_contextual_conversions\fP
+Contextual conversions, as defined in \fI\%N3323\fP\&.
+.TP
+.B \fBcxx_decltype_incomplete_return_types\fP
+Decltype on incomplete return types, as defined in \fI\%N3276\fP\&.
+.TP
+.B \fBcxx_decltype\fP
+Decltype, as defined in \fI\%N2343\fP\&.
+.TP
+.B \fBcxx_decltype_auto\fP
+\fBdecltype(auto)\fP semantics, as defined in \fI\%N3638\fP\&.
+.TP
+.B \fBcxx_default_function_template_args\fP
+Default template arguments for function templates, as defined in \fI\%DR226\fP
+.TP
+.B \fBcxx_defaulted_functions\fP
+Defaulted functions, as defined in \fI\%N2346\fP\&.
+.TP
+.B \fBcxx_defaulted_move_initializers\fP
+Defaulted move initializers, as defined in \fI\%N3053\fP\&.
+.TP
+.B \fBcxx_delegating_constructors\fP
+Delegating constructors, as defined in \fI\%N1986\fP\&.
+.TP
+.B \fBcxx_deleted_functions\fP
+Deleted functions, as defined in \fI\%N2346\fP\&.
+.TP
+.B \fBcxx_digit_separators\fP
+Digit separators, as defined in \fI\%N3781\fP\&.
+.TP
+.B \fBcxx_enum_forward_declarations\fP
+Enum forward declarations, as defined in \fI\%N2764\fP\&.
+.TP
+.B \fBcxx_explicit_conversions\fP
+Explicit conversion operators, as defined in \fI\%N2437\fP\&.
+.TP
+.B \fBcxx_extended_friend_declarations\fP
+Extended friend declarations, as defined in \fI\%N1791\fP\&.
+.TP
+.B \fBcxx_extern_templates\fP
+Extern templates, as defined in \fI\%N1987\fP\&.
+.TP
+.B \fBcxx_final\fP
+Override control \fBfinal\fP keyword, as defined in \fI\%N2928\fP, \fI\%N3206\fP and \fI\%N3272\fP\&.
+.TP
+.B \fBcxx_func_identifier\fP
+Predefined \fB__func__\fP identifier, as defined in \fI\%N2340\fP\&.
+.TP
+.B \fBcxx_generalized_initializers\fP
+Initializer lists, as defined in \fI\%N2672\fP\&.
+.TP
+.B \fBcxx_generic_lambdas\fP
+Generic lambdas, as defined in \fI\%N3649\fP\&.
+.TP
+.B \fBcxx_inheriting_constructors\fP
+Inheriting constructors, as defined in \fI\%N2540\fP\&.
+.TP
+.B \fBcxx_inline_namespaces\fP
+Inline namespaces, as defined in \fI\%N2535\fP\&.
+.TP
+.B \fBcxx_lambdas\fP
+Lambda functions, as defined in \fI\%N2927\fP\&.
+.TP
+.B \fBcxx_lambda_init_captures\fP
+Initialized lambda captures, as defined in \fI\%N3648\fP\&.
+.TP
+.B \fBcxx_local_type_template_args\fP
+Local and unnamed types as template arguments, as defined in \fI\%N2657\fP\&.
+.TP
+.B \fBcxx_long_long_type\fP
+\fBlong long\fP type, as defined in \fI\%N1811\fP\&.
+.TP
+.B \fBcxx_noexcept\fP
+Exception specifications, as defined in \fI\%N3050\fP\&.
+.TP
+.B \fBcxx_nonstatic_member_init\fP
+Non\-static data member initialization, as defined in \fI\%N2756\fP\&.
+.TP
+.B \fBcxx_nullptr\fP
+Null pointer, as defined in \fI\%N2431\fP\&.
+.TP
+.B \fBcxx_override\fP
+Override control \fBoverride\fP keyword, as defined in \fI\%N2928\fP, \fI\%N3206\fP
+and \fI\%N3272\fP\&.
+.TP
+.B \fBcxx_range_for\fP
+Range\-based for, as defined in \fI\%N2930\fP\&.
+.TP
+.B \fBcxx_raw_string_literals\fP
+Raw string literals, as defined in \fI\%N2442\fP\&.
+.TP
+.B \fBcxx_reference_qualified_functions\fP
+Reference qualified functions, as defined in \fI\%N2439\fP\&.
+.TP
+.B \fBcxx_relaxed_constexpr\fP
+Relaxed constexpr, as defined in \fI\%N3652\fP\&.
+.TP
+.B \fBcxx_return_type_deduction\fP
+Return type deduction on normal functions, as defined in \fI\%N3386\fP\&.
+.TP
+.B \fBcxx_right_angle_brackets\fP
+Right angle bracket parsing, as defined in \fI\%N1757\fP\&.
+.TP
+.B \fBcxx_rvalue_references\fP
+R\-value references, as defined in \fI\%N2118\fP\&.
+.TP
+.B \fBcxx_sizeof_member\fP
+Size of non\-static data members, as defined in \fI\%N2253\fP\&.
+.TP
+.B \fBcxx_static_assert\fP
+Static assert, as defined in \fI\%N1720\fP\&.
+.TP
+.B \fBcxx_strong_enums\fP
+Strongly typed enums, as defined in \fI\%N2347\fP\&.
+.TP
+.B \fBcxx_thread_local\fP
+Thread\-local variables, as defined in \fI\%N2659\fP\&.
+.TP
+.B \fBcxx_trailing_return_types\fP
+Automatic function return type, as defined in \fI\%N2541\fP\&.
+.TP
+.B \fBcxx_unicode_literals\fP
+Unicode string literals, as defined in \fI\%N2442\fP\&.
+.TP
+.B \fBcxx_uniform_initialization\fP
+Uniform intialization, as defined in \fI\%N2640\fP\&.
+.TP
+.B \fBcxx_unrestricted_unions\fP
+Unrestricted unions, as defined in \fI\%N2544\fP\&.
+.TP
+.B \fBcxx_user_literals\fP
+User\-defined literals, as defined in \fI\%N2765\fP\&.
+.TP
+.B \fBcxx_variable_templates\fP
+Variable templates, as defined in \fI\%N3651\fP\&.
+.TP
+.B \fBcxx_variadic_macros\fP
+Variadic macros, as defined in \fI\%N1653\fP\&.
+.TP
+.B \fBcxx_variadic_templates\fP
+Variadic templates, as defined in \fI\%N2242\fP\&.
+.TP
+.B \fBcxx_template_template_parameters\fP
+Template template parameters, as defined in \fBISO/IEC 14882:1998\fP\&.
+.UNINDENT
 .SS DEBUG_CONFIGURATIONS
 .sp
 Specify which configurations are for debugging.
@@ -160,7 +374,7 @@ Ninja only: List of available pools.
 .sp
 A pool is a named integer property and defines the maximum number
 of concurrent jobs which can be started by a rule assigned to the pool.
-The \fBJOB_POOLS\fP property is a semicolon\-separated list of
+The \fI\%JOB_POOLS\fP property is a semicolon\-separated list of
 pairs using the syntax NAME=integer (without a space after the equality sign).
 .sp
 For instance:
@@ -179,6 +393,9 @@ Defined pools could be used globally by setting
 \fBCMAKE_JOB_POOL_COMPILE\fP and \fBCMAKE_JOB_POOL_LINK\fP
 or per target by setting the target properties
 \fBJOB_POOL_COMPILE\fP and \fBJOB_POOL_LINK\fP\&.
+.sp
+Build targets provided by CMake that are meant for individual interactive
+use, such as \fBinstall\fP, are placed in the \fBconsole\fP pool automatically.
 .SS PREDEFINED_TARGETS_FOLDER
 .sp
 Name of FOLDER for targets that are added automatically by CMake.
@@ -205,26 +422,32 @@ into the filename specified in this property.
 .sp
 Specify a launcher for compile rules.
 .sp
-Makefile generators prefix compiler commands with the given launcher
-command line.  This is intended to allow launchers to intercept build
-problems with high granularity.  Non\-Makefile generators currently
-ignore this property.
+Makefile Generators and the \fBNinja\fP generator prefix
+compiler commands with the given launcher command line.
+This is intended to allow launchers to intercept build problems
+with high granularity.  Other generators ignore this property
+because their underlying build systems provide no hook to wrap
+individual commands with a launcher.
 .SS RULE_LAUNCH_CUSTOM
 .sp
 Specify a launcher for custom rules.
 .sp
-Makefile generators prefix custom commands with the given launcher
-command line.  This is intended to allow launchers to intercept build
-problems with high granularity.  Non\-Makefile generators currently
-ignore this property.
+Makefile Generators and the \fBNinja\fP generator prefix
+custom commands with the given launcher command line.
+This is intended to allow launchers to intercept build problems
+with high granularity.  Other generators ignore this property
+because their underlying build systems provide no hook to wrap
+individual commands with a launcher.
 .SS RULE_LAUNCH_LINK
 .sp
 Specify a launcher for link rules.
 .sp
-Makefile generators prefix link and archive commands with the given
-launcher command line.  This is intended to allow launchers to
-intercept build problems with high granularity.  Non\-Makefile
-generators currently ignore this property.
+Makefile Generators and the \fBNinja\fP generator prefix
+link and archive commands with the given launcher command line.
+This is intended to allow launchers to intercept build problems
+with high granularity.  Other generators ignore this property
+because their underlying build systems provide no hook to wrap
+individual commands with a launcher.
 .SS RULE_MESSAGES
 .sp
 Specify whether to report a message for each make rule.
@@ -243,6 +466,25 @@ Set if shared libraries may be named like archives.
 .sp
 On AIX shared libraries may be named "lib<name>.a".  This property is
 set to true on such platforms.
+.SS TARGET_MESSAGES
+.sp
+Specify whether to report the completion of each target.
+.sp
+This property specifies whether Makefile Generators should
+add a progress message describing that each target has been completed.
+If the property is not set the default is \fBON\fP\&.  Set the property
+to \fBOFF\fP to disable target completion messages.
+.sp
+This option is intended to reduce build output when little or no
+work needs to be done to bring the build tree up to date.
+.sp
+If a \fBCMAKE_TARGET_MESSAGES\fP cache entry exists its value
+initializes the value of this property.
+.sp
+Non\-Makefile generators currently ignore this property.
+.sp
+See the counterpart property \fBRULE_MESSAGES\fP to disable
+everything except for target completion messages.
 .SS TARGET_SUPPORTS_SHARED_LIBS
 .sp
 Does the target platform support shared libraries.
@@ -286,22 +528,6 @@ re\-configure the file and generate the build system again.
 .sp
 Specify files as a semicolon\-separated list of paths.  Relative paths
 are interpreted as relative to the current source directory.
-.SS COMPILE_DEFINITIONS_<CONFIG>
-.sp
-Per\-configuration preprocessor definitions in a directory.
-.sp
-This is the configuration\-specific version of \fBCOMPILE_DEFINITIONS\fP
-where \fB<CONFIG>\fP is an upper\-case name (ex. \fBCOMPILE_DEFINITIONS_DEBUG\fP).
-.sp
-This property will be initialized in each directory by its value in
-the directory\(aqs parent.
-.sp
-Contents of \fBCOMPILE_DEFINITIONS_<CONFIG>\fP may use "generator expressions"
-with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
-manual for available expressions.  See the \fBcmake\-buildsystem(7)\fP
-manual for more on defining buildsystem properties.
-.sp
-Generator expressions should be preferred instead of setting this property.
 .SS COMPILE_DEFINITIONS
 .sp
 Preprocessor definitions for compiling a directory\(aqs sources.
@@ -362,12 +588,12 @@ should be preferred instead of setting the alternative property.
 .sp
 List of options to pass to the compiler.
 .sp
-This property specifies the list of options given so far to the
-\fBadd_compile_options()\fP command.
+This property holds a ;\-list of options
+given so far to the \fBadd_compile_options()\fP command.
 .sp
-This property is used to populate the \fBCOMPILE_OPTIONS\fP target
-property, which is used by the generators to set the options for the
-compiler.
+This property is used to initialize the \fBCOMPILE_OPTIONS\fP target
+property when a target is created, which is used by the generators to set
+the options for the compiler.
 .sp
 Contents of \fBCOMPILE_OPTIONS\fP may use "generator expressions" with the
 syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP manual
@@ -375,11 +601,16 @@ for available expressions.  See the \fBcmake\-buildsystem(7)\fP manual
 for more on defining buildsystem properties.
 .SS DEFINITIONS
 .sp
-For CMake 2.4 compatibility only.  Use COMPILE_DEFINITIONS instead.
+For CMake 2.4 compatibility only.  Use \fBCOMPILE_DEFINITIONS\fP
+instead.
 .sp
 This read\-only property specifies the list of flags given so far to
-the add_definitions command.  It is intended for debugging purposes.
-Use the COMPILE_DEFINITIONS instead.
+the \fBadd_definitions()\fP command.  It is intended for debugging
+purposes.  Use the \fBCOMPILE_DEFINITIONS\fP directory property
+instead.
+.sp
+This built\-in read\-only property does not exist if policy
+\fBCMP0059\fP is set to \fBNEW\fP\&.
 .SS EXCLUDE_FROM_ALL
 .sp
 Exclude the directory from the all target of its parent.
@@ -468,9 +699,10 @@ manual for more on defining buildsystem properties.
 .sp
 Include file scanning regular expression.
 .sp
-This read\-only property specifies the regular expression used during
+This property specifies the regular expression used during
 dependency scanning to match include files that should be followed.
-See the include_regular_expression command.
+See the \fBinclude_regular_expression()\fP command for a high\-level
+interface to set this property.
 .SS INTERPROCEDURAL_OPTIMIZATION_<CONFIG>
 .sp
 Per\-configuration interprocedural optimization for a directory.
@@ -609,59 +841,218 @@ directory whose CMakeLists.txt contains a project() command.
 .sp
 Name of target aliased by this target.
 .sp
-If this is an \fIAlias Target\fP, this property contains
+If this is an Alias Target, this property contains
 the name of the target aliased.
+.SS ANDROID_ANT_ADDITIONAL_OPTIONS
+.sp
+Set the additional options for Android Ant build system. This is
+a string value containing all command line options for the Ant build.
+This property is initialized by the value of the
+\fBCMAKE_ANDROID_ANT_ADDITIONAL_OPTIONS\fP variable if it is
+set when a target is created.
+.SS ANDROID_API
+.sp
+Set the Android Target API version (e.g. \fB15\fP).  The version number
+must be a positive decimal integer.  This property is initialized by
+the value of the \fBCMAKE_ANDROID_API\fP variable if it is set
+when a target is created.
+.SS ANDROID_API_MIN
+.sp
+Set the Android MIN API version (e.g. \fB9\fP).  The version number
+must be a positive decimal integer.  This property is initialized by
+the value of the \fBCMAKE_ANDROID_API_MIN\fP variable if it is set
+when a target is created.  Native code builds using this API version.
+.SS ANDROID_ARCH
+.sp
+Set the Android target architecture.
+.sp
+This is a string property that could be set to the one of
+the following values:
+.INDENT 0.0
+.IP \(bu 2
+\fBarmv7\-a\fP: "ARMv7\-A (armv7\-a)"
+.IP \(bu 2
+\fBarmv7\-a\-hard\fP: "ARMv7\-A, hard\-float ABI (armv7\-a)"
+.IP \(bu 2
+\fBarm64\-v8a\fP: "ARMv8\-A, 64bit (arm64\-v8a)"
+.IP \(bu 2
+\fBx86\fP: "x86 (x86)"
+.IP \(bu 2
+\fBx86_64\fP: "x86_64 (x86_64)"
+.UNINDENT
+.sp
+This property is initialized by the value of the
+\fBCMAKE_ANDROID_ARCH\fP variable if it is set
+when a target is created.
+.SS ANDROID_ASSETS_DIRECTORIES
+.sp
+Set the Android assets directories to copy into the main assets
+folder before build. This a string property that contains the
+directory paths separated by semicolon.
+This property is initialized by the value of the
+\fBCMAKE_ANDROID_ASSETS_DIRECTORIES\fP variable if it is set when
+a target is created.
+.SS ANDROID_GUI
+.sp
+Build an executable as an application package on Android.
+.sp
+When this property is set to true the executable when built for Android
+will be created as an application package.  This property is initialized
+by the value of the \fBCMAKE_ANDROID_GUI\fP variable if it is set
+when a target is created.
+.sp
+Add the \fBAndroidManifest.xml\fP source file explicitly to the
+target \fBadd_executable()\fP command invocation to specify the
+root directory of the application package source.
+.SS ANDROID_JAR_DEPENDENCIES
+.sp
+Set the Android property that specifies JAR dependencies.
+This is a string value property. This property is initialized
+by the value of the \fBCMAKE_ANDROID_JAR_DEPENDENCIES\fP
+variable if it is set when a target is created.
+.SS ANDROID_JAR_DIRECTORIES
+.sp
+Set the Android property that specifies directories to search for
+the JAR libraries.
+.sp
+This a string property that contains the directory paths separated by
+semicolons. This property is initialized by the value of the
+\fBCMAKE_ANDROID_JAR_DIRECTORIES\fP variable if it is set when
+a target is created.
+.sp
+Contents of \fBANDROID_JAR_DIRECTORIES\fP may use "generator expressions"
+with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
+manual for available expressions.
+.SS ANDROID_JAVA_SOURCE_DIR
+.sp
+Set the Android property that defines the Java source code root directories.
+This a string property that contains the directory paths separated by semicolon.
+This property is initialized by the value of the
+\fBCMAKE_ANDROID_JAVA_SOURCE_DIR\fP variable if it is set
+when a target is created.
+.SS ANDROID_NATIVE_LIB_DEPENDENCIES
+.sp
+Set the Android property that specifies the .so dependencies.
+This is a string property.
+.sp
+This property is initialized by the value of the
+\fBCMAKE_ANDROID_NATIVE_LIB_DEPENDENCIES\fP variable if it is set
+when a target is created.
+.sp
+Contents of \fBANDROID_NATIVE_LIB_DEPENDENCIES\fP may use
+"generator expressions" with the syntax \fB$<...>\fP\&. See the
+\fBcmake\-generator\-expressions(7)\fP manual for
+available expressions.
+.SS ANDROID_NATIVE_LIB_DIRECTORIES
+.sp
+Set the Android property that specifies directories to search for the
+.so libraries.
+.sp
+This a string property that contains the directory paths separated
+by semicolons.
+.sp
+This property is initialized by the value of the
+\fBCMAKE_ANDROID_NATIVE_LIB_DIRECTORIES\fP variable if it is set when a
+target is created.
+.sp
+Contents of \fBANDROID_NATIVE_LIB_DIRECTORIES\fP may use "generator expressions"
+with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
+manual for available expressions.
+.SS ANDROID_PROCESS_MAX
+.sp
+Set the Android property that defines the maximum number of a
+parallel Android NDK compiler processes (e.g. \fB4\fP).
+This property is initialized by the value of the
+\fBCMAKE_ANDROID_PROCESS_MAX\fP variable if it is set
+when a target is created.
+.SS ANDROID_PROGUARD
+.sp
+When this property is set to true that enables the ProGuard tool to shrink,
+optimize, and obfuscate the code by removing unused code and renaming
+classes, fields, and methods with semantically obscure names.
+This property is initialized by the value of the
+\fBCMAKE_ANDROID_PROGUARD\fP variable if it is set
+when a target is created.
+.SS ANDROID_PROGUARD_CONFIG_PATH
+.sp
+Set the Android property that specifies the location of the ProGuard
+config file. Leave empty to use the default one.
+This a string property that contains the path to ProGuard config file.
+This property is initialized by the value of the
+\fBCMAKE_ANDROID_PROGUARD_CONFIG_PATH\fP variable if it is set
+when a target is created.
+.SS ANDROID_SECURE_PROPS_PATH
+.sp
+Set the Android property that states the location of the secure properties file.
+This is a string property that contains the file path.
+This property is initialized by the value of the
+\fBCMAKE_ANDROID_SECURE_PROPS_PATH\fP variable
+if it is set when a target is created.
+.SS ANDROID_SKIP_ANT_STEP
+.sp
+Set the Android property that defines whether or not to skip the Ant build step.
+This is a boolean property initialized by the value of the
+\fBCMAKE_ANDROID_SKIP_ANT_STEP\fP variable if it is set when a target is created.
+.SS ANDROID_STL_TYPE
+.sp
+Set the Android property that defines the type of STL support for the project.
+This is a string property that could set to the one of the following values:
+\fBnone\fP           e.g. "No C++ Support"
+\fBsystem\fP         e.g. "Minimal C++ without STL"
+\fBgabi++_static\fP  e.g. "GAbi++ Static"
+\fBgabi++_shared\fP  e.g. "GAbi++ Shared"
+\fBgnustl_static\fP  e.g. "GNU libstdc++ Static"
+\fBgnustl_shared\fP  e.g. "GNU libstdc++ Shared"
+\fBstlport_static\fP e.g. "STLport Static"
+\fBstlport_shared\fP e.g. "STLport Shared"
+This property is initialized by the value of the
+variable:\fICMAKE_ANDROID_STL_TYPE\fP variable if it is set when a target is created.
 .SS ARCHIVE_OUTPUT_DIRECTORY_<CONFIG>
 .sp
-Per\-configuration output directory for ARCHIVE target files.
+Per\-configuration output directory for
+ARCHIVE target files.
 .sp
-This is a per\-configuration version of ARCHIVE_OUTPUT_DIRECTORY, but
+This is a per\-configuration version of the
+\fBARCHIVE_OUTPUT_DIRECTORY\fP target property, but
 multi\-configuration generators (VS, Xcode) do NOT append a
 per\-configuration subdirectory to the specified directory.  This
-property is initialized by the value of the variable
-CMAKE_ARCHIVE_OUTPUT_DIRECTORY_<CONFIG> if it is set when a target is
-created.
+property is initialized by the value of the
+\fBCMAKE_ARCHIVE_OUTPUT_DIRECTORY_<CONFIG>\fP variable if
+it is set when a target is created.
+.sp
+Contents of \fBARCHIVE_OUTPUT_DIRECTORY_<CONFIG>\fP may use
+\fBgenerator expressions\fP\&.
 .SS ARCHIVE_OUTPUT_DIRECTORY
 .sp
 Output directory in which to build ARCHIVE target files.
 .sp
 This property specifies the directory into which archive target files
-should be built.  Multi\-configuration generators (VS, Xcode) append a
-per\-configuration subdirectory to the specified directory.
-.sp
-There are three kinds of target files that may be built: archive,
-library, and runtime.  Executables are always treated as runtime
-targets.  Static libraries are always treated as archive targets.
-Module libraries are always treated as library targets.  For
-non\-DLL platforms shared libraries are treated as library
-targets.  For DLL platforms the DLL part of a shared library is
-treated as a runtime target and the corresponding import library
-is treated as an archive target.  All Windows\-based systems
-including Cygwin are DLL platforms.
+should be built.  The property value may use
+\fBgenerator expressions\fP\&.
+Multi\-configuration generators (VS, Xcode) append a per\-configuration
+subdirectory to the specified directory unless a generator expression
+is used.
 .sp
 This property is initialized by the value of the variable
 CMAKE_ARCHIVE_OUTPUT_DIRECTORY if it is set when a target is created.
+.sp
+See also the \fBARCHIVE_OUTPUT_DIRECTORY_<CONFIG>\fP target property.
 .SS ARCHIVE_OUTPUT_NAME_<CONFIG>
 .sp
-Per\-configuration output name for ARCHIVE target files.
+Per\-configuration output name for
+ARCHIVE target files.
 .sp
-This is the configuration\-specific version of ARCHIVE_OUTPUT_NAME.
+This is the configuration\-specific version of the
+\fBARCHIVE_OUTPUT_NAME\fP target property.
 .SS ARCHIVE_OUTPUT_NAME
 .sp
 Output name for ARCHIVE target files.
 .sp
 This property specifies the base name for archive target files.  It
-overrides OUTPUT_NAME and OUTPUT_NAME_<CONFIG> properties.
+overrides \fBOUTPUT_NAME\fP and \fBOUTPUT_NAME_<CONFIG>\fP
+properties.
 .sp
-There are three kinds of target files that may be built: archive,
-library, and runtime.  Executables are always treated as runtime
-targets.  Static libraries are always treated as archive targets.
-Module libraries are always treated as library targets.  For
-non\-DLL platforms shared libraries are treated as library
-targets.  For DLL platforms the DLL part of a shared library is
-treated as a runtime target and the corresponding import library
-is treated as an archive target.  All Windows\-based systems
-including Cygwin are DLL platforms.
+See also the \fBARCHIVE_OUTPUT_NAME_<CONFIG>\fP target property.
 .SS AUTOGEN_TARGET_DEPENDS
 .sp
 Target dependencies of the corresponding \fB_automoc\fP target.
@@ -817,6 +1208,11 @@ set on the \fB\&.qrc\fP source file.
 .sp
 See the \fBcmake\-qt(7)\fP manual for more information on using CMake
 with Qt.
+.SS BINARY_DIR
+.sp
+This read\-only property reports the value of the
+\fBCMAKE_CURRENT_BINARY_DIR\fP variable in the directory in which
+the target was defined.
 .SS BUILD_WITH_INSTALL_RPATH
 .sp
 Should build tree targets have install tree rpaths.
@@ -841,6 +1237,74 @@ If a module library target has this property set to true it will be
 built as a CFBundle when built on the mac.  It will have the directory
 structure required for a CFBundle and will be suitable to be used for
 creating Browser Plugins or other application resources.
+.SS C_EXTENSIONS
+.sp
+Boolean specifying whether compiler specific extensions are requested.
+.sp
+This property specifies whether compiler specific extensions should be
+used.  For some compilers, this results in adding a flag such
+as \fB\-std=gnu11\fP instead of \fB\-std=c11\fP to the compile line.  This
+property is \fBON\fP by default.
+.sp
+See the \fBcmake\-compile\-features(7)\fP manual for information on
+compile features and a list of supported compilers.
+.sp
+This property is initialized by the value of
+the \fBCMAKE_C_EXTENSIONS\fP variable if it is set when a target
+is created.
+.SS C_STANDARD
+.sp
+The C standard whose features are requested to build this target.
+.sp
+This property specifies the C standard whose features are requested
+to build this target.  For some compilers, this results in adding a
+flag such as \fB\-std=gnu11\fP to the compile line.  For compilers that
+have no notion of a standard level, such as MSVC, this has no effect.
+.sp
+Supported values are \fB90\fP, \fB99\fP and \fB11\fP\&.
+.sp
+If the value requested does not result in a compile flag being added for
+the compiler in use, a previous standard flag will be added instead.  This
+means that using:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+set_property(TARGET tgt PROPERTY C_STANDARD 11)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+with a compiler which does not support \fB\-std=gnu11\fP or an equivalent
+flag will not result in an error or warning, but will instead add the
+\fB\-std=gnu99\fP or \fB\-std=gnu90\fP flag if supported.  This "decay" behavior may
+be controlled with the \fBC_STANDARD_REQUIRED\fP target property.
+.sp
+See the \fBcmake\-compile\-features(7)\fP manual for information on
+compile features and a list of supported compilers.
+.sp
+This property is initialized by the value of
+the \fBCMAKE_C_STANDARD\fP variable if it is set when a target
+is created.
+.SS C_STANDARD_REQUIRED
+.sp
+Boolean describing whether the value of \fBC_STANDARD\fP is a requirement.
+.sp
+If this property is set to \fBON\fP, then the value of the
+\fBC_STANDARD\fP target property is treated as a requirement.  If this
+property is \fBOFF\fP or unset, the \fBC_STANDARD\fP target property is
+treated as optional and may "decay" to a previous standard if the requested is
+not available.  For compilers that have no notion of a standard level, such as
+MSVC, this has no effect.
+.sp
+See the \fBcmake\-compile\-features(7)\fP manual for information on
+compile features and a list of supported compilers.
+.sp
+This property is initialized by the value of
+the \fBCMAKE_C_STANDARD_REQUIRED\fP variable if it is set when a
+target is created.
 .SS COMPATIBLE_INTERFACE_BOOL
 .sp
 Properties which must be compatible with their link interface
@@ -859,7 +1323,7 @@ property is not set, then it is ignored.
 .sp
 Note that for each dependee, the set of properties specified in this
 property must not intersect with the set specified in any of the other
-\fICompatible Interface Properties\fP\&.
+Compatible Interface Properties\&.
 .SS COMPATIBLE_INTERFACE_NUMBER_MAX
 .sp
 Properties whose maximum value from the link interface will be used.
@@ -876,7 +1340,7 @@ then it is ignored.
 .sp
 Note that for each dependee, the set of properties specified in this
 property must not intersect with the set specified in any of the other
-\fICompatible Interface Properties\fP\&.
+Compatible Interface Properties\&.
 .SS COMPATIBLE_INTERFACE_NUMBER_MIN
 .sp
 Properties whose maximum value from the link interface will be used.
@@ -893,7 +1357,7 @@ will be returned.  If the property is not set, then it is ignored.
 .sp
 Note that for each dependee, the set of properties specified in this
 property must not intersect with the set specified in any of the other
-\fICompatible Interface Properties\fP\&.
+Compatible Interface Properties\&.
 .SS COMPATIBLE_INTERFACE_STRING
 .sp
 Properties which must be string\-compatible with their link interface
@@ -908,20 +1372,7 @@ in the depender.  If the property is not set, then it is ignored.
 .sp
 Note that for each dependee, the set of properties specified in this
 property must not intersect with the set specified in any of the other
-\fICompatible Interface Properties\fP\&.
-.SS COMPILE_DEFINITIONS_<CONFIG>
-.sp
-Per\-configuration preprocessor definitions on a target.
-.sp
-This is the configuration\-specific version of \fBCOMPILE_DEFINITIONS\fP
-where \fB<CONFIG>\fP is an upper\-case name (ex. \fBCOMPILE_DEFINITIONS_DEBUG\fP).
-.sp
-Contents of \fBCOMPILE_DEFINITIONS_<CONFIG>\fP may use "generator expressions"
-with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
-manual for available expressions.  See the \fBcmake\-buildsystem(7)\fP
-manual for more on defining buildsystem properties.
-.sp
-Generator expressions should be preferred instead of setting this property.
+Compatible Interface Properties\&.
 .SS COMPILE_DEFINITIONS
 .sp
 Preprocessor definitions for compiling a target\(aqs sources.
@@ -972,6 +1423,17 @@ for more on defining buildsystem properties.
 The corresponding \fBCOMPILE_DEFINITIONS_<CONFIG>\fP property may
 be set to specify per\-configuration definitions.  Generator expressions
 should be preferred instead of setting the alternative property.
+.SS COMPILE_FEATURES
+.sp
+Compiler features enabled for this target.
+.sp
+The list of features in this property are a subset of the features listed
+in the \fBCMAKE_CXX_COMPILE_FEATURES\fP variable.
+.sp
+Contents of \fBCOMPILE_FEATURES\fP may use "generator expressions" with the
+syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP manual for
+available expressions.  See the \fBcmake\-compile\-features(7)\fP manual
+for information on compile features and a list of supported compilers.
 .SS COMPILE_FLAGS
 .sp
 Additional flags to use when compiling this target\(aqs sources.
@@ -986,23 +1448,111 @@ target_compile_options command instead.
 .sp
 List of options to pass to the compiler.
 .sp
-This property specifies the list of options specified so far for this
-property.
+This property holds a ;\-list of options
+specified so far for its target.  Use the \fBtarget_compile_options()\fP
+command to append more options.
 .sp
 This property is intialized by the \fBCOMPILE_OPTIONS\fP directory
-property, which is used by the generators to set the options for the
-compiler.
+property when a target is created, and is used by the generators to set
+the options for the compiler.
 .sp
 Contents of \fBCOMPILE_OPTIONS\fP may use "generator expressions" with the
 syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP manual
 for available expressions.  See the \fBcmake\-buildsystem(7)\fP manual
 for more on defining buildsystem properties.
+.SS COMPILE_PDB_NAME
+.sp
+Output name for the MS debug symbol \fB\&.pdb\fP file generated by the
+compiler while building source files.
+.sp
+This property specifies the base name for the debug symbols file.
+If not set, the default is unspecified.
+.sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+The compiler\-generated program database files are specified by the
+\fB/Fd\fP compiler flag and are not the same as linker\-generated
+program database files specified by the \fB/pdb\fP linker flag.
+Use the \fBPDB_NAME\fP property to specify the latter.
+.sp
+This property is not implemented by the \fBVisual Studio 6\fP
+generator.
+.UNINDENT
+.UNINDENT
+.SS COMPILE_PDB_NAME_<CONFIG>
+.sp
+Per\-configuration output name for the MS debug symbol \fB\&.pdb\fP file
+generated by the compiler while building source files.
+.sp
+This is the configuration\-specific version of \fBCOMPILE_PDB_NAME\fP\&.
+.sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+The compiler\-generated program database files are specified by the
+\fB/Fd\fP compiler flag and are not the same as linker\-generated
+program database files specified by the \fB/pdb\fP linker flag.
+Use the \fBPDB_NAME_<CONFIG>\fP property to specify the latter.
+.sp
+This property is not implemented by the \fBVisual Studio 6\fP
+generator.
+.UNINDENT
+.UNINDENT
+.SS COMPILE_PDB_OUTPUT_DIRECTORY
+.sp
+Output directory for the MS debug symbol \fB\&.pdb\fP file
+generated by the compiler while building source files.
+.sp
+This property specifies the directory into which the MS debug symbols
+will be placed by the compiler.  This property is initialized by the
+value of the \fBCMAKE_COMPILE_PDB_OUTPUT_DIRECTORY\fP variable
+if it is set when a target is created.
+.sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+The compiler\-generated program database files are specified by the
+\fB/Fd\fP compiler flag and are not the same as linker\-generated
+program database files specified by the \fB/pdb\fP linker flag.
+Use the \fBPDB_OUTPUT_DIRECTORY\fP property to specify the latter.
+.sp
+This property is not implemented by the \fBVisual Studio 6\fP
+generator.
+.UNINDENT
+.UNINDENT
+.SS COMPILE_PDB_OUTPUT_DIRECTORY_<CONFIG>
+.sp
+Per\-configuration output directory for the MS debug symbol \fB\&.pdb\fP file
+generated by the compiler while building source files.
+.sp
+This is a per\-configuration version of
+\fBCOMPILE_PDB_OUTPUT_DIRECTORY\fP,
+but multi\-configuration generators (VS, Xcode) do NOT append a
+per\-configuration subdirectory to the specified directory.  This
+property is initialized by the value of the
+\fBCMAKE_COMPILE_PDB_OUTPUT_DIRECTORY_<CONFIG>\fP variable
+if it is set when a target is created.
+.sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+The compiler\-generated program database files are specified by the
+\fB/Fd\fP compiler flag and are not the same as linker\-generated
+program database files specified by the \fB/pdb\fP linker flag.
+Use the \fBPDB_OUTPUT_DIRECTORY_<CONFIG>\fP property to specify the latter.
+.sp
+This property is not implemented by the \fBVisual Studio 6\fP
+generator.
+.UNINDENT
+.UNINDENT
 .SS <CONFIG>_OUTPUT_NAME
 .sp
 Old per\-configuration target file base name.
+Use \fBOUTPUT_NAME_<CONFIG>\fP instead.
 .sp
-This is a configuration\-specific version of OUTPUT_NAME.  Use
-OUTPUT_NAME_<CONFIG> instead.
+This is a configuration\-specific version of the \fBOUTPUT_NAME\fP
+target property.
 .SS <CONFIG>_POSTFIX
 .sp
 Postfix to append to the target file name for configuration <CONFIG>.
@@ -1012,6 +1562,79 @@ is appended to the target file name built on disk.  For non\-executable
 targets, this property is initialized by the value of the variable
 CMAKE_<CONFIG>_POSTFIX if it is set when a target is created.  This
 property is ignored on the Mac for Frameworks and App Bundles.
+.SS CROSSCOMPILING_EMULATOR
+.sp
+Use the given emulator to run executables created when crosscompiling.  This
+command will be added as a prefix to \fBadd_test()\fP test commands for
+built target system executables.
+.SS CXX_EXTENSIONS
+.sp
+Boolean specifying whether compiler specific extensions are requested.
+.sp
+This property specifies whether compiler specific extensions should be
+used.  For some compilers, this results in adding a flag such
+as \fB\-std=gnu++11\fP instead of \fB\-std=c++11\fP to the compile line.  This
+property is \fBON\fP by default.
+.sp
+See the \fBcmake\-compile\-features(7)\fP manual for information on
+compile features and a list of supported compilers.
+.sp
+This property is initialized by the value of
+the \fBCMAKE_CXX_EXTENSIONS\fP variable if it is set when a target
+is created.
+.SS CXX_STANDARD
+.sp
+The C++ standard whose features are requested to build this target.
+.sp
+This property specifies the C++ standard whose features are requested
+to build this target.  For some compilers, this results in adding a
+flag such as \fB\-std=gnu++11\fP to the compile line.  For compilers that
+have no notion of a standard level, such as MSVC, this has no effect.
+.sp
+Supported values are \fB98\fP, \fB11\fP and \fB14\fP\&.
+.sp
+If the value requested does not result in a compile flag being added for
+the compiler in use, a previous standard flag will be added instead.  This
+means that using:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+set_property(TARGET tgt PROPERTY CXX_STANDARD 11)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+with a compiler which does not support \fB\-std=gnu++11\fP or an equivalent
+flag will not result in an error or warning, but will instead add the
+\fB\-std=gnu++98\fP flag if supported.  This "decay" behavior may be controlled
+with the \fBCXX_STANDARD_REQUIRED\fP target property.
+.sp
+See the \fBcmake\-compile\-features(7)\fP manual for information on
+compile features and a list of supported compilers.
+.sp
+This property is initialized by the value of
+the \fBCMAKE_CXX_STANDARD\fP variable if it is set when a target
+is created.
+.SS CXX_STANDARD_REQUIRED
+.sp
+Boolean describing whether the value of \fBCXX_STANDARD\fP is a requirement.
+.sp
+If this property is set to \fBON\fP, then the value of the
+\fBCXX_STANDARD\fP target property is treated as a requirement.  If this
+property is \fBOFF\fP or unset, the \fBCXX_STANDARD\fP target property is
+treated as optional and may "decay" to a previous standard if the requested is
+not available.  For compilers that have no notion of a standard level, such as
+MSVC, this has no effect.
+.sp
+See the \fBcmake\-compile\-features(7)\fP manual for information on
+compile features and a list of supported compilers.
+.sp
+This property is initialized by the value of
+the \fBCMAKE_CXX_STANDARD_REQUIRED\fP variable if it is set when a
+target is created.
 .SS DEBUG_POSTFIX
 .sp
 See target property <CONFIG>_POSTFIX.
@@ -1042,7 +1665,7 @@ Normally an executable does not export any symbols because it is the
 final program.  It is possible for an executable to export symbols to
 be used by loadable modules.  When this property is set to true CMake
 will allow other targets to "link" to the executable with the
-TARGET_LINK_LIBRARIES command.  On all platforms a target\-level
+\fBTARGET_LINK_LIBRARIES()\fP command.  On all platforms a target\-level
 dependency on the executable is created for targets that link to it.
 For DLL platforms an import library will be created for the exported
 symbols and then used for linking.  All Windows\-based systems
@@ -1052,6 +1675,9 @@ module will "link" to the executable using a flag like
 "\-bundle_loader".  For other non\-DLL platforms the link rule is simply
 ignored since the dynamic loader will automatically bind symbols when
 the module is loaded.
+.sp
+This property is initialized by the value of the variable
+\fBCMAKE_ENABLE_EXPORTS\fP if it is set when a target is created.
 .SS EXCLUDE_FROM_ALL
 .sp
 Exclude the target from the all target.
@@ -1125,7 +1751,13 @@ This target is a framework on the Mac.
 If a shared library target has this property set to true it will be
 built as a framework when built on the mac.  It will have the
 directory structure required for a framework and will be suitable to
-be used with the \-framework option
+be used with the \fB\-framework\fP option
+.sp
+See also the \fBFRAMEWORK_VERSION\fP target property.
+.SS FRAMEWORK_VERSION
+.sp
+Version of a framework created using the \fBFRAMEWORK\fP target
+property (e.g. \fBA\fP).
 .SS GENERATOR_FILE_NAME
 .sp
 Generator\(aqs file for this target.
@@ -1443,50 +2075,75 @@ This property supports generator expressions.  See the
 \fBcmake\-generator\-expressions(7)\fP manual for available expressions.
 .SS INTERFACE_COMPILE_DEFINITIONS
 .sp
-List of public compile definitions for a library.
+List of public compile definitions requirements for a library.
 .sp
 Targets may populate this property to publish the compile definitions
-required to compile against the headers for the target.  Consuming
-targets can add entries to their own \fBCOMPILE_DEFINITIONS\fP
-property such as \fB$<TARGET_PROPERTY:foo,INTERFACE_COMPILE_DEFINITIONS>\fP
-to use the compile definitions specified in the interface of \fBfoo\fP\&.
+required to compile against the headers for the target.  The \fBtarget_compile_definitions()\fP
+command populates this property with values given to the \fBPUBLIC\fP and
+\fBINTERFACE\fP keywords.  Projects may also get and set the property directly.
+.sp
+When target dependencies are specified using \fBtarget_link_libraries()\fP,
+CMake will read this property from all target dependencies to determine the
+build properties of the consumer.
 .sp
 Contents of \fBINTERFACE_COMPILE_DEFINITIONS\fP may use "generator expressions"
 with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
 manual for available expressions.  See the \fBcmake\-buildsystem(7)\fP
-manual for more on defining buildsystem properties.
+\-manual for more on defining buildsystem properties.
+.SS INTERFACE_COMPILE_FEATURES
+.sp
+List of public compile features requirements for a library.
+.sp
+Targets may populate this property to publish the compile features
+required to compile against the headers for the target.  The \fBtarget_compile_features()\fP
+command populates this property with values given to the \fBPUBLIC\fP and
+\fBINTERFACE\fP keywords.  Projects may also get and set the property directly.
+.sp
+When target dependencies are specified using \fBtarget_link_libraries()\fP,
+CMake will read this property from all target dependencies to determine the
+build properties of the consumer.
+.sp
+Contents of \fBINTERFACE_COMPILE_FEATURES\fP may use "generator expressions"
+with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
+manual for available expressions.  See the \fBcmake\-buildsystem(7)\fP
+\-manual for more on defining buildsystem properties.
+.sp
+See the \fBcmake\-compile\-features(7)\fP manual for information on compile
+features and a list of supported compilers.
 .SS INTERFACE_COMPILE_OPTIONS
 .sp
-List of interface options to pass to the compiler.
+List of public compile options requirements for a library.
 .sp
 Targets may populate this property to publish the compile options
-required to compile against the headers for the target.  Consuming
-targets can add entries to their own \fBCOMPILE_OPTIONS\fP property
-such as \fB$<TARGET_PROPERTY:foo,INTERFACE_COMPILE_OPTIONS>\fP to use the
-compile options specified in the interface of \fBfoo\fP\&.
+required to compile against the headers for the target.  The \fBtarget_compile_options()\fP
+command populates this property with values given to the \fBPUBLIC\fP and
+\fBINTERFACE\fP keywords.  Projects may also get and set the property directly.
+.sp
+When target dependencies are specified using \fBtarget_link_libraries()\fP,
+CMake will read this property from all target dependencies to determine the
+build properties of the consumer.
 .sp
 Contents of \fBINTERFACE_COMPILE_OPTIONS\fP may use "generator expressions"
 with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
 manual for available expressions.  See the \fBcmake\-buildsystem(7)\fP
-manual for more on defining buildsystem properties.
+\-manual for more on defining buildsystem properties.
 .SS INTERFACE_INCLUDE_DIRECTORIES
 .sp
-List of public include directories for a library.
-.sp
-The \fBtarget_include_directories()\fP command populates this property
-with values given to the \fBPUBLIC\fP and \fBINTERFACE\fP keywords.  Projects
-may also get and set the property directly.
+List of public include directories requirements for a library.
 .sp
 Targets may populate this property to publish the include directories
-required to compile against the headers for the target.  Consuming
-targets can add entries to their own \fBINCLUDE_DIRECTORIES\fP
-property such as \fB$<TARGET_PROPERTY:foo,INTERFACE_INCLUDE_DIRECTORIES>\fP
-to use the include directories specified in the interface of \fBfoo\fP\&.
+required to compile against the headers for the target.  The \fBtarget_include_directories()\fP
+command populates this property with values given to the \fBPUBLIC\fP and
+\fBINTERFACE\fP keywords.  Projects may also get and set the property directly.
+.sp
+When target dependencies are specified using \fBtarget_link_libraries()\fP,
+CMake will read this property from all target dependencies to determine the
+build properties of the consumer.
 .sp
 Contents of \fBINTERFACE_INCLUDE_DIRECTORIES\fP may use "generator expressions"
 with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
 manual for available expressions.  See the \fBcmake\-buildsystem(7)\fP
-manual for more on defining buildsystem properties.
+\-manual for more on defining buildsystem properties.
 .sp
 Include directories usage requirements commonly differ between the build\-tree
 and the install\-tree.  The \fBBUILD_INTERFACE\fP and \fBINSTALL_INTERFACE\fP
@@ -1499,20 +2156,40 @@ installation prefix.  For example:
 .sp
 .nf
 .ft C
-set_property(TARGET mylib APPEND PROPERTY INTERFACE_INCLUDE_DIRECTORIES
+target_include_directories(mylib INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/mylib>
   $<INSTALL_INTERFACE:include/mylib>  # <prefix>/include/mylib
-  )
+)
 .ft P
 .fi
 .UNINDENT
 .UNINDENT
+.SS Creating Relocatable Packages
+.sp
+Note that it is not advisable to populate the \fBINSTALL_INTERFACE\fP of the
+\fBINTERFACE_INCLUDE_DIRECTORIES\fP of a target with absolute paths to the include
+directories of dependencies.  That would hard\-code into installed packages
+the include directory paths for dependencies
+\fBas found on the machine the package was made on\fP\&.
+.sp
+The \fBINSTALL_INTERFACE\fP of the \fBINTERFACE_INCLUDE_DIRECTORIES\fP is only
+suitable for specifying the required include directories for headers
+provided with the target itself, not those provided by the transitive
+dependencies listed in its \fBINTERFACE_LINK_LIBRARIES\fP target
+property.  Those dependencies should themselves be targets that specify
+their own header locations in \fBINTERFACE_INCLUDE_DIRECTORIES\fP\&.
+.sp
+See the Creating Relocatable Packages section of the
+\fBcmake\-packages(7)\fP manual for discussion of additional care
+that must be taken when specifying usage requirements while creating
+packages for redistribution.
 .SS INTERFACE_LINK_LIBRARIES
 .sp
 List public interface libraries for a library.
 .sp
 This property contains the list of transitive link dependencies.  When
-the target is linked into another target the libraries listed (and
+the target is linked into another target using the
+\fBtarget_link_libraries()\fP command, the libraries listed (and
 recursively their link interface libraries) will be provided to the
 other target also.  This property is overridden by the
 \fBLINK_INTERFACE_LIBRARIES\fP or
@@ -1523,6 +2200,17 @@ Contents of \fBINTERFACE_LINK_LIBRARIES\fP may use "generator expressions"
 with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
 manual for available expressions.  See the \fBcmake\-buildsystem(7)\fP
 manual for more on defining buildsystem properties.
+.SS Creating Relocatable Packages
+.sp
+Note that it is not advisable to populate the
+\fBINTERFACE_LINK_LIBRARIES\fP of a target with absolute paths to dependencies.
+That would hard\-code into installed packages the library file paths
+for dependencies \fBas found on the machine the package was made on\fP\&.
+.sp
+See the Creating Relocatable Packages section of the
+\fBcmake\-packages(7)\fP manual for discussion of additional care
+that must be taken when specifying usage requirements while creating
+packages for redistribution.
 .SS INTERFACE_POSITION_INDEPENDENT_CODE
 .sp
 Whether consumers need to create a position\-independent target
@@ -1538,14 +2226,44 @@ undefined, then consumers will determine their
 \fBPOSITION_INDEPENDENT_CODE\fP property by other means.  Consumers
 must ensure that the targets that they link to have a consistent
 requirement for their \fBINTERFACE_POSITION_INDEPENDENT_CODE\fP property.
+.SS INTERFACE_SOURCES
+.sp
+List of interface sources to compile into consuming targets.
+.sp
+Targets may populate this property to publish the sources
+for consuming targets to compile.  The \fBtarget_sources()\fP command
+populates this property with values given to the \fBPUBLIC\fP and
+\fBINTERFACE\fP keywords.  Projects may also get and set the property directly.
+.sp
+When target dependencies are specified using \fBtarget_link_libraries()\fP,
+CMake will read this property from all target dependencies to determine the
+sources of the consumer.
+.sp
+Contents of \fBINTERFACE_SOURCES\fP may use "generator expressions"
+with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
+manual for available expressions.  See the \fBcmake\-buildsystem(7)\fP
+manual for more on defining buildsystem properties.
 .SS INTERFACE_SYSTEM_INCLUDE_DIRECTORIES
 .sp
 List of public system include directories for a library.
 .sp
 Targets may populate this property to publish the include directories
 which contain system headers, and therefore should not result in
-compiler warnings.  Consuming targets will then mark the same include
-directories as system headers.
+compiler warnings.  The \fBtarget_include_directories(SYSTEM)\fP
+command signature populates this property with values given to the
+\fBPUBLIC\fP and \fBINTERFACE\fP keywords.
+.sp
+Projects may also get and set the property directly, but must be aware that
+adding directories to this property does not make those directories used
+during compilation.  Adding directories to this property marks directories
+as \fBSYSTEM\fP which otherwise would be used in a non\-\fBSYSTEM\fP manner.  This
+can appear similar to \(aqduplication\(aq, so prefer the
+high\-level \fBtarget_include_directories(SYSTEM)\fP command and avoid
+setting the property by low\-level means.
+.sp
+When target dependencies are specified using \fBtarget_link_libraries()\fP,
+CMake will read this property from all target dependencies to mark the
+same include directories as containing system headers.
 .sp
 Contents of \fBINTERFACE_SYSTEM_INCLUDE_DIRECTORIES\fP may use "generator
 expressions" with the syntax \fB$<...>\fP\&.  See the
@@ -1613,66 +2331,88 @@ This property is initialized by the value of \fBCMAKE_JOB_POOL_LINK\fP\&.
 Specify a list of text labels associated with a target.
 .sp
 Target label semantics are currently unspecified.
+.SS <LANG>_COMPILER_LAUNCHER
+.sp
+This property is implemented only when \fB<LANG>\fP is \fBC\fP or \fBCXX\fP\&.
+.sp
+Specify a ;\-list containing a command line
+for a compiler launching tool. The Makefile Generators and the
+\fBNinja\fP generator will run this tool and pass the compiler and
+its arguments to the tool. Some example tools are distcc and ccache.
+.sp
+This property is initialized by the value of
+the \fBCMAKE_<LANG>_COMPILER_LAUNCHER\fP variable if it is set
+when a target is created.
+.SS <LANG>_INCLUDE_WHAT_YOU_USE
+.sp
+This property is implemented only when \fB<LANG>\fP is \fBC\fP or \fBCXX\fP\&.
+.sp
+Specify a ;\-list containing a command
+line for the \fBinclude\-what\-you\-use\fP tool.  The Makefile Generators
+and the \fBNinja\fP generator will run this tool along with the
+compiler and report a warning if the tool reports any problems.
+.sp
+This property is initialized by the value of
+the \fBCMAKE_<LANG>_INCLUDE_WHAT_YOU_USE\fP variable if it is set
+when a target is created.
 .SS <LANG>_VISIBILITY_PRESET
 .sp
 Value for symbol visibility compile flags
 .sp
-The <LANG>_VISIBILITY_PRESET property determines the value passed in a
-visibility related compile option, such as \-fvisibility= for <LANG>.
-This property only has an affect for libraries and executables with
-exports.  This property is initialized by the value of the variable
-CMAKE_<LANG>_VISIBILITY_PRESET if it is set when a target is created.
+The \fB<LANG>_VISIBILITY_PRESET\fP property determines the value passed in a
+visibility related compile option, such as \fB\-fvisibility=\fP for \fB<LANG>\fP\&.
+This property affects compilation in sources of all types of targets
+(subject to policy \fBCMP0063\fP).
+.sp
+This property is initialized by the value of the
+\fBCMAKE_<LANG>_VISIBILITY_PRESET\fP variable if it is set when a
+target is created.
 .SS LIBRARY_OUTPUT_DIRECTORY_<CONFIG>
 .sp
-Per\-configuration output directory for LIBRARY target files.
+Per\-configuration output directory for
+LIBRARY target files.
 .sp
-This is a per\-configuration version of LIBRARY_OUTPUT_DIRECTORY, but
+This is a per\-configuration version of the
+\fBLIBRARY_OUTPUT_DIRECTORY\fP target property, but
 multi\-configuration generators (VS, Xcode) do NOT append a
 per\-configuration subdirectory to the specified directory.  This
-property is initialized by the value of the variable
-CMAKE_LIBRARY_OUTPUT_DIRECTORY_<CONFIG> if it is set when a target is
-created.
+property is initialized by the value of the
+\fBCMAKE_LIBRARY_OUTPUT_DIRECTORY_<CONFIG>\fP variable if
+it is set when a target is created.
+.sp
+Contents of \fBLIBRARY_OUTPUT_DIRECTORY_<CONFIG>\fP may use
+\fBgenerator expressions\fP\&.
 .SS LIBRARY_OUTPUT_DIRECTORY
 .sp
 Output directory in which to build LIBRARY target files.
 .sp
 This property specifies the directory into which library target files
-should be built.  Multi\-configuration generators (VS, Xcode) append a
-per\-configuration subdirectory to the specified directory.
-.sp
-There are three kinds of target files that may be built: archive,
-library, and runtime.  Executables are always treated as runtime
-targets.  Static libraries are always treated as archive targets.
-Module libraries are always treated as library targets.  For
-non\-DLL platforms shared libraries are treated as library
-targets.  For DLL platforms the DLL part of a shared library is
-treated as a runtime target and the corresponding import library
-is treated as an archive target.  All Windows\-based systems
-including Cygwin are DLL platforms.
+should be built.  The property value may use
+\fBgenerator expressions\fP\&.
+Multi\-configuration generators (VS, Xcode) append a per\-configuration
+subdirectory to the specified directory unless a generator expression
+is used.
 .sp
 This property is initialized by the value of the variable
 CMAKE_LIBRARY_OUTPUT_DIRECTORY if it is set when a target is created.
+.sp
+See also the \fBLIBRARY_OUTPUT_DIRECTORY_<CONFIG>\fP target property.
 .SS LIBRARY_OUTPUT_NAME_<CONFIG>
 .sp
-Per\-configuration output name for LIBRARY target files.
+Per\-configuration output name for
+LIBRARY target files.
 .sp
-This is the configuration\-specific version of LIBRARY_OUTPUT_NAME.
+This is the configuration\-specific version of the
+\fBLIBRARY_OUTPUT_NAME\fP target property.
 .SS LIBRARY_OUTPUT_NAME
 .sp
 Output name for LIBRARY target files.
 .sp
 This property specifies the base name for library target files.  It
-overrides OUTPUT_NAME and OUTPUT_NAME_<CONFIG> properties.
+overrides \fBOUTPUT_NAME\fP and \fBOUTPUT_NAME_<CONFIG>\fP
+properties.
 .sp
-There are three kinds of target files that may be built: archive,
-library, and runtime.  Executables are always treated as runtime
-targets.  Static libraries are always treated as archive targets.
-Module libraries are always treated as library targets.  For
-non\-DLL platforms shared libraries are treated as library
-targets.  For DLL platforms the DLL part of a shared library is
-treated as a runtime target and the corresponding import library
-is treated as an archive target.  All Windows\-based systems
-including Cygwin are DLL platforms.
+See also the \fBLIBRARY_OUTPUT_NAME_<CONFIG>\fP target property.
 .SS LINK_DEPENDS_NO_SHARED
 .sp
 Do not depend on linked shared library files.
@@ -1727,34 +2467,60 @@ step of a target.  LINK_FLAGS_<CONFIG> will add to the configuration
 Per\-configuration list of public interface libraries for a target.
 .sp
 This is the configuration\-specific version of
-LINK_INTERFACE_LIBRARIES.  If set, this property completely overrides
-the generic property for the named configuration.
+\fBLINK_INTERFACE_LIBRARIES\fP\&.  If set, this property completely
+overrides the generic property for the named configuration.
 .sp
-This property is overridden by the INTERFACE_LINK_LIBRARIES property if
-policy CMP0022 is NEW.
+This property is overridden by the \fBINTERFACE_LINK_LIBRARIES\fP
+property if policy \fBCMP0022\fP is \fBNEW\fP\&.
 .sp
-This property is deprecated.  Use INTERFACE_LINK_LIBRARIES instead.
+This property is deprecated.  Use \fBINTERFACE_LINK_LIBRARIES\fP
+instead.
+.SS Creating Relocatable Packages
+.sp
+Note that it is not advisable to populate the
+\fBLINK_INTERFACE_LIBRARIES_<CONFIG>\fP of a target with absolute paths to dependencies.
+That would hard\-code into installed packages the library file paths
+for dependencies \fBas found on the machine the package was made on\fP\&.
+.sp
+See the Creating Relocatable Packages section of the
+\fBcmake\-packages(7)\fP manual for discussion of additional care
+that must be taken when specifying usage requirements while creating
+packages for redistribution.
 .SS LINK_INTERFACE_LIBRARIES
 .sp
 List public interface libraries for a shared library or executable.
 .sp
 By default linking to a shared library target transitively links to
 targets with which the library itself was linked.  For an executable
-with exports (see the ENABLE_EXPORTS property) no default transitive
-link dependencies are used.  This property replaces the default
+with exports (see the \fBENABLE_EXPORTS\fP target property) no
+default transitive link dependencies are used.  This property replaces the default
 transitive link dependencies with an explicit list.  When the target
-is linked into another target the libraries listed (and recursively
+is linked into another target using the \fBtarget_link_libraries()\fP
+command, the libraries listed (and recursively
 their link interface libraries) will be provided to the other target
 also.  If the list is empty then no transitive link dependencies will
 be incorporated when this target is linked into another target even if
 the default set is non\-empty.  This property is initialized by the
-value of the variable CMAKE_LINK_INTERFACE_LIBRARIES if it is set when
-a target is created.  This property is ignored for STATIC libraries.
+value of the \fBCMAKE_LINK_INTERFACE_LIBRARIES\fP variable if it is
+set when a target is created.  This property is ignored for \fBSTATIC\fP
+libraries.
 .sp
-This property is overridden by the INTERFACE_LINK_LIBRARIES property if
-policy CMP0022 is NEW.
+This property is overridden by the \fBINTERFACE_LINK_LIBRARIES\fP
+property if policy \fBCMP0022\fP is \fBNEW\fP\&.
 .sp
-This property is deprecated.  Use INTERFACE_LINK_LIBRARIES instead.
+This property is deprecated.  Use \fBINTERFACE_LINK_LIBRARIES\fP
+instead.
+.SS Creating Relocatable Packages
+.sp
+Note that it is not advisable to populate the
+\fBLINK_INTERFACE_LIBRARIES\fP of a target with absolute paths to dependencies.
+That would hard\-code into installed packages the library file paths
+for dependencies \fBas found on the machine the package was made on\fP\&.
+.sp
+See the Creating Relocatable Packages section of the
+\fBcmake\-packages(7)\fP manual for discussion of additional care
+that must be taken when specifying usage requirements while creating
+packages for redistribution.
 .SS LINK_INTERFACE_MULTIPLICITY_<CONFIG>
 .sp
 Per\-configuration repetition count for cycles of STATIC libraries.
@@ -1800,8 +2566,12 @@ paths are not known or (in some cases) are in implicit link
 directories for the platform.  By default CMake adds an option at the
 end of the library list (if necessary) to set the linker search type
 back to its starting type.  This property switches the final linker
-search type to \-Bstatic regardless of how it started.  See also
-LINK_SEARCH_START_STATIC.
+search type to \-Bstatic regardless of how it started.
+.sp
+This property is initialized by the value of the variable
+CMAKE_LINK_SEARCH_END_STATIC if it is set when a target is created.
+.sp
+See also LINK_SEARCH_START_STATIC.
 .SS LINK_SEARCH_START_STATIC
 .sp
 Assume the linker looks for static libraries by default.
@@ -1814,7 +2584,12 @@ directories for the platform.  By default the linker search type is
 assumed to be \-Bdynamic at the beginning of the library list.  This
 property switches the assumption to \-Bstatic.  It is intended for use
 when linking an executable statically (e.g.  with the GNU \-static
-option).  See also LINK_SEARCH_END_STATIC.
+option).
+.sp
+This property is initialized by the value of the variable
+CMAKE_LINK_SEARCH_START_STATIC if it is set when a target is created.
+.sp
+See also LINK_SEARCH_END_STATIC.
 .SS LOCATION_<CONFIG>
 .sp
 Read\-only property providing a target location on disk.
@@ -1862,37 +2637,46 @@ this rule is not diagnosed and leaves the location of the target
 undefined.
 .SS MACOSX_BUNDLE_INFO_PLIST
 .sp
-Specify a custom Info.plist template for a Mac OS X App Bundle.
+Specify a custom \fBInfo.plist\fP template for a Mac OS X App Bundle.
 .sp
-An executable target with MACOSX_BUNDLE enabled will be built as an
-application bundle on Mac OS X.  By default its Info.plist file is
-created by configuring a template called MacOSXBundleInfo.plist.in
-located in the CMAKE_MODULE_PATH.  This property specifies an
-alternative template file name which may be a full path.
+An executable target with \fBMACOSX_BUNDLE\fP enabled will be built as an
+application bundle on Mac OS X.  By default its \fBInfo.plist\fP file is created
+by configuring a template called \fBMacOSXBundleInfo.plist.in\fP located in the
+\fBCMAKE_MODULE_PATH\fP\&.  This property specifies an alternative template
+file name which may be a full path.
 .sp
 The following target properties may be set to specify content to be
 configured into the file:
 .INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-MACOSX_BUNDLE_INFO_STRING
-MACOSX_BUNDLE_ICON_FILE
-MACOSX_BUNDLE_GUI_IDENTIFIER
-MACOSX_BUNDLE_LONG_VERSION_STRING
-MACOSX_BUNDLE_BUNDLE_NAME
-MACOSX_BUNDLE_SHORT_VERSION_STRING
-MACOSX_BUNDLE_BUNDLE_VERSION
-MACOSX_BUNDLE_COPYRIGHT
-.ft P
-.fi
-.UNINDENT
+.TP
+.B \fBMACOSX_BUNDLE_BUNDLE_NAME\fP
+Sets \fBCFBundleName\fP\&.
+.TP
+.B \fBMACOSX_BUNDLE_BUNDLE_VERSION\fP
+Sets \fBCFBundleVersion\fP\&.
+.TP
+.B \fBMACOSX_BUNDLE_COPYRIGHT\fP
+Sets \fBNSHumanReadableCopyright\fP\&.
+.TP
+.B \fBMACOSX_BUNDLE_GUI_IDENTIFIER\fP
+Sets \fBCFBundleIdentifier\fP\&.
+.TP
+.B \fBMACOSX_BUNDLE_ICON_FILE\fP
+Sets \fBCFBundleIconFile\fP\&.
+.TP
+.B \fBMACOSX_BUNDLE_INFO_STRING\fP
+Sets \fBCFBundleGetInfoString\fP\&.
+.TP
+.B \fBMACOSX_BUNDLE_LONG_VERSION_STRING\fP
+Sets \fBCFBundleLongVersionString\fP\&.
+.TP
+.B \fBMACOSX_BUNDLE_SHORT_VERSION_STRING\fP
+Sets \fBCFBundleShortVersionString\fP\&.
 .UNINDENT
 .sp
 CMake variables of the same name may be set to affect all targets in a
 directory that do not have each specific property set.  If a custom
-Info.plist is specified by this property it may of course hard\-code
+\fBInfo.plist\fP is specified by this property it may of course hard\-code
 all the settings instead of using the target properties.
 .SS MACOSX_BUNDLE
 .sp
@@ -1907,33 +2691,34 @@ property is initialized by the value of the variable
 CMAKE_MACOSX_BUNDLE if it is set when a target is created.
 .SS MACOSX_FRAMEWORK_INFO_PLIST
 .sp
-Specify a custom Info.plist template for a Mac OS X Framework.
+Specify a custom \fBInfo.plist\fP template for a Mac OS X Framework.
 .sp
-A library target with FRAMEWORK enabled will be built as a framework
-on Mac OS X.  By default its Info.plist file is created by configuring
-a template called MacOSXFrameworkInfo.plist.in located in the
-CMAKE_MODULE_PATH.  This property specifies an alternative template
+A library target with \fBFRAMEWORK\fP enabled will be built as a
+framework on Mac OS X.  By default its \fBInfo.plist\fP file is created by
+configuring a template called \fBMacOSXFrameworkInfo.plist.in\fP located in the
+\fBCMAKE_MODULE_PATH\fP\&.  This property specifies an alternative template
 file name which may be a full path.
 .sp
 The following target properties may be set to specify content to be
 configured into the file:
 .INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-MACOSX_FRAMEWORK_ICON_FILE
-MACOSX_FRAMEWORK_IDENTIFIER
-MACOSX_FRAMEWORK_SHORT_VERSION_STRING
-MACOSX_FRAMEWORK_BUNDLE_VERSION
-.ft P
-.fi
-.UNINDENT
+.TP
+.B \fBMACOSX_FRAMEWORK_BUNDLE_VERSION\fP
+Sets \fBCFBundleVersion\fP\&.
+.TP
+.B \fBMACOSX_FRAMEWORK_ICON_FILE\fP
+Sets \fBCFBundleIconFile\fP\&.
+.TP
+.B \fBMACOSX_FRAMEWORK_IDENTIFIER\fP
+Sets \fBCFBundleIdentifier\fP\&.
+.TP
+.B \fBMACOSX_FRAMEWORK_SHORT_VERSION_STRING\fP
+Sets \fBCFBundleShortVersionString\fP\&.
 .UNINDENT
 .sp
 CMake variables of the same name may be set to affect all targets in a
 directory that do not have each specific property set.  If a custom
-Info.plist is specified by this property it may of course hard\-code
+\fBInfo.plist\fP is specified by this property it may of course hard\-code
 all the settings instead of using the target properties.
 .SS MACOSX_RPATH
 .sp
@@ -1977,11 +2762,11 @@ Logical name for the target.
 Read\-only logical name for the target as used by CMake.
 .SS NO_SONAME
 .sp
-Whether to set "soname" when linking a shared library or module.
+Whether to set "soname" when linking a shared library.
 .sp
-Enable this boolean property if a generated shared library or module
+Enable this boolean property if a generated shared library
 should not have "soname" set.  Default is to set "soname" on all
-shared libraries and modules as long as the platform supports it.
+shared libraries as long as the platform supports it.
 Generally, use this property only for leaf private libraries or
 plugins.  If you use it on normal shared libraries which other targets
 link against, on some platforms a linker will insert a full path to
@@ -2018,7 +2803,8 @@ upper\-case name (e.g. \fBOSX_ARCHITECTURES_DEBUG\fP).
 .sp
 Per\-configuration target file base name.
 .sp
-This is the configuration\-specific version of OUTPUT_NAME.
+This is the configuration\-specific version of the \fBOUTPUT_NAME\fP
+target property.
 .SS OUTPUT_NAME
 .sp
 Output name for target files.
@@ -2026,22 +2812,33 @@ Output name for target files.
 This sets the base name for output files created for an executable or
 library target.  If not set, the logical target name is used by
 default.
+.sp
+Contents of \fBOUTPUT_NAME\fP and the variants listed below may use
+\fBgenerator expressions\fP\&.
+.sp
+See also the variants:
+.INDENT 0.0
+.IP \(bu 2
+\fBOUTPUT_NAME_<CONFIG>\fP
+.IP \(bu 2
+\fBARCHIVE_OUTPUT_NAME_<CONFIG>\fP
+.IP \(bu 2
+\fBARCHIVE_OUTPUT_NAME\fP
+.IP \(bu 2
+\fBLIBRARY_OUTPUT_NAME_<CONFIG>\fP
+.IP \(bu 2
+\fBLIBRARY_OUTPUT_NAME\fP
+.IP \(bu 2
+\fBRUNTIME_OUTPUT_NAME_<CONFIG>\fP
+.IP \(bu 2
+\fBRUNTIME_OUTPUT_NAME\fP
+.UNINDENT
 .SS PDB_NAME_<CONFIG>
 .sp
 Per\-configuration output name for the MS debug symbol \fB\&.pdb\fP file
 generated by the linker for an executable or shared library target.
 .sp
 This is the configuration\-specific version of \fBPDB_NAME\fP\&.
-.sp
-This property is not implemented by the \fBVisual Studio 6\fP
-generator.
-.SS PDB_NAME
-.sp
-Output name for the MS debug symbol \fB\&.pdb\fP file generated by the
-linker for an executable or shared library target.
-.sp
-This property specifies the base name for the debug symbols file.
-If not set, the logical target name is used by default.
 .sp
 \fBNOTE:\fP
 .INDENT 0.0
@@ -2050,14 +2847,40 @@ This property does not apply to STATIC library targets because no linker
 is invoked to produce them so they have no linker\-generated \fB\&.pdb\fP file
 containing debug symbols.
 .sp
-The compiler\-generated program database files specified by the MSVC
-\fB/Fd\fP flag are not the same as linker\-generated program database
-files and so are not influenced by this property.
-.UNINDENT
-.UNINDENT
+The linker\-generated program database files are specified by the
+\fB/pdb\fP linker flag and are not the same as compiler\-generated
+program database files specified by the \fB/Fd\fP compiler flag.
+Use the \fBCOMPILE_PDB_NAME_<CONFIG>\fP property to specify the latter.
 .sp
 This property is not implemented by the \fBVisual Studio 6\fP
 generator.
+.UNINDENT
+.UNINDENT
+.SS PDB_NAME
+.sp
+Output name for the MS debug symbol \fB\&.pdb\fP file generated by the
+linker for an executable or shared library target.
+.sp
+This property specifies the base name for the debug symbols file.
+If not set, the \fBOUTPUT_NAME\fP target property value or
+logical target name is used by default.
+.sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+This property does not apply to STATIC library targets because no linker
+is invoked to produce them so they have no linker\-generated \fB\&.pdb\fP file
+containing debug symbols.
+.sp
+The linker\-generated program database files are specified by the
+\fB/pdb\fP linker flag and are not the same as compiler\-generated
+program database files specified by the \fB/Fd\fP compiler flag.
+Use the \fBCOMPILE_PDB_NAME\fP property to specify the latter.
+.sp
+This property is not implemented by the \fBVisual Studio 6\fP
+generator.
+.UNINDENT
+.UNINDENT
 .SS PDB_OUTPUT_DIRECTORY_<CONFIG>
 .sp
 Per\-configuration output directory for the MS debug symbol \fB\&.pdb\fP file
@@ -2070,8 +2893,22 @@ property is initialized by the value of the
 \fBCMAKE_PDB_OUTPUT_DIRECTORY_<CONFIG>\fP variable if it is
 set when a target is created.
 .sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+This property does not apply to STATIC library targets because no linker
+is invoked to produce them so they have no linker\-generated \fB\&.pdb\fP file
+containing debug symbols.
+.sp
+The linker\-generated program database files are specified by the
+\fB/pdb\fP linker flag and are not the same as compiler\-generated
+program database files specified by the \fB/Fd\fP compiler flag.
+Use the \fBCOMPILE_PDB_OUTPUT_DIRECTORY_<CONFIG>\fP property to specify the latter.
+.sp
 This property is not implemented by the \fBVisual Studio 6\fP
 generator.
+.UNINDENT
+.UNINDENT
 .SS PDB_OUTPUT_DIRECTORY
 .sp
 Output directory for the MS debug symbols \fB\&.pdb\fP file
@@ -2089,14 +2926,15 @@ This property does not apply to STATIC library targets because no linker
 is invoked to produce them so they have no linker\-generated \fB\&.pdb\fP file
 containing debug symbols.
 .sp
-The compiler\-generated program database files specified by the MSVC
-\fB/Fd\fP flag are not the same as linker\-generated program database
-files and so are not influenced by this property.
-.UNINDENT
-.UNINDENT
+The linker\-generated program database files are specified by the
+\fB/pdb\fP linker flag and are not the same as compiler\-generated
+program database files specified by the \fB/Fd\fP compiler flag.
+Use the \fBCOMPILE_PDB_OUTPUT_DIRECTORY\fP property to specify the latter.
 .sp
 This property is not implemented by the \fBVisual Studio 6\fP
 generator.
+.UNINDENT
+.UNINDENT
 .SS POSITION_INDEPENDENT_CODE
 .sp
 Whether to create a position\-independent target
@@ -2107,28 +2945,12 @@ property is \fBTrue\fP by default for \fBSHARED\fP and \fBMODULE\fP library
 targets and \fBFalse\fP otherwise.  This property is initialized by the value
 of the \fBCMAKE_POSITION_INDEPENDENT_CODE\fP variable  if it is set
 when a target is created.
-.SS POST_INSTALL_SCRIPT
-.sp
-Deprecated install support.
-.sp
-The PRE_INSTALL_SCRIPT and POST_INSTALL_SCRIPT properties are the old
-way to specify CMake scripts to run before and after installing a
-target.  They are used only when the old INSTALL_TARGETS command is
-used to install the target.  Use the INSTALL command instead.
 .SS PREFIX
 .sp
 What comes before the library name.
 .sp
 A target property that can be set to override the prefix (such as
 "lib") on a library name.
-.SS PRE_INSTALL_SCRIPT
-.sp
-Deprecated install support.
-.sp
-The PRE_INSTALL_SCRIPT and POST_INSTALL_SCRIPT properties are the old
-way to specify CMake scripts to run before and after installing a
-target.  They are used only when the old INSTALL_TARGETS command is
-used to install the target.  Use the INSTALL command instead.
 .SS PRIVATE_HEADER
 .sp
 Specify private header files in a FRAMEWORK shared library target.
@@ -2185,55 +3007,50 @@ See the global property of the same name for details.  This overrides
 the global and directory property for a target.
 .SS RUNTIME_OUTPUT_DIRECTORY_<CONFIG>
 .sp
-Per\-configuration output directory for RUNTIME target files.
+Per\-configuration output directory for
+RUNTIME target files.
 .sp
-This is a per\-configuration version of RUNTIME_OUTPUT_DIRECTORY, but
+This is a per\-configuration version of the
+\fBRUNTIME_OUTPUT_DIRECTORY\fP target property, but
 multi\-configuration generators (VS, Xcode) do NOT append a
 per\-configuration subdirectory to the specified directory.  This
-property is initialized by the value of the variable
-CMAKE_RUNTIME_OUTPUT_DIRECTORY_<CONFIG> if it is set when a target is
-created.
+property is initialized by the value of the
+\fBCMAKE_RUNTIME_OUTPUT_DIRECTORY_<CONFIG>\fP variable if
+it is set when a target is created.
+.sp
+Contents of \fBRUNTIME_OUTPUT_DIRECTORY_<CONFIG>\fP may use
+\fBgenerator expressions\fP\&.
 .SS RUNTIME_OUTPUT_DIRECTORY
 .sp
 Output directory in which to build RUNTIME target files.
 .sp
 This property specifies the directory into which runtime target files
-should be built.  Multi\-configuration generators (VS, Xcode) append a
-per\-configuration subdirectory to the specified directory.
-.sp
-There are three kinds of target files that may be built: archive,
-library, and runtime.  Executables are always treated as runtime
-targets.  Static libraries are always treated as archive targets.
-Module libraries are always treated as library targets.  For
-non\-DLL platforms shared libraries are treated as library
-targets.  For DLL platforms the DLL part of a shared library is
-treated as a runtime target and the corresponding import library
-is treated as an archive target.  All Windows\-based systems
-including Cygwin are DLL platforms.
+should be built.  The property value may use
+\fBgenerator expressions\fP\&.
+Multi\-configuration generators (VS, Xcode) append a per\-configuration
+subdirectory to the specified directory unless a generator expression
+is used.
 .sp
 This property is initialized by the value of the variable
 CMAKE_RUNTIME_OUTPUT_DIRECTORY if it is set when a target is created.
+.sp
+See also the \fBRUNTIME_OUTPUT_DIRECTORY_<CONFIG>\fP target property.
 .SS RUNTIME_OUTPUT_NAME_<CONFIG>
 .sp
-Per\-configuration output name for RUNTIME target files.
+Per\-configuration output name for
+RUNTIME target files.
 .sp
-This is the configuration\-specific version of RUNTIME_OUTPUT_NAME.
+This is the configuration\-specific version of the
+\fBRUNTIME_OUTPUT_NAME\fP target property.
 .SS RUNTIME_OUTPUT_NAME
 .sp
 Output name for RUNTIME target files.
 .sp
 This property specifies the base name for runtime target files.  It
-overrides OUTPUT_NAME and OUTPUT_NAME_<CONFIG> properties.
+overrides \fBOUTPUT_NAME\fP and \fBOUTPUT_NAME_<CONFIG>\fP
+properties.
 .sp
-There are three kinds of target files that may be built: archive,
-library, and runtime.  Executables are always treated as runtime
-targets.  Static libraries are always treated as archive targets.
-Module libraries are always treated as library targets.  For
-non\-DLL platforms shared libraries are treated as library
-targets.  For DLL platforms the DLL part of a shared library is
-treated as a runtime target and the corresponding import library
-is treated as an archive target.  All Windows\-based systems
-including Cygwin are DLL platforms.
+See also the \fBRUNTIME_OUTPUT_NAME_<CONFIG>\fP target property.
 .SS SKIP_BUILD_RPATH
 .sp
 Should rpaths be used for the build tree.
@@ -2242,12 +3059,16 @@ SKIP_BUILD_RPATH is a boolean specifying whether to skip automatic
 generation of an rpath allowing the target to run from the build tree.
 This property is initialized by the value of the variable
 CMAKE_SKIP_BUILD_RPATH if it is set when a target is created.
+.SS SOURCE_DIR
+.sp
+This read\-only property reports the value of the
+\fBCMAKE_CURRENT_SOURCE_DIR\fP variable in the directory in which
+the target was defined.
 .SS SOURCES
 .sp
 Source names specified for a target.
 .sp
-Read\-only list of sources specified for a target.  The names returned
-are suitable for passing to the set_source_files_properties command.
+List of sources specified for a target.
 .SS SOVERSION
 .sp
 What version number is this target.
@@ -2283,7 +3104,8 @@ The type of the target.
 .sp
 This read\-only property can be used to test the type of the given
 target.  It will be one of STATIC_LIBRARY, MODULE_LIBRARY,
-SHARED_LIBRARY, EXECUTABLE or one of the internal target types.
+SHARED_LIBRARY, INTERFACE_LIBRARY, EXECUTABLE or one of the internal
+target types.
 .SS VERSION
 .sp
 What version number is this target.
@@ -2303,12 +3125,23 @@ binary.
 .sp
 Whether to add a compile flag to hide symbols of inline functions
 .sp
-The VISIBILITY_INLINES_HIDDEN property determines whether a flag for
-hiding symbols for inline functions, such as \-fvisibility\-inlines\-hidden,
-should be used when invoking the compiler.  This property only has an affect
-for libraries and executables with exports.  This property is initialized by
-the value of the \fBCMAKE_VISIBILITY_INLINES_HIDDEN\fP if it is set
-when a target is created.
+The \fBVISIBILITY_INLINES_HIDDEN\fP property determines whether a flag for
+hiding symbols for inline functions, such as \fB\-fvisibility\-inlines\-hidden\fP,
+should be used when invoking the compiler.  This property affects compilation
+in sources of all types of targets (subject to policy \fBCMP0063\fP).
+.sp
+This property is initialized by
+the value of the \fBCMAKE_VISIBILITY_INLINES_HIDDEN\fP variable if it
+is set when a target is created.
+.SS VS_DESKTOP_EXTENSIONS_VERSION
+.sp
+Visual Studio Windows 10 Desktop Extensions Version
+.sp
+Specifies the version of the Desktop Extensions that should be included in the
+target. For example \fB10.0.10240.0\fP\&. If the value is not specified, the Desktop
+Extensions will not be included. To use the same version of the extensions as
+the Windows 10 SDK that is being used, you can use the
+\fBCMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION\fP variable.
 .SS VS_DOTNET_REFERENCES
 .sp
 Visual Studio managed project .NET references
@@ -2367,6 +3200,20 @@ Tell the Visual Studio generator to set the global variable
 Ignored on other generators.  Qt integration works better if
 VS_GLOBAL_QtVersion is set to the version FindQt4.cmake found.  For
 example, "4.7.3"
+.SS VS_IOT_EXTENSIONS_VERSION
+.sp
+Visual Studio Windows 10 IoT Extensions Version
+.sp
+Specifies the version of the IoT Extensions that should be included in the
+target. For example \fB10.0.10240.0\fP\&. If the value is not specified, the IoT
+Extensions will not be included. To use the same version of the extensions as
+the Windows 10 SDK that is being used, you can use the
+\fBCMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION\fP variable.
+.SS VS_IOT_STARTUP_TASK
+.sp
+Visual Studio Windows 10 IoT Continuous Background Task
+.sp
+Specifies that the target should be compiled as a Continuous Background Task library.
 .SS VS_KEYWORD
 .sp
 Visual Studio project keyword for VS 9 (2008) and older.
@@ -2376,6 +3223,15 @@ integration works better if this is set to Qt4VSv1.0.
 .sp
 Use the \fBVS_GLOBAL_KEYWORD\fP target property to set the
 keyword for Visual Studio 10 (2010) and newer.
+.SS VS_MOBILE_EXTENSIONS_VERSION
+.sp
+Visual Studio Windows 10 Mobile Extensions Version
+.sp
+Specifies the version of the Mobile Extensions that should be included in the
+target. For example \fB10.0.10240.0\fP\&. If the value is not specified, the Mobile
+Extensions will not be included. To use the same version of the extensions as
+the Windows 10 SDK that is being used, you can use the
+\fBCMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION\fP variable.
 .SS VS_SCC_AUXPATH
 .sp
 Visual Studio Source Code Control Aux Path.
@@ -2400,11 +3256,33 @@ Visual Studio Source Code Control Provider.
 .sp
 Can be set to change the visual studio source code control provider
 property.
+.SS VS_WINDOWS_TARGET_PLATFORM_MIN_VERSION
+.sp
+Visual Studio Windows Target Platform Minimum Version
+.sp
+For Windows 10. Specifies the minimum version of the OS that is being
+targeted. For example \fB10.0.10240.0\fP\&. If the value is not specified, the
+value of \fBCMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION\fP will be used on
+WindowsStore projects otherwise the target platform minimum version will not
+be specified for the project.
+.SS VS_WINRT_COMPONENT
+.sp
+Mark a target as a Windows Runtime component for the Visual Studio generator.
+Compile the target with \fBC++/CX\fP language extensions for Windows Runtime.
+For \fBSHARED\fP and \fBMODULE\fP libraries, this also defines the
+\fB_WINRT_DLL\fP preprocessor macro.
+.sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+Currently this is implemented only by Visual Studio generators.
+Support may be added to other generators in the future.
+.UNINDENT
+.UNINDENT
 .SS VS_WINRT_EXTENSIONS
 .sp
-Visual Studio project C++/CX language extensions for Windows Runtime
-.sp
-Can be set to enable C++/CX language extensions.
+Deprecated.  Use \fBVS_WINRT_COMPONENT\fP instead.
+This property was an experimental partial implementation of that one.
 .SS VS_WINRT_REFERENCES
 .sp
 Visual Studio project Windows Runtime Metadata references
@@ -2422,12 +3300,50 @@ application.  See the CMAKE_MFC_FLAG variable documentation to
 configure use of MFC for WinMain executables.  This property is
 initialized by the value of the variable CMAKE_WIN32_EXECUTABLE if it
 is set when a target is created.
+.SS WINDOWS_EXPORT_ALL_SYMBOLS
+.sp
+This property is implemented only for MS\-compatible tools on Windows.
+.sp
+Enable this boolean property to automatically create a module definition
+(\fB\&.def\fP) file with all global symbols found in the input \fB\&.obj\fP files
+for a \fBSHARED\fP library on Windows.  The module definition file will be
+passed to the linker causing all symbols to be exported from the \fB\&.dll\fP\&.
+For global \fIdata\fP symbols, \fB__declspec(dllimport)\fP must still be used when
+compiling against the code in the \fB\&.dll\fP\&.  All other function symbols will
+be automatically exported and imported by callers.  This simplifies porting
+projects to Windows by reducing the need for explicit \fBdllexport\fP markup,
+even in \fBC++\fP classes.
+.sp
+This property is initialized by the value of
+the \fBCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS\fP variable if it is set
+when a target is created.
 .SS XCODE_ATTRIBUTE_<an\-attribute>
 .sp
 Set Xcode target attributes directly.
 .sp
 Tell the Xcode generator to set \(aq<an\-attribute>\(aq to a given value in
 the generated Xcode project.  Ignored on other generators.
+.sp
+See the \fBCMAKE_XCODE_ATTRIBUTE_<an\-attribute>\fP variable
+to set attributes on all targets in a directory tree.
+.sp
+Contents of \fBXCODE_ATTRIBUTE_<an\-attribute>\fP may use
+"generator expressions" with the syntax \fB$<...>\fP\&.  See the
+\fBcmake\-generator\-expressions(7)\fP manual for available
+expressions.  See the \fBcmake\-buildsystem(7)\fP manual
+for more on defining buildsystem properties.
+.SS XCTEST
+.sp
+This target is a XCTest CFBundle on the Mac.
+.sp
+This property will usually get set via the \fBxctest_add_bundle()\fP
+macro in \fBFindXCTest\fP module.
+.sp
+If a module library target has this property set to true it will be
+built as a CFBundle when built on the Mac.  It will have the directory
+structure required for a CFBundle.
+.sp
+This property depends on \fBBUNDLE\fP to be effective.
 .SH PROPERTIES ON TESTS
 .SS ATTACHED_FILES_ON_FAIL
 .sp
@@ -2465,8 +3381,21 @@ test is done.
 If the output matches this regular expression the test will fail.
 .sp
 If set, if the output matches one of specified regular expressions,
-the test will fail.For example: FAIL_REGULAR_EXPRESSION
-"[^a\-z]Error;ERROR;Failed"
+the test will fail.  Example:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+set_tests_properties(mytest PROPERTIES
+  FAIL_REGULAR_EXPRESSION "[^a\-z]Error;ERROR;Failed"
+)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+\fBFAIL_REGULAR_EXPRESSION\fP expects a list of regular expressions.
 .SS LABELS
 .sp
 Specify a list of text labels associated with a test.
@@ -2485,7 +3414,21 @@ The output must match this regular expression for the test to pass.
 .sp
 If set, the test output will be checked against the specified regular
 expressions and at least one of the regular expressions has to match,
-otherwise the test will fail.
+otherwise the test will fail.  Example:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+set_tests_properties(mytest PROPERTIES
+  PASS_REGULAR_EXPRESSION "TestPassed;All ok"
+)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+\fBPASS_REGULAR_EXPRESSION\fP expects a list of regular expressions.
 .SS PROCESSORS
 .sp
 How many process slots this test requires
@@ -2527,7 +3470,7 @@ How many seconds to allow for this test.
 This property if set will limit a test to not take more than the
 specified number of seconds to run.  If it exceeds that the test
 process will be killed and ctest will move to the next test.  This
-setting takes precedence over CTEST_TESTING_TIMEOUT.
+setting takes precedence over \fBCTEST_TEST_TIMEOUT\fP\&.
 .SS WILL_FAIL
 .sp
 If set to true, this will invert the pass/fail flag of the test.
@@ -2556,7 +3499,7 @@ Additional options for \fBuic\fP when using \fBAUTOUIC\fP
 This property holds additional command line options
 which will be used when \fBuic\fP is executed during the build via \fBAUTOUIC\fP,
 i.e. it is equivalent to the optional \fBOPTIONS\fP argument of the
-\fBqt4_wrap_ui()<FindQt4>\fP macro.
+\fBqt4_wrap_ui()\fP macro.
 .sp
 By default it is empty.
 .sp
@@ -2574,13 +3517,6 @@ By default it is empty.
 .sp
 The options set on the \fB\&.qrc\fP source file may override \fBAUTORCC_OPTIONS\fP set
 on the target.
-.SS COMPILE_DEFINITIONS_<CONFIG>
-.sp
-Per\-configuration preprocessor definitions on a source file.
-.sp
-This is the configuration\-specific version of COMPILE_DEFINITIONS.
-Note that Xcode does not support per\-configuration source file flags
-so this property will be ignored by the Xcode generator.
 .SS COMPILE_DEFINITIONS
 .sp
 Preprocessor definitions for compiling a source file.
@@ -2714,9 +3650,12 @@ directories.
 .sp
 Additional files on which a compiled object file depends.
 .sp
-Specifies a semicolon\-separated list of full\-paths to files on which
-any object files compiled from this source file depend.  An object
-file will be recompiled if any of the named files is newer than it.
+Specifies a ;\-list of full\-paths to
+files on which any object files compiled from this source file depend.
+On Makefile Generators and the \fBNinja\fP generator an
+object file will be recompiled if any of the named files is newer than it.
+Visual Studio Generators and the \fBXcode\fP generator
+cannot implement such compilation dependencies.
 .sp
 This property need not be used to specify the dependency of a source
 file on a generated header file that it includes.  Although the
@@ -2725,8 +3664,8 @@ necessary.  If the generated header file is created by a custom
 command in the same target as the source file, the automatic
 dependency scanning process will recognize the dependency.  If the
 generated header file is created by another target, an inter\-target
-dependency should be created with the add_dependencies command (if one
-does not already exist due to linking relationships).
+dependency should be created with the \fBadd_dependencies()\fP
+command (if one does not already exist due to linking relationships).
 .SS OBJECT_OUTPUTS
 .sp
 Additional outputs for a Makefile rule.
@@ -2742,6 +3681,42 @@ Is this just a name for a rule.
 If SYMBOLIC (boolean) is set to true the build system will be informed
 that the source file is not actually created on disk but instead used
 as a symbolic name for a build rule.
+.SS VS_DEPLOYMENT_CONTENT
+.sp
+Mark a source file as content for deployment with a Windows Phone or
+Windows Store application when built with a Visual Studio generator.
+The value must evaluate to either \fB1\fP or \fB0\fP and may use
+\fBgenerator expressions\fP
+to make the choice based on the build configuration.
+The \fB\&.vcxproj\fP file entry for the source file will be
+marked either \fBDeploymentContent\fP or \fBExcludedFromBuild\fP
+for values \fB1\fP and \fB0\fP, respectively.
+.SS VS_DEPLOYMENT_LOCATION
+.sp
+Specifies the deployment location for a content source file with a Windows
+Phone or Windows Store application when built with a Visual Studio generator.
+This property is only applicable when using \fBVS_DEPLOYMENT_CONTENT\fP\&.
+The value represent the path relative to the app package and applies to all
+configurations.
+.SS VS_SHADER_ENTRYPOINT
+.sp
+Specifies the name of the entry point for the shader of a \fB\&.hlsl\fP source
+file.
+.SS VS_SHADER_FLAGS
+.sp
+Set additional VS shader flags of a \fB\&.hlsl\fP source file.
+.SS VS_SHADER_MODEL
+.sp
+Specifies the shader model of a \fB\&.hlsl\fP source file. Some shader types can
+only be used with recent shader models
+.SS VS_SHADER_TYPE
+.sp
+Set the VS shader type of a \fB\&.hlsl\fP source file.
+.SS VS_XAML_TYPE
+.sp
+Mark a XAML source file as a different type than the default \fBPage\fP\&.
+The most common usage would be to set the default App.xaml file as
+ApplicationDefinition.
 .SS WRAP_EXCLUDE
 .sp
 Exclude this source file from any code wrapping techniques.
@@ -2751,6 +3726,21 @@ provide additional functionality.  For example, C++ code can be
 wrapped into Java or Python etc using SWIG etc.  If WRAP_EXCLUDE is
 set to true (1 etc) that indicates that this source file should not be
 wrapped.
+.SS XCODE_EXPLICIT_FILE_TYPE
+.sp
+Set the Xcode \fBexplicitFileType\fP attribute on its reference to a
+source file.  CMake computes a default based on file extension but
+can be told explicitly with this property.
+.sp
+See also \fBXCODE_LAST_KNOWN_FILE_TYPE\fP\&.
+.SS XCODE_LAST_KNOWN_FILE_TYPE
+.sp
+Set the Xcode \fBlastKnownFileType\fP attribute on its reference to a
+source file.  CMake computes a default based on file extension but
+can be told explicitly with this property.
+.sp
+See also \fBXCODE_EXPLICIT_FILE_TYPE\fP, which is preferred
+over this property if set.
 .SH PROPERTIES ON CACHE ENTRIES
 .SS ADVANCED
 .sp
@@ -2811,7 +3801,129 @@ Value of a cache entry.
 .sp
 This property maps to the actual value of a cache entry.  Setting this
 property always sets the value without checking, so use with care.
+.SH PROPERTIES ON INSTALLED FILES
+.SS CPACK_DESKTOP_SHORTCUTS
+.sp
+Species a list of shortcut names that should be created on the Desktop
+for this file.
+.sp
+The property is currently only supported by the WIX generator.
+.SS CPACK_NEVER_OVERWRITE
+.sp
+Request that this file not be overwritten on install or reinstall.
+.sp
+The property is currently only supported by the WIX generator.
+.SS CPACK_PERMANENT
+.sp
+Request that this file not be removed on uninstall.
+.sp
+The property is currently only supported by the WIX generator.
+.SS CPACK_START_MENU_SHORTCUTS
+.sp
+Species a list of shortcut names that should be created in the Start Menu
+for this file.
+.sp
+The property is currently only supported by the WIX generator.
+.SS CPACK_STARTUP_SHORTCUTS
+.sp
+Species a list of shortcut names that should be created in the Startup folder
+for this file.
+.sp
+The property is currently only supported by the WIX generator.
+.SS CPACK_WIX_ACL
+.sp
+Specifies access permissions for files or directories
+installed by a WiX installer.
+.sp
+The property can contain multiple list entries,
+each of which has to match the following format.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+<user>[@<domain>]=<permission>[,<permission>]
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+\fB<user>\fP and \fB<domain>\fP specify the windows user and domain for which the
+\fB<Permission>\fP element should be generated.
+.sp
+\fB<permission>\fP is any of the YesNoType attributes listed here:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+http://wixtoolset.org/documentation/manual/v3/xsd/wix/permission.html
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH DEPRECATED PROPERTIES ON DIRECTORIES
+.SS COMPILE_DEFINITIONS_<CONFIG>
+.sp
+Ignored.  See CMake Policy \fBCMP0043\fP\&.
+.sp
+Per\-configuration preprocessor definitions in a directory.
+.sp
+This is the configuration\-specific version of \fBCOMPILE_DEFINITIONS\fP
+where \fB<CONFIG>\fP is an upper\-case name (ex. \fBCOMPILE_DEFINITIONS_DEBUG\fP).
+.sp
+This property will be initialized in each directory by its value in
+the directory\(aqs parent.
+.sp
+Contents of \fBCOMPILE_DEFINITIONS_<CONFIG>\fP may use "generator expressions"
+with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
+manual for available expressions.  See the \fBcmake\-buildsystem(7)\fP
+manual for more on defining buildsystem properties.
+.sp
+Generator expressions should be preferred instead of setting this property.
+.SH DEPRECATED PROPERTIES ON TARGETS
+.SS COMPILE_DEFINITIONS_<CONFIG>
+.sp
+Ignored.  See CMake Policy \fBCMP0043\fP\&.
+.sp
+Per\-configuration preprocessor definitions on a target.
+.sp
+This is the configuration\-specific version of \fBCOMPILE_DEFINITIONS\fP
+where \fB<CONFIG>\fP is an upper\-case name (ex. \fBCOMPILE_DEFINITIONS_DEBUG\fP).
+.sp
+Contents of \fBCOMPILE_DEFINITIONS_<CONFIG>\fP may use "generator expressions"
+with the syntax \fB$<...>\fP\&.  See the \fBcmake\-generator\-expressions(7)\fP
+manual for available expressions.  See the \fBcmake\-buildsystem(7)\fP
+manual for more on defining buildsystem properties.
+.sp
+Generator expressions should be preferred instead of setting this property.
+.SS POST_INSTALL_SCRIPT
+.sp
+Deprecated install support.
+.sp
+The PRE_INSTALL_SCRIPT and POST_INSTALL_SCRIPT properties are the old
+way to specify CMake scripts to run before and after installing a
+target.  They are used only when the old INSTALL_TARGETS command is
+used to install the target.  Use the INSTALL command instead.
+.SS PRE_INSTALL_SCRIPT
+.sp
+Deprecated install support.
+.sp
+The PRE_INSTALL_SCRIPT and POST_INSTALL_SCRIPT properties are the old
+way to specify CMake scripts to run before and after installing a
+target.  They are used only when the old INSTALL_TARGETS command is
+used to install the target.  Use the INSTALL command instead.
+.SH DEPRECATED PROPERTIES ON SOURCE FILES
+.SS COMPILE_DEFINITIONS_<CONFIG>
+.sp
+Ignored.  See CMake Policy \fBCMP0043\fP\&.
+.sp
+Per\-configuration preprocessor definitions on a source file.
+.sp
+This is the configuration\-specific version of COMPILE_DEFINITIONS.
+Note that Xcode does not support per\-configuration source file flags
+so this property will be ignored by the Xcode generator.
 .SH COPYRIGHT
-2000-2014 Kitware, Inc.
+2000-2015 Kitware, Inc.
 .\" Generated by docutils manpage writer.
 .

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CMAKE-PACKAGES" "7" "July 31, 2014" "3.0.1" "CMake"
+.TH "CMAKE-PACKAGES" "7" "November 12, 2015" "3.4.0" "CMake"
 .SH NAME
 cmake-packages \- CMake Packages Reference
 .
@@ -380,7 +380,8 @@ add_library(ClimbingStats SHARED climbingstats.cpp)
 generate_export_header(ClimbingStats)
 set_property(TARGET ClimbingStats PROPERTY VERSION ${Upstream_VERSION})
 set_property(TARGET ClimbingStats PROPERTY SOVERSION 3)
-set_property(TARGET ClimbingStats PROPERTY INTERFACE_ClimbingStats_MAJOR_VERSION 3)
+set_property(TARGET ClimbingStats PROPERTY
+  INTERFACE_ClimbingStats_MAJOR_VERSION 3)
 set_property(TARGET ClimbingStats APPEND PROPERTY
   COMPATIBLE_INTERFACE_STRING ClimbingStats_MAJOR_VERSION
 )
@@ -414,7 +415,7 @@ export(EXPORT ClimbingStatsTargets
 )
 configure_file(cmake/ClimbingStatsConfig.cmake
   "${CMAKE_CURRENT_BINARY_DIR}/ClimbingStats/ClimbingStatsConfig.cmake"
-  COPY_ONLY
+  COPYONLY
 )
 
 set(ConfigPackageLocation lib/cmake/ClimbingStats)
@@ -460,7 +461,7 @@ to define their usage requirements, such as
 \fBINTERFACE_COMPILE_DEFINITIONS\fP and other relevant built\-in
 \fBINTERFACE_\fP properties.  The \fBINTERFACE\fP variant of user\-defined
 properties listed in \fBCOMPATIBLE_INTERFACE_STRING\fP and
-other \fICompatible Interface Properties\fP are also propagated to the
+other Compatible Interface Properties are also propagated to the
 generated \fBIMPORTED\fP targets.  In the above case,
 \fBClimbingStats_MAJOR_VERSION\fP is defined as a string which must be
 compatible among the dependencies of any depender.  By setting this custom
@@ -482,6 +483,7 @@ was specified.  This causes the \fBIMPORTED\fP targets to have their
 directory in the \fBCMAKE_INSTALL_PREFIX\fP\&.  When the \fBIMPORTED\fP
 target is used by downsteam, it automatically consumes the entries from
 that property.
+.SS Creating a Package Configuration File
 .sp
 In this case, the \fBClimbingStatsConfig.cmake\fP file could be as simple as:
 .INDENT 0.0
@@ -499,56 +501,6 @@ As this allows downstreams to use the \fBIMPORTED\fP targets.  If any macros
 should be provided by the \fBClimbingStats\fP package, they should
 be in a separate file which is installed to the same location as the
 \fBClimbingStatsConfig.cmake\fP file, and included from there.
-.sp
-Packages created by \fBinstall(EXPORT)\fP are designed to be relocatable,
-using paths relative to the location of the package itself.  When defining
-the interface of a target for \fBEXPORT\fP, keep in mind that the include
-directories should be specified as relative paths which are relative to the
-\fBCMAKE_INSTALL_PREFIX\fP:
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-target_include_directories(tgt INTERFACE
-  # Wrong, not relocatable:
-  $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include/TgtName>
-)
-
-target_include_directories(tgt INTERFACE
-  # Ok, relocatable:
-  $<INSTALL_INTERFACE:include/TgtName>
-)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
-.sp
-The \fB$<INSTALL_PREFIX>\fP
-\fBgenerator expression\fP may be used as
-a placeholder for the install prefix without resulting in a non\-relocatable
-package.  This is necessary if complex generator expressions are used:
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-target_include_directories(tgt INTERFACE
-  # Ok, relocatable:
-  $<INSTALL_INTERFACE:$<$<CONFIG:Debug>:$<INSTALL_PREFIX>/include/TgtName>>
-)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
-.sp
-The \fBexport(EXPORT)\fP command creates an \fBIMPORTED\fP targets
-definition file which is specific to the build\-tree, and is not relocatable.
-This can similiarly be used with a suitable package configuration file and
-package version file to define a package for the build tree which may be used
-without installation.  Consumers of the build tree can simply ensure that the
-\fBCMAKE_PREFIX_PATH\fP contains the build directory, or set the
-\fBClimbingStats_DIR\fP to \fB<build_dir>/ClimbingStats\fP in the cache.
 .sp
 This can also be extended to cover dependencies:
 .INDENT 0.0
@@ -613,7 +565,7 @@ set(_supported_components Plot Table)
 foreach(_comp ${ClimbingStats_FIND_COMPONENTS})
   if (NOT ";${_supported_components};" MATCHES _comp)
     set(ClimbingStats_FOUND False)
-    set(ClimbingStats_NOTFOUND_MESSAGE "Specified unsupported component: ${_comp}")
+    set(ClimbingStats_NOTFOUND_MESSAGE "Unsupported component: ${_comp}")
   endif()
   include("${CMAKE_CURRENT_LIST_DIR}/ClimbingStats${_comp}Targets.cmake")
 endforeach()
@@ -626,6 +578,131 @@ Here, the \fBClimbingStats_NOTFOUND_MESSAGE\fP is set to a diagnosis that the pa
 could not be found because an invalid component was specified.  This message
 variable can be set for any case where the \fB_FOUND\fP variable is set to \fBFalse\fP,
 and will be displayed to the user.
+.SS Creating a Package Configuration File for the Build Tree
+.sp
+The \fBexport(EXPORT)\fP command creates an \fBIMPORTED\fP targets
+definition file which is specific to the build\-tree, and is not relocatable.
+This can similiarly be used with a suitable package configuration file and
+package version file to define a package for the build tree which may be used
+without installation.  Consumers of the build tree can simply ensure that the
+\fBCMAKE_PREFIX_PATH\fP contains the build directory, or set the
+\fBClimbingStats_DIR\fP to \fB<build_dir>/ClimbingStats\fP in the cache.
+.SS Creating Relocatable Packages
+.sp
+A relocatable package must not reference absolute paths of files on
+the machine where the package is built that will not exist on the
+machines where the package may be installed.
+.sp
+Packages created by \fBinstall(EXPORT)\fP are designed to be relocatable,
+using paths relative to the location of the package itself.  When defining
+the interface of a target for \fBEXPORT\fP, keep in mind that the include
+directories should be specified as relative paths which are relative to the
+\fBCMAKE_INSTALL_PREFIX\fP:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+target_include_directories(tgt INTERFACE
+  # Wrong, not relocatable:
+  $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include/TgtName>
+)
+
+target_include_directories(tgt INTERFACE
+  # Ok, relocatable:
+  $<INSTALL_INTERFACE:include/TgtName>
+)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The \fB$<INSTALL_PREFIX>\fP
+\fBgenerator expression\fP may be used as
+a placeholder for the install prefix without resulting in a non\-relocatable
+package.  This is necessary if complex generator expressions are used:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+target_include_directories(tgt INTERFACE
+  # Ok, relocatable:
+  $<INSTALL_INTERFACE:$<$<CONFIG:Debug>:$<INSTALL_PREFIX>/include/TgtName>>
+)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+This also applies to paths referencing external dependencies.
+It is not advisable to populate any properties which may contain
+paths, such as \fBINTERFACE_INCLUDE_DIRECTORIES\fP and
+\fBINTERFACE_LINK_LIBRARIES\fP, with paths relevant to dependencies.
+For example, this code may not work well for a relocatable package:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+target_link_libraries(ClimbingStats INTERFACE
+  ${Foo_LIBRARIES} ${Bar_LIBRARIES}
+  )
+target_include_directories(ClimbingStats INTERFACE
+  "$<INSTALL_INTERFACE:${Foo_INCLUDE_DIRS};${Bar_INCLUDE_DIRS}>"
+  )
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The referenced variables may contain the absolute paths to libraries
+and include directories \fBas found on the machine the package was made on\fP\&.
+This would create a package with hard\-coded paths to dependencies and not
+suitable for relocation.
+.sp
+Ideally such dependencies should be used through their own
+IMPORTED targets that have their own
+\fBIMPORTED_LOCATION\fP and usage requirement properties
+such as \fBINTERFACE_INCLUDE_DIRECTORIES\fP populated
+appropriately.  Those imported targets may then be used with
+the \fBtarget_link_libraries()\fP command for \fBClimbingStats\fP:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+target_link_libraries(ClimbingStats INTERFACE Foo::Foo Bar::Bar)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+With this approach the package references its external dependencies
+only through the names of IMPORTED targets\&.
+When a consumer uses the installed package, the consumer will run the
+appropriate \fBfind_package()\fP commands (via the \fBfind_dependency\fP
+macro described above) to find the dependencies and populate the
+imported targets with appropriate paths on their own machine.
+.sp
+Unfortunately many \fBmodules\fP shipped with
+CMake do not yet provide IMPORTED targets
+because their development pre\-dated this approach.  This may improve
+incrementally over time.  Workarounds to create relocatable packages
+using such modules include:
+.INDENT 0.0
+.IP \(bu 2
+When building the package, specify each \fBFoo_LIBRARY\fP cache
+entry as just a library name, e.g. \fB\-DFoo_LIBRARY=foo\fP\&.  This
+tells the corresponding find module to populate the \fBFoo_LIBRARIES\fP
+with just \fBfoo\fP to ask the linker to search for the library
+instead of hard\-coding a path.
+.IP \(bu 2
+Or, after installing the package content but before creating the
+package installation binary for redistribution, manually replace
+the absolute paths with placeholders for substitution by the
+installation tool when the package is installed.
+.UNINDENT
 .SH PACKAGE REGISTRY
 .sp
 CMake provides two central locations to register packages that have
@@ -716,6 +793,25 @@ as a \fBREG_SZ\fP value, with arbitrary name, that specifies the directory
 containing the package configuration file.
 .sp
 There is no system package registry on non\-Windows platforms.
+.SS Disabling the Package Registry
+.sp
+In some cases using the Package Registries is not desirable. CMake
+allows to disable them using the following variables:
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.IP \(bu 2
+\fBCMAKE_EXPORT_NO_PACKAGE_REGISTRY\fP disables the
+\fBexport(PACKAGE)\fP command.
+.IP \(bu 2
+\fBCMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY\fP disables the
+User Package Registry in all the \fBfind_package()\fP calls.
+.IP \(bu 2
+\fBCMAKE_FIND_PACKAGE_NO_SYSTEM_PACKAGE_REGISTRY\fP disables
+the System Package Registry in all the \fBfind_package()\fP calls.
+.UNINDENT
+.UNINDENT
+.UNINDENT
 .SS Package Registry Example
 .sp
 A simple convention for naming package registry entries is to use content
@@ -789,6 +885,6 @@ existing build tree once \fBexport(PACKAGE)\fP has been invoked.
 However, if the project removes its package configuration file from the build
 tree then the entry referencing the location will be considered stale.
 .SH COPYRIGHT
-2000-2014 Kitware, Inc.
+2000-2015 Kitware, Inc.
 .\" Generated by docutils manpage writer.
 .

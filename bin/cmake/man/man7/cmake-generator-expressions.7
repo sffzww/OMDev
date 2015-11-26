@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CMAKE-GENERATOR-EXPRESSIONS" "7" "July 31, 2014" "3.0.1" "CMake"
+.TH "CMAKE-GENERATOR-EXPRESSIONS" "7" "November 12, 2015" "3.4.0" "CMake"
 .SH NAME
 cmake-generator-expressions \- CMake Generator Expressions
 .
@@ -65,13 +65,9 @@ $<$<CONFIG:Debug>:DEBUG_MODE>
 .sp
 expands to \fBDEBUG_MODE\fP when the \fBDebug\fP configuration is used, and
 otherwise expands to nothing.
+.sp
+Available logical expressions are:
 .INDENT 0.0
-.TP
-.B \fB$<0:...>\fP
-Empty string (ignores \fB\&...\fP)
-.TP
-.B \fB$<1:...>\fP
-Content of \fB\&...\fP
 .TP
 .B \fB$<BOOL:...>\fP
 \fB1\fP if the \fB\&...\fP is true, else \fB0\fP
@@ -128,6 +124,74 @@ target.
 else \fB0\fP\&.  If the policy was not set, the warning message for the policy
 will be emitted. This generator expression only works for a subset of
 policies.
+.TP
+.B \fB$<COMPILE_FEATURES:feature[,feature]...>\fP
+\fB1\fP if all of the \fBfeature\fP features are available for the \(aqhead\(aq
+target, and \fB0\fP otherwise. If this expression is used while evaluating
+the link implementation of a target and if any dependency transitively
+increases the required \fBC_STANDARD\fP or \fBCXX_STANDARD\fP
+for the \(aqhead\(aq target, an error is reported.  See the
+\fBcmake\-compile\-features(7)\fP manual for information on
+compile features and a list of supported compilers.
+.TP
+.B \fB$<COMPILE_LANGUAGE:lang>\fP
+\fB1\fP when the language used for compilation unit matches \fBlang\fP,
+otherwise \fB0\fP\&.  This expression used to specify compile options for
+source files of a particular language in a target. For example, to specify
+the use of the \fB\-fno\-exceptions\fP compile option (compiler id checks
+elided):
+.INDENT 7.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+add_executable(myapp main.cpp foo.c bar.cpp)
+target_compile_options(myapp
+  PRIVATE $<$<COMPILE_LANGUAGE:CXX>:\-fno\-exceptions>
+)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+This generator expression has limited use because it is not possible to
+use it with the Visual Studio generators.  Portable buildsystems would
+not use this expression, and would create separate libraries for each
+source file language instead:
+.INDENT 7.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+add_library(myapp_c foo.c)
+add_library(myapp_cxx foo.c)
+target_compile_options(myapp_cxx PUBLIC \-fno\-exceptions)
+add_executable(myapp main.cpp)
+target_link_libraries(myapp myapp_c myapp_cxx)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The \fBMakefile\fP and \fBNinja\fP based generators can also use this
+expression to specify compile\-language specific compile definitions
+and include directories:
+.INDENT 7.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+add_executable(myapp main.cpp foo.c bar.cpp)
+target_compile_definitions(myapp
+  PRIVATE $<$<COMPILE_LANGUAGE:CXX>:COMPILING_CXX>
+)
+target_include_directories(myapp
+  PRIVATE $<$<COMPILE_LANGUAGE:CXX>:/opt/foo/cxx_headers>
+)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .UNINDENT
 .SH INFORMATIONAL EXPRESSIONS
 .sp
@@ -162,6 +226,8 @@ $<$<VERSION_LESS:$<CXX_COMPILER_VERSION>,4.2.0>:OLD_COMPILER>
 expands to \fBOLD_COMPILER\fP if the
 \fBCMAKE_CXX_COMPILER_VERSION\fP is less
 than 4.2.0.
+.sp
+Available informational expressions are:
 .INDENT 0.0
 .TP
 .B \fB$<CONFIGURATION>\fP
@@ -171,19 +237,24 @@ Configuration name. Deprecated. Use \fBCONFIG\fP instead.
 Configuration name
 .TP
 .B \fB$<PLATFORM_ID>\fP
-The CMake\-id of the platform
+The CMake\-id of the platform.
+See also the \fBCMAKE_SYSTEM_NAME\fP variable.
 .TP
 .B \fB$<C_COMPILER_ID>\fP
 The CMake\-id of the C compiler used.
+See also the \fBCMAKE_<LANG>_COMPILER_ID\fP variable.
 .TP
 .B \fB$<CXX_COMPILER_ID>\fP
 The CMake\-id of the CXX compiler used.
+See also the \fBCMAKE_<LANG>_COMPILER_ID\fP variable.
 .TP
 .B \fB$<C_COMPILER_VERSION>\fP
 The version of the C compiler used.
+See also the \fBCMAKE_<LANG>_COMPILER_VERSION\fP variable.
 .TP
 .B \fB$<CXX_COMPILER_VERSION>\fP
 The version of the CXX compiler used.
+See also the \fBCMAKE_<LANG>_COMPILER_VERSION\fP variable.
 .TP
 .B \fB$<TARGET_FILE:tgt>\fP
 Full path to main file (.exe, .so.1.2, .a) where \fBtgt\fP is the name of a target.
@@ -212,6 +283,20 @@ Name of file with soname (.so.3).
 .B \fB$<TARGET_SONAME_FILE_DIR:tgt>\fP
 Directory of with soname (.so.3).
 .TP
+.B \fB$<TARGET_PDB_FILE:tgt>\fP
+Full path to the linker generated program database file (.pdb)
+where \fBtgt\fP is the name of a target.
+.sp
+See also the \fBPDB_NAME\fP and \fBPDB_OUTPUT_DIRECTORY\fP
+target properties and their configuration specific variants
+\fBPDB_NAME_<CONFIG>\fP and \fBPDB_OUTPUT_DIRECTORY_<CONFIG>\fP\&.
+.TP
+.B \fB$<TARGET_PDB_FILE_NAME:tgt>\fP
+Name of the linker generated program database file (.pdb).
+.TP
+.B \fB$<TARGET_PDB_FILE_DIR:tgt>\fP
+Directory of the linker generated program database file (.pdb).
+.TP
 .B \fB$<TARGET_PROPERTY:tgt,prop>\fP
 Value of the property \fBprop\fP on the target \fBtgt\fP\&.
 .sp
@@ -225,6 +310,11 @@ expression is evaluated.
 .B \fB$<INSTALL_PREFIX>\fP
 Content of the install prefix when the target is exported via
 \fBinstall(EXPORT)\fP and empty otherwise.
+.TP
+.B \fB$<COMPILE_LANGUAGE>\fP
+The compile language of source files when evaluating compile options. See
+the unary version for notes about portability of this generator
+expression.
 .UNINDENT
 .SH OUTPUT EXPRESSIONS
 .sp
@@ -251,12 +341,32 @@ property is non\-empty:
 .sp
 .nf
 .ft C
-$<$<BOOL:$<TARGET_PROPERTY:INCLUDE_DIRECTORIES>>:\-I$<JOIN:$<TARGET_PROPERTY:INCLUDE_DIRECTORIES>, \-I>>
+$<$<BOOL:${prop}>:\-I$<JOIN:${prop}, \-I>>
 .ft P
 .fi
 .UNINDENT
 .UNINDENT
+.sp
+where \fB${prop}\fP refers to a helper variable:
 .INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+set(prop "$<TARGET_PROPERTY:INCLUDE_DIRECTORIES>")
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Available output expressions are:
+.INDENT 0.0
+.TP
+.B \fB$<0:...>\fP
+Empty string (ignores \fB\&...\fP)
+.TP
+.B \fB$<1:...>\fP
+Content of \fB\&...\fP
 .TP
 .B \fB$<JOIN:list,...>\fP
 Joins the list with the content of \fB\&...\fP
@@ -275,6 +385,14 @@ Marks \fB\&...\fP as being the name of a target.  This is required if exporting
 targets to multiple dependent export sets.  The \fB\&...\fP must be a literal
 name of a target\- it may not contain generator expressions.
 .TP
+.B \fB$<LINK_ONLY:...>\fP
+Content of \fB\&...\fP except when evaluated in a link interface while
+propagating Target Usage Requirements, in which case it is the
+empty string.
+Intended for use only in an \fBINTERFACE_LINK_LIBRARIES\fP target
+property, perhaps via the \fBtarget_link_libraries()\fP command,
+to specify private link dependencies without other usage requirements.
+.TP
 .B \fB$<INSTALL_INTERFACE:...>\fP
 Content of \fB\&...\fP when the property is exported using \fBinstall(EXPORT)\fP,
 and empty otherwise.
@@ -292,8 +410,19 @@ Content of \fB\&...\fP converted to upper case.
 .TP
 .B \fB$<MAKE_C_IDENTIFIER:...>\fP
 Content of \fB\&...\fP converted to a C identifier.
+.TP
+.B \fB$<TARGET_OBJECTS:objLib>\fP
+List of objects resulting from build of \fBobjLib\fP\&. \fBobjLib\fP must be an
+object of type \fBOBJECT_LIBRARY\fP\&.  This expression may only be used in
+the sources of \fBadd_library()\fP and \fBadd_executable()\fP
+commands.
+.TP
+.B \fB$<SHELL_PATH:...>\fP
+Content of \fB\&...\fP converted to shell path style. For example, slashes are
+converted to backslashes in Windows shells and drive letters are converted
+to posix paths in MSYS shells. The \fB\&...\fP must be an absolute path.
 .UNINDENT
 .SH COPYRIGHT
-2000-2014 Kitware, Inc.
+2000-2015 Kitware, Inc.
 .\" Generated by docutils manpage writer.
 .

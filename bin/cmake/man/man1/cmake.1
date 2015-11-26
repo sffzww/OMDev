@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CMAKE" "1" "July 31, 2014" "3.0.1" "CMake"
+.TH "CMAKE" "1" "November 12, 2015" "3.4.0" "CMake"
 .SH NAME
 cmake \- CMake Command-Line Reference
 .
@@ -37,9 +37,9 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 cmake [<options>] (<path\-to\-source> | <path\-to\-existing\-build>)
-cmake [(\-D<var>=<value>)...] \-P <cmake\-script\-file>
+cmake [(\-D <var>=<value>)...] \-P <cmake\-script\-file>
 cmake \-\-build <dir> [<options>] [\-\- <build\-tool\-options>...]
-cmake \-E <command> [<options>]
+cmake \-E <command> [<options>...]
 cmake \-\-find\-package <options>...
 .ft P
 .fi
@@ -71,7 +71,7 @@ project\(aqs default values.  The given file should be a CMake script
 containing SET commands that use the CACHE option, not a
 cache\-format file.
 .TP
-.B \fB\-D <var>:<type>=<value>\fP
+.B \fB\-D <var>:<type>=<value>, \-D <var>=<value>\fP
 Create a cmake cache entry.
 .sp
 When cmake is first run in an empty build tree, it creates a
@@ -79,6 +79,17 @@ CMakeCache.txt file and populates it with customizable settings for
 the project.  This option may be used to specify a setting that
 takes priority over the project\(aqs default value.  The option may be
 repeated for as many cache entries as desired.
+.sp
+If the \fB:<type>\fP portion is given it must be one of the types
+specified by the \fBset()\fP command documentation for its
+\fBCACHE\fP signature.
+If the \fB:<type>\fP portion is omitted the entry will be created
+with no type if it does not exist with a type already.  If a
+command in the project sets the type to \fBPATH\fP or \fBFILEPATH\fP
+then the \fB<value>\fP will be converted to an absolute path.
+.sp
+This option may also be given as a single argument:
+\fB\-D<var>:<type>=<value>\fP or \fB\-D<var>=<value>\fP\&.
 .TP
 .B \fB\-U <globbing_expr>\fP
 Remove matching entries from CMake cache.
@@ -96,7 +107,7 @@ Specify a build system generator.
 CMake may support multiple native build systems on certain
 platforms.  A generator is responsible for generating a particular
 build system.  Possible generator names are specified in the
-Generators section.
+\fBcmake\-generators(7)\fP manual.
 .TP
 .B \fB\-T <toolset\-name>\fP
 Specify toolset name if supported by generator.
@@ -118,6 +129,25 @@ Xcode >= 3.0
 .sp
 See native build system documentation for allowed toolset names.
 .TP
+.B \fB\-A <platform\-name>\fP
+Specify platform name if supported by generator.
+.sp
+Some CMake generators support a platform name to be given to the
+native build system to choose a compiler or SDK.  This is supported only on
+specific generators:
+.INDENT 7.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+Visual Studio >= 8
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+See native build system documentation for allowed platform names.
+.TP
 .B \fB\-Wno\-dev\fP
 Suppress developer warnings.
 .sp
@@ -130,17 +160,8 @@ Enable developer warnings.
 Enable warnings that are meant for the author of the CMakeLists.txt
 files.
 .TP
-.B \fB\-E\fP
-CMake command mode.
-.sp
-For true platform independence, CMake provides a list of commands
-that can be used on all systems.  Run with \-E help for the usage
-information.  Commands available are: chdir, compare_files, copy,
-copy_directory, copy_if_different, echo, echo_append, environment,
-make_directory, md5sum, remove, remove_directory, rename, sleep, tar, time,
-touch, touch_nocreate.  In addition, some platform specific commands
-are available.  On Windows: delete_regv, write_regv.  On
-UNIX: create_symlink.
+.B \fB\-E <command> [<options>...]\fP
+See \fI\%Command\-Line Tool Mode\fP\&.
 .TP
 .B \fB\-L[A][H]\fP
 List non\-advanced cached variables.
@@ -226,14 +247,18 @@ time, and only when debugging.
 .B \fB\-\-debug\-output\fP
 Put cmake in a debug mode.
 .sp
-Print extra stuff during the cmake run like stack traces with
+Print extra information during the cmake run like stack traces with
 message(send_error ) calls.
 .TP
 .B \fB\-\-trace\fP
 Put cmake in trace mode.
 .sp
-Print a trace of all calls made and from where with
-message(send_error ) calls.
+Print a trace of all calls made and from where.
+.TP
+.B \fB\-\-trace\-expand\fP
+Put cmake in trace mode.
+.sp
+Like \fB\-\-trace\fP, but with variables expanded.
 .TP
 .B \fB\-\-warn\-uninitialized\fP
 Warn about uninitialized values.
@@ -395,36 +420,158 @@ The \fBcmake\-variables(7)\fP manual is printed in a
 human\-readable text format.
 The help is printed to a named <f>ile if given.
 .UNINDENT
+.SH COMMAND-LINE TOOL MODE
+.sp
+CMake provides builtin command\-line tools through the signature:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+cmake \-E <command> [<options>...]
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Run \fBcmake \-E\fP or \fBcmake \-E help\fP for a summary of commands.
+Available commands are:
+.INDENT 0.0
+.TP
+.B \fBchdir <dir> <cmd> [<arg>...]\fP
+Change the current working directory and run a command.
+.TP
+.B \fBcompare_files <file1> <file2>\fP
+Check if file1 is same as file2.
+.TP
+.B \fBcopy <file> <destination>\fP
+Copy file to destination (either file or directory).
+.TP
+.B \fBcopy_directory <source> <destination>\fP
+Copy directory \(aqsource\(aq content to directory \(aqdestination\(aq.
+.TP
+.B \fBcopy_if_different <in\-file> <out\-file>\fP
+Copy file if input has changed.
+.TP
+.B \fBecho [<string>...]\fP
+Displays arguments as text.
+.TP
+.B \fBecho_append [<string>...]\fP
+Displays arguments as text but no new line.
+.TP
+.B \fBenv [\-\-unset=NAME]... [NAME=VALUE]... COMMAND [ARG]...\fP
+Run command in a modified environment.
+.TP
+.B \fBenvironment\fP
+Display the current environment.
+.TP
+.B \fBmake_directory <dir>\fP
+Create a directory.
+.TP
+.B \fBmd5sum [<file>...]\fP
+Compute md5sum of files.
+.TP
+.B \fBremove [\-f] [<file>...]\fP
+Remove the file(s), use \fB\-f\fP to force it.
+.TP
+.B \fBremove_directory <dir>\fP
+Remove a directory and its contents.
+.TP
+.B \fBrename <oldname> <newname>\fP
+Rename a file or directory (on one volume).
+.TP
+.B \fBsleep <number>...\fP
+Sleep for given number of seconds.
+.TP
+.B \fBtar [cxt][vf][zjJ] file.tar [<options>...] [\-\-] [<file>...]\fP
+Create or extract a tar or zip archive.  Options are:
+.INDENT 7.0
+.TP
+.B \fB\-\-\fP
+Stop interpreting options and treat all remaining arguments
+as file names even if they start in \fB\-\fP\&.
+.TP
+.B \fB\-\-files\-from=<file>\fP
+Read file names from the given file, one per line.
+Blank lines are ignored.  Lines may not start in \fB\-\fP
+except for \fB\-\-add\-file=<name>\fP to add files whose
+names start in \fB\-\fP\&.
+.TP
+.B \fB\-\-mtime=<date>\fP
+Specify modification time recorded in tarball entries.
+.TP
+.B \fB\-\-format=<format>\fP
+Specify the format of the archive to be created.
+Supported formats are: \fB7zip\fP, \fBgnutar\fP, \fBpax\fP,
+\fBpaxr\fP (restricted pax, default), and \fBzip\fP\&.
+.UNINDENT
+.TP
+.B \fBtime <command> [<args>...]\fP
+Run command and return elapsed time.
+.TP
+.B \fBtouch <file>\fP
+Touch a file.
+.TP
+.B \fBtouch_nocreate <file>\fP
+Touch a file if it exists but do not create it.
+.UNINDENT
+.SS UNIX\-specific Command\-Line Tools
+.sp
+The following \fBcmake \-E\fP commands are available only on UNIX:
+.INDENT 0.0
+.TP
+.B \fBcreate_symlink <old> <new>\fP
+Create a symbolic link \fB<new>\fP naming \fB<old>\fP\&.
+.UNINDENT
+.SS Windows\-specific Command\-Line Tools
+.sp
+The following \fBcmake \-E\fP commands are available only on Windows:
+.INDENT 0.0
+.TP
+.B \fBdelete_regv <key>\fP
+Delete Windows registry value.
+.TP
+.B \fBenv_vs8_wince <sdkname>\fP
+Displays a batch file which sets the environment for the provided
+Windows CE SDK installed in VS2005.
+.TP
+.B \fBenv_vs9_wince <sdkname>\fP
+Displays a batch file which sets the environment for the provided
+Windows CE SDK installed in VS2008.
+.TP
+.B \fBwrite_regv <key> <value>\fP
+Write Windows registry value.
+.UNINDENT
 .SH SEE ALSO
 .sp
 The following resources are available to get help using CMake:
 .INDENT 0.0
 .TP
 .B Home Page
-\fI\%http://www.cmake.org\fP
+\fI\%https://cmake.org\fP
 .sp
 The primary starting point for learning about CMake.
 .TP
 .B Frequently Asked Questions
-\fI\%http://www.cmake.org/Wiki/CMake_FAQ\fP
+\fI\%https://cmake.org/Wiki/CMake_FAQ\fP
 .sp
 A Wiki is provided containing answers to frequently asked questions.
 .TP
 .B Online Documentation
-\fI\%http://www.cmake.org/HTML/Documentation.html\fP
+\fI\%https://cmake.org/documentation\fP
 .sp
 Links to available documentation may be found on this web page.
 .TP
 .B Mailing List
-\fI\%http://www.cmake.org/HTML/MailingLists.html\fP
+\fI\%https://cmake.org/mailing\-lists\fP
 .sp
 For help and discussion about using cmake, a mailing list is
 provided at \fI\%cmake@cmake.org\fP\&.  The list is member\-post\-only but one
 may sign up on the CMake web page.  Please first read the full
-documentation at \fI\%http://www.cmake.org\fP before posting questions to
+documentation at \fI\%https://cmake.org\fP before posting questions to
 the list.
 .UNINDENT
 .SH COPYRIGHT
-2000-2014 Kitware, Inc.
+2000-2015 Kitware, Inc.
 .\" Generated by docutils manpage writer.
 .
