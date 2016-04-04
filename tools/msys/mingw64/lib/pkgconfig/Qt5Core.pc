@@ -1,0 +1,15 @@
+prefix=F:/OMDev/tools/msys/mingw64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+host_bins=${prefix}/bin
+qt_config=minimal-config small-config medium-config large-config full-config debug_and_release build_all release debug c++11 c++14 c++1z shared system-zlib icu system-jpeg png system-png system-freetype system-harfbuzz build_all accessibility opengl ssl openssl dbus dbus-linked audio-backend directwrite native-gestures qpa fontconfig concurrent
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.6.0
+Libs: -L${libdir} -lQt5Core 
+Libs.private: -lole32 -luuid -lws2_32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmpr -lz -licuin -licuuc -licudt -lpcre16  
+Cflags: -I${includedir}/QtCore -I${includedir}
+

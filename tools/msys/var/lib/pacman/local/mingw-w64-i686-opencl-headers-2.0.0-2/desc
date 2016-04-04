@@ -1,0 +1,33 @@
+%NAME%
+mingw-w64-i686-opencl-headers
+
+%VERSION%
+2.0.0-2
+
+%DESC%
+OpenCL (Open Computing Language) header files (mingw-w64)
+
+%URL%
+http://www.khronos.org/registry/cl/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1437422950
+
+%INSTALLDATE%
+1438490446
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+161792
+
+%LICENSE%
+custom
+
+%VALIDATION%
+pgp
+

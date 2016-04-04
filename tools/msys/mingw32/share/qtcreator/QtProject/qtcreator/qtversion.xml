@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QtCreatorQtVersions>
+<!-- Written by sdktool , 2016-04-01T00:39:21. -->
+<qtcreator>
+ <data>
+  <variable>QtVersion.0</variable>
+  <valuemap type="QVariantMap">
+   <value type="int" key="Id">-1</value>
+   <value type="QString" key="Name">Qt  MinGW-w64 32bit (MSYS2)</value>
+   <value type="QString" key="QMakePath">F:/OMDev/tools/msys/mingw32/bin/qmake.exe</value>
+   <value type="QString" key="QtVersion.Type">Qt4ProjectManager.QtVersion.Desktop</value>
+   <value type="QString" key="autodetectionSource">SDK.qt.M2_MinGW-w64_i686</value>
+   <value type="bool" key="isAutodetected">true</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>QtVersion.1</variable>
+  <valuemap type="QVariantMap">
+   <value type="int" key="Id">-1</value>
+   <value type="QString" key="Name">Qt  MinGW-w64 64bit (MSYS2)</value>
+   <value type="QString" key="QMakePath">F:/OMDev/tools/msys/mingw64/bin/qmake.exe</value>
+   <value type="QString" key="QtVersion.Type">Qt4ProjectManager.QtVersion.Desktop</value>
+   <value type="QString" key="autodetectionSource">SDK.qt.M2_MinGW-w64_x86_64</value>
+   <value type="bool" key="isAutodetected">true</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>QtVersion.2</variable>
+  <valuemap type="QVariantMap">
+   <value type="int" key="Id">-1</value>
+   <value type="QString" key="Name">Qt  (static) MinGW-w64 32bit (MSYS2)</value>
+   <value type="QString" key="QMakePath">F:/OMDev/tools/msys/mingw32/qt5-static/bin/qmake.exe</value>
+   <value type="QString" key="QtVersion.Type">Qt4ProjectManager.QtVersion.Desktop</value>
+   <value type="QString" key="autodetectionSource">SDK.qt.M2_MinGW-w64_i686_static</value>
+   <value type="bool" key="isAutodetected">true</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>QtVersion.3</variable>
+  <valuemap type="QVariantMap">
+   <value type="int" key="Id">-1</value>
+   <value type="QString" key="Name">Qt  (static) MinGW-w64 64bit (MSYS2)</value>
+   <value type="QString" key="QMakePath">F:/OMDev/tools/msys/mingw64/qt5-static/bin/qmake.exe</value>
+   <value type="QString" key="QtVersion.Type">Qt4ProjectManager.QtVersion.Desktop</value>
+   <value type="QString" key="autodetectionSource">SDK.qt.M2_MinGW-w64_x86_64_static</value>
+   <value type="bool" key="isAutodetected">true</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>Version</variable>
+  <value type="int">1</value>
+ </data>
+</qtcreator>

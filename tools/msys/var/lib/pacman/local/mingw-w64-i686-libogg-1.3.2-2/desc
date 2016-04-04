@@ -1,0 +1,36 @@
+%NAME%
+mingw-w64-i686-libogg
+
+%VERSION%
+1.3.2-2
+
+%DESC%
+Ogg bitstream and framing library (mingw-w64)
+
+%URL%
+http://xiph.org
+
+%ARCH%
+any
+
+%BUILDDATE%
+1436270432
+
+%INSTALLDATE%
+1438572918
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+507904
+
+%REASON%
+1
+
+%LICENSE%
+BSD
+
+%VALIDATION%
+pgp
+

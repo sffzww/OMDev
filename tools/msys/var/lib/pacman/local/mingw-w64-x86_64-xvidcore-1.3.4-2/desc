@@ -1,0 +1,36 @@
+%NAME%
+mingw-w64-x86_64-xvidcore
+
+%VERSION%
+1.3.4-2
+
+%DESC%
+XviD is an open source MPEG-4 video codec (mingw-w64)
+
+%URL%
+http://www.xvid.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1436336163
+
+%INSTALLDATE%
+1438573402
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+1779712
+
+%REASON%
+1
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+pgp
+

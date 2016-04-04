@@ -1,0 +1,45 @@
+%NAME%
+mingw-w64-i686-fltk
+
+%VERSION%
+1.3.3-2
+
+%DESC%
+C++ user interface toolkit (mingw-w64)
+
+%URL%
+http://www.fltk.org
+
+%ARCH%
+any
+
+%BUILDDATE%
+1437258303
+
+%INSTALLDATE%
+1438572932
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+9041920
+
+%REASON%
+1
+
+%LICENSE%
+LGPLv2+ with exceptions
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+mingw-w64-i686-expat
+mingw-w64-i686-gcc-libs
+mingw-w64-i686-gettext
+mingw-w64-i686-libiconv
+mingw-w64-i686-libpng
+mingw-w64-i686-libjpeg-turbo
+mingw-w64-i686-zlib
+

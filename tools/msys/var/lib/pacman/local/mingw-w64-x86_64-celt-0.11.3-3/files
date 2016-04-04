@@ -1,0 +1,17 @@
+%FILES%
+mingw64/
+mingw64/bin/
+mingw64/bin/celtdec.exe
+mingw64/bin/celtenc.exe
+mingw64/bin/libcelt0-2.dll
+mingw64/include/
+mingw64/include/celt/
+mingw64/include/celt/celt.h
+mingw64/include/celt/celt_header.h
+mingw64/include/celt/celt_types.h
+mingw64/lib/
+mingw64/lib/libcelt0.a
+mingw64/lib/libcelt0.dll.a
+mingw64/lib/pkgconfig/
+mingw64/lib/pkgconfig/celt.pc
+

@@ -1,0 +1,36 @@
+%NAME%
+mingw-w64-i686-orc
+
+%VERSION%
+0.4.24-1
+
+%DESC%
+The Oild Runtime Compiler (mingw-w64)
+
+%URL%
+http://code.entropywave.com/projects/orc/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1436335664
+
+%INSTALLDATE%
+1438572924
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+2048000
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+pgp
+

@@ -1,0 +1,47 @@
+%NAME%
+mingw-w64-i686-cmake
+
+%VERSION%
+3.4.1-1
+
+%BASE%
+mingw-w64-cmake
+
+%DESC%
+A cross-platform open-source make system (mingw-w64)
+
+%URL%
+http://www.cmake.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1450777759
+
+%INSTALLDATE%
+1457144382
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+24101888
+
+%LICENSE%
+MIT
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+mingw-w64-i686-gcc-libs
+mingw-w64-i686-curl
+mingw-w64-i686-expat
+mingw-w64-i686-jsoncpp
+mingw-w64-i686-libarchive
+mingw-w64-i686-zlib
+
+%OPTDEPENDS%
+mingw-w64-i686-qt5: CMake Qt GUI
+

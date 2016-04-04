@@ -1,0 +1,14 @@
+prefix=F:/OMDev/tools/msys/mingw64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 WebSockets
+Description: Qt WebSockets module
+Version: 5.6.0
+Libs: -L${libdir} -lQt5WebSockets 
+Libs.private: -LC:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Network.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Core.dll.a   
+Cflags: -I${includedir}/QtWebSockets -I${includedir}
+Requires: Qt5Core Qt5Network
+

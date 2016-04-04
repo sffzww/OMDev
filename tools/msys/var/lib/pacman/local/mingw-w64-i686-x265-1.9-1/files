@@ -1,0 +1,15 @@
+%FILES%
+mingw32/
+mingw32/bin/
+mingw32/bin/libx265.dll
+mingw32/bin/libx265_main10.dll
+mingw32/bin/x265.exe
+mingw32/include/
+mingw32/include/x265.h
+mingw32/include/x265_config.h
+mingw32/lib/
+mingw32/lib/libx265.a
+mingw32/lib/libx265.dll.a
+mingw32/lib/pkgconfig/
+mingw32/lib/pkgconfig/x265.pc
+

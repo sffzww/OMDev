@@ -1,0 +1,16 @@
+%FILES%
+mingw32/
+mingw32/bin/
+mingw32/bin/libx264-148.dll
+mingw32/bin/x264.exe
+mingw32/include/
+mingw32/include/avisynth/
+mingw32/include/avisynth/avisynth_c.h
+mingw32/include/x264.h
+mingw32/include/x264_config.h
+mingw32/lib/
+mingw32/lib/libx264.a
+mingw32/lib/libx264.dll.a
+mingw32/lib/pkgconfig/
+mingw32/lib/pkgconfig/x264.pc
+

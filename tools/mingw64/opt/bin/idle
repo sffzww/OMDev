@@ -1,5 +1,0 @@
-#!/tmp/x86_64-482-win32-seh-rt_v3-r0/mingw64/opt/bin\python2.7.exe
-
-from idlelib.PyShell import main
-if __name__ == '__main__':
-    main()

@@ -1,0 +1,9 @@
+prefix=/mingw64
+libdir=/mingw64/lib
+includedir=/mingw64/include
+
+Name: dcadec
+Description: a free DTS Coherent Acoustics decoder with support for HD extensions
+Version: 0.2.0
+Libs: -L${libdir} -ldcadec
+Cflags: -I${includedir}

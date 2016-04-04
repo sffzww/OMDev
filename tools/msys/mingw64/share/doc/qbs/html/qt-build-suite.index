@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="" title="QBS Manual" version="" project="Qt Build Suite">
+    <namespace threadsafety="unspecified" name="" status="active" access="public" module="qt build suite">
+        <page name="building-applications.html" href="building-applications.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="642" subtype="page" title="Building Applications" fulltitle="Building Applications" subtitle="" module="Qt Build Suite"/>
+        <page name="building.html" href="building.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="132" subtype="page" title="Building" fulltitle="Building" subtitle="" module="Qt Build Suite">
+            <contents name="configure-options" title="Configure Options" level="1"/>
+        </page>
+        <page name="configuring.html" href="configuring.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="165" subtype="page" title="Configuring" fulltitle="Configuring" subtitle="" module="Qt Build Suite"/>
+        <page name="custom-modules.html" href="custom-modules.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="763" subtype="page" title="Custom Modules and Items" fulltitle="Custom Modules and Items" subtitle="" module="Qt Build Suite">
+            <contents name="file-system-layout" title="File System Layout" level="1"/>
+            <contents name="custom-modules" title="Custom Modules" level="1"/>
+            <contents name="custom-items" title="Custom Items" level="1"/>
+            <contents name="making-qbs-aware-of-custom-modules-and-items" title="Making Qbs Aware of Custom Modules and Items" level="1"/>
+            <contents name="project-specific-modules-and-items" title="Project-specific Modules and Items" level="2"/>
+            <contents name="making-custom-modules-and-items-available-across-projects" title="Making Custom Modules and Items Available Across Projects" level="2"/>
+        </page>
+        <page name="index.html" href="index.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="38" subtype="page" title="Qbs Manual" fulltitle="Qbs Manual" subtitle="" module="Qt Build Suite">
+            <contents name="version-1-4-5" title="Version 1.4.5" level="1"/>
+        </page>
+        <page name="installing-files.html" href="installing-files.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="682" subtype="page" title="Installing Files" fulltitle="Installing Files" subtitle="" module="Qt Build Suite"/>
+        <page name="language-introduction.html" href="language-introduction.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="287" subtype="page" title="Language Introduction" fulltitle="Language Introduction" subtitle="" module="Qt Build Suite">
+            <contents name="the-obligatory-hello-world-example" title="The Obligatory Hello World Example" level="1"/>
+            <contents name="reusing-project-file-code" title="Reusing Project File Code" level="1"/>
+            <contents name="modules" title="Modules" level="1"/>
+            <contents name="different-properties-for-a-single-file" title="Different Properties for a Single File" level="2"/>
+            <contents name="selecting-files-by-properties" title="Selecting Files by Properties" level="2"/>
+            <contents name="file-tags-and-taggers" title="File Tags and Taggers" level="1"/>
+            <contents name="rules" title="Rules" level="1"/>
+        </page>
+        <page name="overview.html" href="overview.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="81" subtype="page" title="Introduction" fulltitle="Introduction" subtitle="" module="Qt Build Suite"/>
+        <page name="qt-versions.html" href="qt-versions.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="197" subtype="page" title="Managing Qt Versions" fulltitle="Managing Qt Versions" subtitle="" module="Qt Build Suite">
+            <contents name="introduction" title="Introduction" level="1"/>
+            <contents name="multiple-qt-builds" title="Multiple Qt Builds" level="1"/>
+        </page>
+        <page name="running-applications.html" href="running-applications.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="722" subtype="page" title="Running Applications" fulltitle="Running Applications" subtitle="" module="Qt Build Suite"/>
+        <page name="setup.html" href="setup.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="96" subtype="page" title="Setup" fulltitle="Setup" subtitle="" module="Qt Build Suite"/>
+        <page name="shell.html" href="shell.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="743" subtype="page" title="Using the Shell" fulltitle="Using the Shell" subtitle="" module="Qt Build Suite"/>
+        <page name="system-requirements.html" href="system-requirements.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="113" subtype="page" title="System Requirements" fulltitle="System Requirements" subtitle="" module="Qt Build Suite"/>
+        <page name="usage.html" href="usage.html" status="active" location="qbs.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/qbs.qdoc" lineno="267" subtype="page" title="Usage" fulltitle="Usage" subtitle="" module="Qt Build Suite"/>
+        <page name="commands.html" href="commands.html" status="active" location="commands.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/commands.qdoc" lineno="33" subtype="page" title="Command and JavaScriptCommand" fulltitle="Command and JavaScriptCommand" subtitle="" module="Qt Build Suite" brief="Types of commands to be used in rules and transformers">
+            <contents name="command" title="Command" level="1"/>
+            <contents name="javascriptcommand" title="JavaScriptCommand" level="1"/>
+            <contents name="properties" title="Properties" level="1"/>
+            <contents name="common-properties" title="Common Properties" level="2"/>
+            <contents name="command-properties" title="Command Properties" level="2"/>
+            <contents name="javascriptcommand-properties" title="JavaScriptCommand Properties" level="2"/>
+        </page>
+        <page name="androidapk-item.html" href="androidapk-item.html" status="active" location="androidapk.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/androidapk.qdoc" lineno="30" subtype="page" title="AndroidApk Item" fulltitle="AndroidApk Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents an Android application package">
+            <contents name="androidapk-properties" title="AndroidApk Properties" level="1"/>
+        </page>
+        <page name="application-item.html" href="application-item.html" status="active" location="application.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/application.qdoc" lineno="30" subtype="page" title="Application Item" fulltitle="Application Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a product of application type"/>
+        <page name="applicationextension-item.html" href="applicationextension-item.html" status="active" location="applicationextension.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/applicationextension.qdoc" lineno="31" subtype="page" title="ApplicationExtension Item" fulltitle="ApplicationExtension Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a product that is an OS X or iOS Application Extension"/>
+        <page name="artifact-item.html" href="artifact-item.html" status="active" location="artifact.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/artifact.qdoc" lineno="30" subtype="page" title="Artifact Item" fulltitle="Artifact Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Describes a file produced by a  or ">
+            <contents name="artifact-properties" title="Artifact Properties" level="1"/>
+        </page>
+        <page name="autotestrunner-item.html" href="autotestrunner-item.html" status="active" location="autotestrunner.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/autotestrunner.qdoc" lineno="30" subtype="page" title="AutotestRunner Item" fulltitle="AutotestRunner Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="A product that runs all autotests in the project">
+            <contents name="autotestrunner-properties" title="AutotestRunner Properties" level="1"/>
+        </page>
+        <page name="cppapplication-item.html" href="cppapplication-item.html" status="active" location="cppapplication.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/cppapplication.qdoc" lineno="30" subtype="page" title="CppApplication Item" fulltitle="CppApplication Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a product of application type with a dependency to the cpp module"/>
+        <page name="depends-item.html" href="depends-item.html" status="active" location="depends.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/depends.qdoc" lineno="30" subtype="page" title="Depends Item" fulltitle="Depends Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents dependencies between products and modules">
+            <contents name="depends-properties" title="Depends Properties" level="1"/>
+        </page>
+        <page name="dynamiclibrary-item.html" href="dynamiclibrary-item.html" status="active" location="dynamiclibrary.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/dynamiclibrary.qdoc" lineno="30" subtype="page" title="DynamicLibrary Item" fulltitle="DynamicLibrary Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a product that is a dynamic library">
+            <contents name="dynamiclibrary-properties" title="DynamicLibrary Properties" level="1"/>
+        </page>
+        <page name="export-item.html" href="export-item.html" status="active" location="export.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/export.qdoc" lineno="30" subtype="page" title="Export Item" fulltitle="Export Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Exports dependencies and properties to other products"/>
+        <page name="filetagger-item.html" href="filetagger-item.html" status="active" location="filetagger.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/filetagger.qdoc" lineno="30" subtype="page" title="FileTagger Item" fulltitle="FileTagger Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Maps file patterns to tags">
+            <contents name="filetagger-properties" title="FileTagger Properties" level="1"/>
+        </page>
+        <page name="group-item.html" href="group-item.html" status="active" location="group.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/group.qdoc" lineno="31" subtype="page" title="Group Item" fulltitle="Group Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Groups files in a product">
+            <contents name="group-properties" title="Group Properties" level="1"/>
+        </page>
+        <page name="installpackage-item.html" href="installpackage-item.html" status="active" location="installpackage.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/installpackage.qdoc" lineno="30" subtype="page" title="InstallPackage Item" fulltitle="InstallPackage Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents an archive of an installed project"/>
+        <page name="javaclasscollection-item.html" href="javaclasscollection-item.html" status="active" location="javaclasscollection.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/javaclasscollection.qdoc" lineno="30" subtype="page" title="JavaClassCollection Item" fulltitle="JavaClassCollection Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a collection of Java class files not bundled in a jar file"/>
+        <page name="javajarfile-item.html" href="javajarfile-item.html" status="active" location="javajarfile.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/javajarfile.qdoc" lineno="30" subtype="page" title="JavaJarFile Item" fulltitle="JavaJarFile Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a collection of Java class files bundled in a jar file"/>
+        <page name="loadablemodule-item.html" href="loadablemodule-item.html" status="active" location="loadablemodule.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/loadablemodule.qdoc" lineno="31" subtype="page" title="LoadableModule Item" fulltitle="LoadableModule Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a product that is a loadable module"/>
+        <page name="module-item.html" href="module-item.html" status="active" location="module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/module.qdoc" lineno="30" subtype="page" title="Module Item" fulltitle="Module Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a collection of properties and items that can be loaded into a product">
+            <contents name="special-property-values" title="Special Property Values" level="1"/>
+            <contents name="base" title="base" level="2"/>
+            <contents name="original" title="original" level="2"/>
+            <contents name="outer" title="outer" level="2"/>
+            <contents name="module-properties" title="Module Properties" level="1"/>
+        </page>
+        <page name="probe-item.html" href="probe-item.html" status="active" location="probe.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/probe.qdoc" lineno="30" subtype="page" title="Probe Item" fulltitle="Probe Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Locates files outside the project">
+            <contents name="probe-properties" title="Probe Properties" level="1"/>
+        </page>
+        <page name="product-item.html" href="product-item.html" status="active" location="product.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/product.qdoc" lineno="30" subtype="page" title="Product Item" fulltitle="Product Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents the result of a build process"/>
+        <page name="project-item.html" href="project-item.html" status="active" location="project.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/project.qdoc" lineno="30" subtype="page" title="Project Item" fulltitle="Project Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a collection of products and properties"/>
+        <page name="properties-item.html" href="properties-item.html" status="active" location="properties.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/properties.qdoc" lineno="30" subtype="page" title="Properties Item" fulltitle="Properties Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Provides conditional setting of properties"/>
+        <page name="propertyoptions-item.html" href="propertyoptions-item.html" status="active" location="propertyoptions.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/propertyoptions.qdoc" lineno="30" subtype="page" title="PropertyOptions Item" fulltitle="PropertyOptions Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Provides inline documentation for properties within product and module items">
+            <contents name="propertyoptions-properties" title="PropertyOptions Properties" level="1"/>
+        </page>
+        <page name="qtapplication-item.html" href="qtapplication-item.html" status="active" location="qtapplication.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/qtapplication.qdoc" lineno="30" subtype="page" title="QtApplication Item" fulltitle="QtApplication Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a product of application type with a dependency to the Qt Core module"/>
+        <page name="qtguiapplication-item.html" href="qtguiapplication-item.html" status="active" location="qtguiapplication.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/qtguiapplication.qdoc" lineno="30" subtype="page" title="QtGuiApplication Item" fulltitle="QtGuiApplication Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a product of application type with a dependency to the Qt GUI module">
+            <contents name="qtguiapplication-properties" title="QtGuiApplication Properties" level="1"/>
+        </page>
+        <page name="rule-item.html" href="rule-item.html" status="active" location="rule.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/rule.qdoc" lineno="30" subtype="page" title="Rule Item" fulltitle="Rule Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Creates transformers for input tags">
+            <contents name="rule-properties" title="Rule Properties" level="1"/>
+        </page>
+        <page name="scanner-item.html" href="scanner-item.html" status="active" location="scanner.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/scanner.qdoc" lineno="30" subtype="page" title="Scanner Item" fulltitle="Scanner Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Creates custom dependency scanners in modules">
+            <contents name="scanner-properties" title="Scanner Properties" level="1"/>
+        </page>
+        <page name="staticlibrary-item.html" href="staticlibrary-item.html" status="active" location="staticlibrary.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/staticlibrary.qdoc" lineno="30" subtype="page" title="StaticLibrary Item" fulltitle="StaticLibrary Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a product that is a static library"/>
+        <page name="subproject-item.html" href="subproject-item.html" status="active" location="subproject.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/subproject.qdoc" lineno="30" subtype="page" title="SubProject Item" fulltitle="SubProject Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Adds a project from a different file"/>
+        <page name="transformer-item.html" href="transformer-item.html" status="active" location="transformer.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/transformer.qdoc" lineno="30" subtype="page" title="Transformer Item" fulltitle="Transformer Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Creates files, typically from other files">
+            <contents name="transformer-properties" title="Transformer Properties" level="1"/>
+        </page>
+        <page name="xpcservice-item.html" href="xpcservice-item.html" status="active" location="xpcservice.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/items/xpcservice.qdoc" lineno="31" subtype="page" title="XPCService Item" fulltitle="XPCService Item" subtitle="" module="Qt Build Suite" groups="list-of-items" brief="Represents a product that is an OS X or iOS XPC service"/>
+        <page name="jsextension-file.html" href="jsextension-file.html" status="active" location="jsextension-file.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/jsextensions/jsextension-file.qdoc" lineno="31" subtype="page" title="File Service" fulltitle="File Service" subtitle="" module="Qt Build Suite" groups="list-of-builtin-services" brief="Provides operations on the file system">
+            <contents name="available-operations" title="Available Operations" level="1"/>
+            <contents name="copy" title="copy" level="2"/>
+            <contents name="exists" title="exists" level="2"/>
+            <contents name="lastmodified" title="lastModified" level="2"/>
+            <contents name="makepath" title="makePath" level="2"/>
+            <contents name="remove" title="remove" level="2"/>
+        </page>
+        <page name="jsextension-fileinfo.html" href="jsextension-fileinfo.html" status="active" location="jsextension-fileinfo.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/jsextensions/jsextension-fileinfo.qdoc" lineno="31" subtype="page" title="FileInfo Service" fulltitle="FileInfo Service" subtitle="" module="Qt Build Suite" groups="list-of-builtin-services" brief="Provides operations on file paths">
+            <contents name="available-operations" title="Available Operations" level="1"/>
+            <contents name="basename" title="baseName" level="2"/>
+            <contents name="completebasename" title="completeBaseName" level="2"/>
+            <contents name="filename" title="fileName" level="2"/>
+            <contents name="fromwindowsseparators" title="fromWindowsSeparators" level="2"/>
+            <contents name="isabsolutepath" title="isAbsolutePath" level="2"/>
+            <contents name="joinpaths" title="joinPaths" level="2"/>
+            <contents name="path" title="path" level="2"/>
+            <contents name="relativepath" title="relativePath" level="2"/>
+            <contents name="towindowsseparators" title="toWindowsSeparators" level="2"/>
+        </page>
+        <page name="jsextension-process.html" href="jsextension-process.html" status="active" location="jsextension-process.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/jsextensions/jsextension-process.qdoc" lineno="31" subtype="page" title="Process Service" fulltitle="Process Service" subtitle="" module="Qt Build Suite" groups="list-of-builtin-services" brief="Allows you to start external processes">
+            <contents name="available-operations" title="Available Operations" level="1"/>
+            <contents name="constructor" title="Constructor" level="2"/>
+            <contents name="close" title="close" level="2"/>
+            <contents name="exec" title="exec" level="2"/>
+            <contents name="exitcode" title="exitCode" level="2"/>
+            <contents name="getenv" title="getEnv" level="2"/>
+            <contents name="kill" title="kill" level="2"/>
+            <contents name="readline" title="readLine" level="2"/>
+            <contents name="readstderr" title="readStdErr" level="2"/>
+            <contents name="readstdout" title="readStdOut" level="2"/>
+            <contents name="setcodec" title="setCodec" level="2"/>
+            <contents name="setenv" title="setEnv" level="2"/>
+            <contents name="setworkingdirectory" title="setWorkingDirectory" level="2"/>
+            <contents name="start" title="start" level="2"/>
+            <contents name="terminate" title="terminate" level="2"/>
+            <contents name="waitforfinished" title="waitForFinished" level="2"/>
+            <contents name="workingdirectory" title="workingDirectory" level="2"/>
+            <contents name="write" title="write" level="2"/>
+            <contents name="writeline" title="writeLine" level="2"/>
+        </page>
+        <page name="jsextension-propertylist.html" href="jsextension-propertylist.html" status="active" location="jsextension-propertylist.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/jsextensions/jsextension-propertylist.qdoc" lineno="31" subtype="page" title="PropertyList Service" fulltitle="PropertyList Service" subtitle="" module="Qt Build Suite" groups="list-of-builtin-services" brief="Provides read, write and convert operations on property list files">
+            <contents name="available-operations" title="Available operations" level="1"/>
+            <contents name="constructor" title="Constructor" level="2"/>
+            <contents name="clear" title="clear" level="2"/>
+            <contents name="isempty" title="isEmpty" level="2"/>
+            <contents name="format" title="format" level="2"/>
+            <contents name="readfromfile" title="readFromFile" level="2"/>
+            <contents name="readfromobject" title="readFromObject" level="2"/>
+            <contents name="readfromstring" title="readFromString" level="2"/>
+            <contents name="toobject" title="toObject" level="2"/>
+            <contents name="tojson" title="toJSON" level="2"/>
+            <contents name="tostring" title="toString" level="2"/>
+            <contents name="toxmlstring" title="toXMLString" level="2"/>
+            <contents name="writetofile" title="writeToFile" level="2"/>
+        </page>
+        <page name="jsextension-temporarydir.html" href="jsextension-temporarydir.html" status="active" location="jsextension-temporarydir.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/jsextensions/jsextension-temporarydir.qdoc" lineno="31" subtype="page" title="TemporaryDir Service" fulltitle="TemporaryDir Service" subtitle="" module="Qt Build Suite" groups="list-of-builtin-services" brief="Creates a unique directory for temporary use">
+            <contents name="available-operations" title="Available Operations" level="1"/>
+            <contents name="constructor" title="Constructor" level="2"/>
+            <contents name="isvalid" title="isValid" level="2"/>
+            <contents name="path" title="path" level="2"/>
+            <contents name="remove" title="remove" level="2"/>
+        </page>
+        <page name="jsextension-textfile.html" href="jsextension-textfile.html" status="active" location="jsextension-textfile.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/jsextensions/jsextension-textfile.qdoc" lineno="31" subtype="page" title="TextFile Service" fulltitle="TextFile Service" subtitle="" module="Qt Build Suite" groups="list-of-builtin-services" brief="Provides read and write operations on text files">
+            <contents name="related-declarations" title="Related Declarations" level="1"/>
+            <contents name="textfile-openmode" title="TextFile.OpenMode" level="2"/>
+            <contents name="available-operations" title="Available operations" level="1"/>
+            <contents name="constructor" title="Constructor" level="2"/>
+            <contents name="ateof" title="atEof" level="2"/>
+            <contents name="close" title="close" level="2"/>
+            <contents name="readall" title="readAll" level="2"/>
+            <contents name="readline" title="readLine" level="2"/>
+            <contents name="setcodec" title="setCodec" level="2"/>
+            <contents name="truncate" title="truncate" level="2"/>
+            <contents name="write" title="write" level="2"/>
+            <contents name="writeline" title="writeLine" level="2"/>
+        </page>
+        <page name="jsextensions-general.html" href="jsextensions-general.html" status="active" location="jsextensions-general.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/jsextensions/jsextensions-general.qdoc" lineno="32" subtype="page" title="General Services" fulltitle="General Services" subtitle="" module="Qt Build Suite" groups="list-of-builtin-services" brief="Provides various operations">
+            <contents name="available-operations" title="Available Operations" level="1"/>
+            <contents name="qbs-currentenv" title="qbs.currentEnv" level="2"/>
+            <contents name="qbs-getenv" title="qbs.getEnv" level="2"/>
+            <contents name="qbs-gethash" title="qbs.getHash" level="2"/>
+            <contents name="qbs-rfc1034identifier" title="qbs.rfc1034Identifier" level="2"/>
+            <contents name="loadfile" title="loadFile" level="2"/>
+            <contents name="loadextension" title="loadExtension" level="2"/>
+            <contents name="extensions-to-javascript-built-in-objects" title="Extensions to JavaScript Built-in Objects" level="1"/>
+            <contents name="array-contains" title="Array.contains" level="2"/>
+            <contents name="array-uniqueconcat" title="Array.uniqueConcat" level="2"/>
+            <contents name="string-contains" title="String.contains" level="2"/>
+            <contents name="startswith" title="startsWith" level="2"/>
+            <contents name="endswith" title="endsWith" level="2"/>
+        </page>
+        <page name="list-of-tools.html" href="list-of-tools.html" status="active" location="list-of-tools.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/list-of-tools.qdoc" lineno="31" subtype="page" title="List of Command-line Tools" fulltitle="List of Command-line Tools" subtitle="" module="Qt Build Suite" brief="Auxiliary tools">
+            <contents name="config" title="config" level="1"/>
+            <contents name="config-ui" title="config-ui" level="1"/>
+            <contents name="qmltypes" title="qmltypes" level="1"/>
+            <contents name="setup-android" title="setup-android" level="1"/>
+            <contents name="setup-qt" title="setup-qt" level="1"/>
+            <contents name="setup-toolchains" title="setup-toolchains" level="1"/>
+        </page>
+        <page name="android-ndk-module.html" href="android-ndk-module.html" status="active" location="android-ndk-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/android-ndk-module.qdoc" lineno="31" since="1.4" subtype="page" title="Module Android.ndk" fulltitle="Module Android.ndk" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides support for building native Android libraries">
+            <contents name="android-ndk-properties" title="Android.ndk Properties" level="1"/>
+        </page>
+        <page name="android-sdk-module.html" href="android-sdk-module.html" status="active" location="android-sdk-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/android-sdk-module.qdoc" lineno="31" since="1.4" subtype="page" title="Module Android.sdk" fulltitle="Module Android.sdk" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides support for building Android packages">
+            <contents name="android-sdk-properties" title="Android.sdk Properties" level="1"/>
+        </page>
+        <page name="archiver-module.html" href="archiver-module.html" status="active" location="archiver-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/archiver-module.qdoc" lineno="31" since="1.4" subtype="page" title="Module archiver" fulltitle="Module archiver" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides support for building archives">
+            <contents name="archiver-properties" title="archiver Properties" level="1"/>
+        </page>
+        <page name="bundle-module.html" href="bundle-module.html" status="active" location="bundle-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/bundle-module.qdoc" lineno="32" since="1.4" subtype="page" title="Module bundle" fulltitle="Module bundle" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides Core Foundation bundle support">
+            <contents name="general-properties" title="General Properties" level="1"/>
+            <contents name="path-specific-properties" title="Path Specific Properties" level="1"/>
+        </page>
+        <page name="cpp-module.html" href="cpp-module.html" status="active" location="cpp-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/cpp-module.qdoc" lineno="31" since="1.0" subtype="page" title="Module cpp" fulltitle="Module cpp" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides C/C++ support">
+            <contents name="general-properties" title="General Properties" level="1"/>
+            <contents name="properties-specific-to-apple-platforms" title="Properties Specific to Apple Platforms" level="1"/>
+            <contents name="properties-specific-to-unix-platforms" title="Properties Specific to Unix Platforms" level="1"/>
+            <contents name="properties-specific-to-windows" title="Properties Specific to Windows" level="1"/>
+        </page>
+        <page name="ib-module.html" href="ib-module.html" status="active" location="ib-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/ib-module.qdoc" lineno="31" since="1.1" subtype="page" title="Module ib" fulltitle="Module ib" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides support for Apple Interface Builder and related tools and file types">
+            <contents name="general-properties" title="General Properties" level="1"/>
+            <contents name="properties-specific-to-nibs-and-storyboards" title="Properties Specific to NIBs and Storyboards" level="1"/>
+            <contents name="properties-specific-to-asset-catalogs" title="Properties Specific to Asset Catalogs" level="1"/>
+            <contents name="properties-specific-to-icon-sets" title="Properties Specific to Icon Sets" level="1"/>
+        </page>
+        <page name="java-module.html" href="java-module.html" status="active" location="java-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/java-module.qdoc" lineno="31" since="1.4" subtype="page" title="Module java" fulltitle="Module java" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides Java support">
+            <contents name="java-properties" title="Java Properties" level="1"/>
+        </page>
+        <page name="nodejs-module.html" href="nodejs-module.html" status="active" location="nodejs-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/nodejs-module.qdoc" lineno="31" since="1.3" subtype="page" title="Module nodejs" fulltitle="Module nodejs" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides Node.js support">
+            <contents name="general-properties" title="General Properties" level="1"/>
+        </page>
+        <page name="nsis-module.html" href="nsis-module.html" status="active" location="nsis-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/nsis-module.qdoc" lineno="31" since="1.2" subtype="page" title="Module nsis" fulltitle="Module nsis" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides Nullsoft Scriptable Install System support">
+            <contents name="general-properties" title="General Properties" level="1"/>
+        </page>
+        <page name="qbs-module.html" href="qbs-module.html" status="active" location="qbs-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/qbs-module.qdoc" lineno="31" since="1.0" subtype="page" title="Module qbs" fulltitle="Module qbs" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Comprises general properties">
+            <contents name="general-properties" title="General Properties" level="1"/>
+            <contents name="environment-properties" title="Environment Properties" level="1"/>
+            <contents name="installation-properties" title="Installation Properties" level="1"/>
+        </page>
+        <page name="qt-modules.html" href="qt-modules.html" status="active" location="qt-modules.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/qt-modules.qdoc" lineno="31" subtype="page" title="Qt Modules" fulltitle="Qt Modules" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provide Qt support">
+            <contents name="creating-dependencies-to-qt-modules" title="Creating Dependencies to Qt Modules" level="1"/>
+            <contents name="list-of-submodules" title="List of Submodules" level="1"/>
+            <contents name="core-properties" title="core Properties" level="1"/>
+            <contents name="declarative-properties" title="declarative Properties" level="1"/>
+            <contents name="gui-properties" title="gui Properties" level="1"/>
+            <contents name="quick-properties" title="quick Properties" level="1"/>
+        </page>
+        <page name="typescript-module.html" href="typescript-module.html" status="active" location="typescript-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/typescript-module.qdoc" lineno="31" since="1.3" subtype="page" title="Module typescript" fulltitle="Module typescript" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides TypeScript support">
+            <contents name="general-properties" title="General Properties" level="1"/>
+        </page>
+        <page name="wix-module.html" href="wix-module.html" status="active" location="wix-module.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/modules/wix-module.qdoc" lineno="31" since="1.2" subtype="page" title="Module wix" fulltitle="Module wix" subtitle="" module="Qt Build Suite" groups="list-of-modules" brief="Provides Windows Installer XML Toolset support">
+            <contents name="general-properties" title="General Properties" level="1"/>
+        </page>
+        <page name="reference.html" href="reference.html" status="active" location="reference.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/reference.qdoc" lineno="30" subtype="page" title="Reference" fulltitle="Reference" subtitle="" module="Qt Build Suite"/>
+        <group name="list-of-builtin-services" href="list-of-builtin-services.html" status="active" location="reference.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/reference.qdoc" lineno="46" seen="true" title="List of Built-in Services" module="Qt Build Suite" members="jsextension-file.html,jsextension-fileinfo.html,jsextension-process.html,jsextension-propertylist.html,jsextension-temporarydir.html,jsextension-textfile.html,jsextensions-general.html"/>
+        <group name="list-of-items" href="list-of-items.html" status="active" location="reference.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/reference.qdoc" lineno="73" seen="true" title="List of Language Items" module="Qt Build Suite" members="androidapk-item.html,application-item.html,applicationextension-item.html,artifact-item.html,autotestrunner-item.html,cppapplication-item.html,depends-item.html,dynamiclibrary-item.html,export-item.html,filetagger-item.html,group-item.html,installpackage-item.html,javaclasscollection-item.html,javajarfile-item.html,loadablemodule-item.html,module-item.html,probe-item.html,product-item.html,project-item.html,properties-item.html,propertyoptions-item.html,qtapplication-item.html,qtguiapplication-item.html,rule-item.html,scanner-item.html,staticlibrary-item.html,subproject-item.html,transformer-item.html,xpcservice-item.html"/>
+        <group name="list-of-modules" href="list-of-modules.html" status="active" location="reference.qdoc" filepath="C:/repo/mingw-w64-qbs/src/qbs-src-1.4.5/doc/reference/reference.qdoc" lineno="66" seen="true" title="List of Modules" module="Qt Build Suite" members="android-ndk-module.html,android-sdk-module.html,archiver-module.html,bundle-module.html,cpp-module.html,ib-module.html,java-module.html,nodejs-module.html,nsis-module.html,qbs-module.html,qt-modules.html,typescript-module.html,wix-module.html"/>
+    </namespace>
+</INDEX>

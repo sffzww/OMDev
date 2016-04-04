@@ -1,0 +1,14 @@
+prefix=F:/OMDev/tools/msys/mingw32
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 PrintSupport
+Description: Qt PrintSupport module
+Version: 5.6.0
+Libs: -L${libdir} -lQt5PrintSupport 
+Libs.private: -lglu32 -lopengl32 -lgdi32 -luser32 -LC:/repo/mingw-w64-qt5/src/i686/qtbase/lib C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Widgets.dll.a C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Gui.dll.a C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a -lwinspool -lcomdlg32 -lgdi32 -luser32  
+Cflags: -I${includedir}/QtPrintSupport -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets
+

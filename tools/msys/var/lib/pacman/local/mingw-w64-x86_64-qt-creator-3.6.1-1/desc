@@ -1,0 +1,44 @@
+%NAME%
+mingw-w64-x86_64-qt-creator
+
+%VERSION%
+3.6.1-1
+
+%BASE%
+mingw-w64-qt-creator
+
+%DESC%
+Cross-patform IDE (mingw-w64)
+
+%URL%
+https://www.qt.io/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1458715489
+
+%INSTALLDATE%
+1459464439
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+70586368
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+mingw-w64-x86_64-qt5
+mingw-w64-x86_64-gcc
+mingw-w64-x86_64-make
+mingw-w64-x86_64-qbs
+
+%OPTDEPENDS%
+mingw-w64-x86_64-gdb: for the debugger
+mingw-w64-x86_64-cmake: for cmake project support
+mingw-w64-x86_64-clang: for clang code model
+

@@ -1,0 +1,8 @@
+prefix=/mingw32
+
+Name: shared-mime-info
+Description: Freedesktop common MIME database
+Version: 1.4
+Requires:
+Libs:
+Cflags:

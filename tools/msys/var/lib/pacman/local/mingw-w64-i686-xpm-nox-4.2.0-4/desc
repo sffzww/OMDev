@@ -1,0 +1,39 @@
+%NAME%
+mingw-w64-i686-xpm-nox
+
+%VERSION%
+4.2.0-4
+
+%DESC%
+X Pixmap library not using X (mingw-w64)
+
+%URL%
+ftp://koala.inria.fr/pub/xpm
+
+%ARCH%
+any
+
+%BUILDDATE%
+1435667578
+
+%INSTALLDATE%
+1438573034
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+260096
+
+%REASON%
+1
+
+%LICENSE%
+Groupe Bull
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+mingw-w64-i686-gcc-libs
+

@@ -1,0 +1,14 @@
+%FILES%
+mingw32/
+mingw32/bin/
+mingw32/bin/libass-5.dll
+mingw32/include/
+mingw32/include/ass/
+mingw32/include/ass/ass.h
+mingw32/include/ass/ass_types.h
+mingw32/lib/
+mingw32/lib/libass.a
+mingw32/lib/libass.dll.a
+mingw32/lib/pkgconfig/
+mingw32/lib/pkgconfig/libass.pc
+

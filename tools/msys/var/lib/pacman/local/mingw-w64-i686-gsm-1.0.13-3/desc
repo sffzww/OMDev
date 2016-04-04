@@ -1,0 +1,36 @@
+%NAME%
+mingw-w64-i686-gsm
+
+%VERSION%
+1.0.13-3
+
+%DESC%
+Shared libraries for GSM 06.10 lossy speech compression (mingw-w64)
+
+%URL%
+http://www.quut.com/gsm/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1436270588
+
+%INSTALLDATE%
+1438572918
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+370688
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+pgp
+

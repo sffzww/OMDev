@@ -1,3 +1,0 @@
-/* include/mico/config.idl.  Generated automatically by configure.  */
-/* whether CORBASec Level 2 is used */
-/* #undef USE_CSL2 */

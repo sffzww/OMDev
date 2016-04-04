@@ -1,0 +1,14 @@
+prefix=F:/OMDev/tools/msys/mingw64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Location
+Description: Qt Location module
+Version: 5.6.0
+Libs: -L${libdir} -lQt5Location 
+Libs.private: -lglu32 -lopengl32 -lgdi32 -luser32 -LC:/repo/mingw-w64-qt5/src/x86_64/qtlocation/lib C:/repo/mingw-w64-qt5/src/x86_64/qtlocation/lib/libQt5Positioning.dll.a -LC:/repo/mingw-w64-qt5/src/x86_64/qtdeclarative/lib C:/repo/mingw-w64-qt5/src/x86_64/qtdeclarative/lib/libQt5Quick.dll.a -LC:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Gui.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtdeclarative/lib/libQt5Qml.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Network.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Core.dll.a   
+Cflags: -I${includedir}/QtLocation -I${includedir}
+Requires: Qt5Core Qt5Positioning Qt5Gui Qt5Quick
+

@@ -1,0 +1,11 @@
+prefix=/mingw32
+exec_prefix=/mingw32
+libdir=/mingw32/lib
+includedir=/mingw32/include
+GSL_CBLAS_LIB=-lgslcblas
+
+Name: GSL
+Description: GNU Scientific Library
+Version: 2.1
+Libs: -L/mingw32/lib -lgsl ${GSL_CBLAS_LIB} -lm -lm 
+Cflags: -I/mingw32/include

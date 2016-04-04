@@ -1,0 +1,14 @@
+prefix=F:/OMDev/tools/msys/mingw64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 3DRender
+Description: Qt 3DRender module
+Version: 5.6.0
+Libs: -L${libdir} -lQt53DRender 
+Libs.private: -LC:/repo/mingw-w64-qt5/src/x86_64/qt3d/lib C:/repo/mingw-w64-qt5/src/x86_64/qt3d/lib/libQt53DCore.dll.a -LC:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5OpenGLExtensions.a -lglu32 -lopengl32 -lgdi32 -luser32 C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Gui.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Concurrent.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Core.dll.a   
+Cflags: -I${includedir}/Qt3DRender -I${includedir}
+Requires: Qt5Core Qt5Gui Qt53DCore Qt5OpenGLExtensions Qt5Concurrent
+
