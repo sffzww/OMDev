@@ -20,6 +20,12 @@ if you move the OMDev directory around then you need to patch the qt files using
 > cd $OMDEV/tools/msys/mingw32/bin
 > qtbinpatcher --nobackup
 
+MINGW32 or MINGW64
+==================
+To build 32 bit OMC you run:
+path_to_your_omdev\tools\msys\mingw32_shell.bat
+To build 64 bit OMC you run:
+path_to_your_omdev\tools\msys\mingw65_shell.bat
 
 ENVIRONMENT VARIABLE SETTING
 ============================
@@ -38,7 +44,14 @@ If you want to use msys shell make a
 shortcut on your desktop to: 
 path_to_your_omdev\tools\msys\msys2_shell.bat
 and say it to run in:
-path_to_your_omdev\tools\msys\mingw32\bin OR path_to_your_omdev\tools\msys\mingw64\bin
+path_to_your_omdev\tools\msys\
+
+QT DEBUG DLLS (optional)
+========================
+We don't ship the debug dlls for qt5, you can reinstall the qt packages to get them.
+Start msys2 shell: path_to_your_omdev\tools\msys\msys2_shell.bat
+Type command:
+> pacman -S mingw-w64-i686-qt5 mingw-w64-x86_64-qt5
 
 Address questions/problems to:
 Adrian Pop,
