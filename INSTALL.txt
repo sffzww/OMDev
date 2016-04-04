@@ -1,6 +1,6 @@
 OMDev=OpenModelica Development Environment-MSYS2+MINGW32/MINGW64
 ----------------------------------------------------------------
-Adrian.Pop@liu.se, 2010-10-24, last update: 2016-03-11
+Adrian.Pop@liu.se, 2010-10-24, last update: 2016-04-04
 ----------------------------------------------------------------
 To check for an updated version of this package go to:
 https://openmodelica.org/svn/OpenModelicaExternal/trunk/tools/windows/OMDev
@@ -10,12 +10,8 @@ VERY IMPORTANT INSTALLATION ISSUES!
 
 MSYS setting
 ============
-To make things move fast in msys2 one has to generate the group and passwd files on the host:
-> mkpasswd -l -c > /etc/passwd
-> mkgroup -l -c > /etc/group
-In /etc/nsswitch.conf one needs to change to:
-passwd: files #db
-group: files #db
+To make things move fast in msys2 one has to generate the group and passwd files on the host.
+Run path_to_your_omdev\SETUP_OMDEV.bat file.
 
 if you move the OMDev directory around then you need to path the qt files using:
 > cd $OMDEV/tools/msys/mingw64/bin
@@ -41,7 +37,7 @@ If you want to use msys shell make a
 shortcut on your desktop to: 
 path_to_your_omdev\tools\msys\msys2_shell.bat
 and say it to run in:
-path_to_your_omdev\tools\msys\bin
+path_to_your_omdev\tools\msys\mingw32\bin
 
 Address questions/problems to:
 Adrian Pop,
