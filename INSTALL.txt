@@ -27,10 +27,25 @@ path_to_your_omdev\tools\msys\mingw32_shell.bat
 To build 64 bit OMC you run:
 path_to_your_omdev\tools\msys\mingw65_shell.bat
 
-ENVIRONMENT VARIABLE SETTING
-============================
+ENVIRONMENT VARIABLE SETTINGS
+=============================
 - define a Windows environment variable called OMDEV 
   that points to c:\path\to\your\omdev
+- note that msys_shell.bat mingw32_shell.bat mingw64_shell.bat
+  + does not use Windows PATH varible. If you want to use the 
+    Windows path variable define an environment varible called
+    SET_FULL_PATH=Yes
+  + does not use Windows TEMP directory but the directory:
+    %OMDEV%\tools\msys\tmp
+	if you want to change this behavior edit:
+	%OMDEV%\tools\msys\etc\profile
+	or define $TEMP and $TMP in the terminal
+- if you want to use the msys shell from Windows command line
+  make sure you set MSYSTEM to one of MSYS, MINGW32, MINGW64
+  if you do:
+  set MSYSTEM=MINGW32 you get the 32 bit GCC (mingw32_shell.bat)
+  set MSYSTEM=MINGW64 you get the 64 bit GCC (mingw64_shell.bat)
+  set MSYSTEM=MSYS use for updating MSYS     (msys2_shell.bat)
 
 Subversion and Eclipse:
 =======================
