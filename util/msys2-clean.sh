@@ -23,3 +23,10 @@ done
 sed -i.bak s/'_populate_Core_target_properties(DEBUG "Qt5Cored.dll"'/'# _populate_Core_target_properties(DEBUG "Qt5Cored.dll"'/g /mingw32/lib/cmake/Qt5Core/Qt5CoreConfig.cmake
 sed -i.bak s/'_populate_Core_target_properties(DEBUG "Qt5Cored.dll"'/'# _populate_Core_target_properties(DEBUG "Qt5Cored.dll"'/g /mingw64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake
 
+# remove all .pyc and .pyo files if the .py exists
+for fpy in `find ${OMDEV} -name "*.py" -exec echo {} ";"` ; do
+  fc=`echo $fpy | sed s/[.]py/.pyc/`
+  fo=`echo $fpy | sed s/[.]py/.pyo/`
+  test -f $fc && rm -vf $fc
+  test -f $fo && rm -vf $fo
+done
