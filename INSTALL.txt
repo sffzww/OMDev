@@ -16,16 +16,16 @@ Open windows command prompt (cmd) and run path_to_your_omdev\SETUP_OMDEV.bat fil
 if you move the OMDev directory around then you need to patch the qt files using:
 > Open msys terminal path_to_your_omdev\tools\msys\msys2_shell.bat
 > cd $OMDEV/tools/msys/mingw64/bin
-> qtbinpatcher --nobackup
+> ./qtbinpatcher --nobackup
 > cd $OMDEV/tools/msys/mingw32/bin
-> qtbinpatcher --nobackup
+> ./qtbinpatcher --nobackup
 
 MINGW32 or MINGW64
 ==================
 To build 32 bit OMC you run:
 path_to_your_omdev\tools\msys\mingw32_shell.bat
 To build 64 bit OMC you run:
-path_to_your_omdev\tools\msys\mingw65_shell.bat
+path_to_your_omdev\tools\msys\mingw64_shell.bat
 
 ENVIRONMENT VARIABLE SETTINGS
 =============================
