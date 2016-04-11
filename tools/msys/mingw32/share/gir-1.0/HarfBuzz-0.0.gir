@@ -103,13 +103,13 @@ Set to U+FFFD REPLACEMENT CHARACTER.</doc>
     <constant name="VERSION_MAJOR" value="1" c:type="HB_VERSION_MAJOR">
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="VERSION_MICRO" value="4" c:type="HB_VERSION_MICRO">
+    <constant name="VERSION_MICRO" value="6" c:type="HB_VERSION_MICRO">
       <type name="gint" c:type="gint"/>
     </constant>
     <constant name="VERSION_MINOR" value="2" c:type="HB_VERSION_MINOR">
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="VERSION_STRING" value="1.2.4" c:type="HB_VERSION_STRING">
+    <constant name="VERSION_STRING" value="1.2.6" c:type="HB_VERSION_STRING">
       <type name="utf8" c:type="gchar*"/>
     </constant>
     <function name="blob_create"
@@ -136,7 +136,10 @@ zero.  Destroy with hb_blob_destroy().</doc>
           <doc xml:space="preserve">Memory mode for @data.</doc>
           <type name="memory_mode_t" c:type="hb_memory_mode_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <doc xml:space="preserve">Data parameter to pass to @destroy.</doc>
           <type name="gpointer" c:type="void*"/>
         </parameter>
@@ -275,7 +278,7 @@ See TODO:link object types for more information.</doc>
               c:identifier="hb_blob_get_user_data"
               version="0.9.2"
               introspectable="0">
-      <return-value transfer-ownership="none">
+      <return-value transfer-ownership="none" nullable="1">
         <type name="gpointer" c:type="void*"/>
       </return-value>
       <parameters>
@@ -350,7 +353,10 @@ See TODO:link object types for more information.</doc>
           <doc xml:space="preserve">key for data to set.</doc>
           <type name="user_data_key_t" c:type="hb_user_data_key_t*"/>
         </parameter>
-        <parameter name="data" transfer-ownership="none">
+        <parameter name="data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <doc xml:space="preserve">data to set.</doc>
           <type name="gpointer" c:type="void*"/>
         </parameter>
@@ -989,7 +995,7 @@ The value valid as long as buffer has not been modified.</doc>
               c:identifier="hb_buffer_get_user_data"
               version="0.9.2"
               introspectable="0">
-      <return-value>
+      <return-value transfer-ownership="none" nullable="1">
         <type name="gpointer" c:type="void*"/>
       </return-value>
       <parameters>
@@ -1046,7 +1052,11 @@ taking buffer script into consideration when choosing a language.</doc>
         <parameter name="message" transfer-ownership="none">
           <type name="utf8" c:type="const char*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="3">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="3">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -1525,7 +1535,10 @@ end.</doc>
           <type name="buffer_message_func_t"
                 c:type="hb_buffer_message_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -1632,7 +1645,10 @@ hb_buffer_set_language() individually.</doc>
         <parameter name="key" transfer-ownership="none">
           <type name="user_data_key_t" c:type="hb_user_data_key_t*"/>
         </parameter>
-        <parameter name="data" transfer-ownership="none">
+        <parameter name="data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none">
@@ -1656,7 +1672,11 @@ and output glyphs and their information after shaping.</doc>
         <type name="none" c:type="void"/>
       </return-value>
       <parameters>
-        <parameter name="user_data" transfer-ownership="none" closure="0">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="0">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -1753,7 +1773,10 @@ and output glyphs and their information after shaping.</doc>
           <type name="reference_table_func_t"
                 c:type="hb_reference_table_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -1825,7 +1848,7 @@ and output glyphs and their information after shaping.</doc>
               c:identifier="hb_face_get_user_data"
               version="0.9.2"
               introspectable="0">
-      <return-value transfer-ownership="none">
+      <return-value transfer-ownership="none" nullable="1">
         <type name="gpointer" c:type="void*"/>
       </return-value>
       <parameters>
@@ -1970,7 +1993,10 @@ and output glyphs and their information after shaping.</doc>
         <parameter name="key" transfer-ownership="none">
           <type name="user_data_key_t" c:type="hb_user_data_key_t*"/>
         </parameter>
-        <parameter name="data" transfer-ownership="none">
+        <parameter name="data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none">
@@ -2239,7 +2265,7 @@ allocating big enough size for @buf, 128 bytes is more than enough.</doc>
               c:identifier="hb_font_funcs_get_user_data"
               version="0.9.2"
               introspectable="0">
-      <return-value transfer-ownership="none">
+      <return-value transfer-ownership="none" nullable="1">
         <type name="gpointer" c:type="void*"/>
       </return-value>
       <parameters>
@@ -2311,7 +2337,10 @@ allocating big enough size for @buf, 128 bytes is more than enough.</doc>
           <type name="font_get_font_h_extents_func_t"
                 c:type="hb_font_get_font_h_extents_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2338,7 +2367,10 @@ allocating big enough size for @buf, 128 bytes is more than enough.</doc>
           <type name="font_get_font_v_extents_func_t"
                 c:type="hb_font_get_font_v_extents_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2365,7 +2397,10 @@ allocating big enough size for @buf, 128 bytes is more than enough.</doc>
           <type name="font_get_glyph_contour_point_func_t"
                 c:type="hb_font_get_glyph_contour_point_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2392,7 +2427,10 @@ allocating big enough size for @buf, 128 bytes is more than enough.</doc>
           <type name="font_get_glyph_extents_func_t"
                 c:type="hb_font_get_glyph_extents_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2419,7 +2457,10 @@ allocating big enough size for @buf, 128 bytes is more than enough.</doc>
           <type name="font_get_glyph_from_name_func_t"
                 c:type="hb_font_get_glyph_from_name_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2450,7 +2491,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
           <type name="font_get_glyph_func_t"
                 c:type="hb_font_get_glyph_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2477,7 +2521,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
           <type name="font_get_glyph_h_advance_func_t"
                 c:type="hb_font_get_glyph_h_advance_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2504,7 +2551,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
           <type name="font_get_glyph_h_kerning_func_t"
                 c:type="hb_font_get_glyph_h_kerning_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2531,7 +2581,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
           <type name="font_get_glyph_h_origin_func_t"
                 c:type="hb_font_get_glyph_h_origin_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2558,7 +2611,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
           <type name="font_get_glyph_name_func_t"
                 c:type="hb_font_get_glyph_name_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2585,7 +2641,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
           <type name="font_get_glyph_v_advance_func_t"
                 c:type="hb_font_get_glyph_v_advance_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2612,7 +2671,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
           <type name="font_get_glyph_v_kerning_func_t"
                 c:type="hb_font_get_glyph_v_kerning_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2639,7 +2701,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
           <type name="font_get_glyph_v_origin_func_t"
                 c:type="hb_font_get_glyph_v_origin_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2666,7 +2731,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
           <type name="font_get_nominal_glyph_func_t"
                 c:type="hb_font_get_nominal_glyph_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2689,7 +2757,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="key" transfer-ownership="none">
           <type name="user_data_key_t" c:type="hb_user_data_key_t*"/>
         </parameter>
-        <parameter name="data" transfer-ownership="none">
+        <parameter name="data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none">
@@ -2719,7 +2790,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
           <type name="font_get_variation_glyph_func_t"
                 c:type="hb_font_get_variation_glyph_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -2781,13 +2855,20 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="metrics" transfer-ownership="none">
           <type name="font_extents_t" c:type="hb_font_extents_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="3">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="3">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -2857,13 +2938,20 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="glyph" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="3">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="3">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -2942,7 +3030,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="glyph" transfer-ownership="none">
@@ -2957,7 +3048,11 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="y" transfer-ownership="none">
           <type name="position_t" c:type="hb_position_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="6">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="6">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -3018,7 +3113,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="glyph" transfer-ownership="none">
@@ -3027,7 +3125,11 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="extents" transfer-ownership="none">
           <type name="glyph_extents_t" c:type="hb_glyph_extents_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="4">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="4">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -3068,7 +3170,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="name" transfer-ownership="none">
@@ -3080,7 +3185,11 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="glyph" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="5">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="5">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -3093,7 +3202,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="unicode" transfer-ownership="none">
@@ -3105,7 +3217,11 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="glyph" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="5">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="5">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -3216,7 +3332,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="first_glyph" transfer-ownership="none">
@@ -3225,7 +3344,11 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="second_glyph" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="4">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="4">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -3263,7 +3386,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="glyph" transfer-ownership="none">
@@ -3275,7 +3401,11 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="size" transfer-ownership="none">
           <type name="guint" c:type="unsigned int"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="5">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="5">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -3320,7 +3450,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="glyph" transfer-ownership="none">
@@ -3332,7 +3465,11 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="y" transfer-ownership="none">
           <type name="position_t" c:type="hb_position_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="5">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="5">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -3450,7 +3587,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="unicode" transfer-ownership="none">
@@ -3459,7 +3599,11 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="glyph" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="4">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="4">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -3531,7 +3675,7 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
               c:identifier="hb_font_get_user_data"
               version="0.9.2"
               introspectable="0">
-      <return-value transfer-ownership="none">
+      <return-value transfer-ownership="none" nullable="1">
         <type name="gpointer" c:type="void*"/>
       </return-value>
       <parameters>
@@ -3597,7 +3741,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="font" transfer-ownership="none">
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="unicode" transfer-ownership="none">
@@ -3609,7 +3756,11 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="glyph" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="5">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="5">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -3723,7 +3874,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
                    destroy="3">
           <type name="font_funcs_t" c:type="hb_font_funcs_t*"/>
         </parameter>
-        <parameter name="font_data" transfer-ownership="none">
+        <parameter name="font_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -3744,6 +3898,8 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         </parameter>
         <parameter name="font_data"
                    transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
                    scope="notified"
                    destroy="2">
           <type name="gpointer" c:type="void*"/>
@@ -3824,7 +3980,10 @@ hb_font_funcs_set_variation_glyph_func() instead.</doc>
         <parameter name="key" transfer-ownership="none">
           <type name="user_data_key_t" c:type="hb_user_data_key_t*"/>
         </parameter>
-        <parameter name="data" transfer-ownership="none">
+        <parameter name="data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none">
@@ -4914,7 +5073,11 @@ the caller.</doc>
         <parameter name="tag" transfer-ownership="none">
           <type name="tag_t" c:type="hb_tag_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="2">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="2">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -5659,7 +5822,7 @@ hb_script_from_iso15924_tag().</doc>
               c:identifier="hb_segment_properties_equal"
               version="0.9.7">
       <doc xml:space="preserve">Checks the equality of two #hb_segment_properties_t's.</doc>
-      <return-value transfer-ownership="full">
+      <return-value transfer-ownership="none">
         <doc xml:space="preserve">
 %true if all properties of @a equal those of @b, false otherwise.</doc>
         <type name="bool_t" c:type="hb_bool_t"/>
@@ -5881,7 +6044,7 @@ hb_buffer_get_segment_properties(), respectively.</doc>
               c:identifier="hb_set_get_user_data"
               version="0.9.2"
               introspectable="0">
-      <return-value transfer-ownership="none">
+      <return-value transfer-ownership="none" nullable="1">
         <type name="gpointer" c:type="void*"/>
       </return-value>
       <parameters>
@@ -6055,7 +6218,10 @@ are greater than current value of @last.</doc>
         <parameter name="key" transfer-ownership="none">
           <type name="user_data_key_t" c:type="hb_user_data_key_t*"/>
         </parameter>
-        <parameter name="data" transfer-ownership="none">
+        <parameter name="data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <doc xml:space="preserve">@destroy (closure data):</doc>
           <type name="gpointer" c:type="void*"/>
         </parameter>
@@ -6124,7 +6290,6 @@ are greater than current value of @last.</doc>
 positioned glyphs. If @features is not %NULL, it will be used to control the
 features applied during shaping.</doc>
       <return-value transfer-ownership="none">
-        <doc xml:space="preserve">%FALSE if all shapers failed, %TRUE otherwise</doc>
         <type name="none" c:type="void"/>
       </return-value>
       <parameters>
@@ -6332,7 +6497,7 @@ will be used.</doc>
               c:identifier="hb_shape_plan_get_user_data"
               version="0.9.7"
               introspectable="0">
-      <return-value transfer-ownership="none">
+      <return-value transfer-ownership="none" nullable="1">
         <type name="gpointer" c:type="void*"/>
       </return-value>
       <parameters>
@@ -6374,7 +6539,10 @@ will be used.</doc>
         <parameter name="key" transfer-ownership="none">
           <type name="user_data_key_t" c:type="hb_user_data_key_t*"/>
         </parameter>
-        <parameter name="data" transfer-ownership="none">
+        <parameter name="data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none">
@@ -6454,7 +6622,11 @@ will be used.</doc>
         <parameter name="unicode" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="2">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="2">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -6787,7 +6959,11 @@ will be used.</doc>
         <parameter name="ab" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="4">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="4">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -6858,7 +7034,11 @@ of this function type must ensure that they do not write past the provided array
           <doc xml:space="preserve">address of codepoint array (of length %HB_UNICODE_MAX_DECOMPOSITION_LEN) to write decomposition into</doc>
           <type name="codepoint_t" c:type="hb_codepoint_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="3">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="3">
           <doc xml:space="preserve">user data pointer as passed to hb_unicode_funcs_set_decompose_compatibility_func()</doc>
           <type name="gpointer" c:type="void*"/>
         </parameter>
@@ -6882,7 +7062,11 @@ of this function type must ensure that they do not write past the provided array
         <parameter name="b" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t*"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="4">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="4">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -6914,7 +7098,11 @@ of this function type must ensure that they do not write past the provided array
         <parameter name="unicode" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="2">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="2">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -6978,7 +7166,7 @@ of this function type must ensure that they do not write past the provided array
               c:identifier="hb_unicode_funcs_get_user_data"
               version="0.9.2"
               introspectable="0">
-      <return-value transfer-ownership="none">
+      <return-value transfer-ownership="none" nullable="1">
         <type name="gpointer" c:type="void*"/>
       </return-value>
       <parameters>
@@ -7050,7 +7238,10 @@ of this function type must ensure that they do not write past the provided array
           <type name="unicode_combining_class_func_t"
                 c:type="hb_unicode_combining_class_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -7077,7 +7268,10 @@ of this function type must ensure that they do not write past the provided array
           <type name="unicode_compose_func_t"
                 c:type="hb_unicode_compose_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -7104,7 +7298,10 @@ of this function type must ensure that they do not write past the provided array
           <type name="unicode_decompose_compatibility_func_t"
                 c:type="hb_unicode_decompose_compatibility_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -7131,7 +7328,10 @@ of this function type must ensure that they do not write past the provided array
           <type name="unicode_decompose_func_t"
                 c:type="hb_unicode_decompose_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -7158,7 +7358,10 @@ of this function type must ensure that they do not write past the provided array
           <type name="unicode_eastasian_width_func_t"
                 c:type="hb_unicode_eastasian_width_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -7185,7 +7388,10 @@ of this function type must ensure that they do not write past the provided array
           <type name="unicode_general_category_func_t"
                 c:type="hb_unicode_general_category_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -7212,7 +7418,10 @@ of this function type must ensure that they do not write past the provided array
           <type name="unicode_mirroring_func_t"
                 c:type="hb_unicode_mirroring_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -7239,7 +7448,10 @@ of this function type must ensure that they do not write past the provided array
           <type name="unicode_script_func_t"
                 c:type="hb_unicode_script_func_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none" scope="notified">
@@ -7262,7 +7474,10 @@ of this function type must ensure that they do not write past the provided array
         <parameter name="key" transfer-ownership="none">
           <type name="user_data_key_t" c:type="hb_user_data_key_t*"/>
         </parameter>
-        <parameter name="data" transfer-ownership="none">
+        <parameter name="data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
           <type name="gpointer" c:type="void*"/>
         </parameter>
         <parameter name="destroy" transfer-ownership="none">
@@ -7308,7 +7523,11 @@ of this function type must ensure that they do not write past the provided array
         <parameter name="unicode" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="2">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="2">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -7495,7 +7714,11 @@ of this function type must ensure that they do not write past the provided array
         <parameter name="unicode" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="2">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="2">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>
@@ -7526,7 +7749,11 @@ of this function type must ensure that they do not write past the provided array
         <parameter name="unicode" transfer-ownership="none">
           <type name="codepoint_t" c:type="hb_codepoint_t"/>
         </parameter>
-        <parameter name="user_data" transfer-ownership="none" closure="2">
+        <parameter name="user_data"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1"
+                   closure="2">
           <type name="gpointer" c:type="void*"/>
         </parameter>
       </parameters>

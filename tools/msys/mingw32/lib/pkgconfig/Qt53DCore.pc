@@ -8,7 +8,7 @@ Name: Qt5 3DCore
 Description: Qt 3DCore module
 Version: 5.6.0
 Libs: -L${libdir} -lQt53DCore 
-Libs.private: -lglu32 -lopengl32 -lgdi32 -luser32 -LC:/repo/mingw-w64-qt5/src/i686/qtbase/lib C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Gui.dll.a C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a   
+Libs.private: -lglu32 -lopengl32 -lgdi32 -luser32 -LC:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Gui.dll.a C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a   
 Cflags: -I${includedir}/Qt3DCore -I${includedir}
 Requires: Qt5Core Qt5Gui
 

@@ -14,5 +14,5 @@ Version: 2.11.94
 Requires:  freetype2
 Requires.private:  expat
 Libs: -L${libdir} -lfontconfig
-Libs.private: -lexpat  -lfreetype  -L/mingw64/lib -liconv 
-Cflags: -I${includedir}  -mms-bitfields -I/mingw64/include/freetype2 -I/mingw64/include/libpng16 -I/mingw64/include/harfbuzz -I/mingw64/include/glib-2.0 -I/mingw64/lib/glib-2.0/include  -I/mingw64/include 
+Libs.private: -lexpat -lfreetype -L${libdir} -liconv 
+Cflags: -I${includedir}  -mms-bitfields -I${includedir}/freetype2 -I${includedir}/libpng16 -I${includedir}/harfbuzz -I${includedir}/glib-2.0 -I${libdir}/glib-2.0/include -I${includedir} 

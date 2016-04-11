@@ -1,7 +1,7 @@
 Name: libpgtypes
 Description: PostgreSQL libpgtypes library
 Url: http://www.postgresql.org/
-Version: 9.5.1
+Version: 9.5.2
 Requires: 
 Requires.private: 
 Cflags: -I/mingw32/include

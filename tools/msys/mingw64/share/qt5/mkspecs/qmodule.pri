@@ -14,6 +14,6 @@ QT_COMPILER_STDCXX = 199711
 QMAKE_QT_VERSION_OVERRIDE = 5
 QMAKE_CFLAGS_FONTCONFIG =
 QMAKE_LIBS_FONTCONFIG   = -lfreetype -lfontconfig
-INCLUDEPATH    += F:/OMDev/tools/msys/mingw64/include/dbus-1.0 F:/OMDev/tools/msys/mingw64/lib/dbus-1.0/include F:/OMDev/tools/msys/mingw64/include/libxml2 F:/OMDev/tools/msys/mingw64/include/freetype2 F:/OMDev/tools/msys/mingw64/include F:/OMDev/tools/msys/mingw64/include/libpng16 F:/OMDev/tools/msys/mingw64/include/harfbuzz F:/OMDev/tools/msys/mingw64/include/glib-2.0 F:/OMDev/tools/msys/mingw64/lib/glib-2.0/include F:/OMDev/tools/msys/mingw64/include/mariadb
+INCLUDEPATH    += F:/OMDev/tools/msys/mingw64/include/dbus-1.0 F:/OMDev/tools/msys/mingw64/lib/dbus-1.0/include F:/OMDev/tools/msys/mingw64/include/libxml2 F:/OMDev/tools/msys/mingw64/include/freetype2 F:/OMDev/tools/msys/mingw64/include F:/OMDev/tools/msys/mingw64/include/libpng16 F:/OMDev/tools/msys/mingw64/include/harfbuzz F:/OMDev/tools/msys/mingw64/include/glib-2.0 F:/OMDev/tools/msys/mingw64/lib/glib-2.0/include F:/OMDev/tools/msys/mingw64/include F:/OMDev/tools/msys/mingw64/include/mariadb
 sql-plugins    += mysql odbc psql sqlite ibase
 styles         += windows fusion windowsxp windowsvista

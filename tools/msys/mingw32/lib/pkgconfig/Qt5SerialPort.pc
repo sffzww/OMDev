@@ -8,7 +8,7 @@ Name: Qt5 SerialPort
 Description: Qt SerialPort module
 Version: 5.6.0
 Libs: -L${libdir} -lQt5SerialPort 
-Libs.private: -LC:/repo/mingw-w64-qt5/src/i686/qtbase/lib C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a -lsetupapi -ladvapi32  
+Libs.private: -LC:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a -lsetupapi -ladvapi32  
 Cflags: -I${includedir}/QtSerialPort -I${includedir}
 Requires: Qt5Core
 

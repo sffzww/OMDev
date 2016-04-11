@@ -710,7 +710,7 @@
 #define PACKAGE_NAME "PostgreSQL"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "PostgreSQL 9.5.1"
+#define PACKAGE_STRING "PostgreSQL 9.5.2"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "postgresql"
@@ -719,7 +719,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "9.5.1"
+#define PACKAGE_VERSION "9.5.2"
 
 /* Define to the name of a signed 128-bit integer type. */
 #define PG_INT128_TYPE __int128
@@ -742,13 +742,13 @@
 #define PG_USE_INLINE 1
 
 /* PostgreSQL version as a string */
-#define PG_VERSION "9.5.1"
+#define PG_VERSION "9.5.2"
 
 /* PostgreSQL version as a number */
-#define PG_VERSION_NUM 90501
+#define PG_VERSION_NUM 90502
 
 /* A string containing the version number, platform, and C compiler */
-#define PG_VERSION_STR "PostgreSQL 9.5.1 on x86_64-w64-mingw32, compiled by x86_64-w64-mingw32-gcc.exe (Rev2, Built by MSYS2 project) 5.3.0, 64-bit"
+#define PG_VERSION_STR "PostgreSQL 9.5.2 on x86_64-w64-mingw32, compiled by x86_64-w64-mingw32-gcc.exe (Rev5, Built by MSYS2 project) 5.3.0, 64-bit"
 
 /* Define to 1 to allow profiling output to be saved separately for each
    process. */
@@ -851,6 +851,9 @@
 
 /* Define to select Win32-style shared memory. */
 #define USE_WIN32_SHARED_MEMORY 1
+
+/* Define to 1 if `wcstombs_l' requires <xlocale.h>. */
+/* #undef WCSTOMBS_L_IN_XLOCALE */
 
 /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
    significant byte first (like Motorola and SPARC, unlike Intel). */

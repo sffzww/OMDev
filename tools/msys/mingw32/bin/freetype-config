@@ -141,7 +141,7 @@ fi
 
 if test "$echo_libs" = "yes" ; then
   libs="-lfreetype"
-  staticlibs="-lfreetype -L/mingw32/lib -lz -L/mingw32/lib -lbz2 -L/mingw32/lib -lpng16 -lz -L/mingw32/lib -lharfbuzz -lglib-2.0 -lintl -pthread -lws2_32 -lole32 -lwinmm -lshlwapi -lintl"
+  staticlibs="-lfreetype -L/mingw32/lib -lz -L/mingw32/lib -lbz2 -L/mingw32/lib -lpng16 -lz -L/mingw32/lib -lharfbuzz -lglib-2.0 -lintl -pthread -lws2_32 -lole32 -lwinmm -lshlwapi -lpcre -lintl -lpcre"
   if test "$show_static" = "yes" ; then
     libs="$staticlibs"
   fi

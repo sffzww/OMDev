@@ -8,7 +8,7 @@ Name: Qt5 3DRender
 Description: Qt 3DRender module
 Version: 5.6.0
 Libs: -L${libdir} -lQt53DRender 
-Libs.private: -LC:/repo/mingw-w64-qt5/src/i686/qt3d/lib C:/repo/mingw-w64-qt5/src/i686/qt3d/lib/libQt53DCore.dll.a -LC:/repo/mingw-w64-qt5/src/i686/qtbase/lib C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5OpenGLExtensions.a -lglu32 -lopengl32 -lgdi32 -luser32 C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Gui.dll.a C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Concurrent.dll.a C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a   
+Libs.private: -LC:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qt3d/lib C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qt3d/lib/libQt53DCore.dll.a -LC:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5OpenGLExtensions.a -lglu32 -lopengl32 -lgdi32 -luser32 C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Gui.dll.a C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Concurrent.dll.a C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a   
 Cflags: -I${includedir}/Qt3DRender -I${includedir}
 Requires: Qt5Core Qt5Gui Qt53DCore Qt5OpenGLExtensions Qt5Concurrent
 

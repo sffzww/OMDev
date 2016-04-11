@@ -8,7 +8,7 @@ Name: Qt5 QuickWidgets
 Description: Qt QuickWidgets module
 Version: 5.6.0
 Libs: -L${libdir} -lQt5QuickWidgets 
-Libs.private: -lglu32 -lopengl32 -lgdi32 -luser32 -LC:/repo/mingw-w64-qt5/src/i686/qtdeclarative/lib C:/repo/mingw-w64-qt5/src/i686/qtdeclarative/lib/libQt5Quick.dll.a -LC:/repo/mingw-w64-qt5/src/i686/qtbase/lib C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Widgets.dll.a C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Gui.dll.a C:/repo/mingw-w64-qt5/src/i686/qtdeclarative/lib/libQt5Qml.dll.a C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Network.dll.a C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a   
+Libs.private: -lglu32 -lopengl32 -lgdi32 -luser32 -LC:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtdeclarative/lib C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtdeclarative/lib/libQt5Quick.dll.a -LC:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Widgets.dll.a C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Gui.dll.a C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtdeclarative/lib/libQt5Qml.dll.a C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Network.dll.a C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a   
 Cflags: -I${includedir}/QtQuickWidgets -I${includedir}
 Requires: Qt5Core Qt5Gui Qt5Qml Qt5Quick Qt5Widgets
 

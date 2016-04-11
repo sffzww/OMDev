@@ -1,7 +1,7 @@
 Name: libecpg_compat
 Description: PostgreSQL libecpg_compat library
 Url: http://www.postgresql.org/
-Version: 9.5.1
+Version: 9.5.2
 Requires: 
 Requires.private: libecpg libpgtypes
 Cflags: -I/mingw32/include

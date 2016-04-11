@@ -5,7 +5,7 @@ includedir=${prefix}/include
 
 Name: Xerces-C++
 Description: Validating XML parser library for C++
-Version: 3.1.2
+Version: 3.1.3
 Libs: -L${libdir} -lxerces-c
-Libs.private: -L/mingw32/lib -lcurl -lidn -lrtmp -lssh2 -lssl -lcrypto -lgdi32 -lssl -lcrypto -lwldap32 -lz -lws2_32
+Libs.private: -L/mingw32/lib -lcurl -lidn -lrtmp -lssh2 -lssl -lcrypto -lssl -lcrypto -lgdi32 -lwldap32 -lz -lws2_32
 Cflags: -I${includedir}

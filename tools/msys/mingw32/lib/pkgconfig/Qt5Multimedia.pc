@@ -8,7 +8,7 @@ Name: Qt5 Multimedia
 Description: Qt Multimedia module
 Version: 5.6.0
 Libs: -L${libdir} -lQt5Multimedia 
-Libs.private: -lglu32 -lopengl32 -lgdi32 -luser32 -LC:/repo/mingw-w64-qt5/src/i686/qtbase/lib C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Network.dll.a C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Gui.dll.a C:/repo/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a -luuid  
+Libs.private: -lglu32 -lopengl32 -lgdi32 -luser32 -LC:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Network.dll.a C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Gui.dll.a C:/dev/msys/MINGW-packages/mingw-w64-qt5/src/i686/qtbase/lib/libQt5Core.dll.a -luuid  
 Cflags: -I${includedir}/QtMultimedia -I${includedir}
 Requires: Qt5Core Qt5Network Qt5Gui
 

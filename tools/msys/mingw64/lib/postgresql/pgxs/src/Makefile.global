@@ -36,9 +36,9 @@ all:
 .SECONDARY:
 
 # PostgreSQL version number
-VERSION = 9.5.1
+VERSION = 9.5.2
 MAJORVERSION = 9.5
-VERSION_NUM = 90501
+VERSION_NUM = 90502
 
 # Set top_srcdir, srcdir, and VPATH.
 ifdef PGXS
@@ -59,8 +59,8 @@ endif
 endif
 else # not PGXS
 vpath_build = yes
-abs_top_builddir = /scripts/mingw-w64-postgresql/src/build-x86_64
-abs_top_srcdir = /scripts/mingw-w64-postgresql/src/build-x86_64/../postgresql-9.5.1
+abs_top_builddir = /c/repo/mingw-w64-postgresql/src/build-x86_64
+abs_top_srcdir = /c/repo/mingw-w64-postgresql/src/build-x86_64/../postgresql-9.5.2
 
 ifneq ($(vpath_build),yes)
 top_srcdir = $(top_builddir)
@@ -224,7 +224,7 @@ PTHREAD_LIBS		=
 # Compilers
 
 CPP = x86_64-w64-mingw32-gcc -E
-CPPFLAGS = -D_FORTIFY_SOURCE=2 -D__USE_MINGW_ANSI_STDIO=1 -I../postgresql-9.5.1/src/include/port/win32 -DEXEC_BACKEND -I/mingw64/include/libxml2 
+CPPFLAGS = -D_FORTIFY_SOURCE=2 -D__USE_MINGW_ANSI_STDIO=1 -I../postgresql-9.5.2/src/include/port/win32 -DEXEC_BACKEND -I/mingw64/include/libxml2 
 
 ifdef PGXS
 override CPPFLAGS := -I$(includedir_server) -I$(includedir_internal) $(CPPFLAGS)
