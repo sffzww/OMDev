@@ -11,7 +11,7 @@ exit 1
 REM patch Qt5 files
 echo patch Qt5 files
 cd %OMDEV%/tools/msys/mingw32/bin
-.\qtbinpatcher --nobackup
+.\qtbinpatcher --nobackup --force
 cd %OMDEV%/tools/msys/mingw64/bin
-.\qtbinpatcher --nobackup
+.\qtbinpatcher --nobackup --force
 
