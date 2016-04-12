@@ -34,7 +34,7 @@ ENVIRONMENT VARIABLE SETTINGS
 - note that msys_shell.bat mingw32_shell.bat mingw64_shell.bat
   + does not use Windows PATH varible. If you want to use the 
     Windows path variable define an environment varible called
-    SET_FULL_PATH=Yes
+    MSYS2_PATH_TYPE=inherit
   + does not use Windows TEMP directory but the directory:
     %OMDEV%\tools\msys\tmp
 	if you want to change this behavior edit:
