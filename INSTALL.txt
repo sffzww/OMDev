@@ -14,11 +14,7 @@ To make things move fast in msys2 one has to generate the group and passwd files
 Open windows command prompt (cmd) and run path_to_your_omdev\SETUP_OMDEV.bat file.
 
 if you move the OMDev directory around then you need to patch the qt files using:
-> Open msys terminal path_to_your_omdev\tools\msys\msys2_shell.bat
-> cd $OMDEV/tools/msys/mingw64/bin
-> ./qtbinpatcher --nobackup
-> cd $OMDEV/tools/msys/mingw32/bin
-> ./qtbinpatcher --nobackup
+Open windows command prompt (cmd) and run path_to_your_omdev\SETUP_OMDEV_Qt5.bat file.
 
 MINGW32 or MINGW64
 ==================
