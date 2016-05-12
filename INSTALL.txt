@@ -31,6 +31,7 @@ ENVIRONMENT VARIABLE SETTINGS
   + does not use Windows PATH varible. If you want to use the 
     Windows path variable define an environment varible called
     MSYS2_PATH_TYPE=inherit
+	or you can call the batch scripts with -use-full-path
   + does not use Windows TEMP directory but the directory:
     %OMDEV%\tools\msys\tmp
 	if you want to change this behavior edit:

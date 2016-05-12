@@ -1,6 +1,6 @@
 OMDev=OpenModelica Development Environment
 -------------------------------------------
-Adrian.Pop@liu.se, 2012-02-15, last update 2016-03-11
+Adrian.Pop@liu.se, 2012-02-15, last update 2016-05-12
 
 In Subversion here:
 https://openmodelica.org/svn/OpenModelicaExternal/trunk/tools/windows/OMDev
@@ -22,7 +22,7 @@ http://sourceforge.net/p/msys2/wiki/MSYS2%20installation/
 Install msys2 from:
  http://msys2.github.io/
 into OMDev\tools\msys
-start the msys2 shell and sync the local package database, and update the msys2 system:
+start the msys2_shell.bat and sync the local package database, and update the msys2 system:
  > pacman -Syuu
  RESTART the msys2 shell if you are told to do so!
 do a full system upgrade write:
@@ -71,7 +71,8 @@ if you move the OMDev directory around then you need to path the qt files using:
 > cd $OMDEV/tools/msys/mingw32/bin
 > qtbinpatcher --nobackup
 
-see all installed packages
+See all installed packages
+Start $OMDev\tools\msys\msys2_shell.bat
 > pacman -Qet
 list the files in a package
 > pacman -Ql mingw-w64-i686-openblas
@@ -80,6 +81,7 @@ find which package a file belongs to:
 
 
 To get the debug DLLs for qt5 and the qt5 examples reinstall the qt5 packages:
+Start $OMDev\tools\msys\msys2_shell.bat
 See which are the installed qt packages:
  > pacman -Ss qt5 | grep installed
    mingw32/mingw-w64-i686-qt5 5.5.1-4 (mingw-w64-i686-qt mingw-w64-i686-qt5) [installed]
